@@ -59,11 +59,11 @@ namespace Soenneker.Quo.OpenApiClient.V1.Contacts
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsGetResponse?> GetAsContactsGetResponseAsync(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsRequestBuilder.ContactsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsRequestBuilder.ContactsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsGetResponse> GetAsContactsGetResponseAsync(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsRequestBuilder.ContactsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsRequestBuilder.ContactsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -77,40 +77,6 @@ namespace Soenneker.Quo.OpenApiClient.V1.Contacts
                 { "500", global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsGetResponse>(requestInfo, global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Retrieve a paginated list of contacts. You can optionally filter the results by providing external IDs and sources. When no external IDs are provided, all contacts for the organization are returned.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsResponse"/></returns>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts403Error">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts409Error">When receiving a 409 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts500Error">When receiving a 500 status code</exception>
-        [Obsolete("This method is obsolete. Use GetAsContactsGetResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsRequestBuilder.ContactsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsRequestBuilder.ContactsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            var requestInfo = ToGetRequestInformation(requestConfiguration);
-            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
-            {
-                { "400", global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts400Error.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts401Error.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts403Error.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts404Error.CreateFromDiscriminatorValue },
-                { "409", global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts409Error.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts500Error.CreateFromDiscriminatorValue },
-            };
-            return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsResponse>(requestInfo, global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create a contact for a workspace.
@@ -127,11 +93,11 @@ namespace Soenneker.Quo.OpenApiClient.V1.Contacts
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsPostResponse?> PostAsContactsPostResponseAsync(global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsPostResponse?> PostAsync(global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsPostResponse> PostAsContactsPostResponseAsync(global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsPostResponse> PostAsync(global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -146,42 +112,6 @@ namespace Soenneker.Quo.OpenApiClient.V1.Contacts
                 { "500", global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsPostResponse>(requestInfo, global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Create a contact for a workspace.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsResponse"/></returns>
-        /// <param name="body">The request body</param>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts403Error">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts409Error">When receiving a 409 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts500Error">When receiving a 500 status code</exception>
-        [Obsolete("This method is obsolete. Use PostAsContactsPostResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsResponse?> PostAsync(global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsResponse> PostAsync(global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
-            {
-                { "400", global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts400Error.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts401Error.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts403Error.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts404Error.CreateFromDiscriminatorValue },
-                { "409", global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts409Error.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts500Error.CreateFromDiscriminatorValue },
-            };
-            return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsResponse>(requestInfo, global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a paginated list of contacts. You can optionally filter the results by providing external IDs and sources. When no external IDs are provided, all contacts for the organization are returned.
@@ -268,22 +198,6 @@ namespace Soenneker.Quo.OpenApiClient.V1.Contacts
             [QueryParameter("sources")]
             public string[] Sources { get; set; }
 #endif
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ContactsRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsRequestBuilder.ContactsRequestBuilderGetQueryParameters>
-        {
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ContactsRequestBuilderPostRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
-        {
         }
     }
 }

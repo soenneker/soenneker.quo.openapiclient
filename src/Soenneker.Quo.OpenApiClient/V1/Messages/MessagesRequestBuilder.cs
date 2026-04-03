@@ -59,11 +59,11 @@ namespace Soenneker.Quo.OpenApiClient.V1.Messages
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Messages.Messages500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesGetResponse?> GetAsMessagesGetResponseAsync(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesRequestBuilder.MessagesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesRequestBuilder.MessagesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesGetResponse> GetAsMessagesGetResponseAsync(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesRequestBuilder.MessagesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesRequestBuilder.MessagesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -77,40 +77,6 @@ namespace Soenneker.Quo.OpenApiClient.V1.Messages
                 { "500", global::Soenneker.Quo.OpenApiClient.V1.Messages.Messages500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesGetResponse>(requestInfo, global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Retrieve a chronological list of messages exchanged between your OpenPhone number and specified participants, with support for filtering and pagination. 
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesResponse"/></returns>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Messages.Messages400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Messages.Messages401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Messages.Messages402Error">When receiving a 402 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Messages.Messages403Error">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Messages.Messages404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Messages.Messages500Error">When receiving a 500 status code</exception>
-        [Obsolete("This method is obsolete. Use GetAsMessagesGetResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesRequestBuilder.MessagesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesRequestBuilder.MessagesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            var requestInfo = ToGetRequestInformation(requestConfiguration);
-            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
-            {
-                { "400", global::Soenneker.Quo.OpenApiClient.V1.Messages.Messages400Error.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Quo.OpenApiClient.V1.Messages.Messages401Error.CreateFromDiscriminatorValue },
-                { "402", global::Soenneker.Quo.OpenApiClient.V1.Messages.Messages402Error.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Quo.OpenApiClient.V1.Messages.Messages403Error.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Quo.OpenApiClient.V1.Messages.Messages404Error.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Quo.OpenApiClient.V1.Messages.Messages500Error.CreateFromDiscriminatorValue },
-            };
-            return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesResponse>(requestInfo, global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Send a text message from your OpenPhone number to a recipient.
@@ -127,11 +93,11 @@ namespace Soenneker.Quo.OpenApiClient.V1.Messages
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Messages.Messages500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesPostResponse?> PostAsMessagesPostResponseAsync(global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesPostResponse?> PostAsync(global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesPostResponse> PostAsMessagesPostResponseAsync(global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesPostResponse> PostAsync(global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -146,42 +112,6 @@ namespace Soenneker.Quo.OpenApiClient.V1.Messages
                 { "500", global::Soenneker.Quo.OpenApiClient.V1.Messages.Messages500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesPostResponse>(requestInfo, global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Send a text message from your OpenPhone number to a recipient.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesResponse"/></returns>
-        /// <param name="body">The request body</param>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Messages.Messages400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Messages.Messages401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Messages.Messages402Error">When receiving a 402 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Messages.Messages403Error">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Messages.Messages404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Messages.Messages500Error">When receiving a 500 status code</exception>
-        [Obsolete("This method is obsolete. Use PostAsMessagesPostResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesResponse?> PostAsync(global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesResponse> PostAsync(global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
-            {
-                { "400", global::Soenneker.Quo.OpenApiClient.V1.Messages.Messages400Error.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Quo.OpenApiClient.V1.Messages.Messages401Error.CreateFromDiscriminatorValue },
-                { "402", global::Soenneker.Quo.OpenApiClient.V1.Messages.Messages402Error.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Quo.OpenApiClient.V1.Messages.Messages403Error.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Quo.OpenApiClient.V1.Messages.Messages404Error.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Quo.OpenApiClient.V1.Messages.Messages500Error.CreateFromDiscriminatorValue },
-            };
-            return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesResponse>(requestInfo, global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a chronological list of messages exchanged between your OpenPhone number and specified participants, with support for filtering and pagination. 
@@ -284,22 +214,6 @@ namespace Soenneker.Quo.OpenApiClient.V1.Messages
             [QueryParameter("userId")]
             public string UserId { get; set; }
 #endif
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class MessagesRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesRequestBuilder.MessagesRequestBuilderGetQueryParameters>
-        {
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class MessagesRequestBuilderPostRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
-        {
         }
     }
 }

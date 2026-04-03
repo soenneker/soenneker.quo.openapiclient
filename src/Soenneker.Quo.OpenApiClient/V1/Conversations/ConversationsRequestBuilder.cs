@@ -45,11 +45,11 @@ namespace Soenneker.Quo.OpenApiClient.V1.Conversations
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Conversations.Conversations500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Conversations.ConversationsGetResponse?> GetAsConversationsGetResponseAsync(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Conversations.ConversationsRequestBuilder.ConversationsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Conversations.ConversationsGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Conversations.ConversationsRequestBuilder.ConversationsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Conversations.ConversationsGetResponse> GetAsConversationsGetResponseAsync(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Conversations.ConversationsRequestBuilder.ConversationsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Conversations.ConversationsGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Conversations.ConversationsRequestBuilder.ConversationsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -62,38 +62,6 @@ namespace Soenneker.Quo.OpenApiClient.V1.Conversations
                 { "500", global::Soenneker.Quo.OpenApiClient.V1.Conversations.Conversations500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.V1.Conversations.ConversationsGetResponse>(requestInfo, global::Soenneker.Quo.OpenApiClient.V1.Conversations.ConversationsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Fetch a paginated list of conversations of OpenPhone conversations. Can be filtered by user and/or phone numbers. Defaults to all conversations in the OpenPhone organization. Results are returned in descending order based on the most recent conversation.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.V1.Conversations.ConversationsResponse"/></returns>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Conversations.Conversations400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Conversations.Conversations401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Conversations.Conversations403Error">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Conversations.Conversations404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Conversations.Conversations500Error">When receiving a 500 status code</exception>
-        [Obsolete("This method is obsolete. Use GetAsConversationsGetResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Conversations.ConversationsResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Conversations.ConversationsRequestBuilder.ConversationsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Conversations.ConversationsResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Conversations.ConversationsRequestBuilder.ConversationsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            var requestInfo = ToGetRequestInformation(requestConfiguration);
-            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
-            {
-                { "400", global::Soenneker.Quo.OpenApiClient.V1.Conversations.Conversations400Error.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Quo.OpenApiClient.V1.Conversations.Conversations401Error.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Quo.OpenApiClient.V1.Conversations.Conversations403Error.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Quo.OpenApiClient.V1.Conversations.Conversations404Error.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Quo.OpenApiClient.V1.Conversations.Conversations500Error.CreateFromDiscriminatorValue },
-            };
-            return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.V1.Conversations.ConversationsResponse>(requestInfo, global::Soenneker.Quo.OpenApiClient.V1.Conversations.ConversationsResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Fetch a paginated list of conversations of OpenPhone conversations. Can be filtered by user and/or phone numbers. Defaults to all conversations in the OpenPhone organization. Results are returned in descending order based on the most recent conversation.
@@ -178,14 +146,6 @@ namespace Soenneker.Quo.OpenApiClient.V1.Conversations
             [QueryParameter("userId")]
             public string UserId { get; set; }
 #endif
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ConversationsRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Conversations.ConversationsRequestBuilder.ConversationsRequestBuilderGetQueryParameters>
-        {
         }
     }
 }

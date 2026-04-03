@@ -58,11 +58,11 @@ namespace Soenneker.Quo.OpenApiClient.V1.Calls
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Calls.Calls500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Calls.CallsGetResponse?> GetAsCallsGetResponseAsync(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Calls.CallsRequestBuilder.CallsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Calls.CallsGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Calls.CallsRequestBuilder.CallsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Calls.CallsGetResponse> GetAsCallsGetResponseAsync(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Calls.CallsRequestBuilder.CallsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Calls.CallsGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Calls.CallsRequestBuilder.CallsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -75,38 +75,6 @@ namespace Soenneker.Quo.OpenApiClient.V1.Calls
                 { "500", global::Soenneker.Quo.OpenApiClient.V1.Calls.Calls500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.V1.Calls.CallsGetResponse>(requestInfo, global::Soenneker.Quo.OpenApiClient.V1.Calls.CallsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Fetch a paginated list of calls associated with a specific OpenPhone number and another number.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.V1.Calls.CallsResponse"/></returns>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Calls.Calls400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Calls.Calls401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Calls.Calls403Error">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Calls.Calls404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Calls.Calls500Error">When receiving a 500 status code</exception>
-        [Obsolete("This method is obsolete. Use GetAsCallsGetResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Calls.CallsResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Calls.CallsRequestBuilder.CallsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Calls.CallsResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Calls.CallsRequestBuilder.CallsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            var requestInfo = ToGetRequestInformation(requestConfiguration);
-            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
-            {
-                { "400", global::Soenneker.Quo.OpenApiClient.V1.Calls.Calls400Error.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Quo.OpenApiClient.V1.Calls.Calls401Error.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Quo.OpenApiClient.V1.Calls.Calls403Error.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Quo.OpenApiClient.V1.Calls.Calls404Error.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Quo.OpenApiClient.V1.Calls.Calls500Error.CreateFromDiscriminatorValue },
-            };
-            return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.V1.Calls.CallsResponse>(requestInfo, global::Soenneker.Quo.OpenApiClient.V1.Calls.CallsResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Fetch a paginated list of calls associated with a specific OpenPhone number and another number.
@@ -187,14 +155,6 @@ namespace Soenneker.Quo.OpenApiClient.V1.Calls
             [QueryParameter("userId")]
             public string UserId { get; set; }
 #endif
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class CallsRequestBuilderGetRequestConfiguration : RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Calls.CallsRequestBuilder.CallsRequestBuilderGetQueryParameters>
-        {
         }
     }
 }

@@ -45,11 +45,11 @@ namespace Soenneker.Quo.OpenApiClient.V1.CallTranscripts.Item
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.CallTranscripts.Item.CallTranscripts500Error">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.CallTranscripts.Item.CallTranscriptsGetResponse?> GetAsCallTranscriptsGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Quo.OpenApiClient.V1.CallTranscripts.Item.CallTranscriptsGetResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.CallTranscripts.Item.CallTranscriptsGetResponse> GetAsCallTranscriptsGetResponseAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Quo.OpenApiClient.V1.CallTranscripts.Item.CallTranscriptsGetResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -62,38 +62,6 @@ namespace Soenneker.Quo.OpenApiClient.V1.CallTranscripts.Item
                 { "500", global::Soenneker.Quo.OpenApiClient.V1.CallTranscripts.Item.CallTranscripts500Error.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.V1.CallTranscripts.Item.CallTranscriptsGetResponse>(requestInfo, global::Soenneker.Quo.OpenApiClient.V1.CallTranscripts.Item.CallTranscriptsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// Retrieve a detailed transcript of a specific call identified by its unique call ID. This endpoint supports transcripts for both regular calls and calls handled by Sona. Call transcripts are only available on business and scale plans.
-        /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.V1.CallTranscripts.Item.CallTranscriptsResponse"/></returns>
-        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
-        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.CallTranscripts.Item.CallTranscripts400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.CallTranscripts.Item.CallTranscripts401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.CallTranscripts.Item.CallTranscripts403Error">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.CallTranscripts.Item.CallTranscripts404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.CallTranscripts.Item.CallTranscripts500Error">When receiving a 500 status code</exception>
-        [Obsolete("This method is obsolete. Use GetAsCallTranscriptsGetResponseAsync instead.")]
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.CallTranscripts.Item.CallTranscriptsResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#nullable restore
-#else
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.CallTranscripts.Item.CallTranscriptsResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
-        {
-#endif
-            var requestInfo = ToGetRequestInformation(requestConfiguration);
-            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
-            {
-                { "400", global::Soenneker.Quo.OpenApiClient.V1.CallTranscripts.Item.CallTranscripts400Error.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Quo.OpenApiClient.V1.CallTranscripts.Item.CallTranscripts401Error.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Quo.OpenApiClient.V1.CallTranscripts.Item.CallTranscripts403Error.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Quo.OpenApiClient.V1.CallTranscripts.Item.CallTranscripts404Error.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Quo.OpenApiClient.V1.CallTranscripts.Item.CallTranscripts500Error.CreateFromDiscriminatorValue },
-            };
-            return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.V1.CallTranscripts.Item.CallTranscriptsResponse>(requestInfo, global::Soenneker.Quo.OpenApiClient.V1.CallTranscripts.Item.CallTranscriptsResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a detailed transcript of a specific call identified by its unique call ID. This endpoint supports transcripts for both regular calls and calls handled by Sona. Call transcripts are only available on business and scale plans.
@@ -122,14 +90,6 @@ namespace Soenneker.Quo.OpenApiClient.V1.CallTranscripts.Item
         public global::Soenneker.Quo.OpenApiClient.V1.CallTranscripts.Item.CallTranscriptsItemRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Quo.OpenApiClient.V1.CallTranscripts.Item.CallTranscriptsItemRequestBuilder(rawUrl, RequestAdapter);
-        }
-        /// <summary>
-        /// Configuration for the request such as headers, query parameters, and middleware options.
-        /// </summary>
-        [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class CallTranscriptsItemRequestBuilderGetRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
-        {
         }
     }
 }
