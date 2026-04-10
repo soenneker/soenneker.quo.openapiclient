@@ -14221,6 +14221,141 @@
                               "events",
                               "resourceIds"
                             ]
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "description": "The webhook's ID",
+                                "examples": [
+                                  "WHabcd1234"
+                                ],
+                                "pattern": "^WH(.*)$",
+                                "type": "string"
+                              },
+                              "userId": {
+                                "description": "The unique identifier of the user that created the webhook.",
+                                "examples": [
+                                  "US123abc"
+                                ],
+                                "pattern": "^US(.*)$",
+                                "type": "string"
+                              },
+                              "orgId": {
+                                "description": "The unique identifier of the organization the webhook belongs to",
+                                "examples": [
+                                  "OR1223abc"
+                                ],
+                                "pattern": "^OR(.*)$",
+                                "type": "string"
+                              },
+                              "label": {
+                                "anyOf": [
+                                  {
+                                    "description": "The webhook's label.",
+                                    "examples": [
+                                      "my webhook label"
+                                    ],
+                                    "type": "string"
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "status": {
+                                "type": "string",
+                                "enum": [
+                                  "enabled",
+                                  "disabled"
+                                ],
+                                "default": "enabled",
+                                "description": "The status of the webhook.",
+                                "examples": [
+                                  "enabled"
+                                ]
+                              },
+                              "url": {
+                                "format": "uri",
+                                "description": "The endpoint that receives events from the webhook.",
+                                "examples": [
+                                  "https://example.com/"
+                                ],
+                                "type": "string"
+                              },
+                              "key": {
+                                "description": "Webhook key",
+                                "examples": [
+                                  "example-key"
+                                ],
+                                "type": "string"
+                              },
+                              "createdAt": {
+                                "description": "The date the webhook was created at, in ISO_8601 format.",
+                                "examples": [
+                                  "2022-01-01T00:00:00Z"
+                                ],
+                                "format": "date-time",
+                                "type": "string"
+                              },
+                              "updatedAt": {
+                                "description": "The date the webhook was created at, in ISO_8601 format.",
+                                "examples": [
+                                  "2022-01-01T00:00:00Z"
+                                ],
+                                "format": "date-time",
+                                "type": "string"
+                              },
+                              "deletedAt": {
+                                "anyOf": [
+                                  {
+                                    "description": "The date the webhook was deleted at, in ISO_8601 format.",
+                                    "examples": [
+                                      "2022-01-01T00:00:00Z"
+                                    ],
+                                    "format": "date-time",
+                                    "type": "string"
+                                  },
+                                  {
+                                    "type": "null"
+                                  }
+                                ]
+                              },
+                              "events": {
+                                "minItems": 1,
+                                "type": "array",
+                                "items": {
+                                  "type": "string",
+                                  "enum": [
+                                    "contact.updated",
+                                    "contact.deleted"
+                                  ]
+                                }
+                              },
+                              "resourceIds": {
+                                "minItems": 1,
+                                "maxItems": 1,
+                                "type": "array",
+                                "items": {
+                                  "const": "*",
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "required": [
+                              "id",
+                              "userId",
+                              "orgId",
+                              "label",
+                              "status",
+                              "url",
+                              "key",
+                              "createdAt",
+                              "updatedAt",
+                              "deletedAt",
+                              "events",
+                              "resourceIds"
+                            ]
                           }
                         ]
                       }
@@ -15195,6 +15330,141 @@
                                   }
                                 }
                               ]
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "userId",
+                            "orgId",
+                            "label",
+                            "status",
+                            "url",
+                            "key",
+                            "createdAt",
+                            "updatedAt",
+                            "deletedAt",
+                            "events",
+                            "resourceIds"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "description": "The webhook's ID",
+                              "examples": [
+                                "WHabcd1234"
+                              ],
+                              "pattern": "^WH(.*)$",
+                              "type": "string"
+                            },
+                            "userId": {
+                              "description": "The unique identifier of the user that created the webhook.",
+                              "examples": [
+                                "US123abc"
+                              ],
+                              "pattern": "^US(.*)$",
+                              "type": "string"
+                            },
+                            "orgId": {
+                              "description": "The unique identifier of the organization the webhook belongs to",
+                              "examples": [
+                                "OR1223abc"
+                              ],
+                              "pattern": "^OR(.*)$",
+                              "type": "string"
+                            },
+                            "label": {
+                              "anyOf": [
+                                {
+                                  "description": "The webhook's label.",
+                                  "examples": [
+                                    "my webhook label"
+                                  ],
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "status": {
+                              "type": "string",
+                              "enum": [
+                                "enabled",
+                                "disabled"
+                              ],
+                              "default": "enabled",
+                              "description": "The status of the webhook.",
+                              "examples": [
+                                "enabled"
+                              ]
+                            },
+                            "url": {
+                              "format": "uri",
+                              "description": "The endpoint that receives events from the webhook.",
+                              "examples": [
+                                "https://example.com/"
+                              ],
+                              "type": "string"
+                            },
+                            "key": {
+                              "description": "Webhook key",
+                              "examples": [
+                                "example-key"
+                              ],
+                              "type": "string"
+                            },
+                            "createdAt": {
+                              "description": "The date the webhook was created at, in ISO_8601 format.",
+                              "examples": [
+                                "2022-01-01T00:00:00Z"
+                              ],
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "updatedAt": {
+                              "description": "The date the webhook was created at, in ISO_8601 format.",
+                              "examples": [
+                                "2022-01-01T00:00:00Z"
+                              ],
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            "deletedAt": {
+                              "anyOf": [
+                                {
+                                  "description": "The date the webhook was deleted at, in ISO_8601 format.",
+                                  "examples": [
+                                    "2022-01-01T00:00:00Z"
+                                  ],
+                                  "format": "date-time",
+                                  "type": "string"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            },
+                            "events": {
+                              "minItems": 1,
+                              "type": "array",
+                              "items": {
+                                "type": "string",
+                                "enum": [
+                                  "contact.updated",
+                                  "contact.deleted"
+                                ]
+                              }
+                            },
+                            "resourceIds": {
+                              "minItems": 1,
+                              "maxItems": 1,
+                              "type": "array",
+                              "items": {
+                                "const": "*",
+                                "type": "string"
+                              }
                             }
                           },
                           "required": [
