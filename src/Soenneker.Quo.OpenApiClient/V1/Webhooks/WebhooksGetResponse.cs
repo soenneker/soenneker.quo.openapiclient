@@ -61,7 +61,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Webhooks
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Quo.OpenApiClient.V1.Webhooks.WebhooksGetResponse_dataMember1"/>, <see cref="global::Soenneker.Quo.OpenApiClient.V1.Webhooks.WebhooksGetResponse_dataMember2"/>, <see cref="global::Soenneker.Quo.OpenApiClient.V1.Webhooks.WebhooksGetResponse_dataMember3"/>, <see cref="global::Soenneker.Quo.OpenApiClient.V1.Webhooks.WebhooksGetResponse_dataMember4"/>, <see cref="global::Soenneker.Quo.OpenApiClient.V1.Webhooks.WebhooksGetResponse_dataMember5"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Quo.OpenApiClient.V1.Webhooks.WebhooksGetResponse_dataMember1"/>, <see cref="global::Soenneker.Quo.OpenApiClient.V1.Webhooks.WebhooksGetResponse_dataMember2"/>, <see cref="global::Soenneker.Quo.OpenApiClient.V1.Webhooks.WebhooksGetResponse_dataMember3"/>, <see cref="global::Soenneker.Quo.OpenApiClient.V1.Webhooks.WebhooksGetResponse_dataMember4"/>, <see cref="global::Soenneker.Quo.OpenApiClient.V1.Webhooks.WebhooksGetResponse_dataMember5"/>, <see cref="global::Soenneker.Quo.OpenApiClient.V1.Webhooks.WebhooksGetResponse_dataMember6"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WebhooksGetResponse_data : IComposedTypeWrapper, IParsable
@@ -106,6 +106,14 @@ namespace Soenneker.Quo.OpenApiClient.V1.Webhooks
 #else
             public global::Soenneker.Quo.OpenApiClient.V1.Webhooks.WebhooksGetResponse_dataMember5 WebhooksGetResponseDataMember5 { get; set; }
 #endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Quo.OpenApiClient.V1.Webhooks.WebhooksGetResponse_dataMember6"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Quo.OpenApiClient.V1.Webhooks.WebhooksGetResponse_dataMember6? WebhooksGetResponseDataMember6 { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Quo.OpenApiClient.V1.Webhooks.WebhooksGetResponse_dataMember6 WebhooksGetResponseDataMember6 { get; set; }
+#endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
@@ -120,6 +128,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Webhooks
                 result.WebhooksGetResponseDataMember3 = new global::Soenneker.Quo.OpenApiClient.V1.Webhooks.WebhooksGetResponse_dataMember3();
                 result.WebhooksGetResponseDataMember4 = new global::Soenneker.Quo.OpenApiClient.V1.Webhooks.WebhooksGetResponse_dataMember4();
                 result.WebhooksGetResponseDataMember5 = new global::Soenneker.Quo.OpenApiClient.V1.Webhooks.WebhooksGetResponse_dataMember5();
+                result.WebhooksGetResponseDataMember6 = new global::Soenneker.Quo.OpenApiClient.V1.Webhooks.WebhooksGetResponse_dataMember6();
                 return result;
             }
             /// <summary>
@@ -128,9 +137,9 @@ namespace Soenneker.Quo.OpenApiClient.V1.Webhooks
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(WebhooksGetResponseDataMember1 != null || WebhooksGetResponseDataMember2 != null || WebhooksGetResponseDataMember3 != null || WebhooksGetResponseDataMember4 != null || WebhooksGetResponseDataMember5 != null)
+                if(WebhooksGetResponseDataMember1 != null || WebhooksGetResponseDataMember2 != null || WebhooksGetResponseDataMember3 != null || WebhooksGetResponseDataMember4 != null || WebhooksGetResponseDataMember5 != null || WebhooksGetResponseDataMember6 != null)
                 {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(WebhooksGetResponseDataMember1, WebhooksGetResponseDataMember2, WebhooksGetResponseDataMember3, WebhooksGetResponseDataMember4, WebhooksGetResponseDataMember5);
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(WebhooksGetResponseDataMember1, WebhooksGetResponseDataMember2, WebhooksGetResponseDataMember3, WebhooksGetResponseDataMember4, WebhooksGetResponseDataMember5, WebhooksGetResponseDataMember6);
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -141,7 +150,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Webhooks
             public virtual void Serialize(ISerializationWriter writer)
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.V1.Webhooks.WebhooksGetResponse_dataMember1>(null, WebhooksGetResponseDataMember1, WebhooksGetResponseDataMember2, WebhooksGetResponseDataMember3, WebhooksGetResponseDataMember4, WebhooksGetResponseDataMember5);
+                writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.V1.Webhooks.WebhooksGetResponse_dataMember1>(null, WebhooksGetResponseDataMember1, WebhooksGetResponseDataMember2, WebhooksGetResponseDataMember3, WebhooksGetResponseDataMember4, WebhooksGetResponseDataMember5, WebhooksGetResponseDataMember6);
             }
         }
     }
