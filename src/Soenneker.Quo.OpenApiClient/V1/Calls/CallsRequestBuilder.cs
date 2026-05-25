@@ -46,7 +46,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Calls
         {
         }
         /// <summary>
-        /// Fetch a paginated list of calls associated with a specific OpenPhone number and another number.
+        /// Fetch a paginated list of calls associated with a specific Quo number and another number.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.V1.Calls.CallsGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -77,7 +77,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Calls
             return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.V1.Calls.CallsGetResponse>(requestInfo, global::Soenneker.Quo.OpenApiClient.V1.Calls.CallsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Fetch a paginated list of calls associated with a specific OpenPhone number and another number.
+        /// Fetch a paginated list of calls associated with a specific Quo number and another number.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -105,7 +105,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Calls
             return new global::Soenneker.Quo.OpenApiClient.V1.Calls.CallsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Fetch a paginated list of calls associated with a specific OpenPhone number and another number.
+        /// Fetch a paginated list of calls associated with a specific Quo number and another number.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class CallsRequestBuilderGetQueryParameters 

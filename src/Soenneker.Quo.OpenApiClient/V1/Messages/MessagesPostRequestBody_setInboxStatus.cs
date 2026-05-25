@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Quo.OpenApiClient.V1.Messages
 {
-    /// <summary>Used to set the status of the related OpenPhone inbox conversation. The default behavior without setting this parameter will be for the message sent to show up as an open conversation in the user&apos;s inbox. Setting the parameter to `&apos;done&apos;` would move the conversation to the Done inbox view.</summary>
+    /// <summary>Used to set the status of the related Quo inbox conversation. The default behavior without setting this parameter will be for the message sent to show up as an open conversation in the user&apos;s inbox. Setting the parameter to `&apos;done&apos;` would move the conversation to the Done inbox view.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum MessagesPostRequestBody_setInboxStatus
     {

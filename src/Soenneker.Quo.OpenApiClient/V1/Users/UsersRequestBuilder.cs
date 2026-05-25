@@ -46,7 +46,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Users
         {
         }
         /// <summary>
-        /// Retrieve a paginated list of users in your OpenPhone workspace.
+        /// Retrieve a paginated list of users in your Quo workspace.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.V1.Users.UsersGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -77,7 +77,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Users
             return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.V1.Users.UsersGetResponse>(requestInfo, global::Soenneker.Quo.OpenApiClient.V1.Users.UsersGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieve a paginated list of users in your OpenPhone workspace.
+        /// Retrieve a paginated list of users in your Quo workspace.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -105,7 +105,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Users
             return new global::Soenneker.Quo.OpenApiClient.V1.Users.UsersRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieve a paginated list of users in your OpenPhone workspace.
+        /// Retrieve a paginated list of users in your Quo workspace.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class UsersRequestBuilderGetQueryParameters 

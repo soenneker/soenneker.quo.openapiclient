@@ -54,7 +54,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Calls
 #endif
         /// <summary>The timestamp when the call record was created, in ISO 8601 format.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
-        /// <summary>The direction of the call relative to the OpenPhone number.</summary>
+        /// <summary>The direction of the call relative to the Quo number.</summary>
         public global::Soenneker.Quo.OpenApiClient.V1.Calls.CallsGetResponse_data_direction? Direction { get; set; }
         /// <summary>The total duration of the call in seconds.</summary>
         public int? Duration { get; set; }
@@ -98,7 +98,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Calls
 #else
         public List<string> Participants { get; set; }
 #endif
-        /// <summary>The unique identifier of the OpenPhone number associated with the call.</summary>
+        /// <summary>The unique identifier of the Quo number associated with the call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PhoneNumberId { get; set; }
@@ -116,7 +116,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Calls
 #else
         public global::Soenneker.Quo.OpenApiClient.V1.Calls.CallsGetResponse_data.CallsGetResponse_data_updatedAt UpdatedAt { get; set; }
 #endif
-        /// <summary>The unique identifier of the OpenPhone user account associated with the call.</summary>
+        /// <summary>The unique identifier of the Quo user account associated with the call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UserId { get; set; }

@@ -33,7 +33,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Conversations
         {
         }
         /// <summary>
-        /// Fetch a paginated list of conversations of OpenPhone conversations. Can be filtered by user and/or phone numbers. Defaults to all conversations in the OpenPhone organization. Results are returned in descending order based on the most recent conversation.
+        /// Fetch a paginated list of conversations of Quo conversations. Can be filtered by user and/or phone numbers. Defaults to all conversations in the Quo organization. Results are returned in descending order based on the most recent conversation.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.V1.Conversations.ConversationsGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -64,7 +64,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Conversations
             return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.V1.Conversations.ConversationsGetResponse>(requestInfo, global::Soenneker.Quo.OpenApiClient.V1.Conversations.ConversationsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Fetch a paginated list of conversations of OpenPhone conversations. Can be filtered by user and/or phone numbers. Defaults to all conversations in the OpenPhone organization. Results are returned in descending order based on the most recent conversation.
+        /// Fetch a paginated list of conversations of Quo conversations. Can be filtered by user and/or phone numbers. Defaults to all conversations in the Quo organization. Results are returned in descending order based on the most recent conversation.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -92,7 +92,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Conversations
             return new global::Soenneker.Quo.OpenApiClient.V1.Conversations.ConversationsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Fetch a paginated list of conversations of OpenPhone conversations. Can be filtered by user and/or phone numbers. Defaults to all conversations in the OpenPhone organization. Results are returned in descending order based on the most recent conversation.
+        /// Fetch a paginated list of conversations of Quo conversations. Can be filtered by user and/or phone numbers. Defaults to all conversations in the Quo organization. Results are returned in descending order based on the most recent conversation.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ConversationsRequestBuilderGetQueryParameters 

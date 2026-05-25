@@ -46,7 +46,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Messages
         {
         }
         /// <summary>
-        /// Retrieve a chronological list of messages exchanged between your OpenPhone number and specified participants, with support for filtering and pagination. 
+        /// Retrieve a chronological list of messages exchanged between your Quo number and specified participants, with support for filtering and pagination. 
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -79,7 +79,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Messages
             return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesGetResponse>(requestInfo, global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Send a text message from your OpenPhone number to a recipient.
+        /// Send a text message from your Quo number to a recipient.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesPostResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -114,7 +114,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Messages
             return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesPostResponse>(requestInfo, global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieve a chronological list of messages exchanged between your OpenPhone number and specified participants, with support for filtering and pagination. 
+        /// Retrieve a chronological list of messages exchanged between your Quo number and specified participants, with support for filtering and pagination. 
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -133,7 +133,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Messages
             return requestInfo;
         }
         /// <summary>
-        /// Send a text message from your OpenPhone number to a recipient.
+        /// Send a text message from your Quo number to a recipient.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -164,7 +164,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Messages
             return new global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieve a chronological list of messages exchanged between your OpenPhone number and specified participants, with support for filtering and pagination. 
+        /// Retrieve a chronological list of messages exchanged between your Quo number and specified participants, with support for filtering and pagination. 
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class MessagesRequestBuilderGetQueryParameters 

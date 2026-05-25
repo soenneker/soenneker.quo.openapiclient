@@ -33,7 +33,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Users.Item
         {
         }
         /// <summary>
-        /// Retrieve detailed information about a specific user in your OpenPhone workspace using the user&apos;s unique identifier.
+        /// Retrieve detailed information about a specific user in your Quo workspace using the user&apos;s unique identifier.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.V1.Users.Item.WithUserGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -64,7 +64,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Users.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.V1.Users.Item.WithUserGetResponse>(requestInfo, global::Soenneker.Quo.OpenApiClient.V1.Users.Item.WithUserGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieve detailed information about a specific user in your OpenPhone workspace using the user&apos;s unique identifier.
+        /// Retrieve detailed information about a specific user in your Quo workspace using the user&apos;s unique identifier.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

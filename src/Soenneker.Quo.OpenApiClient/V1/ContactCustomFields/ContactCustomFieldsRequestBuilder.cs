@@ -33,7 +33,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.ContactCustomFields
         {
         }
         /// <summary>
-        /// Custom contact fields enhance your OpenPhone contacts with additional information beyond standard details like name, company, role, emails and phone numbers. These user-defined fields let you capture business-specific data. While you can only create or modify these fields in OpenPhone itself, this endpoint retrieves your existing custom properties. Use this information to accurately map and include important custom data when creating new contacts via the API.
+        /// Custom contact fields enhance your Quo contacts with additional information beyond standard details like name, company, role, emails and phone numbers. These user-defined fields let you capture business-specific data. While you can only create or modify these fields in Quo itself, this endpoint retrieves your existing custom properties. Use this information to accurately map and include important custom data when creating new contacts via the API.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.V1.ContactCustomFields.ContactCustomFieldsGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -64,7 +64,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.ContactCustomFields
             return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.V1.ContactCustomFields.ContactCustomFieldsGetResponse>(requestInfo, global::Soenneker.Quo.OpenApiClient.V1.ContactCustomFields.ContactCustomFieldsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Custom contact fields enhance your OpenPhone contacts with additional information beyond standard details like name, company, role, emails and phone numbers. These user-defined fields let you capture business-specific data. While you can only create or modify these fields in OpenPhone itself, this endpoint retrieves your existing custom properties. Use this information to accurately map and include important custom data when creating new contacts via the API.
+        /// Custom contact fields enhance your Quo contacts with additional information beyond standard details like name, company, role, emails and phone numbers. These user-defined fields let you capture business-specific data. While you can only create or modify these fields in Quo itself, this endpoint retrieves your existing custom properties. Use this information to accurately map and include important custom data when creating new contacts via the API.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

@@ -30,7 +30,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Messages
 #else
         public global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesPostRequestBody.MessagesPostRequestBody_from From { get; set; }
 #endif
-        /// <summary>DEPRECATED, use &quot;from&quot; instead. OpenPhone phone number ID to send a message from</summary>
+        /// <summary>DEPRECATED, use &quot;from&quot; instead. Quo phone number ID to send a message from</summary>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -39,7 +39,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Messages
 #else
         public string PhoneNumberId { get; set; }
 #endif
-        /// <summary>Used to set the status of the related OpenPhone inbox conversation. The default behavior without setting this parameter will be for the message sent to show up as an open conversation in the user&apos;s inbox. Setting the parameter to `&apos;done&apos;` would move the conversation to the Done inbox view.</summary>
+        /// <summary>Used to set the status of the related Quo inbox conversation. The default behavior without setting this parameter will be for the message sent to show up as an open conversation in the user&apos;s inbox. Setting the parameter to `&apos;done&apos;` would move the conversation to the Done inbox view.</summary>
         public global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesPostRequestBody_setInboxStatus? SetInboxStatus { get; set; }
         /// <summary>The to property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -49,7 +49,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Messages
 #else
         public List<string> To { get; set; }
 #endif
-        /// <summary>The unique identifier of the OpenPhone user sending the message. If not provided, defaults to the phone number owner.</summary>
+        /// <summary>The unique identifier of the Quo user sending the message. If not provided, defaults to the phone number owner.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UserId { get; set; }

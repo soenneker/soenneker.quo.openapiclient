@@ -22,7 +22,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Contacts.Item
 #else
         public string Key { get; set; }
 #endif
-        /// <summary>The name of the custom contact field. This name is set by users in the OpenPhone interface when the custom field is created.</summary>
+        /// <summary>The name of the custom contact field. This name is set by users in the Quo interface when the custom field is created.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }

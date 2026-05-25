@@ -1,15 +1,15 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "OpenPhone Public API",
+    "title": "Quo Public API",
     "version": "1.0.0",
-    "description": "API for connecting with OpenPhone.",
+    "description": "API for connecting with Quo.",
     "contact": {
-      "name": "OpenPhone Support",
-      "email": "support@openphone.com",
-      "url": "https://support.openphone.com/hc/en-us"
+      "name": "Quo Support",
+      "email": "support@quo.com",
+      "url": "https://support.quo.com/"
     },
-    "termsOfService": "https://www.openphone.com/terms"
+    "termsOfService": "https://www.quo.com/terms"
   },
   "paths": {
     "/v1/call-recordings/{callId}": {
@@ -532,7 +532,7 @@
           "Calls"
         ],
         "summary": "List calls",
-        "description": "Fetch a paginated list of calls associated with a specific OpenPhone number and another number.",
+        "description": "Fetch a paginated list of calls associated with a specific Quo number and another number.",
         "operationId": "listCalls_v1",
         "parameters": [
           {
@@ -540,7 +540,7 @@
             "name": "phoneNumberId",
             "required": true,
             "schema": {
-              "description": "The unique identifier of the OpenPhone number associated with the call.",
+              "description": "The unique identifier of the Quo number associated with the call.",
               "examples": [
                 "PN123abc"
               ],
@@ -553,7 +553,7 @@
             "name": "userId",
             "required": false,
             "schema": {
-              "description": "The unique identifier of the OpenPhone user who either placed or received the call. Defaults to the workspace owner.",
+              "description": "The unique identifier of the Quo user who either placed or received the call. Defaults to the workspace owner.",
               "examples": [
                 "US123abc"
               ],
@@ -567,7 +567,7 @@
             "required": true,
             "schema": {
               "maxItems": 1,
-              "description": "The phone numbers of participants involved in the call conversation, excluding your OpenPhone number. Each number should contain the country code and conform to the E.164 format. Currently limited to one-to-one (1:1) conversations only.",
+              "description": "The phone numbers of participants involved in the call conversation, excluding your Quo number. Each number should contain the country code and conform to the E.164 format. Currently limited to one-to-one (1:1) conversations only.",
               "examples": [
                 "+15555555555"
               ],
@@ -676,7 +676,7 @@
                           "answeredBy": {
                             "anyOf": [
                               {
-                                "description": "The unique identifier of the OpenPhone user who answered the incoming call. Null for outgoing calls or unanswered incoming calls.",
+                                "description": "The unique identifier of the Quo user who answered the incoming call. Null for outgoing calls or unanswered incoming calls.",
                                 "examples": [
                                   "USlHhXmRMz"
                                 ],
@@ -690,7 +690,7 @@
                           "initiatedBy": {
                             "anyOf": [
                               {
-                                "description": "The unique identifier of the OpenPhone user who initiated the outgoing call. Null for incoming calls.",
+                                "description": "The unique identifier of the Quo user who initiated the outgoing call. Null for incoming calls.",
                                 "examples": [
                                   "USlHhXmRMz"
                                 ],
@@ -707,7 +707,7 @@
                               "incoming",
                               "outgoing"
                             ],
-                            "description": "The direction of the call relative to the OpenPhone number.",
+                            "description": "The direction of the call relative to the Quo number.",
                             "examples": [
                               "incoming"
                             ]
@@ -848,7 +848,7 @@
                             "type": "string"
                           },
                           "phoneNumberId": {
-                            "description": "The unique identifier of the OpenPhone number associated with the call.",
+                            "description": "The unique identifier of the Quo number associated with the call.",
                             "examples": [
                               "PN123abc"
                             ],
@@ -883,7 +883,7 @@
                             ]
                           },
                           "userId": {
-                            "description": "The unique identifier of the OpenPhone user account associated with the call.",
+                            "description": "The unique identifier of the Quo user account associated with the call.",
                             "examples": [
                               "US123abc"
                             ],
@@ -1367,7 +1367,7 @@
                         "answeredBy": {
                           "anyOf": [
                             {
-                              "description": "The unique identifier of the OpenPhone user who answered the incoming call. Null for outgoing calls or unanswered incoming calls.",
+                              "description": "The unique identifier of the Quo user who answered the incoming call. Null for outgoing calls or unanswered incoming calls.",
                               "examples": [
                                 "USlHhXmRMz"
                               ],
@@ -1381,7 +1381,7 @@
                         "initiatedBy": {
                           "anyOf": [
                             {
-                              "description": "The unique identifier of the OpenPhone user who initiated the outgoing call. Null for incoming calls.",
+                              "description": "The unique identifier of the Quo user who initiated the outgoing call. Null for incoming calls.",
                               "examples": [
                                 "USlHhXmRMz"
                               ],
@@ -1398,7 +1398,7 @@
                             "incoming",
                             "outgoing"
                           ],
-                          "description": "The direction of the call relative to the OpenPhone number.",
+                          "description": "The direction of the call relative to the Quo number.",
                           "examples": [
                             "incoming"
                           ]
@@ -1539,7 +1539,7 @@
                           "type": "string"
                         },
                         "phoneNumberId": {
-                          "description": "The unique identifier of the OpenPhone number associated with the call.",
+                          "description": "The unique identifier of the Quo number associated with the call.",
                           "examples": [
                             "PN123abc"
                           ],
@@ -1574,7 +1574,7 @@
                           ]
                         },
                         "userId": {
-                          "description": "The unique identifier of the OpenPhone user account associated with the call.",
+                          "description": "The unique identifier of the Quo user account associated with the call.",
                           "examples": [
                             "US123abc"
                           ],
@@ -2614,7 +2614,7 @@
                                   "userId": {
                                     "anyOf": [
                                       {
-                                        "description": "The unique identifier of the OpenPhone user who spoke during this dialogue segment. Null for external participants or if user identification is not available.",
+                                        "description": "The unique identifier of the Quo user who spoke during this dialogue segment. Null for external participants or if user identification is not available.",
                                         "examples": [
                                           "US123abc"
                                         ],
@@ -3530,7 +3530,7 @@
           "Contact Custom Fields"
         ],
         "summary": "Get contact custom fields",
-        "description": "Custom contact fields enhance your OpenPhone contacts with additional information beyond standard details like name, company, role, emails and phone numbers. These user-defined fields let you capture business-specific data. While you can only create or modify these fields in OpenPhone itself, this endpoint retrieves your existing custom properties. Use this information to accurately map and include important custom data when creating new contacts via the API.",
+        "description": "Custom contact fields enhance your Quo contacts with additional information beyond standard details like name, company, role, emails and phone numbers. These user-defined fields let you capture business-specific data. While you can only create or modify these fields in Quo itself, this endpoint retrieves your existing custom properties. Use this information to accurately map and include important custom data when creating new contacts via the API.",
         "operationId": "getContactCustomFields_v1",
         "parameters": [],
         "security": [
@@ -3552,7 +3552,7 @@
                         "type": "object",
                         "properties": {
                           "name": {
-                            "description": "The name of the custom contact field. This name is set by users in the OpenPhone interface when the custom field is created.",
+                            "description": "The name of the custom contact field. This name is set by users in the Quo interface when the custom field is created.",
                             "examples": [
                               "Inbound Lead"
                             ],
@@ -3989,7 +3989,7 @@
                           {
                             "description": "The contact's company name.",
                             "examples": [
-                              "OpenPhone"
+                              "Quo"
                             ],
                             "type": "string"
                           },
@@ -4357,7 +4357,7 @@
                                 {
                                   "description": "The contact's company name.",
                                   "examples": [
-                                    "OpenPhone"
+                                    "Quo"
                                   ],
                                   "type": "string"
                                 },
@@ -4506,7 +4506,7 @@
                                 "type": "object",
                                 "properties": {
                                   "name": {
-                                    "description": "The name of the custom contact field. This name is set by users in the OpenPhone interface when the custom field is created.",
+                                    "description": "The name of the custom contact field. This name is set by users in the Quo interface when the custom field is created.",
                                     "examples": [
                                       "Inbound Lead"
                                     ],
@@ -5304,7 +5304,7 @@
                                   {
                                     "description": "The contact's company name.",
                                     "examples": [
-                                      "OpenPhone"
+                                      "Quo"
                                     ],
                                     "type": "string"
                                   },
@@ -5453,7 +5453,7 @@
                                   "type": "object",
                                   "properties": {
                                     "name": {
-                                      "description": "The name of the custom contact field. This name is set by users in the OpenPhone interface when the custom field is created.",
+                                      "description": "The name of the custom contact field. This name is set by users in the Quo interface when the custom field is created.",
                                       "examples": [
                                         "Inbound Lead"
                                       ],
@@ -6129,7 +6129,7 @@
           "Contacts"
         ],
         "summary": "Get a contact by ID",
-        "description": "Retrieve detailed information about a specific contact in your OpenPhone workspace using the contact's unique identifier.",
+        "description": "Retrieve detailed information about a specific contact in your Quo workspace using the contact's unique identifier.",
         "operationId": "getContactById_v1",
         "parameters": [
           {
@@ -6225,7 +6225,7 @@
                                 {
                                   "description": "The contact's company name.",
                                   "examples": [
-                                    "OpenPhone"
+                                    "Quo"
                                   ],
                                   "type": "string"
                                 },
@@ -6374,7 +6374,7 @@
                                 "type": "object",
                                 "properties": {
                                   "name": {
-                                    "description": "The name of the custom contact field. This name is set by users in the OpenPhone interface when the custom field is created.",
+                                    "description": "The name of the custom contact field. This name is set by users in the Quo interface when the custom field is created.",
                                     "examples": [
                                       "Inbound Lead"
                                     ],
@@ -7031,7 +7031,7 @@
           "Contacts"
         ],
         "summary": "Update a contact by ID",
-        "description": "Modify an existing contact in your OpenPhone workspace using the contact's unique identifier.",
+        "description": "Modify an existing contact in your Quo workspace using the contact's unique identifier.",
         "operationId": "updateContactById_v1",
         "parameters": [
           {
@@ -7116,7 +7116,7 @@
                           {
                             "description": "The contact's company name.",
                             "examples": [
-                              "OpenPhone"
+                              "Quo"
                             ],
                             "type": "string"
                           },
@@ -7453,7 +7453,7 @@
                                 {
                                   "description": "The contact's company name.",
                                   "examples": [
-                                    "OpenPhone"
+                                    "Quo"
                                   ],
                                   "type": "string"
                                 },
@@ -7602,7 +7602,7 @@
                                 "type": "object",
                                 "properties": {
                                   "name": {
-                                    "description": "The name of the custom contact field. This name is set by users in the OpenPhone interface when the custom field is created.",
+                                    "description": "The name of the custom contact field. This name is set by users in the Quo interface when the custom field is created.",
                                     "examples": [
                                       "Inbound Lead"
                                     ],
@@ -8728,7 +8728,7 @@
           "Conversations"
         ],
         "summary": "List Conversations",
-        "description": "Fetch a paginated list of conversations of OpenPhone conversations. Can be filtered by user and/or phone numbers. Defaults to all conversations in the OpenPhone organization. Results are returned in descending order based on the most recent conversation.",
+        "description": "Fetch a paginated list of conversations of Quo conversations. Can be filtered by user and/or phone numbers. Defaults to all conversations in the Quo organization. Results are returned in descending order based on the most recent conversation.",
         "operationId": "listConversations_v1",
         "parameters": [
           {
@@ -8736,7 +8736,7 @@
             "name": "phoneNumber",
             "required": false,
             "schema": {
-              "description": "DEPRECATED, use `phoneNumbers` instead. If both `phoneNumber` and `phoneNumbers` are provided, `phoneNumbers` will be used. Filters results to only include conversations with the specified OpenPhone phone number. Can be either your OpenPhone phone number ID or the full phone number in E.164 format.",
+              "description": "DEPRECATED, use `phoneNumbers` instead. If both `phoneNumber` and `phoneNumbers` are provided, `phoneNumbers` will be used. Filters results to only include conversations with the specified Quo phone number. Can be either your Quo phone number ID or the full phone number in E.164 format.",
               "examples": [
                 "+15555555555",
                 "PN123abc"
@@ -8763,7 +8763,7 @@
             "name": "phoneNumbers",
             "required": false,
             "schema": {
-              "description": "Filters results to only include conversations with the specified OpenPhone phone numbers. Each item can be either an OpenPhone phone number ID or a full phone number in E.164 format.",
+              "description": "Filters results to only include conversations with the specified Quo phone numbers. Each item can be either an Quo phone number ID or a full phone number in E.164 format.",
               "examples": [
                 [
                   "+15555555555",
@@ -9438,7 +9438,7 @@
           "Messages"
         ],
         "summary": "Send a text message",
-        "description": "Send a text message from your OpenPhone number to a recipient.",
+        "description": "Send a text message from your Quo number to a recipient.",
         "operationId": "sendMessage_v1",
         "parameters": [],
         "security": [
@@ -9461,7 +9461,7 @@
                     "type": "string"
                   },
                   "phoneNumberId": {
-                    "description": "DEPRECATED, use \"from\" instead. OpenPhone phone number ID to send a message from",
+                    "description": "DEPRECATED, use \"from\" instead. Quo phone number ID to send a message from",
                     "examples": [
                       "OP1232abc"
                     ],
@@ -9507,7 +9507,7 @@
                     }
                   },
                   "userId": {
-                    "description": "The unique identifier of the OpenPhone user sending the message. If not provided, defaults to the phone number owner.",
+                    "description": "The unique identifier of the Quo user sending the message. If not provided, defaults to the phone number owner.",
                     "examples": [
                       "US123abc"
                     ],
@@ -9519,7 +9519,7 @@
                     "enum": [
                       "done"
                     ],
-                    "description": "Used to set the status of the related OpenPhone inbox conversation. The default behavior without setting this parameter will be for the message sent to show up as an open conversation in the user's inbox. Setting the parameter to `'done'` would move the conversation to the Done inbox view.",
+                    "description": "Used to set the status of the related Quo inbox conversation. The default behavior without setting this parameter will be for the message sent to show up as an open conversation in the user's inbox. Setting the parameter to `'done'` would move the conversation to the Done inbox view.",
                     "examples": [
                       "done"
                     ]
@@ -9582,7 +9582,7 @@
                         "phoneNumberId": {
                           "anyOf": [
                             {
-                              "description": "The unique identifier of the OpenPhone phone number that the message was sent from.",
+                              "description": "The unique identifier of the Quo phone number that the message was sent from.",
                               "examples": [
                                 "PN123abc"
                               ],
@@ -9600,7 +9600,7 @@
                             "incoming",
                             "outgoing"
                           ],
-                          "description": "The direction of the message relative to the OpenPhone number.",
+                          "description": "The direction of the message relative to the Quo number.",
                           "examples": [
                             "incoming"
                           ]
@@ -10119,7 +10119,7 @@
           "Messages"
         ],
         "summary": "List messages",
-        "description": "Retrieve a chronological list of messages exchanged between your OpenPhone number and specified participants, with support for filtering and pagination. ",
+        "description": "Retrieve a chronological list of messages exchanged between your Quo number and specified participants, with support for filtering and pagination. ",
         "operationId": "listMessages_v1",
         "parameters": [
           {
@@ -10127,7 +10127,7 @@
             "name": "phoneNumberId",
             "required": true,
             "schema": {
-              "description": "The unique identifier of the OpenPhone number used to send or receive the messages. PhoneNumberID can be retrieved via the Get Phone Numbers endpoint.",
+              "description": "The unique identifier of the Quo number used to send or receive the messages. PhoneNumberID can be retrieved via the Get Phone Numbers endpoint.",
               "examples": [
                 "OP123abc"
               ],
@@ -10153,7 +10153,7 @@
             "name": "participants",
             "required": true,
             "schema": {
-              "description": "Array of phone numbers involved in the conversation, excluding your OpenPhone number, in E.164 format.",
+              "description": "Array of phone numbers involved in the conversation, excluding your Quo number, in E.164 format.",
               "examples": [
                 "+15555555555"
               ],
@@ -10284,7 +10284,7 @@
                           "phoneNumberId": {
                             "anyOf": [
                               {
-                                "description": "The unique identifier of the OpenPhone phone number that the message was sent from.",
+                                "description": "The unique identifier of the Quo phone number that the message was sent from.",
                                 "examples": [
                                   "PN123abc"
                                 ],
@@ -10302,7 +10302,7 @@
                               "incoming",
                               "outgoing"
                             ],
-                            "description": "The direction of the message relative to the OpenPhone number.",
+                            "description": "The direction of the message relative to the Quo number.",
                             "examples": [
                               "incoming"
                             ]
@@ -10910,7 +10910,7 @@
                         "phoneNumberId": {
                           "anyOf": [
                             {
-                              "description": "The unique identifier of the OpenPhone phone number that the message was sent from.",
+                              "description": "The unique identifier of the Quo phone number that the message was sent from.",
                               "examples": [
                                 "PN123abc"
                               ],
@@ -10928,7 +10928,7 @@
                             "incoming",
                             "outgoing"
                           ],
-                          "description": "The direction of the message relative to the OpenPhone number.",
+                          "description": "The direction of the message relative to the Quo number.",
                           "examples": [
                             "incoming"
                           ]
@@ -11449,7 +11449,7 @@
           "Phone Numbers"
         ],
         "summary": "List phone numbers",
-        "description": "Retrieve the list of phone numbers and users associated with your OpenPhone workspace.",
+        "description": "Retrieve the list of phone numbers and users associated with your Quo workspace.",
         "operationId": "listPhoneNumbers_v1",
         "parameters": [
           {
@@ -11885,7 +11885,7 @@
                       "type": "object",
                       "properties": {
                         "id": {
-                          "description": "The unique identifier of OpenPhone phone number.",
+                          "description": "The unique identifier of Quo phone number.",
                           "examples": [
                             "PN123bc"
                           ],
@@ -11893,7 +11893,7 @@
                           "type": "string"
                         },
                         "groupId": {
-                          "description": "The unique identifier of the group to which the OpenPhone number belongs.",
+                          "description": "The unique identifier of the group to which the Quo number belongs.",
                           "examples": [
                             "1234"
                           ],
@@ -12577,7 +12577,7 @@
           "Users"
         ],
         "summary": "List users",
-        "description": "Retrieve a paginated list of users in your OpenPhone workspace.",
+        "description": "Retrieve a paginated list of users in your Quo workspace.",
         "operationId": "listUsers_v1",
         "parameters": [
           {
@@ -13110,7 +13110,7 @@
           "Users"
         ],
         "summary": "Get a user by ID",
-        "description": "Retrieve detailed information about a specific user in your OpenPhone workspace using the user's unique identifier.",
+        "description": "Retrieve detailed information about a specific user in your Quo workspace using the user's unique identifier.",
         "operationId": "getUserById_v1",
         "parameters": [
           {
@@ -19019,7 +19019,7 @@
               "type": "object",
               "properties": {
                 "id": {
-                  "description": "The unique identifier of OpenPhone phone number.",
+                  "description": "The unique identifier of Quo phone number.",
                   "examples": [
                     "PN123bc"
                   ],
@@ -19027,7 +19027,7 @@
                   "type": "string"
                 },
                 "groupId": {
-                  "description": "The unique identifier of the group to which the OpenPhone number belongs.",
+                  "description": "The unique identifier of the group to which the Quo number belongs.",
                   "examples": [
                     "1234"
                   ],

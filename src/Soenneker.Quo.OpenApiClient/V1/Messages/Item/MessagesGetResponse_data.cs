@@ -16,7 +16,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Messages.Item
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The timestamp when the message was created at, in ISO 8601 format</summary>
         public DateTimeOffset? CreatedAt { get; set; }
-        /// <summary>The direction of the message relative to the OpenPhone number.</summary>
+        /// <summary>The direction of the message relative to the Quo number.</summary>
         public global::Soenneker.Quo.OpenApiClient.V1.Messages.Item.MessagesGetResponse_data_direction? Direction { get; set; }
         /// <summary>A phone number in E.164 format, including the country code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Quo.OpenApiClient.V1.Calls
 {
-    /// <summary>The direction of the call relative to the OpenPhone number.</summary>
+    /// <summary>The direction of the call relative to the Quo number.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum CallsGetResponse_data_direction
     {

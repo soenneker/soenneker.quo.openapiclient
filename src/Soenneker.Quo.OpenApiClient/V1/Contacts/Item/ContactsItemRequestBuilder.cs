@@ -65,7 +65,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Contacts.Item
             await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieve detailed information about a specific contact in your OpenPhone workspace using the contact&apos;s unique identifier.
+        /// Retrieve detailed information about a specific contact in your Quo workspace using the contact&apos;s unique identifier.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.V1.Contacts.Item.ContactsGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -98,7 +98,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Contacts.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.V1.Contacts.Item.ContactsGetResponse>(requestInfo, global::Soenneker.Quo.OpenApiClient.V1.Contacts.Item.ContactsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Modify an existing contact in your OpenPhone workspace using the contact&apos;s unique identifier.
+        /// Modify an existing contact in your Quo workspace using the contact&apos;s unique identifier.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.V1.Contacts.Item.ContactsPatchResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -152,7 +152,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Contacts.Item
             return requestInfo;
         }
         /// <summary>
-        /// Retrieve detailed information about a specific contact in your OpenPhone workspace using the contact&apos;s unique identifier.
+        /// Retrieve detailed information about a specific contact in your Quo workspace using the contact&apos;s unique identifier.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -171,7 +171,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Contacts.Item
             return requestInfo;
         }
         /// <summary>
-        /// Modify an existing contact in your OpenPhone workspace using the contact&apos;s unique identifier.
+        /// Modify an existing contact in your Quo workspace using the contact&apos;s unique identifier.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

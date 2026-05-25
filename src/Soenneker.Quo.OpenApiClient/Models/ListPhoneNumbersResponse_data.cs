@@ -38,7 +38,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
 #else
         public global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_forward Forward { get; set; }
 #endif
-        /// <summary>The unique identifier of the group to which the OpenPhone number belongs.</summary>
+        /// <summary>The unique identifier of the group to which the Quo number belongs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? GroupId { get; set; }
@@ -46,7 +46,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
 #else
         public string GroupId { get; set; }
 #endif
-        /// <summary>The unique identifier of OpenPhone phone number.</summary>
+        /// <summary>The unique identifier of Quo phone number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
