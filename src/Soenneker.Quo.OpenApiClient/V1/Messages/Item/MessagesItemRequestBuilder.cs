@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Quo.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -35,35 +36,35 @@ namespace Soenneker.Quo.OpenApiClient.V1.Messages.Item
         /// <summary>
         /// Get a message by its unique identifier.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.V1.Messages.Item.MessagesGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetMessageByIdV1200"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Messages.Item.Messages400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Messages.Item.Messages401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Messages.Item.Messages402Error">When receiving a 402 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Messages.Item.Messages403Error">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Messages.Item.Messages404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Messages.Item.Messages500Error">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetMessageByIdV1400">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetMessageByIdV1401">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetMessageByIdV1402">When receiving a 402 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetMessageByIdV1403">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetMessageByIdV1404">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetMessageByIdV1500">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Messages.Item.MessagesGetResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Quo.OpenApiClient.Models.GetMessageByIdV1200?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Messages.Item.MessagesGetResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Quo.OpenApiClient.Models.GetMessageByIdV1200> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Quo.OpenApiClient.V1.Messages.Item.Messages400Error.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Quo.OpenApiClient.V1.Messages.Item.Messages401Error.CreateFromDiscriminatorValue },
-                { "402", global::Soenneker.Quo.OpenApiClient.V1.Messages.Item.Messages402Error.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Quo.OpenApiClient.V1.Messages.Item.Messages403Error.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Quo.OpenApiClient.V1.Messages.Item.Messages404Error.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Quo.OpenApiClient.V1.Messages.Item.Messages500Error.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Quo.OpenApiClient.Models.GetMessageByIdV1400.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Quo.OpenApiClient.Models.GetMessageByIdV1401.CreateFromDiscriminatorValue },
+                { "402", global::Soenneker.Quo.OpenApiClient.Models.GetMessageByIdV1402.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Quo.OpenApiClient.Models.GetMessageByIdV1403.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Quo.OpenApiClient.Models.GetMessageByIdV1404.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Quo.OpenApiClient.Models.GetMessageByIdV1500.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.V1.Messages.Item.MessagesGetResponse>(requestInfo, global::Soenneker.Quo.OpenApiClient.V1.Messages.Item.MessagesGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.Models.GetMessageByIdV1200>(requestInfo, global::Soenneker.Quo.OpenApiClient.Models.GetMessageByIdV1200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get a message by its unique identifier.

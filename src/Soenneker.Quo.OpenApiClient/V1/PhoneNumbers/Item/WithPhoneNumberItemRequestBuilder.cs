@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Quo.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -35,33 +36,33 @@ namespace Soenneker.Quo.OpenApiClient.V1.PhoneNumbers.Item
         /// <summary>
         /// Get a phone number by its unique identifier.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.V1.PhoneNumbers.Item.WithPhoneNumberGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.PhoneNumbers.Item.WithPhoneNumber400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.PhoneNumbers.Item.WithPhoneNumber401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.PhoneNumbers.Item.WithPhoneNumber403Error">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.PhoneNumbers.Item.WithPhoneNumber404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.PhoneNumbers.Item.WithPhoneNumber500Error">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1400">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1401">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1403">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1404">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1500">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.PhoneNumbers.Item.WithPhoneNumberGetResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.PhoneNumbers.Item.WithPhoneNumberGetResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Quo.OpenApiClient.V1.PhoneNumbers.Item.WithPhoneNumber400Error.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Quo.OpenApiClient.V1.PhoneNumbers.Item.WithPhoneNumber401Error.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Quo.OpenApiClient.V1.PhoneNumbers.Item.WithPhoneNumber403Error.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Quo.OpenApiClient.V1.PhoneNumbers.Item.WithPhoneNumber404Error.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Quo.OpenApiClient.V1.PhoneNumbers.Item.WithPhoneNumber500Error.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1400.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1401.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1403.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1404.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1500.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.V1.PhoneNumbers.Item.WithPhoneNumberGetResponse>(requestInfo, global::Soenneker.Quo.OpenApiClient.V1.PhoneNumbers.Item.WithPhoneNumberGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200>(requestInfo, global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get a phone number by its unique identifier.

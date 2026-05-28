@@ -22,21 +22,21 @@ namespace Soenneker.Quo.OpenApiClient.Models
 #else
         public string CreatedAt { get; set; }
 #endif
-        /// <summary>The formattedNumber property</summary>
+        /// <summary>A human-readable representation of a phone number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_formattedNumber? FormattedNumber { get; set; }
+        public string? FormattedNumber { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_formattedNumber FormattedNumber { get; set; }
+        public string FormattedNumber { get; set; }
 #endif
-        /// <summary>The forward property</summary>
+        /// <summary>Forwarding number for incoming calls, null if no forwarding number is configured.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_forward? Forward { get; set; }
+        public string? Forward { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_forward Forward { get; set; }
+        public string Forward { get; set; }
 #endif
         /// <summary>The unique identifier of the group to which the Quo number belongs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -70,21 +70,21 @@ namespace Soenneker.Quo.OpenApiClient.Models
 #else
         public string Number { get; set; }
 #endif
-        /// <summary>The portingStatus property</summary>
+        /// <summary>Current status of the porting process, if applicable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_portingStatus? PortingStatus { get; set; }
+        public string? PortingStatus { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_portingStatus PortingStatus { get; set; }
+        public string PortingStatus { get; set; }
 #endif
-        /// <summary>The portRequestId property</summary>
+        /// <summary>Unique identifier for the phone number’s porting request, if applicable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_portRequestId? PortRequestId { get; set; }
+        public string? PortRequestId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_portRequestId PortRequestId { get; set; }
+        public string PortRequestId { get; set; }
 #endif
         /// <summary>The restrictions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -94,13 +94,13 @@ namespace Soenneker.Quo.OpenApiClient.Models
 #else
         public global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_restrictions Restrictions { get; set; }
 #endif
-        /// <summary>The symbol property</summary>
+        /// <summary>Custom symbol or emoji associated with the phone number.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_symbol? Symbol { get; set; }
+        public string? Symbol { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_symbol Symbol { get; set; }
+        public string Symbol { get; set; }
 #endif
         /// <summary>Timestamp of the last update to the phone number&apos;s details in ISO 8601 format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -144,16 +144,16 @@ namespace Soenneker.Quo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "createdAt", n => { CreatedAt = n.GetStringValue(); } },
-                { "formattedNumber", n => { FormattedNumber = n.GetObjectValue<global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_formattedNumber>(global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_formattedNumber.CreateFromDiscriminatorValue); } },
-                { "forward", n => { Forward = n.GetObjectValue<global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_forward>(global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_forward.CreateFromDiscriminatorValue); } },
+                { "formattedNumber", n => { FormattedNumber = n.GetStringValue(); } },
+                { "forward", n => { Forward = n.GetStringValue(); } },
                 { "groupId", n => { GroupId = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "number", n => { Number = n.GetStringValue(); } },
-                { "portRequestId", n => { PortRequestId = n.GetObjectValue<global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_portRequestId>(global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_portRequestId.CreateFromDiscriminatorValue); } },
-                { "portingStatus", n => { PortingStatus = n.GetObjectValue<global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_portingStatus>(global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_portingStatus.CreateFromDiscriminatorValue); } },
+                { "portRequestId", n => { PortRequestId = n.GetStringValue(); } },
+                { "portingStatus", n => { PortingStatus = n.GetStringValue(); } },
                 { "restrictions", n => { Restrictions = n.GetObjectValue<global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_restrictions>(global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_restrictions.CreateFromDiscriminatorValue); } },
-                { "symbol", n => { Symbol = n.GetObjectValue<global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_symbol>(global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_symbol.CreateFromDiscriminatorValue); } },
+                { "symbol", n => { Symbol = n.GetStringValue(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetStringValue(); } },
                 { "users", n => { Users = n.GetCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_users>(global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_users.CreateFromDiscriminatorValue)?.AsList(); } },
             };
@@ -166,359 +166,19 @@ namespace Soenneker.Quo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("createdAt", CreatedAt);
-            writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_formattedNumber>("formattedNumber", FormattedNumber);
-            writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_forward>("forward", Forward);
+            writer.WriteStringValue("formattedNumber", FormattedNumber);
+            writer.WriteStringValue("forward", Forward);
             writer.WriteStringValue("groupId", GroupId);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("number", Number);
-            writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_portingStatus>("portingStatus", PortingStatus);
-            writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_portRequestId>("portRequestId", PortRequestId);
+            writer.WriteStringValue("portingStatus", PortingStatus);
+            writer.WriteStringValue("portRequestId", PortRequestId);
             writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_restrictions>("restrictions", Restrictions);
-            writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_symbol>("symbol", Symbol);
+            writer.WriteStringValue("symbol", Symbol);
             writer.WriteStringValue("updatedAt", UpdatedAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_users>("users", Users);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_formattedNumberMember1"/>, <see cref="string"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ListPhoneNumbersResponse_data_formattedNumber : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_formattedNumberMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_formattedNumberMember1? ListPhoneNumbersResponseDataFormattedNumberMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_formattedNumberMember1 ListPhoneNumbersResponseDataFormattedNumberMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="string"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public string? String { get; set; }
-#nullable restore
-#else
-            public string String { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_formattedNumber"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_formattedNumber CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_formattedNumber();
-                if(parseNode.GetStringValue() is string stringValue)
-                {
-                    result.String = stringValue;
-                }
-                else {
-                    result.ListPhoneNumbersResponseDataFormattedNumberMember1 = new global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_formattedNumberMember1();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ListPhoneNumbersResponseDataFormattedNumberMember1 != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(ListPhoneNumbersResponseDataFormattedNumberMember1);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(String != null)
-                {
-                    writer.WriteStringValue(null, String);
-                }
-                else {
-                    writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_formattedNumberMember1>(null, ListPhoneNumbersResponseDataFormattedNumberMember1);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_forwardMember1"/>, <see cref="string"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ListPhoneNumbersResponse_data_forward : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_forwardMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_forwardMember1? ListPhoneNumbersResponseDataForwardMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_forwardMember1 ListPhoneNumbersResponseDataForwardMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="string"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public string? String { get; set; }
-#nullable restore
-#else
-            public string String { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_forward"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_forward CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_forward();
-                if(parseNode.GetStringValue() is string stringValue)
-                {
-                    result.String = stringValue;
-                }
-                else {
-                    result.ListPhoneNumbersResponseDataForwardMember1 = new global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_forwardMember1();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ListPhoneNumbersResponseDataForwardMember1 != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(ListPhoneNumbersResponseDataForwardMember1);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(String != null)
-                {
-                    writer.WriteStringValue(null, String);
-                }
-                else {
-                    writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_forwardMember1>(null, ListPhoneNumbersResponseDataForwardMember1);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_portingStatusMember1"/>, <see cref="string"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ListPhoneNumbersResponse_data_portingStatus : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_portingStatusMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_portingStatusMember1? ListPhoneNumbersResponseDataPortingStatusMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_portingStatusMember1 ListPhoneNumbersResponseDataPortingStatusMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="string"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public string? String { get; set; }
-#nullable restore
-#else
-            public string String { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_portingStatus"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_portingStatus CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_portingStatus();
-                if(parseNode.GetStringValue() is string stringValue)
-                {
-                    result.String = stringValue;
-                }
-                else {
-                    result.ListPhoneNumbersResponseDataPortingStatusMember1 = new global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_portingStatusMember1();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ListPhoneNumbersResponseDataPortingStatusMember1 != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(ListPhoneNumbersResponseDataPortingStatusMember1);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(String != null)
-                {
-                    writer.WriteStringValue(null, String);
-                }
-                else {
-                    writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_portingStatusMember1>(null, ListPhoneNumbersResponseDataPortingStatusMember1);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_portRequestIdMember1"/>, <see cref="string"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ListPhoneNumbersResponse_data_portRequestId : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_portRequestIdMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_portRequestIdMember1? ListPhoneNumbersResponseDataPortRequestIdMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_portRequestIdMember1 ListPhoneNumbersResponseDataPortRequestIdMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="string"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public string? String { get; set; }
-#nullable restore
-#else
-            public string String { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_portRequestId"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_portRequestId CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_portRequestId();
-                if(parseNode.GetStringValue() is string stringValue)
-                {
-                    result.String = stringValue;
-                }
-                else {
-                    result.ListPhoneNumbersResponseDataPortRequestIdMember1 = new global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_portRequestIdMember1();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ListPhoneNumbersResponseDataPortRequestIdMember1 != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(ListPhoneNumbersResponseDataPortRequestIdMember1);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(String != null)
-                {
-                    writer.WriteStringValue(null, String);
-                }
-                else {
-                    writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_portRequestIdMember1>(null, ListPhoneNumbersResponseDataPortRequestIdMember1);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_symbolMember1"/>, <see cref="string"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class ListPhoneNumbersResponse_data_symbol : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_symbolMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_symbolMember1? ListPhoneNumbersResponseDataSymbolMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_symbolMember1 ListPhoneNumbersResponseDataSymbolMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="string"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public string? String { get; set; }
-#nullable restore
-#else
-            public string String { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_symbol"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_symbol CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data.ListPhoneNumbersResponse_data_symbol();
-                if(parseNode.GetStringValue() is string stringValue)
-                {
-                    result.String = stringValue;
-                }
-                else {
-                    result.ListPhoneNumbersResponseDataSymbolMember1 = new global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_symbolMember1();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(ListPhoneNumbersResponseDataSymbolMember1 != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(ListPhoneNumbersResponseDataSymbolMember1);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(String != null)
-                {
-                    writer.WriteStringValue(null, String);
-                }
-                else {
-                    writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponse_data_symbolMember1>(null, ListPhoneNumbersResponseDataSymbolMember1);
-                }
-            }
         }
     }
 }

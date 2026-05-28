@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Quo.OpenApiClient.Models;
 using Soenneker.Quo.OpenApiClient.V1.Contacts.Item;
 using System.Collections.Generic;
 using System.IO;
@@ -48,70 +49,70 @@ namespace Soenneker.Quo.OpenApiClient.V1.Contacts
         /// <summary>
         /// Retrieve a paginated list of contacts. You can optionally filter the results by providing external IDs and sources. When no external IDs are provided, all contacts for the organization are returned.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.ListContactsV1200"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts403Error">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts409Error">When receiving a 409 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts500Error">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListContactsV1400">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListContactsV1401">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListContactsV1403">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListContactsV1404">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListContactsV1409">When receiving a 409 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListContactsV1500">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsRequestBuilder.ContactsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Quo.OpenApiClient.Models.ListContactsV1200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsRequestBuilder.ContactsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsRequestBuilder.ContactsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Quo.OpenApiClient.Models.ListContactsV1200> GetAsync(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsRequestBuilder.ContactsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts400Error.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts401Error.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts403Error.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts404Error.CreateFromDiscriminatorValue },
-                { "409", global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts409Error.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts500Error.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Quo.OpenApiClient.Models.ListContactsV1400.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Quo.OpenApiClient.Models.ListContactsV1401.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Quo.OpenApiClient.Models.ListContactsV1403.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Quo.OpenApiClient.Models.ListContactsV1404.CreateFromDiscriminatorValue },
+                { "409", global::Soenneker.Quo.OpenApiClient.Models.ListContactsV1409.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Quo.OpenApiClient.Models.ListContactsV1500.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsGetResponse>(requestInfo, global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.Models.ListContactsV1200>(requestInfo, global::Soenneker.Quo.OpenApiClient.Models.ListContactsV1200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create a contact for a workspace.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsPostResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1201"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts403Error">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts409Error">When receiving a 409 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts500Error">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1400">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1401">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1403">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1404">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1409">When receiving a 409 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1500">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsPostResponse?> PostAsync(global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1201?> PostAsync(global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsPostResponse> PostAsync(global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1201> PostAsync(global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts400Error.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts401Error.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts403Error.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts404Error.CreateFromDiscriminatorValue },
-                { "409", global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts409Error.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Quo.OpenApiClient.V1.Contacts.Contacts500Error.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1400.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1401.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1403.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1404.CreateFromDiscriminatorValue },
+                { "409", global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1409.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1500.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsPostResponse>(requestInfo, global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1201>(requestInfo, global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1201.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a paginated list of contacts. You can optionally filter the results by providing external IDs and sources. When no external IDs are provided, all contacts for the organization are returned.
@@ -140,11 +141,11 @@ namespace Soenneker.Quo.OpenApiClient.V1.Contacts
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Quo.OpenApiClient.V1.Contacts.ContactsPostRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Quo.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -35,33 +36,33 @@ namespace Soenneker.Quo.OpenApiClient.V1.CallSummaries.Item
         /// <summary>
         /// Retrieve a detailed summary of a specific call identified by its unique call ID. This endpoint supports summaries for both regular calls and calls handled by Sona. Call summaries are only available on business and scale plans.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.V1.CallSummaries.Item.WithCallGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.CallSummaries.Item.WithCall400Error">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.CallSummaries.Item.WithCall401Error">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.CallSummaries.Item.WithCall403Error">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.CallSummaries.Item.WithCall404Error">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.V1.CallSummaries.Item.WithCall500Error">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1400">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1401">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1403">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1404">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1500">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.CallSummaries.Item.WithCallGetResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Quo.OpenApiClient.V1.CallSummaries.Item.WithCallGetResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Quo.OpenApiClient.V1.CallSummaries.Item.WithCall400Error.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Quo.OpenApiClient.V1.CallSummaries.Item.WithCall401Error.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Quo.OpenApiClient.V1.CallSummaries.Item.WithCall403Error.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Quo.OpenApiClient.V1.CallSummaries.Item.WithCall404Error.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Quo.OpenApiClient.V1.CallSummaries.Item.WithCall500Error.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1400.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1401.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1403.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1404.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1500.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.V1.CallSummaries.Item.WithCallGetResponse>(requestInfo, global::Soenneker.Quo.OpenApiClient.V1.CallSummaries.Item.WithCallGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200>(requestInfo, global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a detailed summary of a specific call identified by its unique call ID. This endpoint supports summaries for both regular calls and calls handled by Sona. Call summaries are only available on business and scale plans.
