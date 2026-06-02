@@ -36,33 +36,33 @@ namespace Soenneker.Quo.OpenApiClient.V1.CallVoicemails.Item
         /// <summary>
         /// Retrieve a voicemail associated with a specific call. Returns null data fields while the voicemail is processing in our system. Returns competed data fields when the voicemail has finished processing.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1400">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1401">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1403">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1404">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1500">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1401Response">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1403Response">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1404Response">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1500Response">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1200?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1200Response?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1200> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1200Response> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1400.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1401.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1403.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1404.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1500.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1400Response.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1401Response.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1403Response.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1404Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1500Response.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1200>(requestInfo, global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1200Response>(requestInfo, global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a voicemail associated with a specific call. Returns null data fields while the voicemail is processing in our system. Returns competed data fields when the voicemail has finished processing.
