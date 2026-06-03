@@ -35,7 +35,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Messages
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MessagesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/messages?maxResults={maxResults}&participants={participants}&phoneNumberId={phoneNumberId}{&createdAfter*,createdBefore*,pageToken*,since*,userId*}", pathParameters)
+        public MessagesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Messages
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MessagesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/messages?maxResults={maxResults}&participants={participants}&phoneNumberId={phoneNumberId}{&createdAfter*,createdBefore*,pageToken*,since*,userId*}", rawUrl)
+        public MessagesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
         {
         }
         /// <summary>
@@ -128,7 +128,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Messages
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesRequestBuilder.MessagesRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/v1/messages?maxResults={maxResults}&participants={participants}&phoneNumberId={phoneNumberId}{&createdAfter*,createdBefore*,pageToken*,since*,userId*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
