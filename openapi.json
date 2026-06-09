@@ -9444,7 +9444,7 @@
         "tags": [
           "Conversations"
         ],
-        "summary": "Mark Conversation as Read",
+        "summary": "Mark conversation as read",
         "description": "Mark a conversation as read, clearing its unread indicator without sending a message. Returns the updated conversation.",
         "operationId": "markConversationAsRead_v1",
         "parameters": [
@@ -13054,6 +13054,5981 @@
                     },
                     "code": {
                       "const": "0401500",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 500,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Unknown",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/tasks": {
+      "get": {
+        "tags": [
+          "Tasks"
+        ],
+        "summary": "List tasks",
+        "description": "Retrieve a list of tasks",
+        "operationId": "listTasks_v1",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "maxResults",
+            "required": true,
+            "schema": {
+              "description": "Maximum number of results to return per page.",
+              "default": 50,
+              "maximum": 100,
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          {
+            "in": "query",
+            "name": "pageToken",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "security": [
+          {
+            "apiKey": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "taskId": {
+                            "pattern": "^TK(.*)$",
+                            "type": "string"
+                          },
+                          "phoneNumberId": {
+                            "anyOf": [
+                              {
+                                "pattern": "^PN(.*)$",
+                                "type": "string"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "conversationId": {
+                            "anyOf": [
+                              {
+                                "pattern": "^CN(.*)$",
+                                "type": "string"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "activityId": {
+                            "anyOf": [
+                              {
+                                "pattern": "^AC(.*)$",
+                                "type": "string"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "phoneNumberGroupId": {
+                            "anyOf": [
+                              {
+                                "type": "string"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "orgId": {
+                            "pattern": "^OR(.*)$",
+                            "type": "string"
+                          },
+                          "title": {
+                            "anyOf": [
+                              {
+                                "type": "string"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "description": {
+                            "anyOf": [
+                              {
+                                "type": "string"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "dueDate": {
+                            "anyOf": [
+                              {
+                                "format": "date-time",
+                                "type": "string"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "assignedTo": {
+                            "anyOf": [
+                              {
+                                "anyOf": [
+                                  {
+                                    "pattern": "^US(.*)$",
+                                    "type": "string"
+                                  },
+                                  {
+                                    "pattern": "^SYU(.*)$",
+                                    "type": "string"
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "assignedBy": {
+                            "anyOf": [
+                              {
+                                "anyOf": [
+                                  {
+                                    "pattern": "^US(.*)$",
+                                    "type": "string"
+                                  },
+                                  {
+                                    "pattern": "^SYU(.*)$",
+                                    "type": "string"
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "createdAt": {
+                            "format": "date-time",
+                            "type": "string"
+                          },
+                          "createdBy": {
+                            "type": "string"
+                          },
+                          "completed": {
+                            "type": "boolean"
+                          },
+                          "isDeleted": {
+                            "type": "boolean"
+                          },
+                          "revision": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "taskId",
+                          "phoneNumberId",
+                          "conversationId",
+                          "activityId",
+                          "phoneNumberGroupId",
+                          "orgId",
+                          "title",
+                          "description",
+                          "dueDate",
+                          "assignedTo",
+                          "assignedBy",
+                          "createdAt",
+                          "createdBy",
+                          "completed",
+                          "isDeleted",
+                          "revision"
+                        ]
+                      }
+                    },
+                    "nextPageToken": {
+                      "type": "string"
+                    },
+                    "totalItems": {
+                      "description": "Total number of items available.",
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "data",
+                    "totalItems"
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600400",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 400,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Bad Request",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600401",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 401,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Unauthorized",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600403",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 403,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Forbidden",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600404",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 404,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Not Found",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unknown error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0601500",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 500,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Unknown",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Tasks"
+        ],
+        "summary": "Create a task",
+        "description": "Create a task linked to a phone number, conversation, or conversation activity. Provide exactly one of `phoneNumberId`, `conversationId`, or `activityId`.",
+        "operationId": "createTask_v1",
+        "parameters": [],
+        "security": [
+          {
+            "apiKey": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "anyOf": [
+                  {
+                    "additionalProperties": false,
+                    "type": "object",
+                    "properties": {
+                      "title": {
+                        "description": "The title of the task.",
+                        "examples": [
+                          "Follow up with customer"
+                        ],
+                        "type": "string"
+                      },
+                      "description": {
+                        "description": "The description of the task.",
+                        "examples": [
+                          "Discuss pricing and onboarding next steps."
+                        ],
+                        "type": "string"
+                      },
+                      "dueDate": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "assignedTo": {
+                        "pattern": "^US(.*)$",
+                        "type": "string"
+                      },
+                      "phoneNumberId": {
+                        "pattern": "^PN(.*)$",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "title",
+                      "description",
+                      "phoneNumberId"
+                    ]
+                  },
+                  {
+                    "additionalProperties": false,
+                    "type": "object",
+                    "properties": {
+                      "title": {
+                        "description": "The title of the task.",
+                        "examples": [
+                          "Follow up with customer"
+                        ],
+                        "type": "string"
+                      },
+                      "description": {
+                        "description": "The description of the task.",
+                        "examples": [
+                          "Discuss pricing and onboarding next steps."
+                        ],
+                        "type": "string"
+                      },
+                      "dueDate": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "assignedTo": {
+                        "pattern": "^US(.*)$",
+                        "type": "string"
+                      },
+                      "conversationId": {
+                        "pattern": "^CN(.*)$",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "title",
+                      "description",
+                      "conversationId"
+                    ]
+                  },
+                  {
+                    "additionalProperties": false,
+                    "type": "object",
+                    "properties": {
+                      "title": {
+                        "description": "The title of the task.",
+                        "examples": [
+                          "Follow up with customer"
+                        ],
+                        "type": "string"
+                      },
+                      "description": {
+                        "description": "The description of the task.",
+                        "examples": [
+                          "Discuss pricing and onboarding next steps."
+                        ],
+                        "type": "string"
+                      },
+                      "dueDate": {
+                        "format": "date-time",
+                        "type": "string"
+                      },
+                      "assignedTo": {
+                        "pattern": "^US(.*)$",
+                        "type": "string"
+                      },
+                      "activityId": {
+                        "pattern": "^AC(.*)$",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "title",
+                      "description",
+                      "activityId"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "taskId": {
+                          "pattern": "^TK(.*)$",
+                          "type": "string"
+                        },
+                        "revision": {
+                          "type": "string"
+                        },
+                        "phoneNumberId": {
+                          "pattern": "^PN(.*)$",
+                          "type": "string"
+                        },
+                        "conversationId": {
+                          "pattern": "^CN(.*)$",
+                          "type": "string"
+                        },
+                        "activityId": {
+                          "pattern": "^AC(.*)$",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "taskId",
+                        "revision",
+                        "phoneNumberId"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "data"
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600400",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 400,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Bad Request",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600401",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 401,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Unauthorized",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600403",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 403,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Forbidden",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600404",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 404,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Not Found",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unknown error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0601500",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 500,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Unknown",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/tasks/{taskId}": {
+      "get": {
+        "tags": [
+          "Tasks"
+        ],
+        "summary": "Gets a task by ID",
+        "description": "Retrieve a single task by its ID",
+        "operationId": "getTaskById_v1",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "taskId",
+            "required": true,
+            "schema": {
+              "pattern": "^TK(.*)$",
+              "type": "string"
+            }
+          }
+        ],
+        "security": [
+          {
+            "apiKey": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "taskId": {
+                          "pattern": "^TK(.*)$",
+                          "type": "string"
+                        },
+                        "phoneNumberId": {
+                          "anyOf": [
+                            {
+                              "pattern": "^PN(.*)$",
+                              "type": "string"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "conversationId": {
+                          "anyOf": [
+                            {
+                              "pattern": "^CN(.*)$",
+                              "type": "string"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "activityId": {
+                          "anyOf": [
+                            {
+                              "pattern": "^AC(.*)$",
+                              "type": "string"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "phoneNumberGroupId": {
+                          "anyOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "orgId": {
+                          "pattern": "^OR(.*)$",
+                          "type": "string"
+                        },
+                        "title": {
+                          "anyOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "description": {
+                          "anyOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "dueDate": {
+                          "anyOf": [
+                            {
+                              "format": "date-time",
+                              "type": "string"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "assignedTo": {
+                          "anyOf": [
+                            {
+                              "anyOf": [
+                                {
+                                  "pattern": "^US(.*)$",
+                                  "type": "string"
+                                },
+                                {
+                                  "pattern": "^SYU(.*)$",
+                                  "type": "string"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "assignedBy": {
+                          "anyOf": [
+                            {
+                              "anyOf": [
+                                {
+                                  "pattern": "^US(.*)$",
+                                  "type": "string"
+                                },
+                                {
+                                  "pattern": "^SYU(.*)$",
+                                  "type": "string"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "createdAt": {
+                          "format": "date-time",
+                          "type": "string"
+                        },
+                        "createdBy": {
+                          "type": "string"
+                        },
+                        "completed": {
+                          "type": "boolean"
+                        },
+                        "isDeleted": {
+                          "type": "boolean"
+                        },
+                        "revision": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "taskId",
+                        "phoneNumberId",
+                        "conversationId",
+                        "activityId",
+                        "phoneNumberGroupId",
+                        "orgId",
+                        "title",
+                        "description",
+                        "dueDate",
+                        "assignedTo",
+                        "assignedBy",
+                        "createdAt",
+                        "createdBy",
+                        "completed",
+                        "isDeleted",
+                        "revision"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "data"
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600400",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 400,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Bad Request",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600401",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 401,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Unauthorized",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600403",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 403,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Forbidden",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600404",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 404,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Not Found",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unknown error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0601500",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 500,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Unknown",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Tasks"
+        ],
+        "summary": "Delete a task by ID",
+        "description": "Deletes the task with the provided task ID",
+        "operationId": "deleteTask_v1",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "taskId",
+            "required": true,
+            "schema": {
+              "pattern": "^TK(.*)$",
+              "type": "string"
+            }
+          }
+        ],
+        "security": [
+          {
+            "apiKey": []
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600400",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 400,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Bad Request",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600401",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 401,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Unauthorized",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600403",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 403,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Forbidden",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600404",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 404,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Not Found",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unknown error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0601500",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 500,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Unknown",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Tasks"
+        ],
+        "summary": "Update a task",
+        "description": "Updates the task's title and description",
+        "operationId": "updateTask_v1",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "taskId",
+            "required": true,
+            "schema": {
+              "pattern": "^TK(.*)$",
+              "type": "string"
+            }
+          }
+        ],
+        "security": [
+          {
+            "apiKey": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "additionalProperties": false,
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "description": "The title of the task.",
+                    "examples": [
+                      "Follow up with customer"
+                    ],
+                    "type": "string"
+                  },
+                  "description": {
+                    "description": "The description of the task.",
+                    "examples": [
+                      "Discuss pricing and onboarding next steps."
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "title",
+                  "description"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "taskId": {
+                          "pattern": "^TK(.*)$",
+                          "type": "string"
+                        },
+                        "revision": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "taskId",
+                        "revision"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "data"
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600400",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 400,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Bad Request",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600401",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 401,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Unauthorized",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600403",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 403,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Forbidden",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600404",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 404,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Not Found",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unknown error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0601500",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 500,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Unknown",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/tasks/{taskId}/complete": {
+      "post": {
+        "tags": [
+          "Tasks"
+        ],
+        "summary": "Complete a task",
+        "description": "Marks the provided task as completed",
+        "operationId": "completeTask_v1",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "taskId",
+            "required": true,
+            "schema": {
+              "pattern": "^TK(.*)$",
+              "type": "string"
+            }
+          }
+        ],
+        "security": [
+          {
+            "apiKey": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "taskId": {
+                          "pattern": "^TK(.*)$",
+                          "type": "string"
+                        },
+                        "revision": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "taskId",
+                        "revision"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "data"
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600400",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 400,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Bad Request",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600401",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 401,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Unauthorized",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600403",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 403,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Forbidden",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600404",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 404,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Not Found",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unknown error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0601500",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 500,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Unknown",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/tasks/{taskId}/link-conversation": {
+      "post": {
+        "tags": [
+          "Tasks"
+        ],
+        "summary": "Link a task to a conversation",
+        "description": "Links the task with the provided task ID to a conversation",
+        "operationId": "linkTaskToConversation_v1",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "taskId",
+            "required": true,
+            "schema": {
+              "pattern": "^TK(.*)$",
+              "type": "string"
+            }
+          }
+        ],
+        "security": [
+          {
+            "apiKey": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "conversationId": {
+                    "pattern": "^CN(.*)$",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "conversationId"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "taskId": {
+                          "pattern": "^TK(.*)$",
+                          "type": "string"
+                        },
+                        "revision": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "taskId",
+                        "revision"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "data"
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600400",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 400,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Bad Request",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600401",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 401,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Unauthorized",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600403",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 403,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Forbidden",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600404",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 404,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Not Found",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unknown error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0601500",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 500,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Unknown",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/tasks/{taskId}/unlink-conversation": {
+      "post": {
+        "tags": [
+          "Tasks"
+        ],
+        "summary": "Unlink a task from a conversation",
+        "description": "Unlinks the provided conversation from the task",
+        "operationId": "unlinkTaskFromConversation_v1",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "taskId",
+            "required": true,
+            "schema": {
+              "pattern": "^TK(.*)$",
+              "type": "string"
+            }
+          }
+        ],
+        "security": [
+          {
+            "apiKey": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "conversationId": {
+                    "pattern": "^CN(.*)$",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "conversationId"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "taskId": {
+                          "pattern": "^TK(.*)$",
+                          "type": "string"
+                        },
+                        "revision": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "taskId",
+                        "revision"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "data"
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600400",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 400,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Bad Request",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600401",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 401,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Unauthorized",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600403",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 403,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Forbidden",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600404",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 404,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Not Found",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unknown error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0601500",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 500,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Unknown",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/tasks/{taskId}/reopen": {
+      "post": {
+        "tags": [
+          "Tasks"
+        ],
+        "summary": "Reopen a task",
+        "description": "Reopens the provided task",
+        "operationId": "reopenTask_v1",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "taskId",
+            "required": true,
+            "schema": {
+              "pattern": "^TK(.*)$",
+              "type": "string"
+            }
+          }
+        ],
+        "security": [
+          {
+            "apiKey": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "taskId": {
+                          "pattern": "^TK(.*)$",
+                          "type": "string"
+                        },
+                        "revision": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "taskId",
+                        "revision"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "data"
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600400",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 400,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Bad Request",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600401",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 401,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Unauthorized",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600403",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 403,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Forbidden",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600404",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 404,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Not Found",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unknown error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0601500",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 500,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Unknown",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/tasks/{taskId}/assign": {
+      "post": {
+        "tags": [
+          "Tasks"
+        ],
+        "summary": "Assign a user to a task",
+        "description": "Assigns the provided user to the list of assignees for the task",
+        "operationId": "assignTask_v1",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "taskId",
+            "required": true,
+            "schema": {
+              "pattern": "^TK(.*)$",
+              "type": "string"
+            }
+          }
+        ],
+        "security": [
+          {
+            "apiKey": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "additionalProperties": false,
+                "type": "object",
+                "properties": {
+                  "userId": {
+                    "pattern": "^US(.*)$",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "userId"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "taskId": {
+                          "pattern": "^TK(.*)$",
+                          "type": "string"
+                        },
+                        "revision": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "taskId",
+                        "revision"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "data"
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600400",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 400,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Bad Request",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600401",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 401,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Unauthorized",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600403",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 403,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Forbidden",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600404",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 404,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Not Found",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unknown error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0601500",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 500,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Unknown",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/tasks/{taskId}/unassign": {
+      "post": {
+        "tags": [
+          "Tasks"
+        ],
+        "summary": "Unassign a user from a task",
+        "description": "Removes the provided user from the assignee list of a task",
+        "operationId": "unassignTask_v1",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "taskId",
+            "required": true,
+            "schema": {
+              "pattern": "^TK(.*)$",
+              "type": "string"
+            }
+          }
+        ],
+        "security": [
+          {
+            "apiKey": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "additionalProperties": false,
+                "type": "object",
+                "properties": {
+                  "userId": {
+                    "pattern": "^US(.*)$",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "userId"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "taskId": {
+                          "pattern": "^TK(.*)$",
+                          "type": "string"
+                        },
+                        "revision": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "taskId",
+                        "revision"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "data"
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600400",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 400,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Bad Request",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600401",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 401,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Unauthorized",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600403",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 403,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Forbidden",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600404",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 404,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Not Found",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unknown error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0601500",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 500,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Unknown",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/tasks/{taskId}/change-due-date": {
+      "post": {
+        "tags": [
+          "Tasks"
+        ],
+        "summary": "Change a task's due date",
+        "description": "Sets the task's due date",
+        "operationId": "changeTaskDueDate_v1",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "taskId",
+            "required": true,
+            "schema": {
+              "pattern": "^TK(.*)$",
+              "type": "string"
+            }
+          }
+        ],
+        "security": [
+          {
+            "apiKey": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "additionalProperties": false,
+                "type": "object",
+                "properties": {
+                  "dueDate": {
+                    "format": "date-time",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "dueDate"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "taskId": {
+                          "pattern": "^TK(.*)$",
+                          "type": "string"
+                        },
+                        "revision": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "taskId",
+                        "revision"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "data"
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600400",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 400,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Bad Request",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600401",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 401,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Unauthorized",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600403",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 403,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Forbidden",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600404",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 404,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Not Found",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unknown error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0601500",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 500,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Unknown",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/tasks/{taskId}/remove-due-date": {
+      "post": {
+        "tags": [
+          "Tasks"
+        ],
+        "summary": "Remove a task's due date",
+        "description": "Clears the task's due date",
+        "operationId": "removeTaskDueDate_v1",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "taskId",
+            "required": true,
+            "schema": {
+              "pattern": "^TK(.*)$",
+              "type": "string"
+            }
+          }
+        ],
+        "security": [
+          {
+            "apiKey": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "taskId": {
+                          "pattern": "^TK(.*)$",
+                          "type": "string"
+                        },
+                        "revision": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "taskId",
+                        "revision"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "data"
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600400",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 400,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Bad Request",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600401",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 401,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Unauthorized",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600403",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 403,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Forbidden",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0600404",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 404,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Not Found",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ]
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unknown error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "0601500",
                       "type": "string"
                     },
                     "status": {

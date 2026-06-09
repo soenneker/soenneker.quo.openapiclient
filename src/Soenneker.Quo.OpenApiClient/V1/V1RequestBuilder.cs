@@ -12,6 +12,7 @@ using Soenneker.Quo.OpenApiClient.V1.Contacts;
 using Soenneker.Quo.OpenApiClient.V1.Conversations;
 using Soenneker.Quo.OpenApiClient.V1.Messages;
 using Soenneker.Quo.OpenApiClient.V1.PhoneNumbers;
+using Soenneker.Quo.OpenApiClient.V1.Tasks;
 using Soenneker.Quo.OpenApiClient.V1.Users;
 using Soenneker.Quo.OpenApiClient.V1.Webhooks;
 using System.Collections.Generic;
@@ -75,6 +76,11 @@ namespace Soenneker.Quo.OpenApiClient.V1
         public global::Soenneker.Quo.OpenApiClient.V1.PhoneNumbers.PhoneNumbersRequestBuilder PhoneNumbers
         {
             get => new global::Soenneker.Quo.OpenApiClient.V1.PhoneNumbers.PhoneNumbersRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The tasks property</summary>
+        public global::Soenneker.Quo.OpenApiClient.V1.Tasks.TasksRequestBuilder Tasks
+        {
+            get => new global::Soenneker.Quo.OpenApiClient.V1.Tasks.TasksRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The users property</summary>
         public global::Soenneker.Quo.OpenApiClient.V1.Users.UsersRequestBuilder Users
