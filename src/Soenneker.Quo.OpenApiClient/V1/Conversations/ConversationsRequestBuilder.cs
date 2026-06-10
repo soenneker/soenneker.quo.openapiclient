@@ -4,7 +4,6 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Quo.OpenApiClient.Models;
-using Soenneker.Quo.OpenApiClient.V1.Conversations.Item;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -18,18 +17,6 @@ namespace Soenneker.Quo.OpenApiClient.V1.Conversations
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ConversationsRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>Gets an item from the Soenneker.Quo.OpenApiClient.v1.conversations.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.V1.Conversations.Item.ConversationsItemRequestBuilder"/></returns>
-        public global::Soenneker.Quo.OpenApiClient.V1.Conversations.Item.ConversationsItemRequestBuilder this[string position]
-        {
-            get
-            {
-                var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("id", position);
-                return new global::Soenneker.Quo.OpenApiClient.V1.Conversations.Item.ConversationsItemRequestBuilder(urlTplParams, RequestAdapter);
-            }
-        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Quo.OpenApiClient.V1.Conversations.ConversationsRequestBuilder"/> and sets the default values.
         /// </summary>

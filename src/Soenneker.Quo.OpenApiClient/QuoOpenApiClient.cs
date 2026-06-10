@@ -39,7 +39,7 @@ namespace Soenneker.Quo.OpenApiClient
             ApiClientBuilder.RegisterDefaultDeserializer<FormParseNodeFactory>();
             if (string.IsNullOrEmpty(RequestAdapter.BaseUrl))
             {
-                RequestAdapter.BaseUrl = "https://api.openphone.com";
+                RequestAdapter.BaseUrl = "https://api.quo.com";
             }
             PathParameters.TryAdd("baseurl", RequestAdapter.BaseUrl);
         }
