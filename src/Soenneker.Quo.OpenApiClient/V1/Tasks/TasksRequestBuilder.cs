@@ -81,7 +81,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Tasks
         /// Create a task linked to a phone number, conversation, or conversation activity. Provide exactly one of `phoneNumberId`, `conversationId`, or `activityId`.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1201Response"/></returns>
-        /// <param name="body">The request body</param>
+        /// <param name="body">The task to create. Provide exactly one of `phoneNumberId`, `conversationId`, or `activityId` to link the task to that resource.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1400Response">When receiving a 400 status code</exception>
@@ -133,7 +133,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Tasks
         /// Create a task linked to a phone number, conversation, or conversation activity. Provide exactly one of `phoneNumberId`, `conversationId`, or `activityId`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
-        /// <param name="body">The request body</param>
+        /// <param name="body">The task to create. Provide exactly one of `phoneNumberId`, `conversationId`, or `activityId` to link the task to that resource.</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

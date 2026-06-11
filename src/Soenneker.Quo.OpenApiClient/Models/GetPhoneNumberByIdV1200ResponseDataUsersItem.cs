@@ -38,7 +38,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
 #else
         public string GroupId { get; set; }
 #endif
-        /// <summary>The id property</summary>
+        /// <summary>The unique identifier of the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }

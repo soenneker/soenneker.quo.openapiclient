@@ -22,7 +22,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
 #else
         public string Content { get; set; }
 #endif
-        /// <summary>The from property</summary>
+        /// <summary>The sender&apos;s phone number. Can be either your Quo phone number ID or the full phone number in E.164 format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1RequestFrom? From { get; set; }

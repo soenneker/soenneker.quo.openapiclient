@@ -16,7 +16,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The type property</summary>
         public global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemAllOf1Type? Type { get; set; }
-        /// <summary>The value property</summary>
+        /// <summary>Value defined for the multi select type custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemAllOf1Value? Value { get; set; }

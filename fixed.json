@@ -35,7 +35,8 @@
               "pattern": "^AC(.*)$",
               "type": "string",
               "description": "The unique identifier of the call for which recordings are being retrieved."
-            }
+            },
+            "example": "AC3700e624eca547eb9f749a06f"
           }
         ],
         "responses": {
@@ -124,7 +125,8 @@
               "pattern": "^PN(.*)$",
               "type": "string",
               "description": "The unique identifier of the Quo number associated with the call."
-            }
+            },
+            "example": "PN123abc"
           },
           {
             "name": "userId",
@@ -133,7 +135,8 @@
               "pattern": "^US(.*)$",
               "type": "string",
               "description": "The unique identifier of the Quo user who either placed or received the call. Defaults to the workspace owner."
-            }
+            },
+            "example": "US123abc"
           },
           {
             "name": "participants",
@@ -147,7 +150,8 @@
                 "type": "string"
               },
               "description": "The phone numbers of participants involved in the call conversation, excluding your Quo number. Each number should contain the country code and conform to the E.164 format. Currently limited to one-to-one (1:1) conversations only."
-            }
+            },
+            "example": "\u002B15555555555"
           },
           {
             "name": "since",
@@ -157,7 +161,8 @@
               "description": "DEPRECATED, use \u0022createdAfter\u0022 or \u0022createdBefore\u0022 instead. \u0022since\u0022 incorrectly behaves as \u0022createdBefore\u0022 and will be removed in an upcoming release.",
               "format": "date-time",
               "deprecated": true
-            }
+            },
+            "example": "2022-01-01T00:00:00Z"
           },
           {
             "name": "createdAfter",
@@ -166,7 +171,8 @@
               "type": "string",
               "description": "Filter results to only include calls created after the specified date and time, in ISO 8601 format.",
               "format": "date-time"
-            }
+            },
+            "example": "2022-01-01T00:00:00Z"
           },
           {
             "name": "createdBefore",
@@ -175,7 +181,8 @@
               "type": "string",
               "description": "Filter results to only include calls created before the specified date and time, in ISO 8601 format.",
               "format": "date-time"
-            }
+            },
+            "example": "2022-01-01T00:00:00Z"
           },
           {
             "name": "maxResults",
@@ -283,7 +290,8 @@
               "pattern": "^AC(.*)$",
               "type": "string",
               "description": "Unique identifier of the call."
-            }
+            },
+            "example": "AC3700e624eca547eb9f749a06f2eb1"
           }
         ],
         "responses": {
@@ -372,7 +380,8 @@
               "pattern": "^AC(.*)$",
               "type": "string",
               "description": "The unique identifier of the call associated with the summary."
-            }
+            },
+            "example": "AC3700e624eca547eb9f749a06f"
           }
         ],
         "responses": {
@@ -461,7 +470,8 @@
               "pattern": "^AC(.*)$",
               "type": "string",
               "description": "Unique identifier of the call associated with this transcript."
-            }
+            },
+            "example": "AC3700e624eca547eb9f749a06f2eb1"
           }
         ],
         "responses": {
@@ -550,7 +560,8 @@
               "pattern": "^AC(.*)$",
               "type": "string",
               "description": "The unique identifier of the call for which a voicemail is being retrieved."
-            }
+            },
+            "example": "AC3700e624eca547eb9f749a06f"
           }
         ],
         "responses": {
@@ -945,7 +956,8 @@
               "pattern": "^(.*)$",
               "type": "string",
               "description": "The unique identifier of the contact."
-            }
+            },
+            "example": "66d0d87e8dc1211467372303"
           }
         ],
         "responses": {
@@ -1042,7 +1054,8 @@
               "pattern": "^(.*)$",
               "type": "string",
               "description": "The unique identifier of the contact."
-            }
+            },
+            "example": "66d0d87e8dc1211467372303"
           }
         ],
         "requestBody": {
@@ -1148,7 +1161,8 @@
               "pattern": "^(.*)$",
               "type": "string",
               "description": "The unique identifier of the contact."
-            }
+            },
+            "example": "66d0d87e8dc1211467372303"
           }
         ],
         "responses": {
@@ -1247,7 +1261,8 @@
               ],
               "description": "DEPRECATED, use \u0060phoneNumbers\u0060 instead. If both \u0060phoneNumber\u0060 and \u0060phoneNumbers\u0060 are provided, \u0060phoneNumbers\u0060 will be used. Filters results to only include conversations with the specified Quo phone number. Can be either your Quo phone number ID or the full phone number in E.164 format.",
               "deprecated": true
-            }
+            },
+            "example": "\u002B15555555555"
           },
           {
             "name": "phoneNumbers",
@@ -1271,7 +1286,11 @@
                 ]
               },
               "description": "Filters results to only include conversations with the specified Quo phone numbers. Each item can be either an Quo phone number ID or a full phone number in E.164 format."
-            }
+            },
+            "example": [
+              "\u002B15555555555",
+              "PN123abc"
+            ]
           },
           {
             "name": "userId",
@@ -1280,7 +1299,8 @@
               "pattern": "^US(.*)$",
               "type": "string",
               "description": "The unique identifier of the user the making the request. Used to filter results to only include the user\u0027s conversations."
-            }
+            },
+            "example": "US123abc"
           },
           {
             "name": "createdAfter",
@@ -1289,7 +1309,8 @@
               "type": "string",
               "description": "Filter results to only include conversations created after the specified date and time, in ISO_8601 format.",
               "format": "date-time"
-            }
+            },
+            "example": "2022-01-01T00:00:00Z"
           },
           {
             "name": "createdBefore",
@@ -1298,7 +1319,8 @@
               "type": "string",
               "description": "Filter results to only include conversations created before the specified date and time, in ISO_8601 format.",
               "format": "date-time"
-            }
+            },
+            "example": "2022-01-01T00:00:00Z"
           },
           {
             "name": "excludeInactive",
@@ -1306,7 +1328,8 @@
             "schema": {
               "type": "boolean",
               "description": "Exclude inactive conversations from the results."
-            }
+            },
+            "example": true
           },
           {
             "name": "updatedAfter",
@@ -1315,7 +1338,8 @@
               "type": "string",
               "description": "Filter results to only include conversations updated after the specified date and time, in ISO_8601 format.",
               "format": "date-time"
-            }
+            },
+            "example": "2022-01-01T00:00:00Z"
           },
           {
             "name": "updatedBefore",
@@ -1324,7 +1348,8 @@
               "type": "string",
               "description": "Filter results to only include conversations updated before the specified date and time, in ISO_8601 format.",
               "format": "date-time"
-            }
+            },
+            "example": "2022-01-01T00:00:00Z"
           },
           {
             "name": "maxResults",
@@ -1526,7 +1551,8 @@
               "pattern": "^PN(.*)$",
               "type": "string",
               "description": "The unique identifier of the Quo number used to send or receive the messages. PhoneNumberID can be retrieved via the Get Phone Numbers endpoint."
-            }
+            },
+            "example": "OP123abc"
           },
           {
             "name": "userId",
@@ -1535,7 +1561,8 @@
               "pattern": "^US(.*)$",
               "type": "string",
               "description": "The unique identifier of the user the message was sent from."
-            }
+            },
+            "example": "US123abc"
           },
           {
             "name": "participants",
@@ -1549,7 +1576,8 @@
                 "description": "A phone number in E.164 format, including the country code."
               },
               "description": "Array of phone numbers involved in the conversation, excluding your Quo number, in E.164 format."
-            }
+            },
+            "example": "\u002B15555555555"
           },
           {
             "name": "since",
@@ -1559,7 +1587,8 @@
               "description": "DEPRECATED, use \u0022createdAfter\u0022 or \u0022createdBefore\u0022 instead. \u0022since\u0022 currently behaves as \u0022createdBefore\u0022 and will be removed in an upcoming release.",
               "format": "date-time",
               "deprecated": true
-            }
+            },
+            "example": "2022-01-01T00:00:00Z"
           },
           {
             "name": "createdAfter",
@@ -1568,7 +1597,8 @@
               "type": "string",
               "description": "Filter results to only include messages created after the specified date and time, in ISO_8601 format.",
               "format": "date-time"
-            }
+            },
+            "example": "2022-01-01T00:00:00Z"
           },
           {
             "name": "createdBefore",
@@ -1577,7 +1607,8 @@
               "type": "string",
               "description": "Filter results to only include messages created before the specified date and time, in ISO_8601 format.",
               "format": "date-time"
-            }
+            },
+            "example": "2022-01-01T00:00:00Z"
           },
           {
             "name": "maxResults",
@@ -1695,7 +1726,8 @@
               "pattern": "^AC(.*)$",
               "type": "string",
               "description": "The unique identifier of a message"
-            }
+            },
+            "example": "AC123abc"
           }
         ],
         "responses": {
@@ -1793,7 +1825,8 @@
               "pattern": "^US(.*)$",
               "type": "string",
               "description": "Filter results to return only phone numbers associated with the specified user\u0022s unique identifier."
-            }
+            },
+            "example": "US123abc"
           }
         ],
         "responses": {
@@ -1882,7 +1915,8 @@
               "pattern": "^PN(.*)$",
               "type": "string",
               "description": "Unique identifier of the phone number."
-            }
+            },
+            "example": "PNlja6rrtI"
           }
         ],
         "responses": {
@@ -3259,7 +3293,8 @@
               "pattern": "^US(.*)$",
               "type": "string",
               "description": "The unique identifier of the user being retrieved."
-            }
+            },
+            "example": "US123abc"
           }
         ],
         "responses": {
@@ -3347,7 +3382,8 @@
               "pattern": "^US(.*)$",
               "type": "string",
               "description": "The unique identifier the user. Defaults to the workspace owner."
-            }
+            },
+            "example": "U55wgP5I5"
           }
         ],
         "responses": {
@@ -3436,7 +3472,8 @@
               "pattern": "^WH(.*)$",
               "type": "string",
               "description": "The unique identifier of a webhook"
-            }
+            },
+            "example": "WH12345"
           }
         ],
         "responses": {
@@ -3523,7 +3560,8 @@
               "pattern": "^WH(.*)$",
               "type": "string",
               "description": "The unique identifier of a webhook"
-            }
+            },
+            "example": "WH12345"
           }
         ],
         "responses": {
@@ -3949,27 +3987,32 @@
       "ListPhoneNumbersResponseDataItemPortRequestId": {
         "type": "string",
         "description": "Unique identifier for the phone number\u2019s porting request, if applicable.",
-        "nullable": true
+        "nullable": true,
+        "example": "123abc"
       },
       "ListPhoneNumbersResponseDataItemFormattedNumber": {
         "type": "string",
         "description": "A human-readable representation of a phone number.",
-        "nullable": true
+        "nullable": true,
+        "example": "\u002B15555555555"
       },
       "ListPhoneNumbersResponseDataItemForward": {
         "type": "string",
         "description": "Forwarding number for incoming calls, null if no forwarding number is configured.",
-        "nullable": true
+        "nullable": true,
+        "example": "\u002B15555555555"
       },
       "ListPhoneNumbersResponseDataItemPortingStatus": {
         "type": "string",
         "description": "Current status of the porting process, if applicable.",
-        "nullable": true
+        "nullable": true,
+        "example": "completed"
       },
       "ListPhoneNumbersResponseDataItemSymbol": {
         "type": "string",
         "description": "Custom symbol or emoji associated with the phone number.",
-        "nullable": true
+        "nullable": true,
+        "example": "\uD83C\uDFE1"
       },
       "ListPhoneNumbersResponseDataItemUsersItem": {
         "required": [
@@ -3985,7 +4028,8 @@
           "email": {
             "type": "string",
             "description": "The user\u0027s email address.",
-            "format": "email"
+            "format": "email",
+            "example": "johndoe@example.com"
           },
           "firstName": {
             "$ref": "#/components/schemas/ListPhoneNumbersResponseDataItemUsersItemAllOf1FirstName"
@@ -3995,7 +4039,9 @@
           },
           "id": {
             "pattern": "^US(.*)$",
-            "type": "string"
+            "type": "string",
+            "description": "The unique identifier of the user.",
+            "example": "US123abc"
           },
           "role": {
             "$ref": "#/components/schemas/ListPhoneNumbersResponseDataItemUsersItemRole"
@@ -4003,7 +4049,8 @@
           "groupId": {
             "pattern": "^GR(.*)$",
             "type": "string",
-            "description": "The unique identifier of the group to which the user belongs."
+            "description": "The unique identifier of the group to which the user belongs.",
+            "example": "GRcei8k90o"
           }
         }
       },
@@ -4020,7 +4067,8 @@
           "email": {
             "type": "string",
             "description": "The user\u0027s email address.",
-            "format": "email"
+            "format": "email",
+            "example": "johndoe@example.com"
           },
           "firstName": {
             "$ref": "#/components/schemas/ListPhoneNumbersResponseDataItemUsersItemAllOf1FirstName"
@@ -4030,7 +4078,9 @@
           },
           "id": {
             "pattern": "^US(.*)$",
-            "type": "string"
+            "type": "string",
+            "description": "The unique identifier of the user.",
+            "example": "US123abc"
           },
           "role": {
             "$ref": "#/components/schemas/ListPhoneNumbersResponseDataItemUsersItemRole"
@@ -4046,19 +4096,22 @@
           "groupId": {
             "pattern": "^GR(.*)$",
             "type": "string",
-            "description": "The unique identifier of the group to which the user belongs."
+            "description": "The unique identifier of the group to which the user belongs.",
+            "example": "GRcei8k90o"
           }
         }
       },
       "ListPhoneNumbersResponseDataItemUsersItemAllOf1FirstName": {
         "type": "string",
         "description": "The user\u0027s first name.",
-        "nullable": true
+        "nullable": true,
+        "example": "John"
       },
       "ListPhoneNumbersResponseDataItemUsersItemAllOf1LastName": {
         "type": "string",
         "description": "The user\u0027s last name.",
-        "nullable": true
+        "nullable": true,
+        "example": "Doe"
       },
       "ListPhoneNumbersResponseDataItem": {
         "required": [
@@ -4081,11 +4134,13 @@
           "id": {
             "pattern": "^PN(.*)$",
             "type": "string",
-            "description": "The unique identifier of Quo phone number."
+            "description": "The unique identifier of Quo phone number.",
+            "example": "PN123bc"
           },
           "groupId": {
             "type": "string",
-            "description": "The unique identifier of the group to which the Quo number belongs."
+            "description": "The unique identifier of the group to which the Quo number belongs.",
+            "example": "1234"
           },
           "portRequestId": {
             "$ref": "#/components/schemas/ListPhoneNumbersResponseDataItemPortRequestId"
@@ -4098,12 +4153,14 @@
           },
           "name": {
             "type": "string",
-            "description": "The display name of the phone number"
+            "description": "The display name of the phone number",
+            "example": "My phone number"
           },
           "number": {
             "pattern": "^\\\u002B[1-9]\\d{1,14}$",
             "type": "string",
-            "description": "A phone number in E.164 format, including the country code."
+            "description": "A phone number in E.164 format, including the country code.",
+            "example": "\u002B15555555555"
           },
           "portingStatus": {
             "$ref": "#/components/schemas/ListPhoneNumbersResponseDataItemPortingStatus"
@@ -4119,11 +4176,13 @@
           },
           "createdAt": {
             "type": "string",
-            "description": "Timestamp of when the phone number was added to the account in ISO 8601 format."
+            "description": "Timestamp of when the phone number was added to the account in ISO 8601 format.",
+            "example": " \u00272022-01-01T00:00:00Z\u0027"
           },
           "updatedAt": {
             "type": "string",
-            "description": "Timestamp of the last update to the phone number\u0027s details in ISO 8601 format."
+            "description": "Timestamp of the last update to the phone number\u0027s details in ISO 8601 format.",
+            "example": " \u00272022-01-01T00:00:00Z\u0027"
           },
           "restrictions": {
             "$ref": "#/components/schemas/ListPhoneNumbersResponseDataItemRestrictions"
@@ -7255,28 +7314,32 @@
           "createdByUserId": {
             "pattern": "^US(.*)$",
             "type": "string",
-            "description": "The unique identifier of the user who created the contact."
+            "description": "The unique identifier of the user who created the contact.",
+            "example": "US123abc"
           },
           "source": {
             "maxLength": 72,
             "minLength": 1,
             "type": "string",
             "description": "\u0022The contact\u0027s source. Defaults to \u0060null\u0060 for contacts created in the UI. Defaults to \u0060public-api\u0060 for contacts created via the public API. Cannot be one of the following reserved words: \u0060openphone\u0060, \u0060device\u0060, \u0060csv\u0060, \u0060zapier\u0060, \u0060google-people\u0060, \u0060other\u0060 or start with one of the following reserved prefixes: \u0060openphone\u0060, \u0060csv\u0060.\u0022",
-            "default": "public-api"
+            "default": "public-api",
+            "example": "public-api"
           },
           "sourceUrl": {
             "maxLength": 200,
             "minLength": 1,
             "type": "string",
             "description": "A link to the contact in the source system.",
-            "format": "uri"
+            "format": "uri",
+            "example": "https://openphone.co/contacts/664d0db69fcac7cf2e6ec"
           },
           "externalId": {
             "maxLength": 75,
             "minLength": 1,
             "type": "string",
             "description": "A unique identifier from an external system that can optionally be supplied when creating a contact. This ID is used to associate the contact with records in other systems and is required for retrieving the contact later via the \u0022List Contacts\u0022 endpoint. Ensure the \u0060externalId\u0060 is unique and consistent across systems for accurate cross-referencing.",
-            "nullable": true
+            "nullable": true,
+            "example": "664d0db69fcac7cf2e6ec"
           }
         }
       },
@@ -8930,14 +8993,16 @@
             "minLength": 1,
             "type": "string",
             "description": "A unique identifier from an external system that can optionally be supplied when creating a contact. This ID is used to associate the contact with records in other systems and is required for retrieving the contact later via the \u0022List Contacts\u0022 endpoint. Ensure the \u0060externalId\u0060 is unique and consistent across systems for accurate cross-referencing.",
-            "nullable": true
+            "nullable": true,
+            "example": "664d0db69fcac7cf2e6ec"
           },
           "source": {
             "maxLength": 75,
             "minLength": 1,
             "type": "string",
             "description": "Indicates how the contact was created or where it originated from.",
-            "nullable": true
+            "nullable": true,
+            "example": "public-api"
           },
           "sourceUrl": {
             "maxLength": 200,
@@ -8945,7 +9010,8 @@
             "type": "string",
             "description": "A link to the contact in the source system.",
             "format": "uri",
-            "nullable": true
+            "nullable": true,
+            "example": "https://openphone.co/contacts/664d0db69fcac7cf2e6ec"
           },
           "defaultFields": {
             "$ref": "#/components/schemas/UpdateContactByIdV1RequestDefaultFields"
@@ -10513,6 +10579,7 @@
             "pattern": "^PN(.*)$",
             "type": "string",
             "description": "DEPRECATED, use \u0022from\u0022 instead. Quo phone number ID to send a message from",
+            "example": "OP1232abc",
             "deprecated": true
           },
           "from": {
@@ -10529,7 +10596,8 @@
           "userId": {
             "pattern": "^US(.*)$",
             "type": "string",
-            "description": "The unique identifier of the Quo user sending the message. If not provided, defaults to the phone number owner."
+            "description": "The unique identifier of the Quo user sending the message. If not provided, defaults to the phone number owner.",
+            "example": "US123abc"
           },
           "setInboxStatus": {
             "$ref": "#/components/schemas/SendMessageV1RequestSetInboxStatus"
@@ -13544,6 +13612,7 @@
             "description": "Union discriminator"
           }
         },
+        "description": "The task to create. Provide exactly one of \u0060phoneNumberId\u0060, \u0060conversationId\u0060, or \u0060activityId\u0060 to link the task to that resource.",
         "discriminator": {
           "propertyName": "type"
         }
@@ -14809,11 +14878,13 @@
         "properties": {
           "title": {
             "type": "string",
-            "description": "The title of the task."
+            "description": "The title of the task.",
+            "example": "Follow up with customer"
           },
           "description": {
             "type": "string",
-            "description": "The description of the task."
+            "description": "The description of the task.",
+            "example": "Discuss pricing and onboarding next steps."
           }
         },
         "additionalProperties": false
@@ -20846,7 +20917,8 @@
           },
           "label": {
             "type": "string",
-            "description": "Webhook\u0027s label"
+            "description": "Webhook\u0027s label",
+            "example": "my webhook label"
           },
           "resourceIds": {
             "$ref": "#/components/schemas/CreateMessageWebhookV1RequestResourceIds"
@@ -20857,12 +20929,14 @@
           "url": {
             "type": "string",
             "description": "The endpoint that receives events from the webhook.",
-            "format": "uri"
+            "format": "uri",
+            "example": "https://example.com"
           },
           "userId": {
             "pattern": "^US(.*)$",
             "type": "string",
-            "description": "The unique identifier of the user that creates the webhook. If not provided, default to workspace owner."
+            "description": "The unique identifier of the user that creates the webhook. If not provided, default to workspace owner.",
+            "example": "US123abc"
           }
         }
       },
@@ -21314,7 +21388,8 @@
           "url": {
             "type": "string",
             "description": "The endpoint that receives events from the webhook.",
-            "format": "uri"
+            "format": "uri",
+            "example": "https://example.com/"
           },
           "events": {
             "type": "array",
@@ -21328,11 +21403,13 @@
           "userId": {
             "pattern": "^US(.*)$",
             "type": "string",
-            "description": "The unique identifier of the user that creates the webhook. If not provided, default to workspace owner."
+            "description": "The unique identifier of the user that creates the webhook. If not provided, default to workspace owner.",
+            "example": "US123abc"
           },
           "label": {
             "type": "string",
-            "description": "Webhook\u0027s label"
+            "description": "Webhook\u0027s label",
+            "example": "my webhook label"
           },
           "status": {
             "$ref": "#/components/schemas/CreateCallWebhookV1RequestStatus"
@@ -21793,7 +21870,8 @@
           },
           "label": {
             "type": "string",
-            "description": "Webhook\u0027s label"
+            "description": "Webhook\u0027s label",
+            "example": "my webhook label"
           },
           "resourceIds": {
             "$ref": "#/components/schemas/CreateCallSummaryWebhookV1RequestResourceIds"
@@ -21804,12 +21882,14 @@
           "url": {
             "type": "string",
             "description": "The endpoint that receives events from the webhook.",
-            "format": "uri"
+            "format": "uri",
+            "example": "https://example.com"
           },
           "userId": {
             "pattern": "^US(.*)$",
             "type": "string",
-            "description": "The unique identifier of the user that creates the webhook. If not provided, default to workspace owner."
+            "description": "The unique identifier of the user that creates the webhook. If not provided, default to workspace owner.",
+            "example": "US123abc"
           }
         }
       },
@@ -22267,7 +22347,8 @@
           },
           "label": {
             "type": "string",
-            "description": "The webhook\u0027s label."
+            "description": "The webhook\u0027s label.",
+            "example": "my webhook label"
           },
           "resourceIds": {
             "$ref": "#/components/schemas/CreateCallTranscriptWebhookV1RequestResourceIds"
@@ -22278,12 +22359,14 @@
           "url": {
             "type": "string",
             "description": "The endpoint that receives events from the webhook.",
-            "format": "uri"
+            "format": "uri",
+            "example": "https://example.com"
           },
           "userId": {
             "pattern": "^US(.*)$",
             "type": "string",
-            "description": "The ID of the user that creates the webhook. If not provided, default to workspace owner."
+            "description": "The ID of the user that creates the webhook. If not provided, default to workspace owner.",
+            "example": "US123abc"
           }
         }
       },
@@ -22738,13 +22821,16 @@
               {
                 "pattern": "^\\\u002B[1-9]\\d{1,14}$",
                 "type": "string",
-                "description": "A phone number in E.164 format, including the country code."
+                "description": "A phone number in E.164 format, including the country code.",
+                "example": "\u002B15555555555"
               },
               {
                 "pattern": "^US(.*)$",
                 "type": "string"
               }
-            ]
+            ],
+            "description": "The phone number or Quo user ID from which the call was forwarded. Null if the call was not forwarded.",
+            "example": "US123abc"
           }
         ],
         "nullable": true
@@ -22758,13 +22844,16 @@
               {
                 "pattern": "^\\\u002B[1-9]\\d{1,14}$",
                 "type": "string",
-                "description": "A phone number in E.164 format, including the country code."
+                "description": "A phone number in E.164 format, including the country code.",
+                "example": "\u002B15555555555"
               },
               {
                 "pattern": "^US(.*)$",
                 "type": "string"
               }
-            ]
+            ],
+            "description": "The phone number or Quo user ID to which the call was forwarded. Null if the call was not forwarded.",
+            "example": "US123abc"
           }
         ],
         "nullable": true
@@ -22778,13 +22867,16 @@
               {
                 "pattern": "^\\\u002B[1-9]\\d{1,14}$",
                 "type": "string",
-                "description": "A phone number in E.164 format, including the country code."
+                "description": "A phone number in E.164 format, including the country code.",
+                "example": "\u002B15555555555"
               },
               {
                 "pattern": "^US(.*)$",
                 "type": "string"
               }
-            ]
+            ],
+            "description": "The phone number or Quo user ID from which the call was forwarded. Null if the call was not forwarded.",
+            "example": "US123abc"
           }
         ],
         "nullable": true
@@ -22798,13 +22890,16 @@
               {
                 "pattern": "^\\\u002B[1-9]\\d{1,14}$",
                 "type": "string",
-                "description": "A phone number in E.164 format, including the country code."
+                "description": "A phone number in E.164 format, including the country code.",
+                "example": "\u002B15555555555"
               },
               {
                 "pattern": "^US(.*)$",
                 "type": "string"
               }
-            ]
+            ],
+            "description": "The phone number or Quo user ID to which the call was forwarded. Null if the call was not forwarded.",
+            "example": "US123abc"
           }
         ],
         "nullable": true
@@ -22815,7 +22910,8 @@
           {
             "type": "array",
             "items": {
-              "type": "string"
+              "type": "string",
+              "example": "Bring an umbrella."
             }
           }
         ],
@@ -22827,7 +22923,8 @@
           {
             "type": "array",
             "items": {
-              "type": "string"
+              "type": "string",
+              "example": "You talked about the weather."
             }
           }
         ],
@@ -22861,7 +22958,8 @@
         "properties": {
           "key": {
             "type": "string",
-            "description": "The identifying key for contact custom field."
+            "description": "The identifying key for contact custom field.",
+            "example": "inbound-lead"
           }
         }
       },
@@ -22878,15 +22976,18 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "The name of the custom contact field. This name is set by users in the Quo interface when the custom field is created."
+            "description": "The name of the custom contact field. This name is set by users in the Quo interface when the custom field is created.",
+            "example": "Inbound Lead"
           },
           "key": {
             "type": "string",
-            "description": "The identifying key for contact custom field."
+            "description": "The identifying key for contact custom field.",
+            "example": "inbound-lead"
           },
           "id": {
             "type": "string",
-            "description": "The unique identifier for the contact custom field."
+            "description": "The unique identifier for the contact custom field.",
+            "example": "66d0d87d534de8fd1c433cec3"
           }
         }
       },
@@ -22903,15 +23004,18 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "The name of the custom contact field. This name is set by users in the Quo interface when the custom field is created."
+            "description": "The name of the custom contact field. This name is set by users in the Quo interface when the custom field is created.",
+            "example": "Inbound Lead"
           },
           "key": {
             "type": "string",
-            "description": "The identifying key for contact custom field."
+            "description": "The identifying key for contact custom field.",
+            "example": "inbound-lead"
           },
           "id": {
             "type": "string",
-            "description": "The unique identifier for the contact custom field."
+            "description": "The unique identifier for the contact custom field.",
+            "example": "66d0d87d534de8fd1c433cec3"
           }
         }
       },
@@ -22928,15 +23032,18 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "The name of the custom contact field. This name is set by users in the Quo interface when the custom field is created."
+            "description": "The name of the custom contact field. This name is set by users in the Quo interface when the custom field is created.",
+            "example": "Inbound Lead"
           },
           "key": {
             "type": "string",
-            "description": "The identifying key for contact custom field."
+            "description": "The identifying key for contact custom field.",
+            "example": "inbound-lead"
           },
           "id": {
             "type": "string",
-            "description": "The unique identifier for the contact custom field."
+            "description": "The unique identifier for the contact custom field.",
+            "example": "66d0d87d534de8fd1c433cec3"
           }
         }
       },
@@ -22950,11 +23057,13 @@
         "properties": {
           "key": {
             "type": "string",
-            "description": "The identifying key for contact custom field."
+            "description": "The identifying key for contact custom field.",
+            "example": "inbound-lead"
           },
           "id": {
             "type": "string",
-            "description": "The unique identifier for the contact custom field."
+            "description": "The unique identifier for the contact custom field.",
+            "example": "66d0d87d534de8fd1c433cec3"
           }
         }
       },
@@ -22971,11 +23080,13 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "The name of the custom contact field. This name is set by users in the Quo interface when the custom field is created."
+            "description": "The name of the custom contact field. This name is set by users in the Quo interface when the custom field is created.",
+            "example": "Inbound Lead"
           },
           "key": {
             "type": "string",
-            "description": "The identifying key for contact custom field."
+            "description": "The identifying key for contact custom field.",
+            "example": "inbound-lead"
           }
         }
       },
@@ -22989,9 +23100,12 @@
           {
             "pattern": "^\\\u002B[1-9]\\d{1,14}$",
             "type": "string",
-            "description": "A phone number in E.164 format, including the country code."
+            "description": "A phone number in E.164 format, including the country code.",
+            "example": "\u002B15555555555"
           }
-        ]
+        ],
+        "description": "The sender\u0027s phone number. Can be either your Quo phone number ID or the full phone number in E.164 format.",
+        "example": "\u002B15555555555"
       },
       "SendMessageV1RequestToItem": {
         "type": "object",
@@ -22999,7 +23113,8 @@
           {
             "pattern": "^\\\u002B[1-9]\\d{1,14}$",
             "type": "string",
-            "description": "A phone number in E.164 format, including the country code."
+            "description": "A phone number in E.164 format, including the country code.",
+            "example": "\u002B15555555555"
           },
           {
             "maxLength": 15,
@@ -23055,11 +23170,13 @@
         "properties": {
           "title": {
             "type": "string",
-            "description": "The title of the task."
+            "description": "The title of the task.",
+            "example": "Follow up with customer"
           },
           "description": {
             "type": "string",
-            "description": "The description of the task."
+            "description": "The description of the task.",
+            "example": "Discuss pricing and onboarding next steps."
           },
           "dueDate": {
             "type": "string",
@@ -23086,11 +23203,13 @@
         "properties": {
           "title": {
             "type": "string",
-            "description": "The title of the task."
+            "description": "The title of the task.",
+            "example": "Follow up with customer"
           },
           "description": {
             "type": "string",
-            "description": "The description of the task."
+            "description": "The description of the task.",
+            "example": "Discuss pricing and onboarding next steps."
           },
           "dueDate": {
             "type": "string",
@@ -23117,11 +23236,13 @@
         "properties": {
           "title": {
             "type": "string",
-            "description": "The title of the task."
+            "description": "The title of the task.",
+            "example": "Follow up with customer"
           },
           "description": {
             "type": "string",
-            "description": "The description of the task."
+            "description": "The description of the task.",
+            "example": "Discuss pricing and onboarding next steps."
           },
           "dueDate": {
             "type": "string",
@@ -23205,6 +23326,10 @@
               }
             }
           }
+        ],
+        "description": "The unique identifiers of the phone numbers associated with the webhook.",
+        "example": [
+          "PN1234"
         ]
       },
       "GetWebhookByIdV1200ResponseDataResourceIds": {
@@ -23236,6 +23361,10 @@
               }
             }
           }
+        ],
+        "description": "The unique identifiers of the phone numbers associated with the webhook.",
+        "example": [
+          "PN1234"
         ]
       },
       "CreateMessageWebhookV1RequestResourceIds": {
@@ -23267,7 +23396,8 @@
               }
             }
           }
-        ]
+        ],
+        "description": "The unique identifiers of the phone numbers associated with the webhook."
       },
       "CreateMessageWebhookV1201ResponseDataResourceIds": {
         "type": "object",
@@ -23298,7 +23428,8 @@
               }
             }
           }
-        ]
+        ],
+        "description": "The unique identifiers of the phone numbers associated with the webhook."
       },
       "CreateCallWebhookV1RequestResourceIds": {
         "type": "object",
@@ -23329,7 +23460,8 @@
               }
             }
           }
-        ]
+        ],
+        "description": "The unique identifiers of the phone numbers associated with the webhook."
       },
       "CreateCallWebhookV1201ResponseDataResourceIds": {
         "type": "object",
@@ -23360,7 +23492,8 @@
               }
             }
           }
-        ]
+        ],
+        "description": "The unique identifiers of the phone numbers associated with the webhook."
       },
       "CreateCallSummaryWebhookV1RequestResourceIds": {
         "type": "object",
@@ -23391,7 +23524,8 @@
               }
             }
           }
-        ]
+        ],
+        "description": "The unique identifiers of the phone numbers associated with the webhook."
       },
       "CreateCallSummaryWebhookV1201ResponseDataResourceIds": {
         "type": "object",
@@ -23422,7 +23556,8 @@
               }
             }
           }
-        ]
+        ],
+        "description": "The unique identifiers of the phone numbers associated with the webhook."
       },
       "CreateCallTranscriptWebhookV1RequestResourceIds": {
         "type": "object",
@@ -23453,7 +23588,9 @@
               }
             }
           }
-        ]
+        ],
+        "description": "The unique identifiers of the phone numbers associated with the webhook.",
+        "example": "PN1234"
       },
       "CreateCallTranscriptWebhookV1201ResponseDataResourceIds": {
         "type": "object",
@@ -23484,7 +23621,8 @@
               }
             }
           }
-        ]
+        ],
+        "description": "The unique identifiers of the phone numbers associated with the webhook."
       },
       "GetCallSummaryV1200ResponseDataJobsAnyOf1": {
         "type": "array",
@@ -23604,7 +23742,12 @@
             }
           }
         ],
-        "nullable": true
+        "description": "Value defined for the multi select type custom field.",
+        "nullable": true,
+        "example": [
+          "option1",
+          "option2"
+        ]
       },
       "CreateContactV1201ResponseDataCustomFieldsItemAllOf1Value": {
         "type": "object",
@@ -23616,7 +23759,12 @@
             }
           }
         ],
-        "nullable": true
+        "description": "Value defined for the multi select type custom field.",
+        "nullable": true,
+        "example": [
+          "option1",
+          "option2"
+        ]
       },
       "ListContactsV1200ResponseDataItemCustomFieldsItemAllOf1Value": {
         "type": "object",
@@ -23628,7 +23776,12 @@
             }
           }
         ],
-        "nullable": true
+        "description": "Value defined for the multi select type custom field.",
+        "nullable": true,
+        "example": [
+          "option1",
+          "option2"
+        ]
       },
       "GetContactByIdV1200ResponseDataCustomFieldsItemAllOf1Value": {
         "type": "object",
@@ -23640,7 +23793,12 @@
             }
           }
         ],
-        "nullable": true
+        "description": "Value defined for the multi select type custom field.",
+        "nullable": true,
+        "example": [
+          "option1",
+          "option2"
+        ]
       },
       "UpdateContactByIdV1RequestCustomFieldsItemAllOf1Value": {
         "type": "object",
@@ -23652,7 +23810,12 @@
             }
           }
         ],
-        "nullable": true
+        "description": "Value defined for the multi select type custom field.",
+        "nullable": true,
+        "example": [
+          "option1",
+          "option2"
+        ]
       },
       "UpdateContactByIdV1200ResponseDataCustomFieldsItemAllOf1Value": {
         "type": "object",
@@ -23664,7 +23827,12 @@
             }
           }
         ],
-        "nullable": true
+        "description": "Value defined for the multi select type custom field.",
+        "nullable": true,
+        "example": [
+          "option1",
+          "option2"
+        ]
       },
       "GetCallRecordingsV1200ResponseDataItem": {
         "required": [
@@ -23680,17 +23848,20 @@
           "duration": {
             "type": "integer",
             "description": "The length of the call recording in seconds. Null if the recording is not completed or the duration is unknown.",
-            "nullable": true
+            "nullable": true,
+            "example": 60
           },
           "id": {
             "type": "string",
-            "description": "The unique identifier of the call recording."
+            "description": "The unique identifier of the call recording.",
+            "example": "CRwRVK2qBq"
           },
           "startTime": {
             "type": "string",
             "description": "The timestamp when the recording began, in ISO 8601 format. Null if the recording hasn\u0027t started or the start time is unknown.",
             "format": "date-time",
-            "nullable": true
+            "nullable": true,
+            "example": "2022-01-01T00:00:00Z"
           },
           "status": {
             "$ref": "#/components/schemas/GetCallRecordingsV1200ResponseDataItemStatus"
@@ -23698,13 +23869,15 @@
           "type": {
             "type": "string",
             "description": "The file type of the call recording. Null if the type is not specified or is unknown.",
-            "nullable": true
+            "nullable": true,
+            "example": "audio/mpeg"
           },
           "url": {
             "type": "string",
             "description": "The URL where the call recording can be accessed or downloaded. Null if the URL is not available or the recording is not accessible.",
             "format": "uri-reference",
-            "nullable": true
+            "nullable": true,
+            "example": "https://examplestorage.com/a643d4d3e1484fcc8b721627284eda5e.mp3"
           }
         },
         "additionalProperties": false
@@ -23845,17 +24018,20 @@
             "type": "string",
             "description": "The timestamp when the call was answered in ISO 8601 format. Null if the call was not answered.",
             "format": "date-time",
-            "nullable": true
+            "nullable": true,
+            "example": "2022-01-01T00:00:00Z"
           },
           "answeredBy": {
             "type": "string",
             "description": "The unique identifier of the Quo user who answered the incoming call. Null for outgoing calls or unanswered incoming calls.",
-            "nullable": true
+            "nullable": true,
+            "example": "USlHhXmRMz"
           },
           "initiatedBy": {
             "type": "string",
             "description": "The unique identifier of the Quo user who initiated the outgoing call. Null for incoming calls.",
-            "nullable": true
+            "nullable": true,
+            "example": "USlHhXmRMz"
           },
           "direction": {
             "$ref": "#/components/schemas/ListCallsV1200ResponseDataItemDirection"
@@ -23867,21 +24043,25 @@
             "type": "string",
             "description": "The timestamp when the call ended, in ISO 8601 format. Null if the call is ongoing or was not completed.",
             "format": "date-time",
-            "nullable": true
+            "nullable": true,
+            "example": "2022-01-01T00:00:00Z"
           },
           "createdAt": {
             "type": "string",
             "description": "The timestamp when the call record was created, in ISO 8601 format.",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           },
           "callRoute": {
             "type": "string",
             "description": "\u0022How the call reached the user\u0027s inbox: either by direct dial to their number or routed through a phone menu. Null for outbound calls.\u0022",
-            "nullable": true
+            "nullable": true,
+            "example": "phone-number"
           },
           "duration": {
             "type": "integer",
-            "description": "The total duration of the call in seconds."
+            "description": "The total duration of the call in seconds.",
+            "example": 60
           },
           "forwardedFrom": {
             "$ref": "#/components/schemas/ListCallsV1200ResponseDataItemForwardedFrom"
@@ -23892,17 +24072,20 @@
           "aiHandled": {
             "type": "string",
             "description": "Type of AI that answered the call. Set to \u0027ai-agent\u0027 for AI responses, or null for human responses.",
-            "nullable": true
+            "nullable": true,
+            "example": "ai-agent"
           },
           "id": {
             "pattern": "^AC(.*)$",
             "type": "string",
-            "description": "The unique identifier of the call."
+            "description": "The unique identifier of the call.",
+            "example": "AC123abc"
           },
           "phoneNumberId": {
             "pattern": "^PN(.*)$",
             "type": "string",
-            "description": "The unique identifier of the Quo number associated with the call."
+            "description": "The unique identifier of the Quo number associated with the call.",
+            "example": "PN123abc"
           },
           "participants": {
             "maxItems": 2,
@@ -23910,19 +24093,22 @@
             "items": {
               "pattern": "^\\\u002B[1-9]\\d{1,14}$",
               "type": "string",
-              "description": "A phone number in E.164 format, including the country code."
+              "description": "A phone number in E.164 format, including the country code.",
+              "example": "\u002B15555555555"
             }
           },
           "updatedAt": {
             "type": "string",
             "description": "The timestamp when the call record was last updated, in ISO 8601 format. Null if never updated.",
             "format": "date-time",
-            "nullable": true
+            "nullable": true,
+            "example": "2022-01-01T00:00:00Z"
           },
           "userId": {
             "pattern": "^US(.*)$",
             "type": "string",
-            "description": "The unique identifier of the Quo user account associated with the call."
+            "description": "The unique identifier of the Quo user account associated with the call.",
+            "example": "US123abc"
           }
         },
         "additionalProperties": false
@@ -24063,17 +24249,20 @@
             "type": "string",
             "description": "The timestamp when the call was answered in ISO 8601 format. Null if the call was not answered.",
             "format": "date-time",
-            "nullable": true
+            "nullable": true,
+            "example": "2022-01-01T00:00:00Z"
           },
           "answeredBy": {
             "type": "string",
             "description": "The unique identifier of the Quo user who answered the incoming call. Null for outgoing calls or unanswered incoming calls.",
-            "nullable": true
+            "nullable": true,
+            "example": "USlHhXmRMz"
           },
           "initiatedBy": {
             "type": "string",
             "description": "The unique identifier of the Quo user who initiated the outgoing call. Null for incoming calls.",
-            "nullable": true
+            "nullable": true,
+            "example": "USlHhXmRMz"
           },
           "direction": {
             "$ref": "#/components/schemas/GetCallByIdV1200ResponseDataDirection"
@@ -24085,21 +24274,25 @@
             "type": "string",
             "description": "The timestamp when the call ended, in ISO 8601 format. Null if the call is ongoing or was not completed.",
             "format": "date-time",
-            "nullable": true
+            "nullable": true,
+            "example": "2022-01-01T00:00:00Z"
           },
           "createdAt": {
             "type": "string",
             "description": "The timestamp when the call record was created, in ISO 8601 format.",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           },
           "callRoute": {
             "type": "string",
             "description": "\u0022How the call reached the user\u0027s inbox: either by direct dial to their number or routed through a phone menu. Null for outbound calls.\u0022",
-            "nullable": true
+            "nullable": true,
+            "example": "phone-number"
           },
           "duration": {
             "type": "integer",
-            "description": "The total duration of the call in seconds."
+            "description": "The total duration of the call in seconds.",
+            "example": 60
           },
           "forwardedFrom": {
             "$ref": "#/components/schemas/GetCallByIdV1200ResponseDataForwardedFrom"
@@ -24110,17 +24303,20 @@
           "aiHandled": {
             "type": "string",
             "description": "Type of AI that answered the call. Set to \u0027ai-agent\u0027 for AI responses, or null for human responses.",
-            "nullable": true
+            "nullable": true,
+            "example": "ai-agent"
           },
           "id": {
             "pattern": "^AC(.*)$",
             "type": "string",
-            "description": "The unique identifier of the call."
+            "description": "The unique identifier of the call.",
+            "example": "AC123abc"
           },
           "phoneNumberId": {
             "pattern": "^PN(.*)$",
             "type": "string",
-            "description": "The unique identifier of the Quo number associated with the call."
+            "description": "The unique identifier of the Quo number associated with the call.",
+            "example": "PN123abc"
           },
           "participants": {
             "maxItems": 2,
@@ -24128,19 +24324,22 @@
             "items": {
               "pattern": "^\\\u002B[1-9]\\d{1,14}$",
               "type": "string",
-              "description": "A phone number in E.164 format, including the country code."
+              "description": "A phone number in E.164 format, including the country code.",
+              "example": "\u002B15555555555"
             }
           },
           "updatedAt": {
             "type": "string",
             "description": "The timestamp when the call record was last updated, in ISO 8601 format. Null if never updated.",
             "format": "date-time",
-            "nullable": true
+            "nullable": true,
+            "example": "2022-01-01T00:00:00Z"
           },
           "userId": {
             "pattern": "^US(.*)$",
             "type": "string",
-            "description": "The unique identifier of the Quo user account associated with the call."
+            "description": "The unique identifier of the Quo user account associated with the call.",
+            "example": "US123abc"
           }
         },
         "additionalProperties": false
@@ -24266,7 +24465,8 @@
         "properties": {
           "callId": {
             "type": "string",
-            "description": "The unique identifier of the call to which this summary belongs."
+            "description": "The unique identifier of the call to which this summary belongs.",
+            "example": "ACea724hac8c30465bcbcff0b76e4c1c7b"
           },
           "nextSteps": {
             "$ref": "#/components/schemas/GetCallSummaryV1200ResponseDataNextSteps"
@@ -24404,19 +24604,22 @@
         "properties": {
           "callId": {
             "type": "string",
-            "description": "The unique identifier of the call to which this transcript belongs."
+            "description": "The unique identifier of the call to which this transcript belongs.",
+            "example": "ACea724hac8c30465bcbcff0b76e4c1c7b"
           },
           "createdAt": {
             "type": "string",
             "description": "The timestamp when the transcription was created, in ISO 8601 format.",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           },
           "dialogue": {
             "$ref": "#/components/schemas/GetCallTranscriptV1200ResponseDataDialogue"
           },
           "duration": {
             "type": "number",
-            "description": "The total duration of the transcribed call in seconds."
+            "description": "The total duration of the transcribed call in seconds.",
+            "example": 100
           },
           "status": {
             "$ref": "#/components/schemas/GetCallTranscriptV1200ResponseDataStatus"
@@ -24546,23 +24749,27 @@
           "duration": {
             "type": "integer",
             "description": "The length of the call voicemail in seconds. Null if the voicemail is not completed or the duration is unknown.",
-            "nullable": true
+            "nullable": true,
+            "example": 60
           },
           "id": {
             "pattern": "^VM(.*)$",
             "type": "string",
-            "description": "The unique identifier of the call voicemail."
+            "description": "The unique identifier of the call voicemail.",
+            "example": "VMaaff8f317e0c4e61953b74a5eb42a370"
           },
           "transcript": {
             "type": "string",
             "description": "The transcript of the call voicemail. Null if the voicemail is not completed or the transcript is not available.",
-            "nullable": true
+            "nullable": true,
+            "example": "Hello, this is a voicemail from John Doe."
           },
           "recordingUrl": {
             "type": "string",
             "description": "The URL where the call voicemail can be accessed or downloaded. Null if the voicemail is not completed or the URL is not available.",
             "format": "uri",
-            "nullable": true
+            "nullable": true,
+            "example": "https://examplestorage.com/a643d4d3e1484fcc8b721627284eda5e.mp3"
           },
           "status": {
             "$ref": "#/components/schemas/GetCallVoicemailsV1200ResponseDataStatus"
@@ -24690,11 +24897,13 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "The name of the custom contact field. This name is set by users in the Quo interface when the custom field is created."
+            "description": "The name of the custom contact field. This name is set by users in the Quo interface when the custom field is created.",
+            "example": "Inbound Lead"
           },
           "key": {
             "type": "string",
-            "description": "The identifying key for contact custom field."
+            "description": "The identifying key for contact custom field.",
+            "example": "inbound-lead"
           },
           "type": {
             "$ref": "#/components/schemas/GetContactCustomFieldsV1200ResponseDataItemType"
@@ -24820,7 +25029,8 @@
           "company": {
             "type": "string",
             "description": "The contact\u0027s company name.",
-            "nullable": true
+            "nullable": true,
+            "example": "Quo"
           },
           "emails": {
             "type": "array",
@@ -24831,12 +25041,14 @@
           "firstName": {
             "type": "string",
             "description": "The contact\u0027s first name.",
-            "nullable": true
+            "nullable": true,
+            "example": "John"
           },
           "lastName": {
             "type": "string",
             "description": "The contact\u0027s last name.",
-            "nullable": true
+            "nullable": true,
+            "example": "Doe"
           },
           "phoneNumbers": {
             "type": "array",
@@ -24847,7 +25059,8 @@
           "role": {
             "type": "string",
             "description": "The contact\u0027s role.",
-            "nullable": true
+            "nullable": true,
+            "example": "Sales"
           }
         }
       },
@@ -24868,21 +25081,24 @@
           "id": {
             "pattern": "^(.*)$",
             "type": "string",
-            "description": "The unique identifier of the contact."
+            "description": "The unique identifier of the contact.",
+            "example": "664d0db69fcac7cf2e6ec"
           },
           "externalId": {
             "maxLength": 75,
             "minLength": 1,
             "type": "string",
             "description": "A unique identifier from an external system that can optionally be supplied when creating a contact. This ID is used to associate the contact with records in other systems and is required for retrieving the contact later via the \u0022List Contacts\u0022 endpoint. Ensure the \u0060externalId\u0060 is unique and consistent across systems for accurate cross-referencing.",
-            "nullable": true
+            "nullable": true,
+            "example": "664d0db69fcac7cf2e6ec"
           },
           "source": {
             "maxLength": 75,
             "minLength": 1,
             "type": "string",
             "description": "Indicates how the contact was created or where it originated from.",
-            "nullable": true
+            "nullable": true,
+            "example": "public-api"
           },
           "sourceUrl": {
             "maxLength": 200,
@@ -24890,7 +25106,8 @@
             "type": "string",
             "description": "A link to the contact in the source system.",
             "format": "uri",
-            "nullable": true
+            "nullable": true,
+            "example": "https://openphone.co/contacts/664d0db69fcac7cf2e6ec"
           },
           "defaultFields": {
             "$ref": "#/components/schemas/CreateContactV1201ResponseDataDefaultFields"
@@ -24904,17 +25121,20 @@
           "createdAt": {
             "type": "string",
             "description": "Timestamp of contact creation in ISO 8601 format.",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           },
           "updatedAt": {
             "type": "string",
             "description": "Timestamp of last contact update in ISO 8601 format.",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           },
           "createdByUserId": {
             "pattern": "^US(.*)$",
             "type": "string",
-            "description": "The unique identifier of the user who created the contact."
+            "description": "The unique identifier of the user who created the contact.",
+            "example": "US123abc"
           }
         }
       },
@@ -25067,21 +25287,24 @@
           "id": {
             "pattern": "^(.*)$",
             "type": "string",
-            "description": "The unique identifier of the contact."
+            "description": "The unique identifier of the contact.",
+            "example": "664d0db69fcac7cf2e6ec"
           },
           "externalId": {
             "maxLength": 75,
             "minLength": 1,
             "type": "string",
             "description": "A unique identifier from an external system that can optionally be supplied when creating a contact. This ID is used to associate the contact with records in other systems and is required for retrieving the contact later via the \u0022List Contacts\u0022 endpoint. Ensure the \u0060externalId\u0060 is unique and consistent across systems for accurate cross-referencing.",
-            "nullable": true
+            "nullable": true,
+            "example": "664d0db69fcac7cf2e6ec"
           },
           "source": {
             "maxLength": 75,
             "minLength": 1,
             "type": "string",
             "description": "Indicates how the contact was created or where it originated from.",
-            "nullable": true
+            "nullable": true,
+            "example": "public-api"
           },
           "sourceUrl": {
             "maxLength": 200,
@@ -25089,7 +25312,8 @@
             "type": "string",
             "description": "A link to the contact in the source system.",
             "format": "uri",
-            "nullable": true
+            "nullable": true,
+            "example": "https://openphone.co/contacts/664d0db69fcac7cf2e6ec"
           },
           "defaultFields": {
             "$ref": "#/components/schemas/ListContactsV1200ResponseDataItemDefaultFields"
@@ -25103,17 +25327,20 @@
           "createdAt": {
             "type": "string",
             "description": "Timestamp of contact creation in ISO 8601 format.",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           },
           "updatedAt": {
             "type": "string",
             "description": "Timestamp of last contact update in ISO 8601 format.",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           },
           "createdByUserId": {
             "pattern": "^US(.*)$",
             "type": "string",
-            "description": "The unique identifier of the user who created the contact."
+            "description": "The unique identifier of the user who created the contact.",
+            "example": "US123abc"
           }
         }
       },
@@ -25266,21 +25493,24 @@
           "id": {
             "pattern": "^(.*)$",
             "type": "string",
-            "description": "The unique identifier of the contact."
+            "description": "The unique identifier of the contact.",
+            "example": "664d0db69fcac7cf2e6ec"
           },
           "externalId": {
             "maxLength": 75,
             "minLength": 1,
             "type": "string",
             "description": "A unique identifier from an external system that can optionally be supplied when creating a contact. This ID is used to associate the contact with records in other systems and is required for retrieving the contact later via the \u0022List Contacts\u0022 endpoint. Ensure the \u0060externalId\u0060 is unique and consistent across systems for accurate cross-referencing.",
-            "nullable": true
+            "nullable": true,
+            "example": "664d0db69fcac7cf2e6ec"
           },
           "source": {
             "maxLength": 75,
             "minLength": 1,
             "type": "string",
             "description": "Indicates how the contact was created or where it originated from.",
-            "nullable": true
+            "nullable": true,
+            "example": "public-api"
           },
           "sourceUrl": {
             "maxLength": 200,
@@ -25288,7 +25518,8 @@
             "type": "string",
             "description": "A link to the contact in the source system.",
             "format": "uri",
-            "nullable": true
+            "nullable": true,
+            "example": "https://openphone.co/contacts/664d0db69fcac7cf2e6ec"
           },
           "defaultFields": {
             "$ref": "#/components/schemas/GetContactByIdV1200ResponseDataDefaultFields"
@@ -25302,17 +25533,20 @@
           "createdAt": {
             "type": "string",
             "description": "Timestamp of contact creation in ISO 8601 format.",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           },
           "updatedAt": {
             "type": "string",
             "description": "Timestamp of last contact update in ISO 8601 format.",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           },
           "createdByUserId": {
             "pattern": "^US(.*)$",
             "type": "string",
-            "description": "The unique identifier of the user who created the contact."
+            "description": "The unique identifier of the user who created the contact.",
+            "example": "US123abc"
           }
         }
       },
@@ -25454,7 +25688,8 @@
           "company": {
             "type": "string",
             "description": "The contact\u0027s company name.",
-            "nullable": true
+            "nullable": true,
+            "example": "Quo"
           },
           "emails": {
             "type": "array",
@@ -25465,12 +25700,14 @@
           "firstName": {
             "type": "string",
             "description": "The contact\u0027s first name.",
-            "nullable": true
+            "nullable": true,
+            "example": "John"
           },
           "lastName": {
             "type": "string",
             "description": "The contact\u0027s last name.",
-            "nullable": true
+            "nullable": true,
+            "example": "Doe"
           },
           "phoneNumbers": {
             "type": "array",
@@ -25481,7 +25718,8 @@
           "role": {
             "type": "string",
             "description": "The contact\u0027s role.",
-            "nullable": true
+            "nullable": true,
+            "example": "Sales"
           }
         }
       },
@@ -25502,21 +25740,24 @@
           "id": {
             "pattern": "^(.*)$",
             "type": "string",
-            "description": "The unique identifier of the contact."
+            "description": "The unique identifier of the contact.",
+            "example": "664d0db69fcac7cf2e6ec"
           },
           "externalId": {
             "maxLength": 75,
             "minLength": 1,
             "type": "string",
             "description": "A unique identifier from an external system that can optionally be supplied when creating a contact. This ID is used to associate the contact with records in other systems and is required for retrieving the contact later via the \u0022List Contacts\u0022 endpoint. Ensure the \u0060externalId\u0060 is unique and consistent across systems for accurate cross-referencing.",
-            "nullable": true
+            "nullable": true,
+            "example": "664d0db69fcac7cf2e6ec"
           },
           "source": {
             "maxLength": 75,
             "minLength": 1,
             "type": "string",
             "description": "Indicates how the contact was created or where it originated from.",
-            "nullable": true
+            "nullable": true,
+            "example": "public-api"
           },
           "sourceUrl": {
             "maxLength": 200,
@@ -25524,7 +25765,8 @@
             "type": "string",
             "description": "A link to the contact in the source system.",
             "format": "uri",
-            "nullable": true
+            "nullable": true,
+            "example": "https://openphone.co/contacts/664d0db69fcac7cf2e6ec"
           },
           "defaultFields": {
             "$ref": "#/components/schemas/UpdateContactByIdV1200ResponseDataDefaultFields"
@@ -25538,17 +25780,20 @@
           "createdAt": {
             "type": "string",
             "description": "Timestamp of contact creation in ISO 8601 format.",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           },
           "updatedAt": {
             "type": "string",
             "description": "Timestamp of last contact update in ISO 8601 format.",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           },
           "createdByUserId": {
             "pattern": "^US(.*)$",
             "type": "string",
-            "description": "The unique identifier of the user who created the contact."
+            "description": "The unique identifier of the user who created the contact.",
+            "example": "US123abc"
           }
         }
       },
@@ -25875,7 +26120,8 @@
             "items": {
               "pattern": "^\\\u002B[1-9]\\d{1,14}$",
               "type": "string",
-              "description": "A phone number in E.164 format, including the country code."
+              "description": "A phone number in E.164 format, including the country code.",
+              "example": "\u002B15555555555"
             }
           },
           "phoneNumberId": {
@@ -26022,30 +26268,35 @@
           "id": {
             "pattern": "^AC(.*)$",
             "type": "string",
-            "description": "The unique identifier of the message."
+            "description": "The unique identifier of the message.",
+            "example": "AC123abc"
           },
           "to": {
             "type": "array",
             "items": {
               "pattern": "^\\\u002B[1-9]\\d{1,14}$",
               "type": "string",
-              "description": "A phone number in E.164 format, including the country code."
+              "description": "A phone number in E.164 format, including the country code.",
+              "example": "\u002B15555555555"
             }
           },
           "from": {
             "pattern": "^\\\u002B[1-9]\\d{1,14}$",
             "type": "string",
-            "description": "A phone number in E.164 format, including the country code."
+            "description": "A phone number in E.164 format, including the country code.",
+            "example": "\u002B15555555555"
           },
           "text": {
             "type": "string",
-            "description": "The content of the message."
+            "description": "The content of the message.",
+            "example": "Hello, world!"
           },
           "phoneNumberId": {
             "pattern": "^PN(.*)$",
             "type": "string",
             "description": "The unique identifier of the Quo phone number that the message was sent from.",
-            "nullable": true
+            "nullable": true,
+            "example": "PN123abc"
           },
           "direction": {
             "$ref": "#/components/schemas/SendMessageV1202ResponseDataDirection"
@@ -26053,7 +26304,8 @@
           "userId": {
             "pattern": "^US(.*)$",
             "type": "string",
-            "description": "The unique identifier of the user who sent the message. Null for incoming messages."
+            "description": "The unique identifier of the user who sent the message. Null for incoming messages.",
+            "example": "US123abc"
           },
           "status": {
             "$ref": "#/components/schemas/SendMessageV1202ResponseDataStatus"
@@ -26061,12 +26313,14 @@
           "createdAt": {
             "type": "string",
             "description": "The timestamp when the message was created at, in ISO 8601 format",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           },
           "updatedAt": {
             "type": "string",
             "description": "The timestamp when the message status was last updated, in ISO 8601 format.",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           }
         }
       },
@@ -26220,30 +26474,35 @@
           "id": {
             "pattern": "^AC(.*)$",
             "type": "string",
-            "description": "The unique identifier of the message."
+            "description": "The unique identifier of the message.",
+            "example": "AC123abc"
           },
           "to": {
             "type": "array",
             "items": {
               "pattern": "^\\\u002B[1-9]\\d{1,14}$",
               "type": "string",
-              "description": "A phone number in E.164 format, including the country code."
+              "description": "A phone number in E.164 format, including the country code.",
+              "example": "\u002B15555555555"
             }
           },
           "from": {
             "pattern": "^\\\u002B[1-9]\\d{1,14}$",
             "type": "string",
-            "description": "A phone number in E.164 format, including the country code."
+            "description": "A phone number in E.164 format, including the country code.",
+            "example": "\u002B15555555555"
           },
           "text": {
             "type": "string",
-            "description": "The content of the message."
+            "description": "The content of the message.",
+            "example": "Hello, world!"
           },
           "phoneNumberId": {
             "pattern": "^PN(.*)$",
             "type": "string",
             "description": "The unique identifier of the Quo phone number that the message was sent from.",
-            "nullable": true
+            "nullable": true,
+            "example": "PN123abc"
           },
           "direction": {
             "$ref": "#/components/schemas/ListMessagesV1200ResponseDataItemDirection"
@@ -26251,7 +26510,8 @@
           "userId": {
             "pattern": "^US(.*)$",
             "type": "string",
-            "description": "The unique identifier of the user who sent the message. Null for incoming messages."
+            "description": "The unique identifier of the user who sent the message. Null for incoming messages.",
+            "example": "US123abc"
           },
           "status": {
             "$ref": "#/components/schemas/ListMessagesV1200ResponseDataItemStatus"
@@ -26259,12 +26519,14 @@
           "createdAt": {
             "type": "string",
             "description": "The timestamp when the message was created at, in ISO 8601 format",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           },
           "updatedAt": {
             "type": "string",
             "description": "The timestamp when the message status was last updated, in ISO 8601 format.",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           }
         }
       },
@@ -26418,30 +26680,35 @@
           "id": {
             "pattern": "^AC(.*)$",
             "type": "string",
-            "description": "The unique identifier of the message."
+            "description": "The unique identifier of the message.",
+            "example": "AC123abc"
           },
           "to": {
             "type": "array",
             "items": {
               "pattern": "^\\\u002B[1-9]\\d{1,14}$",
               "type": "string",
-              "description": "A phone number in E.164 format, including the country code."
+              "description": "A phone number in E.164 format, including the country code.",
+              "example": "\u002B15555555555"
             }
           },
           "from": {
             "pattern": "^\\\u002B[1-9]\\d{1,14}$",
             "type": "string",
-            "description": "A phone number in E.164 format, including the country code."
+            "description": "A phone number in E.164 format, including the country code.",
+            "example": "\u002B15555555555"
           },
           "text": {
             "type": "string",
-            "description": "The content of the message."
+            "description": "The content of the message.",
+            "example": "Hello, world!"
           },
           "phoneNumberId": {
             "pattern": "^PN(.*)$",
             "type": "string",
             "description": "The unique identifier of the Quo phone number that the message was sent from.",
-            "nullable": true
+            "nullable": true,
+            "example": "PN123abc"
           },
           "direction": {
             "$ref": "#/components/schemas/GetMessageByIdV1200ResponseDataDirection"
@@ -26449,7 +26716,8 @@
           "userId": {
             "pattern": "^US(.*)$",
             "type": "string",
-            "description": "The unique identifier of the user who sent the message. Null for incoming messages."
+            "description": "The unique identifier of the user who sent the message. Null for incoming messages.",
+            "example": "US123abc"
           },
           "status": {
             "$ref": "#/components/schemas/GetMessageByIdV1200ResponseDataStatus"
@@ -26457,12 +26725,14 @@
           "createdAt": {
             "type": "string",
             "description": "The timestamp when the message was created at, in ISO 8601 format",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           },
           "updatedAt": {
             "type": "string",
             "description": "The timestamp when the message status was last updated, in ISO 8601 format.",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           }
         }
       },
@@ -26729,45 +26999,54 @@
           "id": {
             "pattern": "^PN(.*)$",
             "type": "string",
-            "description": "The unique identifier of Quo phone number."
+            "description": "The unique identifier of Quo phone number.",
+            "example": "PN123bc"
           },
           "groupId": {
             "type": "string",
-            "description": "The unique identifier of the group to which the Quo number belongs."
+            "description": "The unique identifier of the group to which the Quo number belongs.",
+            "example": "1234"
           },
           "portRequestId": {
             "type": "string",
             "description": "Unique identifier for the phone number\u2019s porting request, if applicable.",
-            "nullable": true
+            "nullable": true,
+            "example": "123abc"
           },
           "formattedNumber": {
             "type": "string",
             "description": "A human-readable representation of a phone number.",
-            "nullable": true
+            "nullable": true,
+            "example": "\u002B15555555555"
           },
           "forward": {
             "type": "string",
             "description": "Forwarding number for incoming calls, null if no forwarding number is configured.",
-            "nullable": true
+            "nullable": true,
+            "example": "\u002B15555555555"
           },
           "name": {
             "type": "string",
-            "description": "The display name of the phone number"
+            "description": "The display name of the phone number",
+            "example": "My phone number"
           },
           "number": {
             "pattern": "^\\\u002B[1-9]\\d{1,14}$",
             "type": "string",
-            "description": "A phone number in E.164 format, including the country code."
+            "description": "A phone number in E.164 format, including the country code.",
+            "example": "\u002B15555555555"
           },
           "portingStatus": {
             "type": "string",
             "description": "Current status of the porting process, if applicable.",
-            "nullable": true
+            "nullable": true,
+            "example": "completed"
           },
           "symbol": {
             "type": "string",
             "description": "Custom symbol or emoji associated with the phone number.",
-            "nullable": true
+            "nullable": true,
+            "example": "\uD83C\uDFE1"
           },
           "users": {
             "type": "array",
@@ -26777,11 +27056,13 @@
           },
           "createdAt": {
             "type": "string",
-            "description": "Timestamp of when the phone number was added to the account in ISO 8601 format."
+            "description": "Timestamp of when the phone number was added to the account in ISO 8601 format.",
+            "example": " \u00272022-01-01T00:00:00Z\u0027"
           },
           "updatedAt": {
             "type": "string",
-            "description": "Timestamp of the last update to the phone number\u0027s details in ISO 8601 format."
+            "description": "Timestamp of the last update to the phone number\u0027s details in ISO 8601 format.",
+            "example": " \u00272022-01-01T00:00:00Z\u0027"
           },
           "restrictions": {
             "$ref": "#/components/schemas/GetPhoneNumberByIdV1200ResponseDataRestrictions"
@@ -28686,28 +28967,34 @@
         "properties": {
           "id": {
             "pattern": "^US(.*)$",
-            "type": "string"
+            "type": "string",
+            "description": "The unique identifier of the user.",
+            "example": "US123abc"
           },
           "email": {
             "type": "string",
             "description": "The user\u0027s email address.",
-            "format": "email"
+            "format": "email",
+            "example": "johndoe@example.com"
           },
           "firstName": {
             "type": "string",
             "description": "The user\u0027s first name.",
-            "nullable": true
+            "nullable": true,
+            "example": "John"
           },
           "lastName": {
             "type": "string",
             "description": "The user\u0027s last name.",
-            "nullable": true
+            "nullable": true,
+            "example": "Doe"
           },
           "pictureUrl": {
             "type": "string",
             "description": "The user\u0027s picture URL.",
             "format": "uri",
-            "nullable": true
+            "nullable": true,
+            "example": "https://example.com/picture.jpg"
           },
           "role": {
             "$ref": "#/components/schemas/ListUsersV1200ResponseDataItemRole"
@@ -28715,12 +29002,14 @@
           "createdAt": {
             "type": "string",
             "description": "Timestamp of user creation in ISO 8601 format.",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           },
           "updatedAt": {
             "type": "string",
             "description": "Timestamp of last user update in ISO 8601 format.",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           }
         }
       },
@@ -28849,28 +29138,34 @@
         "properties": {
           "id": {
             "pattern": "^US(.*)$",
-            "type": "string"
+            "type": "string",
+            "description": "The unique identifier of the user.",
+            "example": "US123abc"
           },
           "email": {
             "type": "string",
             "description": "The user\u0027s email address.",
-            "format": "email"
+            "format": "email",
+            "example": "johndoe@example.com"
           },
           "firstName": {
             "type": "string",
             "description": "The user\u0027s first name.",
-            "nullable": true
+            "nullable": true,
+            "example": "John"
           },
           "lastName": {
             "type": "string",
             "description": "The user\u0027s last name.",
-            "nullable": true
+            "nullable": true,
+            "example": "Doe"
           },
           "pictureUrl": {
             "type": "string",
             "description": "The user\u0027s picture URL.",
             "format": "uri",
-            "nullable": true
+            "nullable": true,
+            "example": "https://example.com/picture.jpg"
           },
           "role": {
             "$ref": "#/components/schemas/GetUserByIdV1200ResponseDataRole"
@@ -28878,12 +29173,14 @@
           "createdAt": {
             "type": "string",
             "description": "Timestamp of user creation in ISO 8601 format.",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           },
           "updatedAt": {
             "type": "string",
             "description": "Timestamp of last user update in ISO 8601 format.",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           }
         }
       },
@@ -29017,22 +29314,26 @@
           "id": {
             "pattern": "^WH(.*)$",
             "type": "string",
-            "description": "The webhook\u0027s ID"
+            "description": "The webhook\u0027s ID",
+            "example": "WHabcd1234"
           },
           "userId": {
             "pattern": "^US(.*)$",
             "type": "string",
-            "description": "The unique identifier of the user that created the webhook."
+            "description": "The unique identifier of the user that created the webhook.",
+            "example": "US123abc"
           },
           "orgId": {
             "pattern": "^OR(.*)$",
             "type": "string",
-            "description": "The unique identifier of the organization the webhook belongs to"
+            "description": "The unique identifier of the organization the webhook belongs to",
+            "example": "OR1223abc"
           },
           "label": {
             "type": "string",
             "description": "The webhook\u0027s label.",
-            "nullable": true
+            "nullable": true,
+            "example": "my webhook label"
           },
           "status": {
             "$ref": "#/components/schemas/ListWebhooksV1200ResponseDataItemStatus"
@@ -29040,27 +29341,32 @@
           "url": {
             "type": "string",
             "description": "The endpoint that receives events from the webhook.",
-            "format": "uri"
+            "format": "uri",
+            "example": "https://example.com/"
           },
           "key": {
             "type": "string",
-            "description": "Webhook key"
+            "description": "Webhook key",
+            "example": "example-key"
           },
           "createdAt": {
             "type": "string",
             "description": "The date the webhook was created at, in ISO_8601 format.",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           },
           "updatedAt": {
             "type": "string",
             "description": "The date the webhook was created at, in ISO_8601 format.",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           },
           "deletedAt": {
             "type": "string",
             "description": "The date the webhook was deleted at, in ISO_8601 format.",
             "format": "date-time",
-            "nullable": true
+            "nullable": true,
+            "example": "2022-01-01T00:00:00Z"
           },
           "events": {
             "type": "array",
@@ -29203,22 +29509,26 @@
           "id": {
             "pattern": "^WH(.*)$",
             "type": "string",
-            "description": "The webhook\u0027s ID"
+            "description": "The webhook\u0027s ID",
+            "example": "WHabcd1234"
           },
           "userId": {
             "pattern": "^US(.*)$",
             "type": "string",
-            "description": "The unique identifier of the user that created the webhook."
+            "description": "The unique identifier of the user that created the webhook.",
+            "example": "US123abc"
           },
           "orgId": {
             "pattern": "^OR(.*)$",
             "type": "string",
-            "description": "The unique identifier of the organization the webhook belongs to"
+            "description": "The unique identifier of the organization the webhook belongs to",
+            "example": "OR1223abc"
           },
           "label": {
             "type": "string",
             "description": "The webhook\u0027s label.",
-            "nullable": true
+            "nullable": true,
+            "example": "my webhook label"
           },
           "status": {
             "$ref": "#/components/schemas/GetWebhookByIdV1200ResponseDataStatus"
@@ -29226,27 +29536,32 @@
           "url": {
             "type": "string",
             "description": "The endpoint that receives events from the webhook.",
-            "format": "uri"
+            "format": "uri",
+            "example": "https://example.com/"
           },
           "key": {
             "type": "string",
-            "description": "Webhook key"
+            "description": "Webhook key",
+            "example": "example-key"
           },
           "createdAt": {
             "type": "string",
             "description": "The date the webhook was created at, in ISO_8601 format.",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           },
           "updatedAt": {
             "type": "string",
             "description": "The date the webhook was created at, in ISO_8601 format.",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           },
           "deletedAt": {
             "type": "string",
             "description": "The date the webhook was deleted at, in ISO_8601 format.",
             "format": "date-time",
-            "nullable": true
+            "nullable": true,
+            "example": "2022-01-01T00:00:00Z"
           },
           "events": {
             "type": "array",
@@ -29499,22 +29814,26 @@
           "id": {
             "pattern": "^WH(.*)$",
             "type": "string",
-            "description": "The webhook\u0027s ID"
+            "description": "The webhook\u0027s ID",
+            "example": "WHabcd1234"
           },
           "userId": {
             "pattern": "^US(.*)$",
             "type": "string",
-            "description": "The unique identifier of the user that created the webhook."
+            "description": "The unique identifier of the user that created the webhook.",
+            "example": "US123abc"
           },
           "orgId": {
             "pattern": "^OR(.*)$",
             "type": "string",
-            "description": "The unique identifier of the organization the webhook belongs to"
+            "description": "The unique identifier of the organization the webhook belongs to",
+            "example": "OR1223abc"
           },
           "label": {
             "type": "string",
             "description": "The webhook\u0027s label.",
-            "nullable": true
+            "nullable": true,
+            "example": "my webhook label"
           },
           "status": {
             "$ref": "#/components/schemas/CreateMessageWebhookV1201ResponseDataStatus"
@@ -29522,27 +29841,32 @@
           "url": {
             "type": "string",
             "description": "The endpoint that receives events from the webhook.",
-            "format": "uri"
+            "format": "uri",
+            "example": "https://example.com/"
           },
           "key": {
             "type": "string",
-            "description": "Webhook key"
+            "description": "Webhook key",
+            "example": "example-key"
           },
           "createdAt": {
             "type": "string",
             "description": "The date the webhook was created at, in ISO_8601 format.",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           },
           "updatedAt": {
             "type": "string",
             "description": "The date the webhook was created at, in ISO_8601 format.",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           },
           "deletedAt": {
             "type": "string",
             "description": "The date the webhook was deleted at, in ISO_8601 format.",
             "format": "date-time",
-            "nullable": true
+            "nullable": true,
+            "example": "2022-01-01T00:00:00Z"
           },
           "events": {
             "type": "array",
@@ -29685,22 +30009,26 @@
           "id": {
             "pattern": "^WH(.*)$",
             "type": "string",
-            "description": "The webhook\u0027s ID"
+            "description": "The webhook\u0027s ID",
+            "example": "WHabcd1234"
           },
           "userId": {
             "pattern": "^US(.*)$",
             "type": "string",
-            "description": "The unique identifier of the user that created the webhook."
+            "description": "The unique identifier of the user that created the webhook.",
+            "example": "US123abc"
           },
           "orgId": {
             "pattern": "^OR(.*)$",
             "type": "string",
-            "description": "The unique identifier of the organization the webhook belongs to"
+            "description": "The unique identifier of the organization the webhook belongs to",
+            "example": "OR1223abc"
           },
           "label": {
             "type": "string",
             "description": "The webhook\u0027s label.",
-            "nullable": true
+            "nullable": true,
+            "example": "my webhook label"
           },
           "status": {
             "$ref": "#/components/schemas/CreateCallWebhookV1201ResponseDataStatus"
@@ -29708,27 +30036,32 @@
           "url": {
             "type": "string",
             "description": "The endpoint that receives events from the webhook.",
-            "format": "uri"
+            "format": "uri",
+            "example": "https://example.com/"
           },
           "key": {
             "type": "string",
-            "description": "Webhook key"
+            "description": "Webhook key",
+            "example": "example-key"
           },
           "createdAt": {
             "type": "string",
             "description": "The date the webhook was created at, in ISO_8601 format.",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           },
           "updatedAt": {
             "type": "string",
             "description": "The date the webhook was created at, in ISO_8601 format.",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           },
           "deletedAt": {
             "type": "string",
             "description": "The date the webhook was deleted at, in ISO_8601 format.",
             "format": "date-time",
-            "nullable": true
+            "nullable": true,
+            "example": "2022-01-01T00:00:00Z"
           },
           "events": {
             "type": "array",
@@ -29871,22 +30204,26 @@
           "id": {
             "pattern": "^WH(.*)$",
             "type": "string",
-            "description": "The webhook\u0027s ID"
+            "description": "The webhook\u0027s ID",
+            "example": "WHabcd1234"
           },
           "userId": {
             "pattern": "^US(.*)$",
             "type": "string",
-            "description": "The unique identifier of the user that created the webhook."
+            "description": "The unique identifier of the user that created the webhook.",
+            "example": "US123abc"
           },
           "orgId": {
             "pattern": "^OR(.*)$",
             "type": "string",
-            "description": "The unique identifier of the organization the webhook belongs to"
+            "description": "The unique identifier of the organization the webhook belongs to",
+            "example": "OR1223abc"
           },
           "label": {
             "type": "string",
             "description": "The webhook\u0027s label.",
-            "nullable": true
+            "nullable": true,
+            "example": "my webhook label"
           },
           "status": {
             "$ref": "#/components/schemas/CreateCallSummaryWebhookV1201ResponseDataStatus"
@@ -29894,27 +30231,32 @@
           "url": {
             "type": "string",
             "description": "The endpoint that receives events from the webhook.",
-            "format": "uri"
+            "format": "uri",
+            "example": "https://example.com/"
           },
           "key": {
             "type": "string",
-            "description": "Webhook key"
+            "description": "Webhook key",
+            "example": "example-key"
           },
           "createdAt": {
             "type": "string",
             "description": "The date the webhook was created at, in ISO_8601 format.",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           },
           "updatedAt": {
             "type": "string",
             "description": "The date the webhook was created at, in ISO_8601 format.",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           },
           "deletedAt": {
             "type": "string",
             "description": "The date the webhook was deleted at, in ISO_8601 format.",
             "format": "date-time",
-            "nullable": true
+            "nullable": true,
+            "example": "2022-01-01T00:00:00Z"
           },
           "events": {
             "minItems": 1,
@@ -30058,22 +30400,26 @@
           "id": {
             "pattern": "^WH(.*)$",
             "type": "string",
-            "description": "The webhook\u0027s ID"
+            "description": "The webhook\u0027s ID",
+            "example": "WHabcd1234"
           },
           "userId": {
             "pattern": "^US(.*)$",
             "type": "string",
-            "description": "The unique identifier of the user that created the webhook."
+            "description": "The unique identifier of the user that created the webhook.",
+            "example": "US123abc"
           },
           "orgId": {
             "pattern": "^OR(.*)$",
             "type": "string",
-            "description": "The unique identifier of the organization the webhook belongs to"
+            "description": "The unique identifier of the organization the webhook belongs to",
+            "example": "OR1223abc"
           },
           "label": {
             "type": "string",
             "description": "The webhook\u0027s label.",
-            "nullable": true
+            "nullable": true,
+            "example": "my webhook label"
           },
           "status": {
             "$ref": "#/components/schemas/CreateCallTranscriptWebhookV1201ResponseDataStatus"
@@ -30081,27 +30427,32 @@
           "url": {
             "type": "string",
             "description": "The endpoint that receives events from the webhook.",
-            "format": "uri"
+            "format": "uri",
+            "example": "https://example.com/"
           },
           "key": {
             "type": "string",
-            "description": "Webhook key"
+            "description": "Webhook key",
+            "example": "example-key"
           },
           "createdAt": {
             "type": "string",
             "description": "The date the webhook was created at, in ISO_8601 format.",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           },
           "updatedAt": {
             "type": "string",
             "description": "The date the webhook was created at, in ISO_8601 format.",
-            "format": "date-time"
+            "format": "date-time",
+            "example": "2022-01-01T00:00:00Z"
           },
           "deletedAt": {
             "type": "string",
             "description": "The date the webhook was deleted at, in ISO_8601 format.",
             "format": "date-time",
-            "nullable": true
+            "nullable": true,
+            "example": "2022-01-01T00:00:00Z"
           },
           "events": {
             "minItems": 1,
@@ -30256,26 +30607,31 @@
         "properties": {
           "content": {
             "type": "string",
-            "description": "The transcribed text of a specific dialogue segment."
+            "description": "The transcribed text of a specific dialogue segment.",
+            "example": "Hello, world!"
           },
           "start": {
             "type": "number",
-            "description": "The start time of the dialogue segment in seconds, relative to the beginning of the call."
+            "description": "The start time of the dialogue segment in seconds, relative to the beginning of the call.",
+            "example": 5.123456
           },
           "end": {
             "type": "number",
-            "description": "The end time of the dialogue segment in seconds, relative to the beginning of the call."
+            "description": "The end time of the dialogue segment in seconds, relative to the beginning of the call.",
+            "example": 10.123456
           },
           "identifier": {
             "type": "string",
             "description": "The phone number of the participant who spoke during this dialogue segment.",
-            "nullable": true
+            "nullable": true,
+            "example": "\u002B19876543210"
           },
           "userId": {
             "pattern": "^US(.*)$",
             "type": "string",
             "description": "The unique identifier of the Quo user who spoke during this dialogue segment. Null for external participants or if user identification is not available.",
-            "nullable": true
+            "nullable": true,
+            "example": "US123abc"
           }
         }
       },
@@ -30778,12 +31134,14 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "The name for the contact\u0027s email address."
+            "description": "The name for the contact\u0027s email address.",
+            "example": "company email"
           },
           "value": {
             "type": "string",
             "description": "The contact\u0027s email address.",
-            "nullable": true
+            "nullable": true,
+            "example": "abc@example.com"
           }
         }
       },
@@ -30796,12 +31154,14 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "The name of the contact\u0027s phone number."
+            "description": "The name of the contact\u0027s phone number.",
+            "example": "company phone"
           },
           "value": {
             "type": "string",
             "description": "The contact\u0027s phone number.",
-            "nullable": true
+            "nullable": true,
+            "example": "\u002B12345678901"
           }
         }
       },
@@ -30819,7 +31179,8 @@
           "company": {
             "type": "string",
             "description": "The contact\u0027s company name.",
-            "nullable": true
+            "nullable": true,
+            "example": "Quo"
           },
           "emails": {
             "type": "array",
@@ -30830,12 +31191,14 @@
           "firstName": {
             "type": "string",
             "description": "The contact\u0027s first name.",
-            "nullable": true
+            "nullable": true,
+            "example": "John"
           },
           "lastName": {
             "type": "string",
             "description": "The contact\u0027s last name.",
-            "nullable": true
+            "nullable": true,
+            "example": "Doe"
           },
           "phoneNumbers": {
             "type": "array",
@@ -30846,7 +31209,8 @@
           "role": {
             "type": "string",
             "description": "The contact\u0027s role.",
-            "nullable": true
+            "nullable": true,
+            "example": "Sales"
           }
         }
       },
@@ -30948,7 +31312,8 @@
           "company": {
             "type": "string",
             "description": "The contact\u0027s company name.",
-            "nullable": true
+            "nullable": true,
+            "example": "Quo"
           },
           "emails": {
             "type": "array",
@@ -30959,12 +31324,14 @@
           "firstName": {
             "type": "string",
             "description": "The contact\u0027s first name.",
-            "nullable": true
+            "nullable": true,
+            "example": "John"
           },
           "lastName": {
             "type": "string",
             "description": "The contact\u0027s last name.",
-            "nullable": true
+            "nullable": true,
+            "example": "Doe"
           },
           "phoneNumbers": {
             "type": "array",
@@ -30975,7 +31342,8 @@
           "role": {
             "type": "string",
             "description": "The contact\u0027s role.",
-            "nullable": true
+            "nullable": true,
+            "example": "Sales"
           }
         }
       },
@@ -31077,7 +31445,8 @@
           "company": {
             "type": "string",
             "description": "The contact\u0027s company name.",
-            "nullable": true
+            "nullable": true,
+            "example": "Quo"
           },
           "emails": {
             "type": "array",
@@ -31088,12 +31457,14 @@
           "firstName": {
             "type": "string",
             "description": "The contact\u0027s first name.",
-            "nullable": true
+            "nullable": true,
+            "example": "John"
           },
           "lastName": {
             "type": "string",
             "description": "The contact\u0027s last name.",
-            "nullable": true
+            "nullable": true,
+            "example": "Doe"
           },
           "phoneNumbers": {
             "type": "array",
@@ -31104,7 +31475,8 @@
           "role": {
             "type": "string",
             "description": "The contact\u0027s role.",
-            "nullable": true
+            "nullable": true,
+            "example": "Sales"
           }
         }
       },
@@ -31201,16 +31573,19 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "The name for the contact\u0027s email address."
+            "description": "The name for the contact\u0027s email address.",
+            "example": "company email"
           },
           "value": {
             "type": "string",
             "description": "The contact\u0027s email address. If set to null during a patch operation, it will remove the email item from the contact.",
-            "nullable": true
+            "nullable": true,
+            "example": "info@openphone.com"
           },
           "id": {
             "type": "string",
-            "description": "The unique identifier for the contact email field."
+            "description": "The unique identifier for the contact email field.",
+            "example": "acb123"
           }
         }
       },
@@ -31223,16 +31598,19 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "The name of the contact\u0027s phone number."
+            "description": "The name of the contact\u0027s phone number.",
+            "example": "company phone"
           },
           "value": {
             "type": "string",
             "description": "The contact\u0027s phone number. If set to null during a patch operation, it will remove the phone number item from the contact.",
-            "nullable": true
+            "nullable": true,
+            "example": "\u002B15555555555"
           },
           "id": {
             "type": "string",
-            "description": "The unique identifier of the contact phone number field."
+            "description": "The unique identifier of the contact phone number field.",
+            "example": "acb123"
           }
         }
       },
@@ -31250,7 +31628,8 @@
           "company": {
             "type": "string",
             "description": "The contact\u0027s company name.",
-            "nullable": true
+            "nullable": true,
+            "example": "Quo"
           },
           "emails": {
             "type": "array",
@@ -31261,12 +31640,14 @@
           "firstName": {
             "type": "string",
             "description": "The contact\u0027s first name.",
-            "nullable": true
+            "nullable": true,
+            "example": "John"
           },
           "lastName": {
             "type": "string",
             "description": "The contact\u0027s last name.",
-            "nullable": true
+            "nullable": true,
+            "example": "Doe"
           },
           "phoneNumbers": {
             "type": "array",
@@ -31277,7 +31658,8 @@
           "role": {
             "type": "string",
             "description": "The contact\u0027s role.",
-            "nullable": true
+            "nullable": true,
+            "example": "Sales"
           }
         }
       },
@@ -31855,21 +32237,26 @@
           "email": {
             "type": "string",
             "description": "The user\u0027s email address.",
-            "format": "email"
+            "format": "email",
+            "example": "johndoe@example.com"
           },
           "firstName": {
             "type": "string",
             "description": "The user\u0027s first name.",
-            "nullable": true
+            "nullable": true,
+            "example": "John"
           },
           "lastName": {
             "type": "string",
             "description": "The user\u0027s last name.",
-            "nullable": true
+            "nullable": true,
+            "example": "Doe"
           },
           "id": {
             "pattern": "^US(.*)$",
-            "type": "string"
+            "type": "string",
+            "description": "The unique identifier of the user.",
+            "example": "US123abc"
           },
           "role": {
             "$ref": "#/components/schemas/GetPhoneNumberByIdV1200ResponseDataUsersItemRole"
@@ -31877,7 +32264,8 @@
           "groupId": {
             "pattern": "^GR(.*)$",
             "type": "string",
-            "description": "The unique identifier of the group to which the user belongs."
+            "description": "The unique identifier of the group to which the user belongs.",
+            "example": "GRcei8k90o"
           }
         }
       },
@@ -33529,16 +33917,19 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "The name for the contact\u0027s email address."
+            "description": "The name for the contact\u0027s email address.",
+            "example": "company email"
           },
           "value": {
             "type": "string",
             "description": "The contact\u0027s email address.",
-            "nullable": true
+            "nullable": true,
+            "example": "abc@example.com"
           },
           "id": {
             "type": "string",
-            "description": "The unique identifier for the contact email field."
+            "description": "The unique identifier for the contact email field.",
+            "example": "acb123"
           }
         }
       },
@@ -33551,16 +33942,19 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "The name of the contact\u0027s phone number."
+            "description": "The name of the contact\u0027s phone number.",
+            "example": "company phone"
           },
           "value": {
             "type": "string",
             "description": "The contact\u0027s phone number.",
-            "nullable": true
+            "nullable": true,
+            "example": "\u002B12345678901"
           },
           "id": {
             "type": "string",
-            "description": "The unique identifier of the contact phone number field."
+            "description": "The unique identifier of the contact phone number field.",
+            "example": "acb123"
           }
         }
       },
@@ -33573,16 +33967,19 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "The name for the contact\u0027s email address."
+            "description": "The name for the contact\u0027s email address.",
+            "example": "company email"
           },
           "value": {
             "type": "string",
             "description": "The contact\u0027s email address.",
-            "nullable": true
+            "nullable": true,
+            "example": "abc@example.com"
           },
           "id": {
             "type": "string",
-            "description": "The unique identifier for the contact email field."
+            "description": "The unique identifier for the contact email field.",
+            "example": "acb123"
           }
         }
       },
@@ -33595,16 +33992,19 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "The name of the contact\u0027s phone number."
+            "description": "The name of the contact\u0027s phone number.",
+            "example": "company phone"
           },
           "value": {
             "type": "string",
             "description": "The contact\u0027s phone number.",
-            "nullable": true
+            "nullable": true,
+            "example": "\u002B12345678901"
           },
           "id": {
             "type": "string",
-            "description": "The unique identifier of the contact phone number field."
+            "description": "The unique identifier of the contact phone number field.",
+            "example": "acb123"
           }
         }
       },
@@ -33617,16 +34017,19 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "The name for the contact\u0027s email address."
+            "description": "The name for the contact\u0027s email address.",
+            "example": "company email"
           },
           "value": {
             "type": "string",
             "description": "The contact\u0027s email address.",
-            "nullable": true
+            "nullable": true,
+            "example": "abc@example.com"
           },
           "id": {
             "type": "string",
-            "description": "The unique identifier for the contact email field."
+            "description": "The unique identifier for the contact email field.",
+            "example": "acb123"
           }
         }
       },
@@ -33639,16 +34042,19 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "The name of the contact\u0027s phone number."
+            "description": "The name of the contact\u0027s phone number.",
+            "example": "company phone"
           },
           "value": {
             "type": "string",
             "description": "The contact\u0027s phone number.",
-            "nullable": true
+            "nullable": true,
+            "example": "\u002B12345678901"
           },
           "id": {
             "type": "string",
-            "description": "The unique identifier of the contact phone number field."
+            "description": "The unique identifier of the contact phone number field.",
+            "example": "acb123"
           }
         }
       },
@@ -33661,16 +34067,19 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "The name for the contact\u0027s email address."
+            "description": "The name for the contact\u0027s email address.",
+            "example": "company email"
           },
           "value": {
             "type": "string",
             "description": "The contact\u0027s email address.",
-            "nullable": true
+            "nullable": true,
+            "example": "abc@example.com"
           },
           "id": {
             "type": "string",
-            "description": "The unique identifier for the contact email field."
+            "description": "The unique identifier for the contact email field.",
+            "example": "acb123"
           }
         }
       },
@@ -33683,16 +34092,19 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "The name of the contact\u0027s phone number."
+            "description": "The name of the contact\u0027s phone number.",
+            "example": "company phone"
           },
           "value": {
             "type": "string",
             "description": "The contact\u0027s phone number.",
-            "nullable": true
+            "nullable": true,
+            "example": "\u002B12345678901"
           },
           "id": {
             "type": "string",
-            "description": "The unique identifier of the contact phone number field."
+            "description": "The unique identifier of the contact phone number field.",
+            "example": "acb123"
           }
         }
       },
@@ -33758,6 +34170,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The user\u0027s role in the organization.",
+        "example": "owner",
         "x-ms-enum": {
           "name": "ListPhoneNumbersResponseDataItemUsersItemRole",
           "modelAsString": false,
@@ -33785,6 +34198,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The phone-number usage restriction status for a specific region",
+        "example": "unrestricted",
         "x-ms-enum": {
           "name": "ListPhoneNumbersResponseDataItemRestrictionsCallingCa",
           "modelAsString": false,
@@ -33808,6 +34222,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The phone-number usage restriction status for a specific region",
+        "example": "unrestricted",
         "x-ms-enum": {
           "name": "ListPhoneNumbersResponseDataItemRestrictionsCallingIntl",
           "modelAsString": false,
@@ -33831,6 +34246,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The phone-number usage restriction status for a specific region",
+        "example": "unrestricted",
         "x-ms-enum": {
           "name": "ListPhoneNumbersResponseDataItemRestrictionsCallingUs",
           "modelAsString": false,
@@ -33854,6 +34270,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The phone-number usage restriction status for a specific region",
+        "example": "unrestricted",
         "x-ms-enum": {
           "name": "ListPhoneNumbersResponseDataItemRestrictionsMessagingCa",
           "modelAsString": false,
@@ -33877,6 +34294,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The phone-number usage restriction status for a specific region",
+        "example": "unrestricted",
         "x-ms-enum": {
           "name": "ListPhoneNumbersResponseDataItemRestrictionsMessagingIntl",
           "modelAsString": false,
@@ -33900,6 +34318,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The phone-number usage restriction status for a specific region",
+        "example": "unrestricted",
         "x-ms-enum": {
           "name": "ListPhoneNumbersResponseDataItemRestrictionsMessagingUs",
           "modelAsString": false,
@@ -33922,6 +34341,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "Used to set the status of the related Quo inbox conversation. The default behavior without setting this parameter will be for the message sent to show up as an open conversation in the user\u0027s inbox. Setting the parameter to \u0060\u0027done\u0027\u0060 would move the conversation to the Done inbox view.",
+        "example": "done",
         "x-ms-enum": {
           "name": "SendMessageV1RequestSetInboxStatus",
           "modelAsString": false,
@@ -33964,6 +34384,7 @@
         "additionalProperties": false,
         "description": "The status of the webhook.",
         "default": "enabled",
+        "example": "enabled",
         "x-ms-enum": {
           "name": "CreateMessageWebhookV1RequestStatus",
           "modelAsString": false,
@@ -34015,6 +34436,7 @@
         "additionalProperties": false,
         "description": "The status of the webhook.",
         "default": "enabled",
+        "example": "enabled",
         "x-ms-enum": {
           "name": "CreateCallWebhookV1RequestStatus",
           "modelAsString": false,
@@ -34056,6 +34478,7 @@
         "additionalProperties": false,
         "description": "The status of the webhook.",
         "default": "enabled",
+        "example": "enabled",
         "x-ms-enum": {
           "name": "CreateCallSummaryWebhookV1RequestStatus",
           "modelAsString": false,
@@ -34096,6 +34519,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The status of the webhook.",
+        "example": "enabled",
         "x-ms-enum": {
           "name": "CreateCallTranscriptWebhookV1RequestStatus",
           "modelAsString": false,
@@ -34315,6 +34739,7 @@
         "additionalProperties": false,
         "description": "The current status of the call recording.",
         "nullable": true,
+        "example": "completed",
         "x-ms-enum": {
           "name": "GetCallRecordingsV1200ResponseDataItemStatus",
           "modelAsString": false,
@@ -34366,6 +34791,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The direction of the call relative to the Quo number.",
+        "example": "incoming",
         "x-ms-enum": {
           "name": "ListCallsV1200ResponseDataItemDirection",
           "modelAsString": false,
@@ -34400,6 +34826,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The current status of the call.",
+        "example": "completed",
         "x-ms-enum": {
           "name": "ListCallsV1200ResponseDataItemStatus",
           "modelAsString": false,
@@ -34467,6 +34894,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The direction of the call relative to the Quo number.",
+        "example": "incoming",
         "x-ms-enum": {
           "name": "GetCallByIdV1200ResponseDataDirection",
           "modelAsString": false,
@@ -34501,6 +34929,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The current status of the call.",
+        "example": "completed",
         "x-ms-enum": {
           "name": "GetCallByIdV1200ResponseDataStatus",
           "modelAsString": false,
@@ -34570,6 +34999,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The status of the call summary.",
+        "example": "completed",
         "x-ms-enum": {
           "name": "GetCallSummaryV1200ResponseDataStatus",
           "modelAsString": false,
@@ -34603,6 +35033,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The status of the call transcription.",
+        "example": "completed",
         "x-ms-enum": {
           "name": "GetCallTranscriptV1200ResponseDataStatus",
           "modelAsString": false,
@@ -34634,6 +35065,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The current status of the call voicemail.",
+        "example": "completed",
         "x-ms-enum": {
           "name": "GetCallVoicemailsV1200ResponseDataStatus",
           "modelAsString": false,
@@ -34662,6 +35094,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The data type of the custom contact field, determining what kind of information can be stored and how it should be formatted.",
+        "example": "boolean",
         "x-ms-enum": {
           "name": "GetContactCustomFieldsV1200ResponseDataItemType",
           "modelAsString": false,
@@ -34705,6 +35138,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The direction of the message relative to the Quo number.",
+        "example": "incoming",
         "x-ms-enum": {
           "name": "SendMessageV1202ResponseDataDirection",
           "modelAsString": false,
@@ -34731,6 +35165,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The status of the message.",
+        "example": "sent",
         "x-ms-enum": {
           "name": "SendMessageV1202ResponseDataStatus",
           "modelAsString": false,
@@ -34766,6 +35201,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The direction of the message relative to the Quo number.",
+        "example": "incoming",
         "x-ms-enum": {
           "name": "ListMessagesV1200ResponseDataItemDirection",
           "modelAsString": false,
@@ -34792,6 +35228,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The status of the message.",
+        "example": "sent",
         "x-ms-enum": {
           "name": "ListMessagesV1200ResponseDataItemStatus",
           "modelAsString": false,
@@ -34827,6 +35264,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The direction of the message relative to the Quo number.",
+        "example": "incoming",
         "x-ms-enum": {
           "name": "GetMessageByIdV1200ResponseDataDirection",
           "modelAsString": false,
@@ -34853,6 +35291,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The status of the message.",
+        "example": "sent",
         "x-ms-enum": {
           "name": "GetMessageByIdV1200ResponseDataStatus",
           "modelAsString": false,
@@ -34889,6 +35328,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The user\u0027s role in the organization.",
+        "example": "owner",
         "x-ms-enum": {
           "name": "ListUsersV1200ResponseDataItemRole",
           "modelAsString": false,
@@ -34917,6 +35357,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The user\u0027s role in the organization.",
+        "example": "owner",
         "x-ms-enum": {
           "name": "GetUserByIdV1200ResponseDataRole",
           "modelAsString": false,
@@ -34945,6 +35386,7 @@
         "additionalProperties": false,
         "description": "The status of the webhook.",
         "default": "enabled",
+        "example": "enabled",
         "x-ms-enum": {
           "name": "ListWebhooksV1200ResponseDataItemStatus",
           "modelAsString": false,
@@ -34991,6 +35433,7 @@
         "additionalProperties": false,
         "description": "The status of the webhook.",
         "default": "enabled",
+        "example": "enabled",
         "x-ms-enum": {
           "name": "GetWebhookByIdV1200ResponseDataStatus",
           "modelAsString": false,
@@ -35037,6 +35480,7 @@
         "additionalProperties": false,
         "description": "The status of the webhook.",
         "default": "enabled",
+        "example": "enabled",
         "x-ms-enum": {
           "name": "CreateMessageWebhookV1201ResponseDataStatus",
           "modelAsString": false,
@@ -35083,6 +35527,7 @@
         "additionalProperties": false,
         "description": "The status of the webhook.",
         "default": "enabled",
+        "example": "enabled",
         "x-ms-enum": {
           "name": "CreateCallWebhookV1201ResponseDataStatus",
           "modelAsString": false,
@@ -35134,6 +35579,7 @@
         "additionalProperties": false,
         "description": "The status of the webhook.",
         "default": "enabled",
+        "example": "enabled",
         "x-ms-enum": {
           "name": "CreateCallSummaryWebhookV1201ResponseDataStatus",
           "modelAsString": false,
@@ -35175,6 +35621,7 @@
         "additionalProperties": false,
         "description": "The status of the webhook.",
         "default": "enabled",
+        "example": "enabled",
         "x-ms-enum": {
           "name": "CreateCallTranscriptWebhookV1201ResponseDataStatus",
           "modelAsString": false,
@@ -35216,6 +35663,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The user\u0027s role in the organization.",
+        "example": "owner",
         "x-ms-enum": {
           "name": "GetPhoneNumberByIdV1200ResponseDataUsersItemRole",
           "modelAsString": false,
@@ -35243,6 +35691,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The phone-number usage restriction status for a specific region",
+        "example": "unrestricted",
         "x-ms-enum": {
           "name": "GetPhoneNumberByIdV1200ResponseDataRestrictionsCallingCa",
           "modelAsString": false,
@@ -35266,6 +35715,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The phone-number usage restriction status for a specific region",
+        "example": "unrestricted",
         "x-ms-enum": {
           "name": "GetPhoneNumberByIdV1200ResponseDataRestrictionsCallingIntl",
           "modelAsString": false,
@@ -35289,6 +35739,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The phone-number usage restriction status for a specific region",
+        "example": "unrestricted",
         "x-ms-enum": {
           "name": "GetPhoneNumberByIdV1200ResponseDataRestrictionsCallingUs",
           "modelAsString": false,
@@ -35312,6 +35763,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The phone-number usage restriction status for a specific region",
+        "example": "unrestricted",
         "x-ms-enum": {
           "name": "GetPhoneNumberByIdV1200ResponseDataRestrictionsMessagingCa",
           "modelAsString": false,
@@ -35335,6 +35787,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The phone-number usage restriction status for a specific region",
+        "example": "unrestricted",
         "x-ms-enum": {
           "name": "GetPhoneNumberByIdV1200ResponseDataRestrictionsMessagingIntl",
           "modelAsString": false,
@@ -35358,6 +35811,7 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The phone-number usage restriction status for a specific region",
+        "example": "unrestricted",
         "x-ms-enum": {
           "name": "GetPhoneNumberByIdV1200ResponseDataRestrictionsMessagingUs",
           "modelAsString": false,

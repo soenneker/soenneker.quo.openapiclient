@@ -58,7 +58,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
 #else
         public string OrgId { get; set; }
 #endif
-        /// <summary>The resourceIds property</summary>
+        /// <summary>The unique identifiers of the phone numbers associated with the webhook.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Quo.OpenApiClient.Models.ListWebhooksV1200ResponseDataItemResourceIds? ResourceIds { get; set; }
