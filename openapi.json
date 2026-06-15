@@ -9335,7 +9335,22 @@
                           "assignedTo": {
                             "anyOf": [
                               {
-                                "type": "string"
+                                "description": "The unique identifier of the user or system user the conversation is assigned to.",
+                                "examples": [
+                                  "US123abc",
+                                  "SYU123abc"
+                                ],
+                                "example": "US123abc",
+                                "anyOf": [
+                                  {
+                                    "pattern": "^US(.*)$",
+                                    "type": "string"
+                                  },
+                                  {
+                                    "pattern": "^SYU(.*)$",
+                                    "type": "string"
+                                  }
+                                ]
                               },
                               {
                                 "type": "null"
@@ -9365,8 +9380,13 @@
                             ]
                           },
                           "id": {
+                            "description": "The unique identifier of the conversation.",
+                            "examples": [
+                              "CN123abc"
+                            ],
                             "pattern": "^CN(.*)$",
-                            "type": "string"
+                            "type": "string",
+                            "example": "CN123abc"
                           },
                           "lastActivityAt": {
                             "anyOf": [
@@ -9382,8 +9402,13 @@
                           "lastActivityId": {
                             "anyOf": [
                               {
+                                "description": "The unique identifier of the most recent activity in the conversation.",
+                                "examples": [
+                                  "AC123abc"
+                                ],
                                 "pattern": "^AC(.*)$",
-                                "type": "string"
+                                "type": "string",
+                                "example": "AC123abc"
                               },
                               {
                                 "type": "null"
@@ -9404,7 +9429,12 @@
                           "name": {
                             "anyOf": [
                               {
-                                "type": "string"
+                                "description": "The custom name of the conversation. Will be null if no custom name is set.",
+                                "examples": [
+                                  "Chat with customer"
+                                ],
+                                "type": "string",
+                                "example": "Chat with customer"
                               },
                               {
                                 "type": "null"
@@ -9424,8 +9454,13 @@
                             }
                           },
                           "phoneNumberId": {
+                            "description": "The unique identifier of the Quo phone number associated with the conversation.",
+                            "examples": [
+                              "PN123abc"
+                            ],
                             "pattern": "^PN(.*)$",
-                            "type": "string"
+                            "type": "string",
+                            "example": "PN123abc"
                           },
                           "snoozedUntil": {
                             "anyOf": [
@@ -9459,6 +9494,582 @@
                     "nextPageToken": {
                       "anyOf": [
                         {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ],
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "1000400",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 400,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Bad Request",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ],
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "required": [
+                              "type"
+                            ],
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ],
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "1000401",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 401,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Unauthorized",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ],
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "required": [
+                              "type"
+                            ],
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Not Phone Number User",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title",
+                    "description"
+                  ],
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "1001403",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 403,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Not Phone Number User",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ],
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "required": [
+                              "type"
+                            ],
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "description": {
+                      "const": "Not Phone Number User",
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ],
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "1000404",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 404,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Not Found",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ],
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "required": [
+                              "type"
+                            ],
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unknown Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "message",
+                    "code",
+                    "status",
+                    "docs",
+                    "title"
+                  ],
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "const": "1001500",
+                      "type": "string"
+                    },
+                    "status": {
+                      "const": 500,
+                      "type": "number"
+                    },
+                    "docs": {
+                      "const": "https://quo.com/docs",
+                      "type": "string"
+                    },
+                    "title": {
+                      "const": "Unknown",
+                      "type": "string"
+                    },
+                    "trace": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "path",
+                          "message",
+                          "schema"
+                        ],
+                        "properties": {
+                          "path": {
+                            "type": "string"
+                          },
+                          "message": {
+                            "type": "string"
+                          },
+                          "value": {},
+                          "schema": {
+                            "type": "object",
+                            "required": [
+                              "type"
+                            ],
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/conversations/{conversationId}/mark-as-read": {
+      "post": {
+        "tags": [
+          "Conversations"
+        ],
+        "summary": "Mark conversation as read",
+        "description": "Mark a conversation as read, clearing its unread indicator without sending a message. Returns the updated conversation.",
+        "operationId": "markConversationAsRead_v1",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "conversationId",
+            "required": true,
+            "schema": {
+              "description": "The unique identifier of the conversation to mark as read.",
+              "examples": [
+                "CN123abc"
+              ],
+              "pattern": "^CN(.*)$",
+              "type": "string"
+            },
+            "example": "CN123abc"
+          }
+        ],
+        "security": [
+          {
+            "apiKey": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "assignedTo",
+                    "createdAt",
+                    "deletedAt",
+                    "id",
+                    "lastActivityAt",
+                    "lastActivityId",
+                    "mutedUntil",
+                    "name",
+                    "participants",
+                    "phoneNumberId",
+                    "snoozedUntil",
+                    "updatedAt"
+                  ],
+                  "properties": {
+                    "assignedTo": {
+                      "anyOf": [
+                        {
+                          "description": "The unique identifier of the user or system user the conversation is assigned to.",
+                          "examples": [
+                            "US123abc",
+                            "SYU123abc"
+                          ],
+                          "example": "US123abc",
+                          "anyOf": [
+                            {
+                              "pattern": "^US(.*)$",
+                              "type": "string"
+                            },
+                            {
+                              "pattern": "^SYU(.*)$",
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "createdAt": {
+                      "anyOf": [
+                        {
+                          "format": "date-time",
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "deletedAt": {
+                      "anyOf": [
+                        {
+                          "format": "date-time",
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "id": {
+                      "description": "The unique identifier of the conversation.",
+                      "examples": [
+                        "CN123abc"
+                      ],
+                      "pattern": "^CN(.*)$",
+                      "type": "string",
+                      "example": "CN123abc"
+                    },
+                    "lastActivityAt": {
+                      "anyOf": [
+                        {
+                          "format": "date-time",
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "lastActivityId": {
+                      "anyOf": [
+                        {
+                          "description": "The unique identifier of the most recent activity in the conversation.",
+                          "examples": [
+                            "AC123abc"
+                          ],
+                          "pattern": "^AC(.*)$",
+                          "type": "string",
+                          "example": "AC123abc"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "mutedUntil": {
+                      "anyOf": [
+                        {
+                          "format": "date-time",
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "name": {
+                      "anyOf": [
+                        {
+                          "description": "The custom name of the conversation. Will be null if no custom name is set.",
+                          "examples": [
+                            "Chat with customer"
+                          ],
+                          "type": "string",
+                          "example": "Chat with customer"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "participants": {
+                      "type": "array",
+                      "items": {
+                        "description": "A phone number in E.164 format, including the country code.",
+                        "examples": [
+                          "+15555555555"
+                        ],
+                        "pattern": "^\\+[1-9]\\d{1,14}$",
+                        "type": "string",
+                        "example": "+15555555555"
+                      }
+                    },
+                    "phoneNumberId": {
+                      "description": "The unique identifier of the Quo phone number associated with the conversation.",
+                      "examples": [
+                        "PN123abc"
+                      ],
+                      "pattern": "^PN(.*)$",
+                      "type": "string",
+                      "example": "PN123abc"
+                    },
+                    "snoozedUntil": {
+                      "anyOf": [
+                        {
+                          "format": "date-time",
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "updatedAt": {
+                      "anyOf": [
+                        {
+                          "format": "date-time",
                           "type": "string"
                         },
                         {

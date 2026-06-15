@@ -9,7 +9,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ListConversationsV1200ResponseDataItem : IAdditionalDataHolder, IParsable
+    public partial class MarkConversationAsReadV1200Response : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -17,10 +17,10 @@ namespace Soenneker.Quo.OpenApiClient.Models
         /// <summary>The assignedTo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Quo.OpenApiClient.Models.ListConversationsV1200ResponseDataItemAssignedTo? AssignedTo { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsReadV1200ResponseAssignedTo? AssignedTo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Quo.OpenApiClient.Models.ListConversationsV1200ResponseDataItemAssignedTo AssignedTo { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsReadV1200ResponseAssignedTo AssignedTo { get; set; }
 #endif
         /// <summary>The createdAt property</summary>
         public DateTimeOffset? CreatedAt { get; set; }
@@ -75,21 +75,21 @@ namespace Soenneker.Quo.OpenApiClient.Models
         /// <summary>The updatedAt property</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Quo.OpenApiClient.Models.ListConversationsV1200ResponseDataItem"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsReadV1200Response"/> and sets the default values.
         /// </summary>
-        public ListConversationsV1200ResponseDataItem()
+        public MarkConversationAsReadV1200Response()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.ListConversationsV1200ResponseDataItem"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsReadV1200Response"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Quo.OpenApiClient.Models.ListConversationsV1200ResponseDataItem CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsReadV1200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Quo.OpenApiClient.Models.ListConversationsV1200ResponseDataItem();
+            return new global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsReadV1200Response();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,7 +99,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "assignedTo", n => { AssignedTo = n.GetObjectValue<global::Soenneker.Quo.OpenApiClient.Models.ListConversationsV1200ResponseDataItemAssignedTo>(global::Soenneker.Quo.OpenApiClient.Models.ListConversationsV1200ResponseDataItemAssignedTo.CreateFromDiscriminatorValue); } },
+                { "assignedTo", n => { AssignedTo = n.GetObjectValue<global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsReadV1200ResponseAssignedTo>(global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsReadV1200ResponseAssignedTo.CreateFromDiscriminatorValue); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "deletedAt", n => { DeletedAt = n.GetDateTimeOffsetValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
@@ -120,7 +120,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.ListConversationsV1200ResponseDataItemAssignedTo>("assignedTo", AssignedTo);
+            writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsReadV1200ResponseAssignedTo>("assignedTo", AssignedTo);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteDateTimeOffsetValue("deletedAt", DeletedAt);
             writer.WriteStringValue("id", Id);
