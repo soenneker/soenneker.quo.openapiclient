@@ -1530,6 +1530,186 @@
         ]
       }
     },
+    "/v1/conversations/{conversationId}/mark-as-done": {
+      "post": {
+        "tags": [
+          "Conversations"
+        ],
+        "summary": "Mark conversation as done",
+        "description": "Mark a conversation as done, removing it from the inbox without sending a message. Returns the updated conversation.",
+        "operationId": "MarkConversationAsDoneV1",
+        "parameters": [
+          {
+            "name": "conversationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^CN(.*)$",
+              "type": "string",
+              "description": "The unique identifier of the conversation to mark as done."
+            },
+            "example": "CN123abc"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarkConversationAsDoneV1200Response"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarkConversationAsDoneV1400Response"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarkConversationAsDoneV1401Response"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Not Phone Number User",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarkConversationAsDoneV1403Response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarkConversationAsDoneV1404Response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unknown Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarkConversationAsDoneV1500Response"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "apiKey": []
+          }
+        ]
+      }
+    },
+    "/v1/conversations/{conversationId}/mark-as-open": {
+      "post": {
+        "tags": [
+          "Conversations"
+        ],
+        "summary": "Mark conversation as open",
+        "description": "Mark a conversation as open, returning it to the inbox without sending a message. Returns the updated conversation.",
+        "operationId": "MarkConversationAsOpenV1",
+        "parameters": [
+          {
+            "name": "conversationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^CN(.*)$",
+              "type": "string",
+              "description": "The unique identifier of the conversation to mark as open."
+            },
+            "example": "CN123abc"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarkConversationAsOpenV1200Response"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarkConversationAsOpenV1400Response"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarkConversationAsOpenV1401Response"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Not Phone Number User",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarkConversationAsOpenV1403Response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarkConversationAsOpenV1404Response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unknown Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarkConversationAsOpenV1500Response"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "apiKey": []
+          }
+        ]
+      }
+    },
     "/v1/messages": {
       "post": {
         "tags": [
@@ -11173,6 +11353,1052 @@
           }
         }
       },
+      "MarkConversationAsDoneV1200Response": {
+        "required": [
+          "assignedTo",
+          "createdAt",
+          "deletedAt",
+          "id",
+          "lastActivityAt",
+          "lastActivityId",
+          "mutedUntil",
+          "name",
+          "participants",
+          "phoneNumberId",
+          "snoozedUntil",
+          "updatedAt"
+        ],
+        "type": "object",
+        "properties": {
+          "assignedTo": {
+            "$ref": "#/components/schemas/MarkConversationAsDoneV1200ResponseAssignedTo"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "deletedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "id": {
+            "pattern": "^CN(.*)$",
+            "type": "string",
+            "description": "The unique identifier of the conversation.",
+            "example": "CN123abc"
+          },
+          "lastActivityAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "lastActivityId": {
+            "pattern": "^AC(.*)$",
+            "type": "string",
+            "description": "The unique identifier of the most recent activity in the conversation.",
+            "nullable": true,
+            "example": "AC123abc"
+          },
+          "mutedUntil": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "description": "The custom name of the conversation. Will be null if no custom name is set.",
+            "nullable": true,
+            "example": "Chat with customer"
+          },
+          "participants": {
+            "type": "array",
+            "items": {
+              "pattern": "^\\\u002B[1-9]\\d{1,14}$",
+              "type": "string",
+              "description": "A phone number in E.164 format, including the country code.",
+              "example": "\u002B15555555555"
+            }
+          },
+          "phoneNumberId": {
+            "pattern": "^PN(.*)$",
+            "type": "string",
+            "description": "The unique identifier of the Quo phone number associated with the conversation.",
+            "example": "PN123abc"
+          },
+          "snoozedUntil": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        }
+      },
+      "MarkConversationAsDoneV1400Response": {
+        "required": [
+          "message",
+          "code",
+          "status",
+          "docs",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "enum": [
+              "1000400"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Code",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "1000400",
+                  "name": "Value1000400"
+                }
+              ]
+            }
+          },
+          "status": {
+            "enum": [
+              "400"
+            ],
+            "type": "number",
+            "x-ms-enum": {
+              "name": "Status",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "400",
+                  "name": "Value400"
+                }
+              ]
+            }
+          },
+          "docs": {
+            "enum": [
+              "https://quo.com/docs"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Docs",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "https://quo.com/docs",
+                  "name": "HttpsColonSlashSlashQuoComDocs"
+                }
+              ]
+            }
+          },
+          "title": {
+            "enum": [
+              "Bad Request"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Title",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "Bad Request",
+                  "name": "BadRequest"
+                }
+              ]
+            }
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MarkConversationAsDoneV1400ResponseErrorsItem"
+            }
+          }
+        }
+      },
+      "MarkConversationAsDoneV1401Response": {
+        "required": [
+          "message",
+          "code",
+          "status",
+          "docs",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "enum": [
+              "1000401"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Code",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "1000401",
+                  "name": "Value1000401"
+                }
+              ]
+            }
+          },
+          "status": {
+            "enum": [
+              "401"
+            ],
+            "type": "number",
+            "x-ms-enum": {
+              "name": "Status",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "401",
+                  "name": "Value401"
+                }
+              ]
+            }
+          },
+          "docs": {
+            "enum": [
+              "https://quo.com/docs"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Docs",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "https://quo.com/docs",
+                  "name": "HttpsColonSlashSlashQuoComDocs"
+                }
+              ]
+            }
+          },
+          "title": {
+            "enum": [
+              "Unauthorized"
+            ],
+            "type": "string"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MarkConversationAsDoneV1401ResponseErrorsItem"
+            }
+          }
+        }
+      },
+      "MarkConversationAsDoneV1403Response": {
+        "required": [
+          "message",
+          "code",
+          "status",
+          "docs",
+          "title",
+          "description"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "enum": [
+              "1001403"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Code",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "1001403",
+                  "name": "Value1001403"
+                }
+              ]
+            }
+          },
+          "status": {
+            "enum": [
+              "403"
+            ],
+            "type": "number",
+            "x-ms-enum": {
+              "name": "Status",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "403",
+                  "name": "Value403"
+                }
+              ]
+            }
+          },
+          "docs": {
+            "enum": [
+              "https://quo.com/docs"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Docs",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "https://quo.com/docs",
+                  "name": "HttpsColonSlashSlashQuoComDocs"
+                }
+              ]
+            }
+          },
+          "title": {
+            "enum": [
+              "Not Phone Number User"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Title",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "Not Phone Number User",
+                  "name": "NotPhoneNumberUser"
+                }
+              ]
+            }
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MarkConversationAsDoneV1403ResponseErrorsItem"
+            }
+          },
+          "description": {
+            "enum": [
+              "Not Phone Number User"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Description",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "Not Phone Number User",
+                  "name": "NotPhoneNumberUser"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "MarkConversationAsDoneV1404Response": {
+        "required": [
+          "message",
+          "code",
+          "status",
+          "docs",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "enum": [
+              "1000404"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Code",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "1000404",
+                  "name": "Value1000404"
+                }
+              ]
+            }
+          },
+          "status": {
+            "enum": [
+              "404"
+            ],
+            "type": "number",
+            "x-ms-enum": {
+              "name": "Status",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "404",
+                  "name": "Value404"
+                }
+              ]
+            }
+          },
+          "docs": {
+            "enum": [
+              "https://quo.com/docs"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Docs",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "https://quo.com/docs",
+                  "name": "HttpsColonSlashSlashQuoComDocs"
+                }
+              ]
+            }
+          },
+          "title": {
+            "enum": [
+              "Not Found"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Title",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "Not Found",
+                  "name": "NotFound"
+                }
+              ]
+            }
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MarkConversationAsDoneV1404ResponseErrorsItem"
+            }
+          }
+        }
+      },
+      "MarkConversationAsDoneV1500Response": {
+        "required": [
+          "message",
+          "code",
+          "status",
+          "docs",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "enum": [
+              "1001500"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Code",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "1001500",
+                  "name": "Value1001500"
+                }
+              ]
+            }
+          },
+          "status": {
+            "enum": [
+              "500"
+            ],
+            "type": "number",
+            "x-ms-enum": {
+              "name": "Status",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "500",
+                  "name": "Value500"
+                }
+              ]
+            }
+          },
+          "docs": {
+            "enum": [
+              "https://quo.com/docs"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Docs",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "https://quo.com/docs",
+                  "name": "HttpsColonSlashSlashQuoComDocs"
+                }
+              ]
+            }
+          },
+          "title": {
+            "enum": [
+              "Unknown"
+            ],
+            "type": "string"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MarkConversationAsDoneV1500ResponseErrorsItem"
+            }
+          }
+        }
+      },
+      "MarkConversationAsOpenV1200Response": {
+        "required": [
+          "assignedTo",
+          "createdAt",
+          "deletedAt",
+          "id",
+          "lastActivityAt",
+          "lastActivityId",
+          "mutedUntil",
+          "name",
+          "participants",
+          "phoneNumberId",
+          "snoozedUntil",
+          "updatedAt"
+        ],
+        "type": "object",
+        "properties": {
+          "assignedTo": {
+            "$ref": "#/components/schemas/MarkConversationAsOpenV1200ResponseAssignedTo"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "deletedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "id": {
+            "pattern": "^CN(.*)$",
+            "type": "string",
+            "description": "The unique identifier of the conversation.",
+            "example": "CN123abc"
+          },
+          "lastActivityAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "lastActivityId": {
+            "pattern": "^AC(.*)$",
+            "type": "string",
+            "description": "The unique identifier of the most recent activity in the conversation.",
+            "nullable": true,
+            "example": "AC123abc"
+          },
+          "mutedUntil": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "description": "The custom name of the conversation. Will be null if no custom name is set.",
+            "nullable": true,
+            "example": "Chat with customer"
+          },
+          "participants": {
+            "type": "array",
+            "items": {
+              "pattern": "^\\\u002B[1-9]\\d{1,14}$",
+              "type": "string",
+              "description": "A phone number in E.164 format, including the country code.",
+              "example": "\u002B15555555555"
+            }
+          },
+          "phoneNumberId": {
+            "pattern": "^PN(.*)$",
+            "type": "string",
+            "description": "The unique identifier of the Quo phone number associated with the conversation.",
+            "example": "PN123abc"
+          },
+          "snoozedUntil": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        }
+      },
+      "MarkConversationAsOpenV1400Response": {
+        "required": [
+          "message",
+          "code",
+          "status",
+          "docs",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "enum": [
+              "1000400"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Code",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "1000400",
+                  "name": "Value1000400"
+                }
+              ]
+            }
+          },
+          "status": {
+            "enum": [
+              "400"
+            ],
+            "type": "number",
+            "x-ms-enum": {
+              "name": "Status",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "400",
+                  "name": "Value400"
+                }
+              ]
+            }
+          },
+          "docs": {
+            "enum": [
+              "https://quo.com/docs"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Docs",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "https://quo.com/docs",
+                  "name": "HttpsColonSlashSlashQuoComDocs"
+                }
+              ]
+            }
+          },
+          "title": {
+            "enum": [
+              "Bad Request"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Title",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "Bad Request",
+                  "name": "BadRequest"
+                }
+              ]
+            }
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MarkConversationAsOpenV1400ResponseErrorsItem"
+            }
+          }
+        }
+      },
+      "MarkConversationAsOpenV1401Response": {
+        "required": [
+          "message",
+          "code",
+          "status",
+          "docs",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "enum": [
+              "1000401"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Code",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "1000401",
+                  "name": "Value1000401"
+                }
+              ]
+            }
+          },
+          "status": {
+            "enum": [
+              "401"
+            ],
+            "type": "number",
+            "x-ms-enum": {
+              "name": "Status",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "401",
+                  "name": "Value401"
+                }
+              ]
+            }
+          },
+          "docs": {
+            "enum": [
+              "https://quo.com/docs"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Docs",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "https://quo.com/docs",
+                  "name": "HttpsColonSlashSlashQuoComDocs"
+                }
+              ]
+            }
+          },
+          "title": {
+            "enum": [
+              "Unauthorized"
+            ],
+            "type": "string"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MarkConversationAsOpenV1401ResponseErrorsItem"
+            }
+          }
+        }
+      },
+      "MarkConversationAsOpenV1403Response": {
+        "required": [
+          "message",
+          "code",
+          "status",
+          "docs",
+          "title",
+          "description"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "enum": [
+              "1001403"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Code",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "1001403",
+                  "name": "Value1001403"
+                }
+              ]
+            }
+          },
+          "status": {
+            "enum": [
+              "403"
+            ],
+            "type": "number",
+            "x-ms-enum": {
+              "name": "Status",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "403",
+                  "name": "Value403"
+                }
+              ]
+            }
+          },
+          "docs": {
+            "enum": [
+              "https://quo.com/docs"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Docs",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "https://quo.com/docs",
+                  "name": "HttpsColonSlashSlashQuoComDocs"
+                }
+              ]
+            }
+          },
+          "title": {
+            "enum": [
+              "Not Phone Number User"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Title",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "Not Phone Number User",
+                  "name": "NotPhoneNumberUser"
+                }
+              ]
+            }
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MarkConversationAsOpenV1403ResponseErrorsItem"
+            }
+          },
+          "description": {
+            "enum": [
+              "Not Phone Number User"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Description",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "Not Phone Number User",
+                  "name": "NotPhoneNumberUser"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "MarkConversationAsOpenV1404Response": {
+        "required": [
+          "message",
+          "code",
+          "status",
+          "docs",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "enum": [
+              "1000404"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Code",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "1000404",
+                  "name": "Value1000404"
+                }
+              ]
+            }
+          },
+          "status": {
+            "enum": [
+              "404"
+            ],
+            "type": "number",
+            "x-ms-enum": {
+              "name": "Status",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "404",
+                  "name": "Value404"
+                }
+              ]
+            }
+          },
+          "docs": {
+            "enum": [
+              "https://quo.com/docs"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Docs",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "https://quo.com/docs",
+                  "name": "HttpsColonSlashSlashQuoComDocs"
+                }
+              ]
+            }
+          },
+          "title": {
+            "enum": [
+              "Not Found"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Title",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "Not Found",
+                  "name": "NotFound"
+                }
+              ]
+            }
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MarkConversationAsOpenV1404ResponseErrorsItem"
+            }
+          }
+        }
+      },
+      "MarkConversationAsOpenV1500Response": {
+        "required": [
+          "message",
+          "code",
+          "status",
+          "docs",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "enum": [
+              "1001500"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Code",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "1001500",
+                  "name": "Value1001500"
+                }
+              ]
+            }
+          },
+          "status": {
+            "enum": [
+              "500"
+            ],
+            "type": "number",
+            "x-ms-enum": {
+              "name": "Status",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "500",
+                  "name": "Value500"
+                }
+              ]
+            }
+          },
+          "docs": {
+            "enum": [
+              "https://quo.com/docs"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Docs",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "https://quo.com/docs",
+                  "name": "HttpsColonSlashSlashQuoComDocs"
+                }
+              ]
+            }
+          },
+          "title": {
+            "enum": [
+              "Unknown"
+            ],
+            "type": "string"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MarkConversationAsOpenV1500ResponseErrorsItem"
+            }
+          }
+        }
+      },
       "SendMessageV1Request": {
         "required": [
           "content",
@@ -11199,7 +12425,7 @@
             "$ref": "#/components/schemas/SendMessageV1RequestFrom"
           },
           "to": {
-            "maxItems": 1,
+            "maxItems": 10,
             "minItems": 1,
             "type": "array",
             "items": {
@@ -23745,6 +24971,48 @@
         ],
         "nullable": true
       },
+      "MarkConversationAsDoneV1200ResponseAssignedTo": {
+        "type": "object",
+        "anyOf": [
+          {
+            "type": "object",
+            "anyOf": [
+              {
+                "pattern": "^US(.*)$",
+                "type": "string"
+              },
+              {
+                "pattern": "^SYU(.*)$",
+                "type": "string"
+              }
+            ],
+            "description": "The unique identifier of the user or system user the conversation is assigned to.",
+            "example": "US123abc"
+          }
+        ],
+        "nullable": true
+      },
+      "MarkConversationAsOpenV1200ResponseAssignedTo": {
+        "type": "object",
+        "anyOf": [
+          {
+            "type": "object",
+            "anyOf": [
+              {
+                "pattern": "^US(.*)$",
+                "type": "string"
+              },
+              {
+                "pattern": "^SYU(.*)$",
+                "type": "string"
+              }
+            ],
+            "description": "The unique identifier of the user or system user the conversation is assigned to.",
+            "example": "US123abc"
+          }
+        ],
+        "nullable": true
+      },
       "SendMessageV1RequestFrom": {
         "type": "object",
         "anyOf": [
@@ -27019,6 +28287,226 @@
           },
           "schema": {
             "$ref": "#/components/schemas/MarkConversationAsReadV1500ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "MarkConversationAsDoneV1400ResponseErrorsItem": {
+        "required": [
+          "path",
+          "message",
+          "schema"
+        ],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "value": {
+            "$ref": "#/components/schemas/MarkConversationAsDoneV1400ResponseErrorsItemValue"
+          },
+          "schema": {
+            "$ref": "#/components/schemas/MarkConversationAsDoneV1400ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "MarkConversationAsDoneV1401ResponseErrorsItem": {
+        "required": [
+          "path",
+          "message",
+          "schema"
+        ],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "value": {
+            "$ref": "#/components/schemas/MarkConversationAsDoneV1401ResponseErrorsItemValue"
+          },
+          "schema": {
+            "$ref": "#/components/schemas/MarkConversationAsDoneV1401ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "MarkConversationAsDoneV1403ResponseErrorsItem": {
+        "required": [
+          "path",
+          "message",
+          "schema"
+        ],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "value": {
+            "$ref": "#/components/schemas/MarkConversationAsDoneV1403ResponseErrorsItemValue"
+          },
+          "schema": {
+            "$ref": "#/components/schemas/MarkConversationAsDoneV1403ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "MarkConversationAsDoneV1404ResponseErrorsItem": {
+        "required": [
+          "path",
+          "message",
+          "schema"
+        ],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "value": {
+            "$ref": "#/components/schemas/MarkConversationAsDoneV1404ResponseErrorsItemValue"
+          },
+          "schema": {
+            "$ref": "#/components/schemas/MarkConversationAsDoneV1404ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "MarkConversationAsDoneV1500ResponseErrorsItem": {
+        "required": [
+          "path",
+          "message",
+          "schema"
+        ],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "value": {
+            "$ref": "#/components/schemas/MarkConversationAsDoneV1500ResponseErrorsItemValue"
+          },
+          "schema": {
+            "$ref": "#/components/schemas/MarkConversationAsDoneV1500ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "MarkConversationAsOpenV1400ResponseErrorsItem": {
+        "required": [
+          "path",
+          "message",
+          "schema"
+        ],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "value": {
+            "$ref": "#/components/schemas/MarkConversationAsOpenV1400ResponseErrorsItemValue"
+          },
+          "schema": {
+            "$ref": "#/components/schemas/MarkConversationAsOpenV1400ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "MarkConversationAsOpenV1401ResponseErrorsItem": {
+        "required": [
+          "path",
+          "message",
+          "schema"
+        ],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "value": {
+            "$ref": "#/components/schemas/MarkConversationAsOpenV1401ResponseErrorsItemValue"
+          },
+          "schema": {
+            "$ref": "#/components/schemas/MarkConversationAsOpenV1401ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "MarkConversationAsOpenV1403ResponseErrorsItem": {
+        "required": [
+          "path",
+          "message",
+          "schema"
+        ],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "value": {
+            "$ref": "#/components/schemas/MarkConversationAsOpenV1403ResponseErrorsItemValue"
+          },
+          "schema": {
+            "$ref": "#/components/schemas/MarkConversationAsOpenV1403ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "MarkConversationAsOpenV1404ResponseErrorsItem": {
+        "required": [
+          "path",
+          "message",
+          "schema"
+        ],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "value": {
+            "$ref": "#/components/schemas/MarkConversationAsOpenV1404ResponseErrorsItemValue"
+          },
+          "schema": {
+            "$ref": "#/components/schemas/MarkConversationAsOpenV1404ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "MarkConversationAsOpenV1500ResponseErrorsItem": {
+        "required": [
+          "path",
+          "message",
+          "schema"
+        ],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "value": {
+            "$ref": "#/components/schemas/MarkConversationAsOpenV1500ResponseErrorsItemValue"
+          },
+          "schema": {
+            "$ref": "#/components/schemas/MarkConversationAsOpenV1500ResponseErrorsItemSchema"
           }
         }
       },
@@ -32733,6 +34221,146 @@
         "type": "object"
       },
       "MarkConversationAsReadV1500ResponseErrorsItemSchema": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "MarkConversationAsDoneV1400ResponseErrorsItemValue": {
+        "type": "object"
+      },
+      "MarkConversationAsDoneV1400ResponseErrorsItemSchema": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "MarkConversationAsDoneV1401ResponseErrorsItemValue": {
+        "type": "object"
+      },
+      "MarkConversationAsDoneV1401ResponseErrorsItemSchema": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "MarkConversationAsDoneV1403ResponseErrorsItemValue": {
+        "type": "object"
+      },
+      "MarkConversationAsDoneV1403ResponseErrorsItemSchema": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "MarkConversationAsDoneV1404ResponseErrorsItemValue": {
+        "type": "object"
+      },
+      "MarkConversationAsDoneV1404ResponseErrorsItemSchema": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "MarkConversationAsDoneV1500ResponseErrorsItemValue": {
+        "type": "object"
+      },
+      "MarkConversationAsDoneV1500ResponseErrorsItemSchema": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "MarkConversationAsOpenV1400ResponseErrorsItemValue": {
+        "type": "object"
+      },
+      "MarkConversationAsOpenV1400ResponseErrorsItemSchema": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "MarkConversationAsOpenV1401ResponseErrorsItemValue": {
+        "type": "object"
+      },
+      "MarkConversationAsOpenV1401ResponseErrorsItemSchema": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "MarkConversationAsOpenV1403ResponseErrorsItemValue": {
+        "type": "object"
+      },
+      "MarkConversationAsOpenV1403ResponseErrorsItemSchema": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "MarkConversationAsOpenV1404ResponseErrorsItemValue": {
+        "type": "object"
+      },
+      "MarkConversationAsOpenV1404ResponseErrorsItemSchema": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "MarkConversationAsOpenV1500ResponseErrorsItemValue": {
+        "type": "object"
+      },
+      "MarkConversationAsOpenV1500ResponseErrorsItemSchema": {
         "required": [
           "type"
         ],

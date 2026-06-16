@@ -2,6 +2,8 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Quo.OpenApiClient.V1.Conversations.Item.MarkAsDone;
+using Soenneker.Quo.OpenApiClient.V1.Conversations.Item.MarkAsOpen;
 using Soenneker.Quo.OpenApiClient.V1.Conversations.Item.MarkAsRead;
 using System.Collections.Generic;
 using System.IO;
@@ -15,6 +17,16 @@ namespace Soenneker.Quo.OpenApiClient.V1.Conversations.Item
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithConversationItemRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The markAsDone property</summary>
+        public global::Soenneker.Quo.OpenApiClient.V1.Conversations.Item.MarkAsDone.MarkAsDoneRequestBuilder MarkAsDone
+        {
+            get => new global::Soenneker.Quo.OpenApiClient.V1.Conversations.Item.MarkAsDone.MarkAsDoneRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The markAsOpen property</summary>
+        public global::Soenneker.Quo.OpenApiClient.V1.Conversations.Item.MarkAsOpen.MarkAsOpenRequestBuilder MarkAsOpen
+        {
+            get => new global::Soenneker.Quo.OpenApiClient.V1.Conversations.Item.MarkAsOpen.MarkAsOpenRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The markAsRead property</summary>
         public global::Soenneker.Quo.OpenApiClient.V1.Conversations.Item.MarkAsRead.MarkAsReadRequestBuilder MarkAsRead
         {
