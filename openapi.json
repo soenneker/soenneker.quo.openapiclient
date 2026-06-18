@@ -11733,6 +11733,7 @@
                         "from",
                         "text",
                         "phoneNumberId",
+                        "conversationId",
                         "direction",
                         "userId",
                         "status",
@@ -11793,6 +11794,15 @@
                               "type": "null"
                             }
                           ]
+                        },
+                        "conversationId": {
+                          "description": "The unique identifier of the conversation.",
+                          "examples": [
+                            "CN123abc"
+                          ],
+                          "pattern": "^CN(.*)$",
+                          "type": "string",
+                          "example": "CN123abc"
                         },
                         "direction": {
                           "type": "string",
@@ -12345,7 +12355,8 @@
             "name": "participants",
             "required": true,
             "schema": {
-              "description": "Array of phone numbers involved in the conversation, excluding your Quo number, in E.164 format.",
+              "description": "Array of phone numbers involved in the conversation, excluding your Quo number, in E.164 format. Passing a single participant will retrieve their conversation messages. Passing multiple participants will retrieve group conversation messages.",
+              "maxItems": 10,
               "examples": [
                 "+15555555555"
               ],
@@ -12453,6 +12464,7 @@
                           "from",
                           "text",
                           "phoneNumberId",
+                          "conversationId",
                           "direction",
                           "userId",
                           "status",
@@ -12513,6 +12525,15 @@
                                 "type": "null"
                               }
                             ]
+                          },
+                          "conversationId": {
+                            "description": "The unique identifier of the conversation.",
+                            "examples": [
+                              "CN123abc"
+                            ],
+                            "pattern": "^CN(.*)$",
+                            "type": "string",
+                            "example": "CN123abc"
                           },
                           "direction": {
                             "type": "string",
@@ -13088,6 +13109,7 @@
                         "from",
                         "text",
                         "phoneNumberId",
+                        "conversationId",
                         "direction",
                         "userId",
                         "status",
@@ -13148,6 +13170,15 @@
                               "type": "null"
                             }
                           ]
+                        },
+                        "conversationId": {
+                          "description": "The unique identifier of the conversation.",
+                          "examples": [
+                            "CN123abc"
+                          ],
+                          "pattern": "^CN(.*)$",
+                          "type": "string",
+                          "example": "CN123abc"
                         },
                         "direction": {
                           "type": "string",

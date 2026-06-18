@@ -14,6 +14,14 @@ namespace Soenneker.Quo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The unique identifier of the conversation.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ConversationId { get; set; }
+#nullable restore
+#else
+        public string ConversationId { get; set; }
+#endif
         /// <summary>The timestamp when the message was created at, in ISO 8601 format</summary>
         public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>The direction of the message relative to the Quo number.</summary>
@@ -95,6 +103,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "conversationId", n => { ConversationId = n.GetStringValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "direction", n => { Direction = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.ListMessagesV1200ResponseDataItemDirection>(); } },
                 { "from", n => { From = n.GetStringValue(); } },
@@ -114,6 +123,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("conversationId", ConversationId);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.ListMessagesV1200ResponseDataItemDirection>("direction", Direction);
             writer.WriteStringValue("from", From);

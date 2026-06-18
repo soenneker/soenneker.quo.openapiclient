@@ -1839,13 +1839,14 @@
             "in": "query",
             "required": true,
             "schema": {
+              "maxItems": 10,
               "type": "array",
               "items": {
                 "pattern": "^\\\u002B[1-9]\\d{1,14}$",
                 "type": "string",
                 "description": "A phone number in E.164 format, including the country code."
               },
-              "description": "Array of phone numbers involved in the conversation, excluding your Quo number, in E.164 format."
+              "description": "Array of phone numbers involved in the conversation, excluding your Quo number, in E.164 format. Passing a single participant will retrieve their conversation messages. Passing multiple participants will retrieve group conversation messages."
             },
             "example": "\u002B15555555555"
           },
@@ -28517,6 +28518,7 @@
           "from",
           "text",
           "phoneNumberId",
+          "conversationId",
           "direction",
           "userId",
           "status",
@@ -28557,6 +28559,12 @@
             "description": "The unique identifier of the Quo phone number that the message was sent from.",
             "nullable": true,
             "example": "PN123abc"
+          },
+          "conversationId": {
+            "pattern": "^CN(.*)$",
+            "type": "string",
+            "description": "The unique identifier of the conversation.",
+            "example": "CN123abc"
           },
           "direction": {
             "$ref": "#/components/schemas/SendMessageV1202ResponseDataDirection"
@@ -28723,6 +28731,7 @@
           "from",
           "text",
           "phoneNumberId",
+          "conversationId",
           "direction",
           "userId",
           "status",
@@ -28763,6 +28772,12 @@
             "description": "The unique identifier of the Quo phone number that the message was sent from.",
             "nullable": true,
             "example": "PN123abc"
+          },
+          "conversationId": {
+            "pattern": "^CN(.*)$",
+            "type": "string",
+            "description": "The unique identifier of the conversation.",
+            "example": "CN123abc"
           },
           "direction": {
             "$ref": "#/components/schemas/ListMessagesV1200ResponseDataItemDirection"
@@ -28929,6 +28944,7 @@
           "from",
           "text",
           "phoneNumberId",
+          "conversationId",
           "direction",
           "userId",
           "status",
@@ -28969,6 +28985,12 @@
             "description": "The unique identifier of the Quo phone number that the message was sent from.",
             "nullable": true,
             "example": "PN123abc"
+          },
+          "conversationId": {
+            "pattern": "^CN(.*)$",
+            "type": "string",
+            "description": "The unique identifier of the conversation.",
+            "example": "CN123abc"
           },
           "direction": {
             "$ref": "#/components/schemas/GetMessageByIdV1200ResponseDataDirection"
