@@ -11763,11 +11763,10 @@
                           }
                         },
                         "from": {
-                          "description": "A phone number in E.164 format, including the country code.",
+                          "description": "The from identifier, typically a E.164 phone number but can be a variety of formats.",
                           "examples": [
                             "+15555555555"
                           ],
-                          "pattern": "^\\+[1-9]\\d{1,14}$",
                           "type": "string",
                           "example": "+15555555555"
                         },
@@ -12494,11 +12493,10 @@
                             }
                           },
                           "from": {
-                            "description": "A phone number in E.164 format, including the country code.",
+                            "description": "The from identifier, typically a E.164 phone number but can be a variety of formats.",
                             "examples": [
                               "+15555555555"
                             ],
-                            "pattern": "^\\+[1-9]\\d{1,14}$",
                             "type": "string",
                             "example": "+15555555555"
                           },
@@ -13139,11 +13137,10 @@
                           }
                         },
                         "from": {
-                          "description": "A phone number in E.164 format, including the country code.",
+                          "description": "The from identifier, typically a E.164 phone number but can be a variety of formats.",
                           "examples": [
                             "+15555555555"
                           ],
-                          "pattern": "^\\+[1-9]\\d{1,14}$",
                           "type": "string",
                           "example": "+15555555555"
                         },

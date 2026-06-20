@@ -26,7 +26,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>The direction of the message relative to the Quo number.</summary>
         public global::Soenneker.Quo.OpenApiClient.Models.ListMessagesV1200ResponseDataItemDirection? Direction { get; set; }
-        /// <summary>A phone number in E.164 format, including the country code.</summary>
+        /// <summary>The from identifier, typically a E.164 phone number but can be a variety of formats.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? From { get; set; }

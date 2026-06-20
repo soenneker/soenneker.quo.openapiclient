@@ -28543,9 +28543,8 @@
             }
           },
           "from": {
-            "pattern": "^\\\u002B[1-9]\\d{1,14}$",
             "type": "string",
-            "description": "A phone number in E.164 format, including the country code.",
+            "description": "The from identifier, typically a E.164 phone number but can be a variety of formats.",
             "example": "\u002B15555555555"
           },
           "text": {
@@ -28756,9 +28755,8 @@
             }
           },
           "from": {
-            "pattern": "^\\\u002B[1-9]\\d{1,14}$",
             "type": "string",
-            "description": "A phone number in E.164 format, including the country code.",
+            "description": "The from identifier, typically a E.164 phone number but can be a variety of formats.",
             "example": "\u002B15555555555"
           },
           "text": {
@@ -28969,9 +28967,8 @@
             }
           },
           "from": {
-            "pattern": "^\\\u002B[1-9]\\d{1,14}$",
             "type": "string",
-            "description": "A phone number in E.164 format, including the country code.",
+            "description": "The from identifier, typically a E.164 phone number but can be a variety of formats.",
             "example": "\u002B15555555555"
           },
           "text": {
