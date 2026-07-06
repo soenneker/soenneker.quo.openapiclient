@@ -41,7 +41,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -206,7 +206,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -296,7 +296,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -386,7 +386,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -476,7 +476,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -566,7 +566,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -643,7 +643,7 @@
         "operationId": "GetContactCustomFieldsV1",
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -729,7 +729,7 @@
         },
         "responses": {
           "201": {
-            "description": "Success",
+            "description": "Created",
             "content": {
               "application/json": {
                 "schema": {
@@ -862,7 +862,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -962,7 +962,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1069,7 +1069,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1307,7 +1307,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "description": "Filter results to only include conversations created after the specified date and time, in ISO_8601 format.",
+              "description": "Filter results to only include conversations created after the specified date and time, in ISO 8601 format.",
               "format": "date-time"
             },
             "example": "2022-01-01T00:00:00Z"
@@ -1317,7 +1317,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "description": "Filter results to only include conversations created before the specified date and time, in ISO_8601 format.",
+              "description": "Filter results to only include conversations created before the specified date and time, in ISO 8601 format.",
               "format": "date-time"
             },
             "example": "2022-01-01T00:00:00Z"
@@ -1336,7 +1336,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "description": "Filter results to only include conversations updated after the specified date and time, in ISO_8601 format.",
+              "description": "Filter results to only include conversations updated after the specified date and time, in ISO 8601 format.",
               "format": "date-time"
             },
             "example": "2022-01-01T00:00:00Z"
@@ -1346,7 +1346,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "description": "Filter results to only include conversations updated before the specified date and time, in ISO_8601 format.",
+              "description": "Filter results to only include conversations updated before the specified date and time, in ISO 8601 format.",
               "format": "date-time"
             },
             "example": "2022-01-01T00:00:00Z"
@@ -1373,7 +1373,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1463,7 +1463,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1553,7 +1553,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1643,7 +1643,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1729,7 +1729,7 @@
         },
         "responses": {
           "202": {
-            "description": "Success",
+            "description": "Accepted",
             "content": {
               "application/json": {
                 "schema": {
@@ -1866,7 +1866,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "description": "Filter results to only include messages created after the specified date and time, in ISO_8601 format.",
+              "description": "Filter results to only include messages created after the specified date and time, in ISO 8601 format.",
               "format": "date-time"
             },
             "example": "2022-01-01T00:00:00Z"
@@ -1876,7 +1876,7 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "description": "Filter results to only include messages created before the specified date and time, in ISO_8601 format.",
+              "description": "Filter results to only include messages created before the specified date and time, in ISO 8601 format.",
               "format": "date-time"
             },
             "example": "2022-01-01T00:00:00Z"
@@ -1903,7 +1903,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2003,7 +2003,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2102,7 +2102,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2192,7 +2192,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2290,7 +2290,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2315,6 +2315,16 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ListTasksV1401Response"
+                }
+              }
+            }
+          },
+          "402": {
+            "description": "Open Tasks Limit Reached",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListTasksV1402Response"
                 }
               }
             }
@@ -2374,7 +2384,7 @@
         },
         "responses": {
           "201": {
-            "description": "Success",
+            "description": "Created",
             "content": {
               "application/json": {
                 "schema": {
@@ -2399,6 +2409,16 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CreateTaskV1401Response"
+                }
+              }
+            }
+          },
+          "402": {
+            "description": "Open Tasks Limit Reached",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateTaskV1402Response"
                 }
               }
             }
@@ -2462,7 +2482,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2487,6 +2507,16 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GetTaskByIdV1401Response"
+                }
+              }
+            }
+          },
+          "402": {
+            "description": "Open Tasks Limit Reached",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetTaskByIdV1402Response"
                 }
               }
             }
@@ -2567,6 +2597,16 @@
               }
             }
           },
+          "402": {
+            "description": "Open Tasks Limit Reached",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteTaskV1402Response"
+                }
+              }
+            }
+          },
           "403": {
             "description": "Forbidden",
             "content": {
@@ -2633,7 +2673,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2658,6 +2698,16 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/UpdateTaskV1401Response"
+                }
+              }
+            }
+          },
+          "402": {
+            "description": "Open Tasks Limit Reached",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateTaskV1402Response"
                 }
               }
             }
@@ -2721,7 +2771,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2746,6 +2796,16 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CompleteTaskV1401Response"
+                }
+              }
+            }
+          },
+          "402": {
+            "description": "Open Tasks Limit Reached",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CompleteTaskV1402Response"
                 }
               }
             }
@@ -2818,7 +2878,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2843,6 +2903,16 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/LinkTaskToConversationV1401Response"
+                }
+              }
+            }
+          },
+          "402": {
+            "description": "Open Tasks Limit Reached",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LinkTaskToConversationV1402Response"
                 }
               }
             }
@@ -2915,7 +2985,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2940,6 +3010,16 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/UnlinkTaskFromConversationV1401Response"
+                }
+              }
+            }
+          },
+          "402": {
+            "description": "Open Tasks Limit Reached",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnlinkTaskFromConversationV1402Response"
                 }
               }
             }
@@ -3003,7 +3083,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -3028,6 +3108,16 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ReopenTaskV1401Response"
+                }
+              }
+            }
+          },
+          "402": {
+            "description": "Open Tasks Limit Reached",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReopenTaskV1402Response"
                 }
               }
             }
@@ -3100,7 +3190,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -3125,6 +3215,16 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/AssignTaskV1401Response"
+                }
+              }
+            }
+          },
+          "402": {
+            "description": "Open Tasks Limit Reached",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssignTaskV1402Response"
                 }
               }
             }
@@ -3197,7 +3297,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -3222,6 +3322,16 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/UnassignTaskV1401Response"
+                }
+              }
+            }
+          },
+          "402": {
+            "description": "Open Tasks Limit Reached",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnassignTaskV1402Response"
                 }
               }
             }
@@ -3294,7 +3404,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -3319,6 +3429,16 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ChangeTaskDueDateV1401Response"
+                }
+              }
+            }
+          },
+          "402": {
+            "description": "Open Tasks Limit Reached",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ChangeTaskDueDateV1402Response"
                 }
               }
             }
@@ -3382,7 +3502,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -3407,6 +3527,16 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/RemoveTaskDueDateV1401Response"
+                }
+              }
+            }
+          },
+          "402": {
+            "description": "Open Tasks Limit Reached",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RemoveTaskDueDateV1402Response"
                 }
               }
             }
@@ -3480,7 +3610,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -3570,7 +3700,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -3659,7 +3789,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -3749,7 +3879,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -3913,7 +4043,7 @@
         },
         "responses": {
           "201": {
-            "description": "Success",
+            "description": "Created",
             "content": {
               "application/json": {
                 "schema": {
@@ -3999,7 +4129,7 @@
         },
         "responses": {
           "201": {
-            "description": "Success",
+            "description": "Created",
             "content": {
               "application/json": {
                 "schema": {
@@ -4085,7 +4215,7 @@
         },
         "responses": {
           "201": {
-            "description": "Success",
+            "description": "Created",
             "content": {
               "application/json": {
                 "schema": {
@@ -4171,7 +4301,7 @@
         },
         "responses": {
           "201": {
-            "description": "Success",
+            "description": "Created",
             "content": {
               "application/json": {
                 "schema": {
@@ -15186,6 +15316,94 @@
           }
         }
       },
+      "ListTasksV1402Response": {
+        "required": [
+          "message",
+          "code",
+          "status",
+          "docs",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "enum": [
+              "0600402"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Code",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "0600402",
+                  "name": "Value0600402"
+                }
+              ]
+            }
+          },
+          "status": {
+            "enum": [
+              "402"
+            ],
+            "type": "number",
+            "x-ms-enum": {
+              "name": "Status",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "402",
+                  "name": "Value402"
+                }
+              ]
+            }
+          },
+          "docs": {
+            "enum": [
+              "https://quo.com/docs"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Docs",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "https://quo.com/docs",
+                  "name": "HttpsColonSlashSlashQuoComDocs"
+                }
+              ]
+            }
+          },
+          "title": {
+            "enum": [
+              "Open Tasks Limit Reached"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Title",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "Open Tasks Limit Reached",
+                  "name": "OpenTasksLimitReached"
+                }
+              ]
+            }
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ListTasksV1402ResponseErrorsItem"
+            }
+          }
+        }
+      },
       "ListTasksV1403Response": {
         "required": [
           "message",
@@ -15634,6 +15852,94 @@
           }
         }
       },
+      "CreateTaskV1402Response": {
+        "required": [
+          "message",
+          "code",
+          "status",
+          "docs",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "enum": [
+              "0600402"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Code",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "0600402",
+                  "name": "Value0600402"
+                }
+              ]
+            }
+          },
+          "status": {
+            "enum": [
+              "402"
+            ],
+            "type": "number",
+            "x-ms-enum": {
+              "name": "Status",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "402",
+                  "name": "Value402"
+                }
+              ]
+            }
+          },
+          "docs": {
+            "enum": [
+              "https://quo.com/docs"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Docs",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "https://quo.com/docs",
+                  "name": "HttpsColonSlashSlashQuoComDocs"
+                }
+              ]
+            }
+          },
+          "title": {
+            "enum": [
+              "Open Tasks Limit Reached"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Title",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "Open Tasks Limit Reached",
+                  "name": "OpenTasksLimitReached"
+                }
+              ]
+            }
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CreateTaskV1402ResponseErrorsItem"
+            }
+          }
+        }
+      },
       "CreateTaskV1403Response": {
         "required": [
           "message",
@@ -16055,6 +16361,94 @@
           }
         }
       },
+      "GetTaskByIdV1402Response": {
+        "required": [
+          "message",
+          "code",
+          "status",
+          "docs",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "enum": [
+              "0600402"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Code",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "0600402",
+                  "name": "Value0600402"
+                }
+              ]
+            }
+          },
+          "status": {
+            "enum": [
+              "402"
+            ],
+            "type": "number",
+            "x-ms-enum": {
+              "name": "Status",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "402",
+                  "name": "Value402"
+                }
+              ]
+            }
+          },
+          "docs": {
+            "enum": [
+              "https://quo.com/docs"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Docs",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "https://quo.com/docs",
+                  "name": "HttpsColonSlashSlashQuoComDocs"
+                }
+              ]
+            }
+          },
+          "title": {
+            "enum": [
+              "Open Tasks Limit Reached"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Title",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "Open Tasks Limit Reached",
+                  "name": "OpenTasksLimitReached"
+                }
+              ]
+            }
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetTaskByIdV1402ResponseErrorsItem"
+            }
+          }
+        }
+      },
       "GetTaskByIdV1403Response": {
         "required": [
           "message",
@@ -16461,6 +16855,94 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/DeleteTaskV1401ResponseErrorsItem"
+            }
+          }
+        }
+      },
+      "DeleteTaskV1402Response": {
+        "required": [
+          "message",
+          "code",
+          "status",
+          "docs",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "enum": [
+              "0600402"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Code",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "0600402",
+                  "name": "Value0600402"
+                }
+              ]
+            }
+          },
+          "status": {
+            "enum": [
+              "402"
+            ],
+            "type": "number",
+            "x-ms-enum": {
+              "name": "Status",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "402",
+                  "name": "Value402"
+                }
+              ]
+            }
+          },
+          "docs": {
+            "enum": [
+              "https://quo.com/docs"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Docs",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "https://quo.com/docs",
+                  "name": "HttpsColonSlashSlashQuoComDocs"
+                }
+              ]
+            }
+          },
+          "title": {
+            "enum": [
+              "Open Tasks Limit Reached"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Title",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "Open Tasks Limit Reached",
+                  "name": "OpenTasksLimitReached"
+                }
+              ]
+            }
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DeleteTaskV1402ResponseErrorsItem"
             }
           }
         }
@@ -16906,6 +17388,94 @@
           }
         }
       },
+      "UpdateTaskV1402Response": {
+        "required": [
+          "message",
+          "code",
+          "status",
+          "docs",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "enum": [
+              "0600402"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Code",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "0600402",
+                  "name": "Value0600402"
+                }
+              ]
+            }
+          },
+          "status": {
+            "enum": [
+              "402"
+            ],
+            "type": "number",
+            "x-ms-enum": {
+              "name": "Status",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "402",
+                  "name": "Value402"
+                }
+              ]
+            }
+          },
+          "docs": {
+            "enum": [
+              "https://quo.com/docs"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Docs",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "https://quo.com/docs",
+                  "name": "HttpsColonSlashSlashQuoComDocs"
+                }
+              ]
+            }
+          },
+          "title": {
+            "enum": [
+              "Open Tasks Limit Reached"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Title",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "Open Tasks Limit Reached",
+                  "name": "OpenTasksLimitReached"
+                }
+              ]
+            }
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UpdateTaskV1402ResponseErrorsItem"
+            }
+          }
+        }
+      },
       "UpdateTaskV1403Response": {
         "required": [
           "message",
@@ -17323,6 +17893,94 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/CompleteTaskV1401ResponseErrorsItem"
+            }
+          }
+        }
+      },
+      "CompleteTaskV1402Response": {
+        "required": [
+          "message",
+          "code",
+          "status",
+          "docs",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "enum": [
+              "0600402"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Code",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "0600402",
+                  "name": "Value0600402"
+                }
+              ]
+            }
+          },
+          "status": {
+            "enum": [
+              "402"
+            ],
+            "type": "number",
+            "x-ms-enum": {
+              "name": "Status",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "402",
+                  "name": "Value402"
+                }
+              ]
+            }
+          },
+          "docs": {
+            "enum": [
+              "https://quo.com/docs"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Docs",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "https://quo.com/docs",
+                  "name": "HttpsColonSlashSlashQuoComDocs"
+                }
+              ]
+            }
+          },
+          "title": {
+            "enum": [
+              "Open Tasks Limit Reached"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Title",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "Open Tasks Limit Reached",
+                  "name": "OpenTasksLimitReached"
+                }
+              ]
+            }
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CompleteTaskV1402ResponseErrorsItem"
             }
           }
         }
@@ -17760,6 +18418,94 @@
           }
         }
       },
+      "LinkTaskToConversationV1402Response": {
+        "required": [
+          "message",
+          "code",
+          "status",
+          "docs",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "enum": [
+              "0600402"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Code",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "0600402",
+                  "name": "Value0600402"
+                }
+              ]
+            }
+          },
+          "status": {
+            "enum": [
+              "402"
+            ],
+            "type": "number",
+            "x-ms-enum": {
+              "name": "Status",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "402",
+                  "name": "Value402"
+                }
+              ]
+            }
+          },
+          "docs": {
+            "enum": [
+              "https://quo.com/docs"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Docs",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "https://quo.com/docs",
+                  "name": "HttpsColonSlashSlashQuoComDocs"
+                }
+              ]
+            }
+          },
+          "title": {
+            "enum": [
+              "Open Tasks Limit Reached"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Title",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "Open Tasks Limit Reached",
+                  "name": "OpenTasksLimitReached"
+                }
+              ]
+            }
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LinkTaskToConversationV1402ResponseErrorsItem"
+            }
+          }
+        }
+      },
       "LinkTaskToConversationV1403Response": {
         "required": [
           "message",
@@ -18193,6 +18939,94 @@
           }
         }
       },
+      "UnlinkTaskFromConversationV1402Response": {
+        "required": [
+          "message",
+          "code",
+          "status",
+          "docs",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "enum": [
+              "0600402"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Code",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "0600402",
+                  "name": "Value0600402"
+                }
+              ]
+            }
+          },
+          "status": {
+            "enum": [
+              "402"
+            ],
+            "type": "number",
+            "x-ms-enum": {
+              "name": "Status",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "402",
+                  "name": "Value402"
+                }
+              ]
+            }
+          },
+          "docs": {
+            "enum": [
+              "https://quo.com/docs"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Docs",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "https://quo.com/docs",
+                  "name": "HttpsColonSlashSlashQuoComDocs"
+                }
+              ]
+            }
+          },
+          "title": {
+            "enum": [
+              "Open Tasks Limit Reached"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Title",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "Open Tasks Limit Reached",
+                  "name": "OpenTasksLimitReached"
+                }
+              ]
+            }
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UnlinkTaskFromConversationV1402ResponseErrorsItem"
+            }
+          }
+        }
+      },
       "UnlinkTaskFromConversationV1403Response": {
         "required": [
           "message",
@@ -18610,6 +19444,94 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ReopenTaskV1401ResponseErrorsItem"
+            }
+          }
+        }
+      },
+      "ReopenTaskV1402Response": {
+        "required": [
+          "message",
+          "code",
+          "status",
+          "docs",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "enum": [
+              "0600402"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Code",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "0600402",
+                  "name": "Value0600402"
+                }
+              ]
+            }
+          },
+          "status": {
+            "enum": [
+              "402"
+            ],
+            "type": "number",
+            "x-ms-enum": {
+              "name": "Status",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "402",
+                  "name": "Value402"
+                }
+              ]
+            }
+          },
+          "docs": {
+            "enum": [
+              "https://quo.com/docs"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Docs",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "https://quo.com/docs",
+                  "name": "HttpsColonSlashSlashQuoComDocs"
+                }
+              ]
+            }
+          },
+          "title": {
+            "enum": [
+              "Open Tasks Limit Reached"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Title",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "Open Tasks Limit Reached",
+                  "name": "OpenTasksLimitReached"
+                }
+              ]
+            }
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReopenTaskV1402ResponseErrorsItem"
             }
           }
         }
@@ -19048,6 +19970,94 @@
           }
         }
       },
+      "AssignTaskV1402Response": {
+        "required": [
+          "message",
+          "code",
+          "status",
+          "docs",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "enum": [
+              "0600402"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Code",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "0600402",
+                  "name": "Value0600402"
+                }
+              ]
+            }
+          },
+          "status": {
+            "enum": [
+              "402"
+            ],
+            "type": "number",
+            "x-ms-enum": {
+              "name": "Status",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "402",
+                  "name": "Value402"
+                }
+              ]
+            }
+          },
+          "docs": {
+            "enum": [
+              "https://quo.com/docs"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Docs",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "https://quo.com/docs",
+                  "name": "HttpsColonSlashSlashQuoComDocs"
+                }
+              ]
+            }
+          },
+          "title": {
+            "enum": [
+              "Open Tasks Limit Reached"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Title",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "Open Tasks Limit Reached",
+                  "name": "OpenTasksLimitReached"
+                }
+              ]
+            }
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AssignTaskV1402ResponseErrorsItem"
+            }
+          }
+        }
+      },
       "AssignTaskV1403Response": {
         "required": [
           "message",
@@ -19478,6 +20488,94 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/UnassignTaskV1401ResponseErrorsItem"
+            }
+          }
+        }
+      },
+      "UnassignTaskV1402Response": {
+        "required": [
+          "message",
+          "code",
+          "status",
+          "docs",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "enum": [
+              "0600402"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Code",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "0600402",
+                  "name": "Value0600402"
+                }
+              ]
+            }
+          },
+          "status": {
+            "enum": [
+              "402"
+            ],
+            "type": "number",
+            "x-ms-enum": {
+              "name": "Status",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "402",
+                  "name": "Value402"
+                }
+              ]
+            }
+          },
+          "docs": {
+            "enum": [
+              "https://quo.com/docs"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Docs",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "https://quo.com/docs",
+                  "name": "HttpsColonSlashSlashQuoComDocs"
+                }
+              ]
+            }
+          },
+          "title": {
+            "enum": [
+              "Open Tasks Limit Reached"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Title",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "Open Tasks Limit Reached",
+                  "name": "OpenTasksLimitReached"
+                }
+              ]
+            }
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UnassignTaskV1402ResponseErrorsItem"
             }
           }
         }
@@ -19916,6 +21014,94 @@
           }
         }
       },
+      "ChangeTaskDueDateV1402Response": {
+        "required": [
+          "message",
+          "code",
+          "status",
+          "docs",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "enum": [
+              "0600402"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Code",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "0600402",
+                  "name": "Value0600402"
+                }
+              ]
+            }
+          },
+          "status": {
+            "enum": [
+              "402"
+            ],
+            "type": "number",
+            "x-ms-enum": {
+              "name": "Status",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "402",
+                  "name": "Value402"
+                }
+              ]
+            }
+          },
+          "docs": {
+            "enum": [
+              "https://quo.com/docs"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Docs",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "https://quo.com/docs",
+                  "name": "HttpsColonSlashSlashQuoComDocs"
+                }
+              ]
+            }
+          },
+          "title": {
+            "enum": [
+              "Open Tasks Limit Reached"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Title",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "Open Tasks Limit Reached",
+                  "name": "OpenTasksLimitReached"
+                }
+              ]
+            }
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ChangeTaskDueDateV1402ResponseErrorsItem"
+            }
+          }
+        }
+      },
       "ChangeTaskDueDateV1403Response": {
         "required": [
           "message",
@@ -20333,6 +21519,94 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/RemoveTaskDueDateV1401ResponseErrorsItem"
+            }
+          }
+        }
+      },
+      "RemoveTaskDueDateV1402Response": {
+        "required": [
+          "message",
+          "code",
+          "status",
+          "docs",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "enum": [
+              "0600402"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Code",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "0600402",
+                  "name": "Value0600402"
+                }
+              ]
+            }
+          },
+          "status": {
+            "enum": [
+              "402"
+            ],
+            "type": "number",
+            "x-ms-enum": {
+              "name": "Status",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "402",
+                  "name": "Value402"
+                }
+              ]
+            }
+          },
+          "docs": {
+            "enum": [
+              "https://quo.com/docs"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Docs",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "https://quo.com/docs",
+                  "name": "HttpsColonSlashSlashQuoComDocs"
+                }
+              ]
+            }
+          },
+          "title": {
+            "enum": [
+              "Open Tasks Limit Reached"
+            ],
+            "type": "string",
+            "x-ms-enum": {
+              "name": "Title",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "Open Tasks Limit Reached",
+                  "name": "OpenTasksLimitReached"
+                }
+              ]
+            }
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RemoveTaskDueDateV1402ResponseErrorsItem"
             }
           }
         }
@@ -29587,6 +30861,28 @@
           }
         }
       },
+      "ListTasksV1402ResponseErrorsItem": {
+        "required": [
+          "path",
+          "message",
+          "schema"
+        ],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "value": {
+            "$ref": "#/components/schemas/ListTasksV1402ResponseErrorsItemValue"
+          },
+          "schema": {
+            "$ref": "#/components/schemas/ListTasksV1402ResponseErrorsItemSchema"
+          }
+        }
+      },
       "ListTasksV1403ResponseErrorsItem": {
         "required": [
           "path",
@@ -29723,6 +31019,28 @@
           },
           "schema": {
             "$ref": "#/components/schemas/CreateTaskV1401ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "CreateTaskV1402ResponseErrorsItem": {
+        "required": [
+          "path",
+          "message",
+          "schema"
+        ],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "value": {
+            "$ref": "#/components/schemas/CreateTaskV1402ResponseErrorsItemValue"
+          },
+          "schema": {
+            "$ref": "#/components/schemas/CreateTaskV1402ResponseErrorsItemSchema"
           }
         }
       },
@@ -29921,6 +31239,28 @@
           }
         }
       },
+      "GetTaskByIdV1402ResponseErrorsItem": {
+        "required": [
+          "path",
+          "message",
+          "schema"
+        ],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "value": {
+            "$ref": "#/components/schemas/GetTaskByIdV1402ResponseErrorsItemValue"
+          },
+          "schema": {
+            "$ref": "#/components/schemas/GetTaskByIdV1402ResponseErrorsItemSchema"
+          }
+        }
+      },
       "GetTaskByIdV1403ResponseErrorsItem": {
         "required": [
           "path",
@@ -30028,6 +31368,28 @@
           },
           "schema": {
             "$ref": "#/components/schemas/DeleteTaskV1401ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "DeleteTaskV1402ResponseErrorsItem": {
+        "required": [
+          "path",
+          "message",
+          "schema"
+        ],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "value": {
+            "$ref": "#/components/schemas/DeleteTaskV1402ResponseErrorsItemValue"
+          },
+          "schema": {
+            "$ref": "#/components/schemas/DeleteTaskV1402ResponseErrorsItemSchema"
           }
         }
       },
@@ -30157,6 +31519,28 @@
           }
         }
       },
+      "UpdateTaskV1402ResponseErrorsItem": {
+        "required": [
+          "path",
+          "message",
+          "schema"
+        ],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "value": {
+            "$ref": "#/components/schemas/UpdateTaskV1402ResponseErrorsItemValue"
+          },
+          "schema": {
+            "$ref": "#/components/schemas/UpdateTaskV1402ResponseErrorsItemSchema"
+          }
+        }
+      },
       "UpdateTaskV1403ResponseErrorsItem": {
         "required": [
           "path",
@@ -30280,6 +31664,28 @@
           },
           "schema": {
             "$ref": "#/components/schemas/CompleteTaskV1401ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "CompleteTaskV1402ResponseErrorsItem": {
+        "required": [
+          "path",
+          "message",
+          "schema"
+        ],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "value": {
+            "$ref": "#/components/schemas/CompleteTaskV1402ResponseErrorsItemValue"
+          },
+          "schema": {
+            "$ref": "#/components/schemas/CompleteTaskV1402ResponseErrorsItemSchema"
           }
         }
       },
@@ -30409,6 +31815,28 @@
           }
         }
       },
+      "LinkTaskToConversationV1402ResponseErrorsItem": {
+        "required": [
+          "path",
+          "message",
+          "schema"
+        ],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "value": {
+            "$ref": "#/components/schemas/LinkTaskToConversationV1402ResponseErrorsItemValue"
+          },
+          "schema": {
+            "$ref": "#/components/schemas/LinkTaskToConversationV1402ResponseErrorsItemSchema"
+          }
+        }
+      },
       "LinkTaskToConversationV1403ResponseErrorsItem": {
         "required": [
           "path",
@@ -30532,6 +31960,28 @@
           },
           "schema": {
             "$ref": "#/components/schemas/UnlinkTaskFromConversationV1401ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "UnlinkTaskFromConversationV1402ResponseErrorsItem": {
+        "required": [
+          "path",
+          "message",
+          "schema"
+        ],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "value": {
+            "$ref": "#/components/schemas/UnlinkTaskFromConversationV1402ResponseErrorsItemValue"
+          },
+          "schema": {
+            "$ref": "#/components/schemas/UnlinkTaskFromConversationV1402ResponseErrorsItemSchema"
           }
         }
       },
@@ -30661,6 +32111,28 @@
           }
         }
       },
+      "ReopenTaskV1402ResponseErrorsItem": {
+        "required": [
+          "path",
+          "message",
+          "schema"
+        ],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "value": {
+            "$ref": "#/components/schemas/ReopenTaskV1402ResponseErrorsItemValue"
+          },
+          "schema": {
+            "$ref": "#/components/schemas/ReopenTaskV1402ResponseErrorsItemSchema"
+          }
+        }
+      },
       "ReopenTaskV1403ResponseErrorsItem": {
         "required": [
           "path",
@@ -30784,6 +32256,28 @@
           },
           "schema": {
             "$ref": "#/components/schemas/AssignTaskV1401ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "AssignTaskV1402ResponseErrorsItem": {
+        "required": [
+          "path",
+          "message",
+          "schema"
+        ],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "value": {
+            "$ref": "#/components/schemas/AssignTaskV1402ResponseErrorsItemValue"
+          },
+          "schema": {
+            "$ref": "#/components/schemas/AssignTaskV1402ResponseErrorsItemSchema"
           }
         }
       },
@@ -30913,6 +32407,28 @@
           }
         }
       },
+      "UnassignTaskV1402ResponseErrorsItem": {
+        "required": [
+          "path",
+          "message",
+          "schema"
+        ],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "value": {
+            "$ref": "#/components/schemas/UnassignTaskV1402ResponseErrorsItemValue"
+          },
+          "schema": {
+            "$ref": "#/components/schemas/UnassignTaskV1402ResponseErrorsItemSchema"
+          }
+        }
+      },
       "UnassignTaskV1403ResponseErrorsItem": {
         "required": [
           "path",
@@ -31039,6 +32555,28 @@
           }
         }
       },
+      "ChangeTaskDueDateV1402ResponseErrorsItem": {
+        "required": [
+          "path",
+          "message",
+          "schema"
+        ],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "value": {
+            "$ref": "#/components/schemas/ChangeTaskDueDateV1402ResponseErrorsItemValue"
+          },
+          "schema": {
+            "$ref": "#/components/schemas/ChangeTaskDueDateV1402ResponseErrorsItemSchema"
+          }
+        }
+      },
       "ChangeTaskDueDateV1403ResponseErrorsItem": {
         "required": [
           "path",
@@ -31162,6 +32700,28 @@
           },
           "schema": {
             "$ref": "#/components/schemas/RemoveTaskDueDateV1401ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "RemoveTaskDueDateV1402ResponseErrorsItem": {
+        "required": [
+          "path",
+          "message",
+          "schema"
+        ],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "value": {
+            "$ref": "#/components/schemas/RemoveTaskDueDateV1402ResponseErrorsItemValue"
+          },
+          "schema": {
+            "$ref": "#/components/schemas/RemoveTaskDueDateV1402ResponseErrorsItemSchema"
           }
         }
       },
@@ -31630,19 +33190,19 @@
           },
           "createdAt": {
             "type": "string",
-            "description": "The date the webhook was created at, in ISO_8601 format.",
+            "description": "The date the webhook was created at, in ISO 8601 format.",
             "format": "date-time",
             "example": "2022-01-01T00:00:00Z"
           },
           "updatedAt": {
             "type": "string",
-            "description": "The date the webhook was created at, in ISO_8601 format.",
+            "description": "The date the webhook was updated at, in ISO 8601 format.",
             "format": "date-time",
             "example": "2022-01-01T00:00:00Z"
           },
           "deletedAt": {
             "type": "string",
-            "description": "The date the webhook was deleted at, in ISO_8601 format.",
+            "description": "The date the webhook was deleted at, in ISO 8601 format.",
             "format": "date-time",
             "nullable": true,
             "example": "2022-01-01T00:00:00Z"
@@ -31825,19 +33385,19 @@
           },
           "createdAt": {
             "type": "string",
-            "description": "The date the webhook was created at, in ISO_8601 format.",
+            "description": "The date the webhook was created at, in ISO 8601 format.",
             "format": "date-time",
             "example": "2022-01-01T00:00:00Z"
           },
           "updatedAt": {
             "type": "string",
-            "description": "The date the webhook was created at, in ISO_8601 format.",
+            "description": "The date the webhook was updated at, in ISO 8601 format.",
             "format": "date-time",
             "example": "2022-01-01T00:00:00Z"
           },
           "deletedAt": {
             "type": "string",
-            "description": "The date the webhook was deleted at, in ISO_8601 format.",
+            "description": "The date the webhook was deleted at, in ISO 8601 format.",
             "format": "date-time",
             "nullable": true,
             "example": "2022-01-01T00:00:00Z"
@@ -32130,19 +33690,19 @@
           },
           "createdAt": {
             "type": "string",
-            "description": "The date the webhook was created at, in ISO_8601 format.",
+            "description": "The date the webhook was created at, in ISO 8601 format.",
             "format": "date-time",
             "example": "2022-01-01T00:00:00Z"
           },
           "updatedAt": {
             "type": "string",
-            "description": "The date the webhook was created at, in ISO_8601 format.",
+            "description": "The date the webhook was updated at, in ISO 8601 format.",
             "format": "date-time",
             "example": "2022-01-01T00:00:00Z"
           },
           "deletedAt": {
             "type": "string",
-            "description": "The date the webhook was deleted at, in ISO_8601 format.",
+            "description": "The date the webhook was deleted at, in ISO 8601 format.",
             "format": "date-time",
             "nullable": true,
             "example": "2022-01-01T00:00:00Z"
@@ -32325,19 +33885,19 @@
           },
           "createdAt": {
             "type": "string",
-            "description": "The date the webhook was created at, in ISO_8601 format.",
+            "description": "The date the webhook was created at, in ISO 8601 format.",
             "format": "date-time",
             "example": "2022-01-01T00:00:00Z"
           },
           "updatedAt": {
             "type": "string",
-            "description": "The date the webhook was created at, in ISO_8601 format.",
+            "description": "The date the webhook was updated at, in ISO 8601 format.",
             "format": "date-time",
             "example": "2022-01-01T00:00:00Z"
           },
           "deletedAt": {
             "type": "string",
-            "description": "The date the webhook was deleted at, in ISO_8601 format.",
+            "description": "The date the webhook was deleted at, in ISO 8601 format.",
             "format": "date-time",
             "nullable": true,
             "example": "2022-01-01T00:00:00Z"
@@ -32520,19 +34080,19 @@
           },
           "createdAt": {
             "type": "string",
-            "description": "The date the webhook was created at, in ISO_8601 format.",
+            "description": "The date the webhook was created at, in ISO 8601 format.",
             "format": "date-time",
             "example": "2022-01-01T00:00:00Z"
           },
           "updatedAt": {
             "type": "string",
-            "description": "The date the webhook was created at, in ISO_8601 format.",
+            "description": "The date the webhook was updated at, in ISO 8601 format.",
             "format": "date-time",
             "example": "2022-01-01T00:00:00Z"
           },
           "deletedAt": {
             "type": "string",
-            "description": "The date the webhook was deleted at, in ISO_8601 format.",
+            "description": "The date the webhook was deleted at, in ISO 8601 format.",
             "format": "date-time",
             "nullable": true,
             "example": "2022-01-01T00:00:00Z"
@@ -32716,19 +34276,19 @@
           },
           "createdAt": {
             "type": "string",
-            "description": "The date the webhook was created at, in ISO_8601 format.",
+            "description": "The date the webhook was created at, in ISO 8601 format.",
             "format": "date-time",
             "example": "2022-01-01T00:00:00Z"
           },
           "updatedAt": {
             "type": "string",
-            "description": "The date the webhook was created at, in ISO_8601 format.",
+            "description": "The date the webhook was updated at, in ISO 8601 format.",
             "format": "date-time",
             "example": "2022-01-01T00:00:00Z"
           },
           "deletedAt": {
             "type": "string",
-            "description": "The date the webhook was deleted at, in ISO_8601 format.",
+            "description": "The date the webhook was deleted at, in ISO 8601 format.",
             "format": "date-time",
             "nullable": true,
             "example": "2022-01-01T00:00:00Z"
@@ -34871,6 +36431,20 @@
           }
         }
       },
+      "ListTasksV1402ResponseErrorsItemValue": {
+        "type": "object"
+      },
+      "ListTasksV1402ResponseErrorsItemSchema": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        }
+      },
       "ListTasksV1403ResponseErrorsItemValue": {
         "type": "object"
       },
@@ -34931,6 +36505,20 @@
         "type": "object"
       },
       "CreateTaskV1401ResponseErrorsItemSchema": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "CreateTaskV1402ResponseErrorsItemValue": {
+        "type": "object"
+      },
+      "CreateTaskV1402ResponseErrorsItemSchema": {
         "required": [
           "type"
         ],
@@ -35011,6 +36599,20 @@
           }
         }
       },
+      "GetTaskByIdV1402ResponseErrorsItemValue": {
+        "type": "object"
+      },
+      "GetTaskByIdV1402ResponseErrorsItemSchema": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        }
+      },
       "GetTaskByIdV1403ResponseErrorsItemValue": {
         "type": "object"
       },
@@ -35071,6 +36673,20 @@
         "type": "object"
       },
       "DeleteTaskV1401ResponseErrorsItemSchema": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "DeleteTaskV1402ResponseErrorsItemValue": {
+        "type": "object"
+      },
+      "DeleteTaskV1402ResponseErrorsItemSchema": {
         "required": [
           "type"
         ],
@@ -35151,6 +36767,20 @@
           }
         }
       },
+      "UpdateTaskV1402ResponseErrorsItemValue": {
+        "type": "object"
+      },
+      "UpdateTaskV1402ResponseErrorsItemSchema": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        }
+      },
       "UpdateTaskV1403ResponseErrorsItemValue": {
         "type": "object"
       },
@@ -35211,6 +36841,20 @@
         "type": "object"
       },
       "CompleteTaskV1401ResponseErrorsItemSchema": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "CompleteTaskV1402ResponseErrorsItemValue": {
+        "type": "object"
+      },
+      "CompleteTaskV1402ResponseErrorsItemSchema": {
         "required": [
           "type"
         ],
@@ -35291,6 +36935,20 @@
           }
         }
       },
+      "LinkTaskToConversationV1402ResponseErrorsItemValue": {
+        "type": "object"
+      },
+      "LinkTaskToConversationV1402ResponseErrorsItemSchema": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        }
+      },
       "LinkTaskToConversationV1403ResponseErrorsItemValue": {
         "type": "object"
       },
@@ -35351,6 +37009,20 @@
         "type": "object"
       },
       "UnlinkTaskFromConversationV1401ResponseErrorsItemSchema": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "UnlinkTaskFromConversationV1402ResponseErrorsItemValue": {
+        "type": "object"
+      },
+      "UnlinkTaskFromConversationV1402ResponseErrorsItemSchema": {
         "required": [
           "type"
         ],
@@ -35431,6 +37103,20 @@
           }
         }
       },
+      "ReopenTaskV1402ResponseErrorsItemValue": {
+        "type": "object"
+      },
+      "ReopenTaskV1402ResponseErrorsItemSchema": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        }
+      },
       "ReopenTaskV1403ResponseErrorsItemValue": {
         "type": "object"
       },
@@ -35491,6 +37177,20 @@
         "type": "object"
       },
       "AssignTaskV1401ResponseErrorsItemSchema": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "AssignTaskV1402ResponseErrorsItemValue": {
+        "type": "object"
+      },
+      "AssignTaskV1402ResponseErrorsItemSchema": {
         "required": [
           "type"
         ],
@@ -35571,6 +37271,20 @@
           }
         }
       },
+      "UnassignTaskV1402ResponseErrorsItemValue": {
+        "type": "object"
+      },
+      "UnassignTaskV1402ResponseErrorsItemSchema": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        }
+      },
       "UnassignTaskV1403ResponseErrorsItemValue": {
         "type": "object"
       },
@@ -35641,6 +37355,20 @@
           }
         }
       },
+      "ChangeTaskDueDateV1402ResponseErrorsItemValue": {
+        "type": "object"
+      },
+      "ChangeTaskDueDateV1402ResponseErrorsItemSchema": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        }
+      },
       "ChangeTaskDueDateV1403ResponseErrorsItemValue": {
         "type": "object"
       },
@@ -35701,6 +37429,20 @@
         "type": "object"
       },
       "RemoveTaskDueDateV1401ResponseErrorsItemSchema": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "RemoveTaskDueDateV1402ResponseErrorsItemValue": {
+        "type": "object"
+      },
+      "RemoveTaskDueDateV1402ResponseErrorsItemSchema": {
         "required": [
           "type"
         ],

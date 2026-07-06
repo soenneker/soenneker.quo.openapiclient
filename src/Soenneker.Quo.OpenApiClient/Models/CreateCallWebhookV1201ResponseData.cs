@@ -14,9 +14,9 @@ namespace Soenneker.Quo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The date the webhook was created at, in ISO_8601 format.</summary>
+        /// <summary>The date the webhook was created at, in ISO 8601 format.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
-        /// <summary>The date the webhook was deleted at, in ISO_8601 format.</summary>
+        /// <summary>The date the webhook was deleted at, in ISO 8601 format.</summary>
         public DateTimeOffset? DeletedAt { get; set; }
         /// <summary>The events property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -68,7 +68,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
 #endif
         /// <summary>The status of the webhook.</summary>
         public global::Soenneker.Quo.OpenApiClient.Models.CreateCallWebhookV1201ResponseDataStatus? Status { get; set; }
-        /// <summary>The date the webhook was created at, in ISO_8601 format.</summary>
+        /// <summary>The date the webhook was updated at, in ISO 8601 format.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>The endpoint that receives events from the webhook.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

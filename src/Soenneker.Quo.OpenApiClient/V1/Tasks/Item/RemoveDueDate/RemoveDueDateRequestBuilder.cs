@@ -41,6 +41,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Tasks.Item.RemoveDueDate
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.RemoveTaskDueDateV1400Response">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.RemoveTaskDueDateV1401Response">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.RemoveTaskDueDateV1402Response">When receiving a 402 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.RemoveTaskDueDateV1403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.RemoveTaskDueDateV1404Response">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.RemoveTaskDueDateV1500Response">When receiving a 500 status code</exception>
@@ -58,6 +59,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Tasks.Item.RemoveDueDate
             {
                 { "400", global::Soenneker.Quo.OpenApiClient.Models.RemoveTaskDueDateV1400Response.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Quo.OpenApiClient.Models.RemoveTaskDueDateV1401Response.CreateFromDiscriminatorValue },
+                { "402", global::Soenneker.Quo.OpenApiClient.Models.RemoveTaskDueDateV1402Response.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Quo.OpenApiClient.Models.RemoveTaskDueDateV1403Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Quo.OpenApiClient.Models.RemoveTaskDueDateV1404Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Quo.OpenApiClient.Models.RemoveTaskDueDateV1500Response.CreateFromDiscriminatorValue },

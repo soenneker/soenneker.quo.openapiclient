@@ -54,6 +54,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Tasks
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListTasksV1400Response">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListTasksV1401Response">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListTasksV1402Response">When receiving a 402 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListTasksV1403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListTasksV1404Response">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListTasksV1500Response">When receiving a 500 status code</exception>
@@ -71,6 +72,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Tasks
             {
                 { "400", global::Soenneker.Quo.OpenApiClient.Models.ListTasksV1400Response.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Quo.OpenApiClient.Models.ListTasksV1401Response.CreateFromDiscriminatorValue },
+                { "402", global::Soenneker.Quo.OpenApiClient.Models.ListTasksV1402Response.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Quo.OpenApiClient.Models.ListTasksV1403Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Quo.OpenApiClient.Models.ListTasksV1404Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Quo.OpenApiClient.Models.ListTasksV1500Response.CreateFromDiscriminatorValue },
@@ -86,6 +88,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Tasks
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1400Response">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1401Response">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1402Response">When receiving a 402 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1404Response">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1500Response">When receiving a 500 status code</exception>
@@ -104,6 +107,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Tasks
             {
                 { "400", global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1400Response.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1401Response.CreateFromDiscriminatorValue },
+                { "402", global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1402Response.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1403Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1404Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1500Response.CreateFromDiscriminatorValue },
