@@ -38614,7 +38614,6 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The status of the webhook.",
-        "default": "enabled",
         "example": "enabled",
         "x-ms-enum": {
           "name": "CreateMessageWebhookV1RequestStatus",
@@ -38666,7 +38665,6 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The status of the webhook.",
-        "default": "enabled",
         "example": "enabled",
         "x-ms-enum": {
           "name": "CreateCallWebhookV1RequestStatus",
@@ -38708,7 +38706,6 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The status of the webhook.",
-        "default": "enabled",
         "example": "enabled",
         "x-ms-enum": {
           "name": "CreateCallSummaryWebhookV1RequestStatus",
@@ -39616,7 +39613,6 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The status of the webhook.",
-        "default": "enabled",
         "example": "enabled",
         "x-ms-enum": {
           "name": "ListWebhooksV1200ResponseDataItemStatus",
@@ -39663,7 +39659,6 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The status of the webhook.",
-        "default": "enabled",
         "example": "enabled",
         "x-ms-enum": {
           "name": "GetWebhookByIdV1200ResponseDataStatus",
@@ -39710,7 +39705,6 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The status of the webhook.",
-        "default": "enabled",
         "example": "enabled",
         "x-ms-enum": {
           "name": "CreateMessageWebhookV1201ResponseDataStatus",
@@ -39757,7 +39751,6 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The status of the webhook.",
-        "default": "enabled",
         "example": "enabled",
         "x-ms-enum": {
           "name": "CreateCallWebhookV1201ResponseDataStatus",
@@ -39809,7 +39802,6 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The status of the webhook.",
-        "default": "enabled",
         "example": "enabled",
         "x-ms-enum": {
           "name": "CreateCallSummaryWebhookV1201ResponseDataStatus",
@@ -39851,7 +39843,6 @@
         "type": "string",
         "additionalProperties": false,
         "description": "The status of the webhook.",
-        "default": "enabled",
         "example": "enabled",
         "x-ms-enum": {
           "name": "CreateCallTranscriptWebhookV1201ResponseDataStatus",

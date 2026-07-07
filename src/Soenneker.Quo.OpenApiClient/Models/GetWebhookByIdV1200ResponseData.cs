@@ -92,7 +92,6 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public GetWebhookByIdV1200ResponseData()
         {
             AdditionalData = new Dictionary<string, object>();
-            Status = global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataStatus.Enabled;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
