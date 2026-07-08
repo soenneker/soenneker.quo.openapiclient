@@ -134,7 +134,7 @@
             "schema": {
               "pattern": "^US(.*)$",
               "type": "string",
-              "description": "The unique identifier of the Quo user who either placed or received the call. Defaults to the workspace owner."
+              "description": "The unique identifier of the user whose access scope is applied to the results. Scopes the response to calls accessible to the specified user. Defaults to the workspace owner."
             },
             "example": "US123abc"
           },
@@ -1298,7 +1298,7 @@
             "schema": {
               "pattern": "^US(.*)$",
               "type": "string",
-              "description": "The unique identifier of the user the making the request. Used to filter results to only include the user\u0027s conversations."
+              "description": "The unique identifier of the user whose access scope is applied to the results. Scopes the response to conversations accessible to the specified user."
             },
             "example": "US123abc"
           },
