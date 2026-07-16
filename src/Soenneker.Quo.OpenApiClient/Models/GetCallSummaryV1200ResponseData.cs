@@ -25,10 +25,10 @@ namespace Soenneker.Quo.OpenApiClient.Models
         /// <summary>The jobs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataJobsAnyOf1Item>? Jobs { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataJobs? Jobs { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataJobsAnyOf1Item> Jobs { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataJobs Jobs { get; set; }
 #endif
         /// <summary>The nextSteps property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -74,7 +74,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "callId", n => { CallId = n.GetStringValue(); } },
-                { "jobs", n => { Jobs = n.GetCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataJobsAnyOf1Item>(global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataJobsAnyOf1Item.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "jobs", n => { Jobs = n.GetObjectValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataJobs>(global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataJobs.CreateFromDiscriminatorValue); } },
                 { "nextSteps", n => { NextSteps = n.GetObjectValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataNextSteps>(global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataNextSteps.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataStatus>(); } },
                 { "summary", n => { Summary = n.GetObjectValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataSummary>(global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataSummary.CreateFromDiscriminatorValue); } },
@@ -88,7 +88,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("callId", CallId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataJobsAnyOf1Item>("jobs", Jobs);
+            writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataJobs>("jobs", Jobs);
             writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataNextSteps>("nextSteps", NextSteps);
             writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataSummary>("summary", Summary);

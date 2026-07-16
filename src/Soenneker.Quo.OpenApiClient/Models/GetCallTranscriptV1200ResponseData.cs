@@ -27,10 +27,10 @@ namespace Soenneker.Quo.OpenApiClient.Models
         /// <summary>The dialogue property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Quo.OpenApiClient.Models.GetCallTranscriptV1200ResponseDataDialogueAnyOf1Item>? Dialogue { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetCallTranscriptV1200ResponseDataDialogue? Dialogue { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Quo.OpenApiClient.Models.GetCallTranscriptV1200ResponseDataDialogueAnyOf1Item> Dialogue { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetCallTranscriptV1200ResponseDataDialogue Dialogue { get; set; }
 #endif
         /// <summary>The total duration of the transcribed call in seconds.</summary>
         public double? Duration { get; set; }
@@ -63,7 +63,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
             {
                 { "callId", n => { CallId = n.GetStringValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "dialogue", n => { Dialogue = n.GetCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.GetCallTranscriptV1200ResponseDataDialogueAnyOf1Item>(global::Soenneker.Quo.OpenApiClient.Models.GetCallTranscriptV1200ResponseDataDialogueAnyOf1Item.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "dialogue", n => { Dialogue = n.GetObjectValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallTranscriptV1200ResponseDataDialogue>(global::Soenneker.Quo.OpenApiClient.Models.GetCallTranscriptV1200ResponseDataDialogue.CreateFromDiscriminatorValue); } },
                 { "duration", n => { Duration = n.GetDoubleValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallTranscriptV1200ResponseDataStatus>(); } },
             };
@@ -77,7 +77,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("callId", CallId);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.GetCallTranscriptV1200ResponseDataDialogueAnyOf1Item>("dialogue", Dialogue);
+            writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallTranscriptV1200ResponseDataDialogue>("dialogue", Dialogue);
             writer.WriteDoubleValue("duration", Duration);
             writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallTranscriptV1200ResponseDataStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);

@@ -25945,9 +25945,13 @@
             ],
             "description": "The phone number or Quo user ID from which the call was forwarded. Null if the call was not forwarded.",
             "example": "US123abc"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
-        ],
-        "nullable": true
+        ]
       },
       "ListCallsV1200ResponseDataItemForwardedTo": {
         "type": "object",
@@ -25968,9 +25972,13 @@
             ],
             "description": "The phone number or Quo user ID to which the call was forwarded. Null if the call was not forwarded.",
             "example": "US123abc"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
-        ],
-        "nullable": true
+        ]
       },
       "GetCallByIdV1200ResponseDataForwardedFrom": {
         "type": "object",
@@ -25991,9 +25999,13 @@
             ],
             "description": "The phone number or Quo user ID from which the call was forwarded. Null if the call was not forwarded.",
             "example": "US123abc"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
-        ],
-        "nullable": true
+        ]
       },
       "GetCallByIdV1200ResponseDataForwardedTo": {
         "type": "object",
@@ -26014,9 +26026,13 @@
             ],
             "description": "The phone number or Quo user ID to which the call was forwarded. Null if the call was not forwarded.",
             "example": "US123abc"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
-        ],
-        "nullable": true
+        ]
       },
       "GetCallSummaryV1200ResponseDataNextSteps": {
         "type": "object",
@@ -26027,9 +26043,13 @@
               "type": "string",
               "example": "Bring an umbrella."
             }
+          },
+          {
+            "enum": [
+              null
+            ]
           }
-        ],
-        "nullable": true
+        ]
       },
       "GetCallSummaryV1200ResponseDataSummary": {
         "type": "object",
@@ -26040,27 +26060,39 @@
               "type": "string",
               "example": "You talked about the weather."
             }
+          },
+          {
+            "enum": [
+              null
+            ]
           }
-        ],
-        "nullable": true
+        ]
       },
       "GetCallSummaryV1200ResponseDataJobs": {
         "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GetCallSummaryV1200ResponseDataJobsAnyOf1"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
-        ],
-        "nullable": true
+        ]
       },
       "GetCallTranscriptV1200ResponseDataDialogue": {
         "type": "object",
         "anyOf": [
           {
             "$ref": "#/components/schemas/GetCallTranscriptV1200ResponseDataDialogueAnyOf1"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
-        ],
-        "nullable": true
+        ]
       },
       "CreateContactV1RequestCustomFieldsItem": {
         "type": "object",
@@ -26221,9 +26253,13 @@
             ],
             "description": "The unique identifier of the user or system user the conversation is assigned to.",
             "example": "US123abc"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
-        ],
-        "nullable": true
+        ]
       },
       "MarkConversationAsReadV1200ResponseAssignedTo": {
         "type": "object",
@@ -26242,9 +26278,13 @@
             ],
             "description": "The unique identifier of the user or system user the conversation is assigned to.",
             "example": "US123abc"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
-        ],
-        "nullable": true
+        ]
       },
       "MarkConversationAsDoneV1200ResponseAssignedTo": {
         "type": "object",
@@ -26263,9 +26303,13 @@
             ],
             "description": "The unique identifier of the user or system user the conversation is assigned to.",
             "example": "US123abc"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
-        ],
-        "nullable": true
+        ]
       },
       "MarkConversationAsOpenV1200ResponseAssignedTo": {
         "type": "object",
@@ -26284,9 +26328,13 @@
             ],
             "description": "The unique identifier of the user or system user the conversation is assigned to.",
             "example": "US123abc"
+          },
+          {
+            "enum": [
+              null
+            ]
           }
-        ],
-        "nullable": true
+        ]
       },
       "SendMessageV1RequestFrom": {
         "type": "object",
@@ -26335,9 +26383,13 @@
                 "type": "string"
               }
             ]
+          },
+          {
+            "enum": [
+              null
+            ]
           }
-        ],
-        "nullable": true
+        ]
       },
       "ListTasksV1200ResponseDataItemAssignedBy": {
         "type": "object",
@@ -26354,9 +26406,13 @@
                 "type": "string"
               }
             ]
+          },
+          {
+            "enum": [
+              null
+            ]
           }
-        ],
-        "nullable": true
+        ]
       },
       "CreateTaskV1RequestAnyOf1": {
         "required": [
@@ -26472,9 +26528,13 @@
                 "type": "string"
               }
             ]
+          },
+          {
+            "enum": [
+              null
+            ]
           }
-        ],
-        "nullable": true
+        ]
       },
       "GetTaskByIdV1200ResponseDataAssignedBy": {
         "type": "object",
@@ -26491,9 +26551,13 @@
                 "type": "string"
               }
             ]
+          },
+          {
+            "enum": [
+              null
+            ]
           }
-        ],
-        "nullable": true
+        ]
       },
       "ListWebhooksV1200ResponseDataItemResourceIds": {
         "type": "object",
@@ -26938,10 +27002,14 @@
             "items": {
               "type": "string"
             }
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "description": "Value defined for the multi select type custom field.",
-        "nullable": true,
         "example": [
           "option1",
           "option2"
@@ -26955,10 +27023,14 @@
             "items": {
               "type": "string"
             }
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "description": "Value defined for the multi select type custom field.",
-        "nullable": true,
         "example": [
           "option1",
           "option2"
@@ -26972,10 +27044,14 @@
             "items": {
               "type": "string"
             }
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "description": "Value defined for the multi select type custom field.",
-        "nullable": true,
         "example": [
           "option1",
           "option2"
@@ -26989,10 +27065,14 @@
             "items": {
               "type": "string"
             }
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "description": "Value defined for the multi select type custom field.",
-        "nullable": true,
         "example": [
           "option1",
           "option2"
@@ -27006,10 +27086,14 @@
             "items": {
               "type": "string"
             }
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "description": "Value defined for the multi select type custom field.",
-        "nullable": true,
         "example": [
           "option1",
           "option2"
@@ -27023,10 +27107,14 @@
             "items": {
               "type": "string"
             }
+          },
+          {
+            "enum": [
+              null
+            ]
           }
         ],
         "description": "Value defined for the multi select type custom field.",
-        "nullable": true,
         "example": [
           "option1",
           "option2"
