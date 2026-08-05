@@ -28652,6 +28652,18 @@
       "name": "Contacts"
     },
     {
+      "description": "Operations related to contact shares",
+      "name": "Contact Shares"
+    },
+    {
+      "description": "Operations related to contact notes",
+      "name": "Contact Notes"
+    },
+    {
+      "description": "Operations related to contact properties",
+      "name": "Contact Properties"
+    },
+    {
       "description": "Operations related to conversations",
       "name": "Conversations"
     },
@@ -28670,6 +28682,10 @@
     {
       "description": "Operations related to webhooks",
       "name": "Webhooks"
+    },
+    {
+      "description": "Operations related to webhook events, including delivery history and test events",
+      "name": "Webhook Events"
     }
   ],
   "security": [

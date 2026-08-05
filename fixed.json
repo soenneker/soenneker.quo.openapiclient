@@ -4385,36 +4385,6 @@
           }
         }
       },
-      "ListPhoneNumbersResponseDataItemPortRequestId": {
-        "type": "string",
-        "description": "Unique identifier for the phone number\u2019s porting request, if applicable.",
-        "nullable": true,
-        "example": "123abc"
-      },
-      "ListPhoneNumbersResponseDataItemFormattedNumber": {
-        "type": "string",
-        "description": "A human-readable representation of a phone number.",
-        "nullable": true,
-        "example": "\u002B15555555555"
-      },
-      "ListPhoneNumbersResponseDataItemForward": {
-        "type": "string",
-        "description": "Forwarding number for incoming calls, null if no forwarding number is configured.",
-        "nullable": true,
-        "example": "\u002B15555555555"
-      },
-      "ListPhoneNumbersResponseDataItemPortingStatus": {
-        "type": "string",
-        "description": "Current status of the porting process, if applicable.",
-        "nullable": true,
-        "example": "completed"
-      },
-      "ListPhoneNumbersResponseDataItemSymbol": {
-        "type": "string",
-        "description": "Custom symbol or emoji associated with the phone number.",
-        "nullable": true,
-        "example": "\uD83C\uDFE1"
-      },
       "ListPhoneNumbersResponseDataItemUsersItem": {
         "required": [
           "email",
@@ -4433,10 +4403,16 @@
             "example": "johndoe@example.com"
           },
           "firstName": {
-            "$ref": "#/components/schemas/ListPhoneNumbersResponseDataItemUsersItemAllOf1FirstName"
+            "type": "string",
+            "description": "The user\u0027s first name.",
+            "nullable": true,
+            "example": "John"
           },
           "lastName": {
-            "$ref": "#/components/schemas/ListPhoneNumbersResponseDataItemUsersItemAllOf1LastName"
+            "type": "string",
+            "description": "The user\u0027s last name.",
+            "nullable": true,
+            "example": "Doe"
           },
           "id": {
             "pattern": "^US(.*)$",
@@ -4472,10 +4448,16 @@
             "example": "johndoe@example.com"
           },
           "firstName": {
-            "$ref": "#/components/schemas/ListPhoneNumbersResponseDataItemUsersItemAllOf1FirstName"
+            "type": "string",
+            "description": "The user\u0027s first name.",
+            "nullable": true,
+            "example": "John"
           },
           "lastName": {
-            "$ref": "#/components/schemas/ListPhoneNumbersResponseDataItemUsersItemAllOf1LastName"
+            "type": "string",
+            "description": "The user\u0027s last name.",
+            "nullable": true,
+            "example": "Doe"
           },
           "id": {
             "pattern": "^US(.*)$",
@@ -4501,18 +4483,6 @@
             "example": "GRcei8k90o"
           }
         }
-      },
-      "ListPhoneNumbersResponseDataItemUsersItemAllOf1FirstName": {
-        "type": "string",
-        "description": "The user\u0027s first name.",
-        "nullable": true,
-        "example": "John"
-      },
-      "ListPhoneNumbersResponseDataItemUsersItemAllOf1LastName": {
-        "type": "string",
-        "description": "The user\u0027s last name.",
-        "nullable": true,
-        "example": "Doe"
       },
       "ListPhoneNumbersResponseDataItem": {
         "required": [
@@ -4544,13 +4514,22 @@
             "example": "1234"
           },
           "portRequestId": {
-            "$ref": "#/components/schemas/ListPhoneNumbersResponseDataItemPortRequestId"
+            "type": "string",
+            "description": "Unique identifier for the phone number\u2019s porting request, if applicable.",
+            "nullable": true,
+            "example": "123abc"
           },
           "formattedNumber": {
-            "$ref": "#/components/schemas/ListPhoneNumbersResponseDataItemFormattedNumber"
+            "type": "string",
+            "description": "A human-readable representation of a phone number.",
+            "nullable": true,
+            "example": "\u002B15555555555"
           },
           "forward": {
-            "$ref": "#/components/schemas/ListPhoneNumbersResponseDataItemForward"
+            "type": "string",
+            "description": "Forwarding number for incoming calls, null if no forwarding number is configured.",
+            "nullable": true,
+            "example": "\u002B15555555555"
           },
           "name": {
             "type": "string",
@@ -4564,10 +4543,16 @@
             "example": "\u002B15555555555"
           },
           "portingStatus": {
-            "$ref": "#/components/schemas/ListPhoneNumbersResponseDataItemPortingStatus"
+            "type": "string",
+            "description": "Current status of the porting process, if applicable.",
+            "nullable": true,
+            "example": "completed"
           },
           "symbol": {
-            "$ref": "#/components/schemas/ListPhoneNumbersResponseDataItemSymbol"
+            "type": "string",
+            "description": "Custom symbol or emoji associated with the phone number.",
+            "nullable": true,
+            "example": "\uD83C\uDFE1"
           },
           "users": {
             "type": "array",
@@ -40175,6 +40160,18 @@
       "description": "Operations related to contacts"
     },
     {
+      "name": "Contact Shares",
+      "description": "Operations related to contact shares"
+    },
+    {
+      "name": "Contact Notes",
+      "description": "Operations related to contact notes"
+    },
+    {
+      "name": "Contact Properties",
+      "description": "Operations related to contact properties"
+    },
+    {
       "name": "Conversations",
       "description": "Operations related to conversations"
     },
@@ -40193,6 +40190,10 @@
     {
       "name": "Webhooks",
       "description": "Operations related to webhooks"
+    },
+    {
+      "name": "Webhook Events",
+      "description": "Operations related to webhook events, including delivery history and test events"
     }
   ]
 }
