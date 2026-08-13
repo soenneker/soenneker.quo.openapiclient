@@ -28668,6 +28668,10 @@
       "name": "Conversations"
     },
     {
+      "description": "Operations related to workspace invitations",
+      "name": "Invites"
+    },
+    {
       "description": "Operations related to text messages",
       "name": "Messages"
     },

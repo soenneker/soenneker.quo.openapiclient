@@ -34,7 +34,8 @@
             "schema": {
               "pattern": "^AC(.*)$",
               "type": "string",
-              "description": "The unique identifier of the call for which recordings are being retrieved."
+              "description": "The unique identifier of the call for which recordings are being retrieved.",
+              "example": "AC3700e624eca547eb9f749a06f"
             },
             "example": "AC3700e624eca547eb9f749a06f"
           }
@@ -124,7 +125,8 @@
             "schema": {
               "pattern": "^PN(.*)$",
               "type": "string",
-              "description": "The unique identifier of the Quo number associated with the call."
+              "description": "The unique identifier of the Quo number associated with the call.",
+              "example": "PN123abc"
             },
             "example": "PN123abc"
           },
@@ -134,7 +136,8 @@
             "schema": {
               "pattern": "^US(.*)$",
               "type": "string",
-              "description": "The unique identifier of the user whose access scope is applied to the results. Scopes the response to calls accessible to the specified user. Defaults to the workspace owner."
+              "description": "The unique identifier of the user whose access scope is applied to the results. Scopes the response to calls accessible to the specified user. Defaults to the workspace owner.",
+              "example": "US123abc"
             },
             "example": "US123abc"
           },
@@ -149,7 +152,8 @@
                 "minLength": 1,
                 "type": "string"
               },
-              "description": "The phone numbers of participants involved in the call conversation, excluding your Quo number. Each number should contain the country code and conform to the E.164 format. Currently limited to one-to-one (1:1) conversations only."
+              "description": "The phone numbers of participants involved in the call conversation, excluding your Quo number. Each number should contain the country code and conform to the E.164 format. Currently limited to one-to-one (1:1) conversations only.",
+              "example": "\u002B15555555555"
             },
             "example": "\u002B15555555555"
           },
@@ -160,6 +164,7 @@
               "type": "string",
               "description": "DEPRECATED, use \u0022createdAfter\u0022 or \u0022createdBefore\u0022 instead. \u0022since\u0022 incorrectly behaves as \u0022createdBefore\u0022 and will be removed in an upcoming release.",
               "format": "date-time",
+              "example": "2022-01-01T00:00:00Z",
               "deprecated": true
             },
             "example": "2022-01-01T00:00:00Z"
@@ -170,7 +175,8 @@
             "schema": {
               "type": "string",
               "description": "Filter results to only include calls created after the specified date and time, in ISO 8601 format.",
-              "format": "date-time"
+              "format": "date-time",
+              "example": "2022-01-01T00:00:00Z"
             },
             "example": "2022-01-01T00:00:00Z"
           },
@@ -180,7 +186,8 @@
             "schema": {
               "type": "string",
               "description": "Filter results to only include calls created before the specified date and time, in ISO 8601 format.",
-              "format": "date-time"
+              "format": "date-time",
+              "example": "2022-01-01T00:00:00Z"
             },
             "example": "2022-01-01T00:00:00Z"
           },
@@ -289,7 +296,8 @@
             "schema": {
               "pattern": "^AC(.*)$",
               "type": "string",
-              "description": "Unique identifier of the call."
+              "description": "Unique identifier of the call.",
+              "example": "AC3700e624eca547eb9f749a06f2eb1"
             },
             "example": "AC3700e624eca547eb9f749a06f2eb1"
           }
@@ -379,7 +387,8 @@
             "schema": {
               "pattern": "^AC(.*)$",
               "type": "string",
-              "description": "The unique identifier of the call associated with the summary."
+              "description": "The unique identifier of the call associated with the summary.",
+              "example": "AC3700e624eca547eb9f749a06f"
             },
             "example": "AC3700e624eca547eb9f749a06f"
           }
@@ -469,7 +478,8 @@
             "schema": {
               "pattern": "^AC(.*)$",
               "type": "string",
-              "description": "Unique identifier of the call associated with this transcript."
+              "description": "Unique identifier of the call associated with this transcript.",
+              "example": "AC3700e624eca547eb9f749a06f2eb1"
             },
             "example": "AC3700e624eca547eb9f749a06f2eb1"
           }
@@ -559,7 +569,8 @@
             "schema": {
               "pattern": "^AC(.*)$",
               "type": "string",
-              "description": "The unique identifier of the call for which a voicemail is being retrieved."
+              "description": "The unique identifier of the call for which a voicemail is being retrieved.",
+              "example": "AC3700e624eca547eb9f749a06f"
             },
             "example": "AC3700e624eca547eb9f749a06f"
           }
@@ -822,7 +833,8 @@
                 "maxLength": 75,
                 "minLength": 1,
                 "type": "string",
-                "description": "A unique identifier from an external system that can optionally be supplied when creating a contact. This ID is used to associate the contact with records in other systems and is required for retrieving the contact later via the \u0022List Contacts\u0022 endpoint. Ensure the \u0060externalId\u0060 is unique and consistent across systems for accurate cross-referencing."
+                "description": "A unique identifier from an external system that can optionally be supplied when creating a contact. This ID is used to associate the contact with records in other systems and is required for retrieving the contact later via the \u0022List Contacts\u0022 endpoint. Ensure the \u0060externalId\u0060 is unique and consistent across systems for accurate cross-referencing.",
+                "example": "664d0db69fcac7cf2e6ec"
               },
               "description": "Optional list of unique identifiers from an external system used to retrieve specific contacts. When provided, the result set is limited to contacts associated with the provided \u0060externalIds\u0060. These IDs must match those supplied during contact creation via the \u0022Create Contacts\u0022 endpoint. When omitted, returns all contacts for the organization. Use this parameter to cross-reference and fetch contacts linked to external systems."
             }
@@ -836,7 +848,8 @@
                 "maxLength": 75,
                 "minLength": 1,
                 "type": "string",
-                "description": "Indicates how the contact was created or where it originated from."
+                "description": "Indicates how the contact was created or where it originated from.",
+                "example": "public-api"
               }
             }
           },
@@ -955,7 +968,8 @@
             "schema": {
               "pattern": "^(.*)$",
               "type": "string",
-              "description": "The unique identifier of the contact."
+              "description": "The unique identifier of the contact.",
+              "example": "66d0d87e8dc1211467372303"
             },
             "example": "66d0d87e8dc1211467372303"
           }
@@ -1053,7 +1067,8 @@
             "schema": {
               "pattern": "^(.*)$",
               "type": "string",
-              "description": "The unique identifier of the contact."
+              "description": "The unique identifier of the contact.",
+              "example": "66d0d87e8dc1211467372303"
             },
             "example": "66d0d87e8dc1211467372303"
           }
@@ -1160,7 +1175,8 @@
             "schema": {
               "pattern": "^(.*)$",
               "type": "string",
-              "description": "The unique identifier of the contact."
+              "description": "The unique identifier of the contact.",
+              "example": "66d0d87e8dc1211467372303"
             },
             "example": "66d0d87e8dc1211467372303"
           }
@@ -1252,7 +1268,8 @@
                 {
                   "pattern": "^\\\u002B[1-9]\\d{1,14}$",
                   "type": "string",
-                  "description": "A phone number in E.164 format, including the country code."
+                  "description": "A phone number in E.164 format, including the country code.",
+                  "example": "\u002B15555555555"
                 },
                 {
                   "pattern": "^PN(.*)$",
@@ -1260,7 +1277,11 @@
                 }
               ],
               "description": "DEPRECATED, use \u0060phoneNumbers\u0060 instead. If both \u0060phoneNumber\u0060 and \u0060phoneNumbers\u0060 are provided, \u0060phoneNumbers\u0060 will be used. Filters results to only include conversations with the specified Quo phone number. Can be either your Quo phone number ID or the full phone number in E.164 format.",
-              "deprecated": true
+              "example": "\u002B15555555555",
+              "deprecated": true,
+              "x-jsonschema-examples": [
+                "PN123abc"
+              ]
             },
             "example": "\u002B15555555555"
           },
@@ -1277,7 +1298,8 @@
                   {
                     "pattern": "^\\\u002B[1-9]\\d{1,14}$",
                     "type": "string",
-                    "description": "A phone number in E.164 format, including the country code."
+                    "description": "A phone number in E.164 format, including the country code.",
+                    "example": "\u002B15555555555"
                   },
                   {
                     "pattern": "^PN(.*)$",
@@ -1285,7 +1307,11 @@
                   }
                 ]
               },
-              "description": "Filters results to only include conversations with the specified Quo phone numbers. Each item can be either an Quo phone number ID or a full phone number in E.164 format."
+              "description": "Filters results to only include conversations with the specified Quo phone numbers. Each item can be either an Quo phone number ID or a full phone number in E.164 format.",
+              "example": [
+                "\u002B15555555555",
+                "PN123abc"
+              ]
             },
             "example": [
               "\u002B15555555555",
@@ -1298,7 +1324,8 @@
             "schema": {
               "pattern": "^US(.*)$",
               "type": "string",
-              "description": "The unique identifier of the user whose access scope is applied to the results. Scopes the response to conversations accessible to the specified user."
+              "description": "The unique identifier of the user whose access scope is applied to the results. Scopes the response to conversations accessible to the specified user.",
+              "example": "US123abc"
             },
             "example": "US123abc"
           },
@@ -1308,7 +1335,8 @@
             "schema": {
               "type": "string",
               "description": "Filter results to only include conversations created after the specified date and time, in ISO 8601 format.",
-              "format": "date-time"
+              "format": "date-time",
+              "example": "2022-01-01T00:00:00Z"
             },
             "example": "2022-01-01T00:00:00Z"
           },
@@ -1318,7 +1346,8 @@
             "schema": {
               "type": "string",
               "description": "Filter results to only include conversations created before the specified date and time, in ISO 8601 format.",
-              "format": "date-time"
+              "format": "date-time",
+              "example": "2022-01-01T00:00:00Z"
             },
             "example": "2022-01-01T00:00:00Z"
           },
@@ -1327,7 +1356,8 @@
             "in": "query",
             "schema": {
               "type": "boolean",
-              "description": "Exclude inactive conversations from the results."
+              "description": "Exclude inactive conversations from the results.",
+              "example": true
             },
             "example": true
           },
@@ -1337,7 +1367,8 @@
             "schema": {
               "type": "string",
               "description": "Filter results to only include conversations updated after the specified date and time, in ISO 8601 format.",
-              "format": "date-time"
+              "format": "date-time",
+              "example": "2022-01-01T00:00:00Z"
             },
             "example": "2022-01-01T00:00:00Z"
           },
@@ -1347,7 +1378,8 @@
             "schema": {
               "type": "string",
               "description": "Filter results to only include conversations updated before the specified date and time, in ISO 8601 format.",
-              "format": "date-time"
+              "format": "date-time",
+              "example": "2022-01-01T00:00:00Z"
             },
             "example": "2022-01-01T00:00:00Z"
           },
@@ -1456,7 +1488,8 @@
             "schema": {
               "pattern": "^CN(.*)$",
               "type": "string",
-              "description": "The unique identifier of the conversation to mark as read."
+              "description": "The unique identifier of the conversation to mark as read.",
+              "example": "CN123abc"
             },
             "example": "CN123abc"
           }
@@ -1546,7 +1579,8 @@
             "schema": {
               "pattern": "^CN(.*)$",
               "type": "string",
-              "description": "The unique identifier of the conversation to mark as done."
+              "description": "The unique identifier of the conversation to mark as done.",
+              "example": "CN123abc"
             },
             "example": "CN123abc"
           }
@@ -1636,7 +1670,8 @@
             "schema": {
               "pattern": "^CN(.*)$",
               "type": "string",
-              "description": "The unique identifier of the conversation to mark as open."
+              "description": "The unique identifier of the conversation to mark as open.",
+              "example": "CN123abc"
             },
             "example": "CN123abc"
           }
@@ -1820,7 +1855,8 @@
             "schema": {
               "pattern": "^PN(.*)$",
               "type": "string",
-              "description": "The unique identifier of the Quo number used to send or receive the messages. PhoneNumberID can be retrieved via the Get Phone Numbers endpoint."
+              "description": "The unique identifier of the Quo number used to send or receive the messages. PhoneNumberID can be retrieved via the Get Phone Numbers endpoint.",
+              "example": "OP123abc"
             },
             "example": "OP123abc"
           },
@@ -1830,7 +1866,8 @@
             "schema": {
               "pattern": "^US(.*)$",
               "type": "string",
-              "description": "The unique identifier of the user the message was sent from."
+              "description": "The unique identifier of the user the message was sent from.",
+              "example": "US123abc"
             },
             "example": "US123abc"
           },
@@ -1844,9 +1881,11 @@
               "items": {
                 "pattern": "^\\\u002B[1-9]\\d{1,14}$",
                 "type": "string",
-                "description": "A phone number in E.164 format, including the country code."
+                "description": "A phone number in E.164 format, including the country code.",
+                "example": "\u002B15555555555"
               },
-              "description": "Array of phone numbers involved in the conversation, excluding your Quo number, in E.164 format. Passing a single participant will retrieve their conversation messages. Passing multiple participants will retrieve group conversation messages."
+              "description": "Array of phone numbers involved in the conversation, excluding your Quo number, in E.164 format. Passing a single participant will retrieve their conversation messages. Passing multiple participants will retrieve group conversation messages.",
+              "example": "\u002B15555555555"
             },
             "example": "\u002B15555555555"
           },
@@ -1857,6 +1896,7 @@
               "type": "string",
               "description": "DEPRECATED, use \u0022createdAfter\u0022 or \u0022createdBefore\u0022 instead. \u0022since\u0022 currently behaves as \u0022createdBefore\u0022 and will be removed in an upcoming release.",
               "format": "date-time",
+              "example": "2022-01-01T00:00:00Z",
               "deprecated": true
             },
             "example": "2022-01-01T00:00:00Z"
@@ -1867,7 +1907,8 @@
             "schema": {
               "type": "string",
               "description": "Filter results to only include messages created after the specified date and time, in ISO 8601 format.",
-              "format": "date-time"
+              "format": "date-time",
+              "example": "2022-01-01T00:00:00Z"
             },
             "example": "2022-01-01T00:00:00Z"
           },
@@ -1877,7 +1918,8 @@
             "schema": {
               "type": "string",
               "description": "Filter results to only include messages created before the specified date and time, in ISO 8601 format.",
-              "format": "date-time"
+              "format": "date-time",
+              "example": "2022-01-01T00:00:00Z"
             },
             "example": "2022-01-01T00:00:00Z"
           },
@@ -1996,7 +2038,8 @@
             "schema": {
               "pattern": "^AC(.*)$",
               "type": "string",
-              "description": "The unique identifier of a message"
+              "description": "The unique identifier of a message",
+              "example": "AC123abc"
             },
             "example": "AC123abc"
           }
@@ -2095,7 +2138,8 @@
             "schema": {
               "pattern": "^US(.*)$",
               "type": "string",
-              "description": "Filter results to return only phone numbers associated with the specified user\u0022s unique identifier."
+              "description": "Filter results to return only phone numbers associated with the specified user\u0022s unique identifier.",
+              "example": "US123abc"
             },
             "example": "US123abc"
           }
@@ -2185,7 +2229,8 @@
             "schema": {
               "pattern": "^PN(.*)$",
               "type": "string",
-              "description": "Unique identifier of the phone number."
+              "description": "Unique identifier of the phone number.",
+              "example": "PNlja6rrtI"
             },
             "example": "PNlja6rrtI"
           }
@@ -3693,7 +3738,8 @@
             "schema": {
               "pattern": "^US(.*)$",
               "type": "string",
-              "description": "The unique identifier of the user being retrieved."
+              "description": "The unique identifier of the user being retrieved.",
+              "example": "US123abc"
             },
             "example": "US123abc"
           }
@@ -3782,7 +3828,8 @@
             "schema": {
               "pattern": "^US(.*)$",
               "type": "string",
-              "description": "The unique identifier the user. Defaults to the workspace owner."
+              "description": "The unique identifier the user. Defaults to the workspace owner.",
+              "example": "U55wgP5I5"
             },
             "example": "U55wgP5I5"
           }
@@ -3872,7 +3919,8 @@
             "schema": {
               "pattern": "^WH(.*)$",
               "type": "string",
-              "description": "The unique identifier of a webhook"
+              "description": "The unique identifier of a webhook",
+              "example": "WH12345"
             },
             "example": "WH12345"
           }
@@ -3960,7 +4008,8 @@
             "schema": {
               "pattern": "^WH(.*)$",
               "type": "string",
-              "description": "The unique identifier of a webhook"
+              "description": "The unique identifier of a webhook",
+              "example": "WH12345"
             },
             "example": "WH12345"
           }
@@ -4400,7 +4449,10 @@
             "type": "string",
             "description": "The user\u0027s email address.",
             "format": "email",
-            "example": "johndoe@example.com"
+            "example": "johndoe@example.com",
+            "x-jsonschema-examples": [
+              "johndoe@example.com"
+            ]
           },
           "firstName": {
             "type": "string",
@@ -4418,7 +4470,10 @@
             "pattern": "^US(.*)$",
             "type": "string",
             "description": "The unique identifier of the user.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc"
+            ]
           },
           "role": {
             "$ref": "#/components/schemas/ListPhoneNumbersResponseDataItemUsersItemRole"
@@ -4427,7 +4482,10 @@
             "pattern": "^GR(.*)$",
             "type": "string",
             "description": "The unique identifier of the group to which the user belongs.",
-            "example": "GRcei8k90o"
+            "example": "GRcei8k90o",
+            "x-jsonschema-examples": [
+              "GRcei8k90o"
+            ]
           }
         }
       },
@@ -4445,7 +4503,10 @@
             "type": "string",
             "description": "The user\u0027s email address.",
             "format": "email",
-            "example": "johndoe@example.com"
+            "example": "johndoe@example.com",
+            "x-jsonschema-examples": [
+              "johndoe@example.com"
+            ]
           },
           "firstName": {
             "type": "string",
@@ -4463,7 +4524,10 @@
             "pattern": "^US(.*)$",
             "type": "string",
             "description": "The unique identifier of the user.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc"
+            ]
           },
           "role": {
             "$ref": "#/components/schemas/ListPhoneNumbersResponseDataItemUsersItemRole"
@@ -4480,7 +4544,10 @@
             "pattern": "^GR(.*)$",
             "type": "string",
             "description": "The unique identifier of the group to which the user belongs.",
-            "example": "GRcei8k90o"
+            "example": "GRcei8k90o",
+            "x-jsonschema-examples": [
+              "GRcei8k90o"
+            ]
           }
         }
       },
@@ -4506,12 +4573,18 @@
             "pattern": "^PN(.*)$",
             "type": "string",
             "description": "The unique identifier of Quo phone number.",
-            "example": "PN123bc"
+            "example": "PN123bc",
+            "x-jsonschema-examples": [
+              "PN123bc"
+            ]
           },
           "groupId": {
             "type": "string",
             "description": "The unique identifier of the group to which the Quo number belongs.",
-            "example": "1234"
+            "example": "1234",
+            "x-jsonschema-examples": [
+              "1234"
+            ]
           },
           "portRequestId": {
             "type": "string",
@@ -4534,13 +4607,19 @@
           "name": {
             "type": "string",
             "description": "The display name of the phone number",
-            "example": "My phone number"
+            "example": "My phone number",
+            "x-jsonschema-examples": [
+              "My phone number"
+            ]
           },
           "number": {
             "pattern": "^\\\u002B[1-9]\\d{1,14}$",
             "type": "string",
             "description": "A phone number in E.164 format, including the country code.",
-            "example": "\u002B15555555555"
+            "example": "\u002B15555555555",
+            "x-jsonschema-examples": [
+              "\u002B15555555555"
+            ]
           },
           "portingStatus": {
             "type": "string",
@@ -4563,12 +4642,18 @@
           "createdAt": {
             "type": "string",
             "description": "Timestamp of when the phone number was added to the account in ISO 8601 format.",
-            "example": " \u00272022-01-01T00:00:00Z\u0027"
+            "example": " \u00272022-01-01T00:00:00Z\u0027",
+            "x-jsonschema-examples": [
+              " \u00272022-01-01T00:00:00Z\u0027"
+            ]
           },
           "updatedAt": {
             "type": "string",
             "description": "Timestamp of the last update to the phone number\u0027s details in ISO 8601 format.",
-            "example": " \u00272022-01-01T00:00:00Z\u0027"
+            "example": " \u00272022-01-01T00:00:00Z\u0027",
+            "x-jsonschema-examples": [
+              " \u00272022-01-01T00:00:00Z\u0027"
+            ]
           },
           "restrictions": {
             "$ref": "#/components/schemas/ListPhoneNumbersResponseDataItemRestrictions"
@@ -7701,7 +7786,10 @@
             "pattern": "^US(.*)$",
             "type": "string",
             "description": "The unique identifier of the user who created the contact.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc"
+            ]
           },
           "source": {
             "maxLength": 72,
@@ -7709,7 +7797,12 @@
             "type": "string",
             "description": "\u0022The contact\u0027s source. Defaults to \u0060null\u0060 for contacts created in the UI. Defaults to \u0060public-api\u0060 for contacts created via the public API. Cannot be one of the following reserved words: \u0060openphone\u0060, \u0060device\u0060, \u0060csv\u0060, \u0060zapier\u0060, \u0060google-people\u0060, \u0060other\u0060 or start with one of the following reserved prefixes: \u0060openphone\u0060, \u0060csv\u0060.\u0022",
             "default": "public-api",
-            "example": "public-api"
+            "example": "public-api",
+            "x-jsonschema-examples": [
+              "public-api",
+              "custom-hubspot",
+              "google-calendar"
+            ]
           },
           "sourceUrl": {
             "maxLength": 200,
@@ -7717,7 +7810,10 @@
             "type": "string",
             "description": "A link to the contact in the source system.",
             "format": "uri",
-            "example": "https://openphone.co/contacts/664d0db69fcac7cf2e6ec"
+            "example": "https://openphone.co/contacts/664d0db69fcac7cf2e6ec",
+            "x-jsonschema-examples": [
+              "https://openphone.co/contacts/664d0db69fcac7cf2e6ec"
+            ]
           },
           "externalId": {
             "maxLength": 75,
@@ -10980,7 +11076,10 @@
             "pattern": "^CN(.*)$",
             "type": "string",
             "description": "The unique identifier of the conversation.",
-            "example": "CN123abc"
+            "example": "CN123abc",
+            "x-jsonschema-examples": [
+              "CN123abc"
+            ]
           },
           "lastActivityAt": {
             "type": "string",
@@ -11011,14 +11110,20 @@
               "pattern": "^\\\u002B[1-9]\\d{1,14}$",
               "type": "string",
               "description": "A phone number in E.164 format, including the country code.",
-              "example": "\u002B15555555555"
+              "example": "\u002B15555555555",
+              "x-jsonschema-examples": [
+                "\u002B15555555555"
+              ]
             }
           },
           "phoneNumberId": {
             "pattern": "^PN(.*)$",
             "type": "string",
             "description": "The unique identifier of the Quo phone number associated with the conversation.",
-            "example": "PN123abc"
+            "example": "PN123abc",
+            "x-jsonschema-examples": [
+              "PN123abc"
+            ]
           },
           "snoozedUntil": {
             "type": "string",
@@ -11503,7 +11608,10 @@
             "pattern": "^CN(.*)$",
             "type": "string",
             "description": "The unique identifier of the conversation.",
-            "example": "CN123abc"
+            "example": "CN123abc",
+            "x-jsonschema-examples": [
+              "CN123abc"
+            ]
           },
           "lastActivityAt": {
             "type": "string",
@@ -11534,14 +11642,20 @@
               "pattern": "^\\\u002B[1-9]\\d{1,14}$",
               "type": "string",
               "description": "A phone number in E.164 format, including the country code.",
-              "example": "\u002B15555555555"
+              "example": "\u002B15555555555",
+              "x-jsonschema-examples": [
+                "\u002B15555555555"
+              ]
             }
           },
           "phoneNumberId": {
             "pattern": "^PN(.*)$",
             "type": "string",
             "description": "The unique identifier of the Quo phone number associated with the conversation.",
-            "example": "PN123abc"
+            "example": "PN123abc",
+            "x-jsonschema-examples": [
+              "PN123abc"
+            ]
           },
           "snoozedUntil": {
             "type": "string",
@@ -12026,7 +12140,10 @@
             "pattern": "^CN(.*)$",
             "type": "string",
             "description": "The unique identifier of the conversation.",
-            "example": "CN123abc"
+            "example": "CN123abc",
+            "x-jsonschema-examples": [
+              "CN123abc"
+            ]
           },
           "lastActivityAt": {
             "type": "string",
@@ -12057,14 +12174,20 @@
               "pattern": "^\\\u002B[1-9]\\d{1,14}$",
               "type": "string",
               "description": "A phone number in E.164 format, including the country code.",
-              "example": "\u002B15555555555"
+              "example": "\u002B15555555555",
+              "x-jsonschema-examples": [
+                "\u002B15555555555"
+              ]
             }
           },
           "phoneNumberId": {
             "pattern": "^PN(.*)$",
             "type": "string",
             "description": "The unique identifier of the Quo phone number associated with the conversation.",
-            "example": "PN123abc"
+            "example": "PN123abc",
+            "x-jsonschema-examples": [
+              "PN123abc"
+            ]
           },
           "snoozedUntil": {
             "type": "string",
@@ -12535,7 +12658,10 @@
             "type": "string",
             "description": "DEPRECATED, use \u0022from\u0022 instead. Quo phone number ID to send a message from",
             "example": "OP1232abc",
-            "deprecated": true
+            "deprecated": true,
+            "x-jsonschema-examples": [
+              "OP1232abc"
+            ]
           },
           "from": {
             "$ref": "#/components/schemas/SendMessageV1RequestFrom"
@@ -12552,7 +12678,10 @@
             "pattern": "^US(.*)$",
             "type": "string",
             "description": "The unique identifier of the Quo user sending the message. If not provided, defaults to the phone number owner.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc"
+            ]
           },
           "setInboxStatus": {
             "$ref": "#/components/schemas/SendMessageV1RequestSetInboxStatus"
@@ -17186,12 +17315,18 @@
           "title": {
             "type": "string",
             "description": "The title of the task.",
-            "example": "Follow up with customer"
+            "example": "Follow up with customer",
+            "x-jsonschema-examples": [
+              "Follow up with customer"
+            ]
           },
           "description": {
             "type": "string",
             "description": "The description of the task.",
-            "example": "Discuss pricing and onboarding next steps."
+            "example": "Discuss pricing and onboarding next steps.",
+            "x-jsonschema-examples": [
+              "Discuss pricing and onboarding next steps."
+            ]
           }
         },
         "additionalProperties": false
@@ -24017,7 +24152,10 @@
           "label": {
             "type": "string",
             "description": "Webhook\u0027s label",
-            "example": "my webhook label"
+            "example": "my webhook label",
+            "x-jsonschema-examples": [
+              "my webhook label"
+            ]
           },
           "resourceIds": {
             "$ref": "#/components/schemas/CreateMessageWebhookV1RequestResourceIds"
@@ -24029,13 +24167,19 @@
             "type": "string",
             "description": "The endpoint that receives events from the webhook.",
             "format": "uri",
-            "example": "https://example.com"
+            "example": "https://example.com",
+            "x-jsonschema-examples": [
+              "https://example.com"
+            ]
           },
           "userId": {
             "pattern": "^US(.*)$",
             "type": "string",
             "description": "The unique identifier of the user that creates the webhook. If not provided, default to workspace owner.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc"
+            ]
           }
         }
       },
@@ -24488,7 +24632,10 @@
             "type": "string",
             "description": "The endpoint that receives events from the webhook.",
             "format": "uri",
-            "example": "https://example.com/"
+            "example": "https://example.com/",
+            "x-jsonschema-examples": [
+              "https://example.com/"
+            ]
           },
           "events": {
             "type": "array",
@@ -24503,12 +24650,18 @@
             "pattern": "^US(.*)$",
             "type": "string",
             "description": "The unique identifier of the user that creates the webhook. If not provided, default to workspace owner.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc"
+            ]
           },
           "label": {
             "type": "string",
             "description": "Webhook\u0027s label",
-            "example": "my webhook label"
+            "example": "my webhook label",
+            "x-jsonschema-examples": [
+              "my webhook label"
+            ]
           },
           "status": {
             "$ref": "#/components/schemas/CreateCallWebhookV1RequestStatus"
@@ -24970,7 +25123,10 @@
           "label": {
             "type": "string",
             "description": "Webhook\u0027s label",
-            "example": "my webhook label"
+            "example": "my webhook label",
+            "x-jsonschema-examples": [
+              "my webhook label"
+            ]
           },
           "resourceIds": {
             "$ref": "#/components/schemas/CreateCallSummaryWebhookV1RequestResourceIds"
@@ -24982,13 +25138,19 @@
             "type": "string",
             "description": "The endpoint that receives events from the webhook.",
             "format": "uri",
-            "example": "https://example.com"
+            "example": "https://example.com",
+            "x-jsonschema-examples": [
+              "https://example.com"
+            ]
           },
           "userId": {
             "pattern": "^US(.*)$",
             "type": "string",
             "description": "The unique identifier of the user that creates the webhook. If not provided, default to workspace owner.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc"
+            ]
           }
         }
       },
@@ -25447,7 +25609,10 @@
           "label": {
             "type": "string",
             "description": "The webhook\u0027s label.",
-            "example": "my webhook label"
+            "example": "my webhook label",
+            "x-jsonschema-examples": [
+              "my webhook label"
+            ]
           },
           "resourceIds": {
             "$ref": "#/components/schemas/CreateCallTranscriptWebhookV1RequestResourceIds"
@@ -25459,13 +25624,19 @@
             "type": "string",
             "description": "The endpoint that receives events from the webhook.",
             "format": "uri",
-            "example": "https://example.com"
+            "example": "https://example.com",
+            "x-jsonschema-examples": [
+              "https://example.com"
+            ]
           },
           "userId": {
             "pattern": "^US(.*)$",
             "type": "string",
             "description": "The ID of the user that creates the webhook. If not provided, default to workspace owner.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc"
+            ]
           }
         }
       },
@@ -25921,7 +26092,10 @@
                 "pattern": "^\\\u002B[1-9]\\d{1,14}$",
                 "type": "string",
                 "description": "A phone number in E.164 format, including the country code.",
-                "example": "\u002B15555555555"
+                "example": "\u002B15555555555",
+                "x-jsonschema-examples": [
+                  "\u002B15555555555"
+                ]
               },
               {
                 "pattern": "^US(.*)$",
@@ -25929,12 +26103,16 @@
               }
             ],
             "description": "The phone number or Quo user ID from which the call was forwarded. Null if the call was not forwarded.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc"
+            ]
           },
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ]
       },
@@ -25948,7 +26126,10 @@
                 "pattern": "^\\\u002B[1-9]\\d{1,14}$",
                 "type": "string",
                 "description": "A phone number in E.164 format, including the country code.",
-                "example": "\u002B15555555555"
+                "example": "\u002B15555555555",
+                "x-jsonschema-examples": [
+                  "\u002B15555555555"
+                ]
               },
               {
                 "pattern": "^US(.*)$",
@@ -25956,12 +26137,16 @@
               }
             ],
             "description": "The phone number or Quo user ID to which the call was forwarded. Null if the call was not forwarded.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc"
+            ]
           },
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ]
       },
@@ -25975,7 +26160,10 @@
                 "pattern": "^\\\u002B[1-9]\\d{1,14}$",
                 "type": "string",
                 "description": "A phone number in E.164 format, including the country code.",
-                "example": "\u002B15555555555"
+                "example": "\u002B15555555555",
+                "x-jsonschema-examples": [
+                  "\u002B15555555555"
+                ]
               },
               {
                 "pattern": "^US(.*)$",
@@ -25983,12 +26171,16 @@
               }
             ],
             "description": "The phone number or Quo user ID from which the call was forwarded. Null if the call was not forwarded.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc"
+            ]
           },
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ]
       },
@@ -26002,7 +26194,10 @@
                 "pattern": "^\\\u002B[1-9]\\d{1,14}$",
                 "type": "string",
                 "description": "A phone number in E.164 format, including the country code.",
-                "example": "\u002B15555555555"
+                "example": "\u002B15555555555",
+                "x-jsonschema-examples": [
+                  "\u002B15555555555"
+                ]
               },
               {
                 "pattern": "^US(.*)$",
@@ -26010,12 +26205,16 @@
               }
             ],
             "description": "The phone number or Quo user ID to which the call was forwarded. Null if the call was not forwarded.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc"
+            ]
           },
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ]
       },
@@ -26026,13 +26225,17 @@
             "type": "array",
             "items": {
               "type": "string",
-              "example": "Bring an umbrella."
+              "example": "Bring an umbrella.",
+              "x-jsonschema-examples": [
+                "Bring an umbrella."
+              ]
             }
           },
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ]
       },
@@ -26043,13 +26246,17 @@
             "type": "array",
             "items": {
               "type": "string",
-              "example": "You talked about the weather."
+              "example": "You talked about the weather.",
+              "x-jsonschema-examples": [
+                "You talked about the weather."
+              ]
             }
           },
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ]
       },
@@ -26062,7 +26269,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ]
       },
@@ -26075,7 +26283,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ]
       },
@@ -26090,7 +26299,10 @@
           "key": {
             "type": "string",
             "description": "The identifying key for contact custom field.",
-            "example": "inbound-lead"
+            "example": "inbound-lead",
+            "x-jsonschema-examples": [
+              "inbound-lead"
+            ]
           }
         }
       },
@@ -26108,17 +26320,26 @@
           "name": {
             "type": "string",
             "description": "The name of the custom contact field. This name is set by users in the Quo interface when the custom field is created.",
-            "example": "Inbound Lead"
+            "example": "Inbound Lead",
+            "x-jsonschema-examples": [
+              "Inbound Lead"
+            ]
           },
           "key": {
             "type": "string",
             "description": "The identifying key for contact custom field.",
-            "example": "inbound-lead"
+            "example": "inbound-lead",
+            "x-jsonschema-examples": [
+              "inbound-lead"
+            ]
           },
           "id": {
             "type": "string",
             "description": "The unique identifier for the contact custom field.",
-            "example": "66d0d87d534de8fd1c433cec3"
+            "example": "66d0d87d534de8fd1c433cec3",
+            "x-jsonschema-examples": [
+              "66d0d87d534de8fd1c433cec3"
+            ]
           }
         }
       },
@@ -26136,17 +26357,26 @@
           "name": {
             "type": "string",
             "description": "The name of the custom contact field. This name is set by users in the Quo interface when the custom field is created.",
-            "example": "Inbound Lead"
+            "example": "Inbound Lead",
+            "x-jsonschema-examples": [
+              "Inbound Lead"
+            ]
           },
           "key": {
             "type": "string",
             "description": "The identifying key for contact custom field.",
-            "example": "inbound-lead"
+            "example": "inbound-lead",
+            "x-jsonschema-examples": [
+              "inbound-lead"
+            ]
           },
           "id": {
             "type": "string",
             "description": "The unique identifier for the contact custom field.",
-            "example": "66d0d87d534de8fd1c433cec3"
+            "example": "66d0d87d534de8fd1c433cec3",
+            "x-jsonschema-examples": [
+              "66d0d87d534de8fd1c433cec3"
+            ]
           }
         }
       },
@@ -26164,17 +26394,26 @@
           "name": {
             "type": "string",
             "description": "The name of the custom contact field. This name is set by users in the Quo interface when the custom field is created.",
-            "example": "Inbound Lead"
+            "example": "Inbound Lead",
+            "x-jsonschema-examples": [
+              "Inbound Lead"
+            ]
           },
           "key": {
             "type": "string",
             "description": "The identifying key for contact custom field.",
-            "example": "inbound-lead"
+            "example": "inbound-lead",
+            "x-jsonschema-examples": [
+              "inbound-lead"
+            ]
           },
           "id": {
             "type": "string",
             "description": "The unique identifier for the contact custom field.",
-            "example": "66d0d87d534de8fd1c433cec3"
+            "example": "66d0d87d534de8fd1c433cec3",
+            "x-jsonschema-examples": [
+              "66d0d87d534de8fd1c433cec3"
+            ]
           }
         }
       },
@@ -26189,12 +26428,18 @@
           "key": {
             "type": "string",
             "description": "The identifying key for contact custom field.",
-            "example": "inbound-lead"
+            "example": "inbound-lead",
+            "x-jsonschema-examples": [
+              "inbound-lead"
+            ]
           },
           "id": {
             "type": "string",
             "description": "The unique identifier for the contact custom field.",
-            "example": "66d0d87d534de8fd1c433cec3"
+            "example": "66d0d87d534de8fd1c433cec3",
+            "x-jsonschema-examples": [
+              "66d0d87d534de8fd1c433cec3"
+            ]
           }
         }
       },
@@ -26212,12 +26457,18 @@
           "name": {
             "type": "string",
             "description": "The name of the custom contact field. This name is set by users in the Quo interface when the custom field is created.",
-            "example": "Inbound Lead"
+            "example": "Inbound Lead",
+            "x-jsonschema-examples": [
+              "Inbound Lead"
+            ]
           },
           "key": {
             "type": "string",
             "description": "The identifying key for contact custom field.",
-            "example": "inbound-lead"
+            "example": "inbound-lead",
+            "x-jsonschema-examples": [
+              "inbound-lead"
+            ]
           }
         }
       },
@@ -26237,12 +26488,17 @@
               }
             ],
             "description": "The unique identifier of the user or system user the conversation is assigned to.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc",
+              "SYU123abc"
+            ]
           },
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ]
       },
@@ -26262,12 +26518,17 @@
               }
             ],
             "description": "The unique identifier of the user or system user the conversation is assigned to.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc",
+              "SYU123abc"
+            ]
           },
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ]
       },
@@ -26287,12 +26548,17 @@
               }
             ],
             "description": "The unique identifier of the user or system user the conversation is assigned to.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc",
+              "SYU123abc"
+            ]
           },
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ]
       },
@@ -26312,12 +26578,17 @@
               }
             ],
             "description": "The unique identifier of the user or system user the conversation is assigned to.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc",
+              "SYU123abc"
+            ]
           },
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ]
       },
@@ -26332,11 +26603,17 @@
             "pattern": "^\\\u002B[1-9]\\d{1,14}$",
             "type": "string",
             "description": "A phone number in E.164 format, including the country code.",
-            "example": "\u002B15555555555"
+            "example": "\u002B15555555555",
+            "x-jsonschema-examples": [
+              "\u002B15555555555"
+            ]
           }
         ],
         "description": "The sender\u0027s phone number. Can be either your Quo phone number ID or the full phone number in E.164 format.",
-        "example": "\u002B15555555555"
+        "example": "\u002B15555555555",
+        "x-jsonschema-examples": [
+          "\u002B15555555555"
+        ]
       },
       "SendMessageV1RequestToItem": {
         "type": "object",
@@ -26345,7 +26622,10 @@
             "pattern": "^\\\u002B[1-9]\\d{1,14}$",
             "type": "string",
             "description": "A phone number in E.164 format, including the country code.",
-            "example": "\u002B15555555555"
+            "example": "\u002B15555555555",
+            "x-jsonschema-examples": [
+              "\u002B15555555555"
+            ]
           },
           {
             "maxLength": 15,
@@ -26372,7 +26652,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ]
       },
@@ -26395,7 +26676,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ]
       },
@@ -26410,12 +26692,18 @@
           "title": {
             "type": "string",
             "description": "The title of the task.",
-            "example": "Follow up with customer"
+            "example": "Follow up with customer",
+            "x-jsonschema-examples": [
+              "Follow up with customer"
+            ]
           },
           "description": {
             "type": "string",
             "description": "The description of the task.",
-            "example": "Discuss pricing and onboarding next steps."
+            "example": "Discuss pricing and onboarding next steps.",
+            "x-jsonschema-examples": [
+              "Discuss pricing and onboarding next steps."
+            ]
           },
           "dueDate": {
             "type": "string",
@@ -26443,12 +26731,18 @@
           "title": {
             "type": "string",
             "description": "The title of the task.",
-            "example": "Follow up with customer"
+            "example": "Follow up with customer",
+            "x-jsonschema-examples": [
+              "Follow up with customer"
+            ]
           },
           "description": {
             "type": "string",
             "description": "The description of the task.",
-            "example": "Discuss pricing and onboarding next steps."
+            "example": "Discuss pricing and onboarding next steps.",
+            "x-jsonschema-examples": [
+              "Discuss pricing and onboarding next steps."
+            ]
           },
           "dueDate": {
             "type": "string",
@@ -26476,12 +26770,18 @@
           "title": {
             "type": "string",
             "description": "The title of the task.",
-            "example": "Follow up with customer"
+            "example": "Follow up with customer",
+            "x-jsonschema-examples": [
+              "Follow up with customer"
+            ]
           },
           "description": {
             "type": "string",
             "description": "The description of the task.",
-            "example": "Discuss pricing and onboarding next steps."
+            "example": "Discuss pricing and onboarding next steps.",
+            "x-jsonschema-examples": [
+              "Discuss pricing and onboarding next steps."
+            ]
           },
           "dueDate": {
             "type": "string",
@@ -26517,7 +26817,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ]
       },
@@ -26540,7 +26841,8 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ]
       },
@@ -26577,6 +26879,11 @@
         "description": "The unique identifiers of the phone numbers associated with the webhook.",
         "example": [
           "PN1234"
+        ],
+        "x-jsonschema-examples": [
+          [
+            "PN1234"
+          ]
         ]
       },
       "GetWebhookByIdV1200ResponseDataResourceIds": {
@@ -26612,6 +26919,11 @@
         "description": "The unique identifiers of the phone numbers associated with the webhook.",
         "example": [
           "PN1234"
+        ],
+        "x-jsonschema-examples": [
+          [
+            "PN1234"
+          ]
         ]
       },
       "CreateMessageWebhookV1RequestResourceIds": {
@@ -26644,7 +26956,10 @@
             }
           }
         ],
-        "description": "The unique identifiers of the phone numbers associated with the webhook."
+        "description": "The unique identifiers of the phone numbers associated with the webhook.",
+        "example": [
+          "PN1234"
+        ]
       },
       "CreateMessageWebhookV1201ResponseDataResourceIds": {
         "type": "object",
@@ -26676,7 +26991,10 @@
             }
           }
         ],
-        "description": "The unique identifiers of the phone numbers associated with the webhook."
+        "description": "The unique identifiers of the phone numbers associated with the webhook.",
+        "example": [
+          "PN1234"
+        ]
       },
       "CreateCallWebhookV1RequestResourceIds": {
         "type": "object",
@@ -26708,7 +27026,10 @@
             }
           }
         ],
-        "description": "The unique identifiers of the phone numbers associated with the webhook."
+        "description": "The unique identifiers of the phone numbers associated with the webhook.",
+        "example": [
+          "PN1234"
+        ]
       },
       "CreateCallWebhookV1201ResponseDataResourceIds": {
         "type": "object",
@@ -26740,7 +27061,10 @@
             }
           }
         ],
-        "description": "The unique identifiers of the phone numbers associated with the webhook."
+        "description": "The unique identifiers of the phone numbers associated with the webhook.",
+        "example": [
+          "PN1234"
+        ]
       },
       "CreateCallSummaryWebhookV1RequestResourceIds": {
         "type": "object",
@@ -26772,7 +27096,10 @@
             }
           }
         ],
-        "description": "The unique identifiers of the phone numbers associated with the webhook."
+        "description": "The unique identifiers of the phone numbers associated with the webhook.",
+        "example": [
+          "PN1234"
+        ]
       },
       "CreateCallSummaryWebhookV1201ResponseDataResourceIds": {
         "type": "object",
@@ -26804,7 +27131,10 @@
             }
           }
         ],
-        "description": "The unique identifiers of the phone numbers associated with the webhook."
+        "description": "The unique identifiers of the phone numbers associated with the webhook.",
+        "example": [
+          "PN1234"
+        ]
       },
       "CreateCallTranscriptWebhookV1RequestResourceIds": {
         "type": "object",
@@ -26837,7 +27167,10 @@
           }
         ],
         "description": "The unique identifiers of the phone numbers associated with the webhook.",
-        "example": "PN1234"
+        "example": "PN1234",
+        "x-jsonschema-examples": [
+          "PN1234"
+        ]
       },
       "CreateCallTranscriptWebhookV1201ResponseDataResourceIds": {
         "type": "object",
@@ -26869,7 +27202,10 @@
             }
           }
         ],
-        "description": "The unique identifiers of the phone numbers associated with the webhook."
+        "description": "The unique identifiers of the phone numbers associated with the webhook.",
+        "example": [
+          "PN1234"
+        ]
       },
       "GetCallSummaryV1200ResponseDataJobsAnyOf1": {
         "type": "array",
@@ -26991,13 +27327,20 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "description": "Value defined for the multi select type custom field.",
         "example": [
           "option1",
           "option2"
+        ],
+        "x-jsonschema-examples": [
+          [
+            "option1",
+            "option2"
+          ]
         ]
       },
       "CreateContactV1201ResponseDataCustomFieldsItemAllOf1Value": {
@@ -27012,13 +27355,20 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "description": "Value defined for the multi select type custom field.",
         "example": [
           "option1",
           "option2"
+        ],
+        "x-jsonschema-examples": [
+          [
+            "option1",
+            "option2"
+          ]
         ]
       },
       "ListContactsV1200ResponseDataItemCustomFieldsItemAllOf1Value": {
@@ -27033,13 +27383,20 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "description": "Value defined for the multi select type custom field.",
         "example": [
           "option1",
           "option2"
+        ],
+        "x-jsonschema-examples": [
+          [
+            "option1",
+            "option2"
+          ]
         ]
       },
       "GetContactByIdV1200ResponseDataCustomFieldsItemAllOf1Value": {
@@ -27054,13 +27411,20 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "description": "Value defined for the multi select type custom field.",
         "example": [
           "option1",
           "option2"
+        ],
+        "x-jsonschema-examples": [
+          [
+            "option1",
+            "option2"
+          ]
         ]
       },
       "UpdateContactByIdV1RequestCustomFieldsItemAllOf1Value": {
@@ -27075,13 +27439,20 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "description": "Value defined for the multi select type custom field.",
         "example": [
           "option1",
           "option2"
+        ],
+        "x-jsonschema-examples": [
+          [
+            "option1",
+            "option2"
+          ]
         ]
       },
       "UpdateContactByIdV1200ResponseDataCustomFieldsItemAllOf1Value": {
@@ -27096,13 +27467,20 @@
           {
             "enum": [
               null
-            ]
+            ],
+            "nullable": true
           }
         ],
         "description": "Value defined for the multi select type custom field.",
         "example": [
           "option1",
           "option2"
+        ],
+        "x-jsonschema-examples": [
+          [
+            "option1",
+            "option2"
+          ]
         ]
       },
       "GetCallRecordingsV1200ResponseDataItem": {
@@ -27125,7 +27503,10 @@
           "id": {
             "type": "string",
             "description": "The unique identifier of the call recording.",
-            "example": "CRwRVK2qBq"
+            "example": "CRwRVK2qBq",
+            "x-jsonschema-examples": [
+              "CRwRVK2qBq"
+            ]
           },
           "startTime": {
             "type": "string",
@@ -27321,7 +27702,10 @@
             "type": "string",
             "description": "The timestamp when the call record was created, in ISO 8601 format.",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           },
           "callRoute": {
             "type": "string",
@@ -27332,7 +27716,10 @@
           "duration": {
             "type": "integer",
             "description": "The total duration of the call in seconds.",
-            "example": 60
+            "example": 60,
+            "x-jsonschema-examples": [
+              60
+            ]
           },
           "forwardedFrom": {
             "$ref": "#/components/schemas/ListCallsV1200ResponseDataItemForwardedFrom"
@@ -27350,13 +27737,19 @@
             "pattern": "^AC(.*)$",
             "type": "string",
             "description": "The unique identifier of the call.",
-            "example": "AC123abc"
+            "example": "AC123abc",
+            "x-jsonschema-examples": [
+              "AC123abc"
+            ]
           },
           "phoneNumberId": {
             "pattern": "^PN(.*)$",
             "type": "string",
             "description": "The unique identifier of the Quo number associated with the call.",
-            "example": "PN123abc"
+            "example": "PN123abc",
+            "x-jsonschema-examples": [
+              "PN123abc"
+            ]
           },
           "participants": {
             "maxItems": 2,
@@ -27365,7 +27758,10 @@
               "pattern": "^\\\u002B[1-9]\\d{1,14}$",
               "type": "string",
               "description": "A phone number in E.164 format, including the country code.",
-              "example": "\u002B15555555555"
+              "example": "\u002B15555555555",
+              "x-jsonschema-examples": [
+                "\u002B15555555555"
+              ]
             }
           },
           "updatedAt": {
@@ -27379,7 +27775,10 @@
             "pattern": "^US(.*)$",
             "type": "string",
             "description": "The unique identifier of the Quo user account associated with the call.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc"
+            ]
           }
         },
         "additionalProperties": false
@@ -27552,7 +27951,10 @@
             "type": "string",
             "description": "The timestamp when the call record was created, in ISO 8601 format.",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           },
           "callRoute": {
             "type": "string",
@@ -27563,7 +27965,10 @@
           "duration": {
             "type": "integer",
             "description": "The total duration of the call in seconds.",
-            "example": 60
+            "example": 60,
+            "x-jsonschema-examples": [
+              60
+            ]
           },
           "forwardedFrom": {
             "$ref": "#/components/schemas/GetCallByIdV1200ResponseDataForwardedFrom"
@@ -27581,13 +27986,19 @@
             "pattern": "^AC(.*)$",
             "type": "string",
             "description": "The unique identifier of the call.",
-            "example": "AC123abc"
+            "example": "AC123abc",
+            "x-jsonschema-examples": [
+              "AC123abc"
+            ]
           },
           "phoneNumberId": {
             "pattern": "^PN(.*)$",
             "type": "string",
             "description": "The unique identifier of the Quo number associated with the call.",
-            "example": "PN123abc"
+            "example": "PN123abc",
+            "x-jsonschema-examples": [
+              "PN123abc"
+            ]
           },
           "participants": {
             "maxItems": 2,
@@ -27596,7 +28007,10 @@
               "pattern": "^\\\u002B[1-9]\\d{1,14}$",
               "type": "string",
               "description": "A phone number in E.164 format, including the country code.",
-              "example": "\u002B15555555555"
+              "example": "\u002B15555555555",
+              "x-jsonschema-examples": [
+                "\u002B15555555555"
+              ]
             }
           },
           "updatedAt": {
@@ -27610,7 +28024,10 @@
             "pattern": "^US(.*)$",
             "type": "string",
             "description": "The unique identifier of the Quo user account associated with the call.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc"
+            ]
           }
         },
         "additionalProperties": false
@@ -27737,7 +28154,10 @@
           "callId": {
             "type": "string",
             "description": "The unique identifier of the call to which this summary belongs.",
-            "example": "ACea724hac8c30465bcbcff0b76e4c1c7b"
+            "example": "ACea724hac8c30465bcbcff0b76e4c1c7b",
+            "x-jsonschema-examples": [
+              "ACea724hac8c30465bcbcff0b76e4c1c7b"
+            ]
           },
           "nextSteps": {
             "$ref": "#/components/schemas/GetCallSummaryV1200ResponseDataNextSteps"
@@ -27876,13 +28296,19 @@
           "callId": {
             "type": "string",
             "description": "The unique identifier of the call to which this transcript belongs.",
-            "example": "ACea724hac8c30465bcbcff0b76e4c1c7b"
+            "example": "ACea724hac8c30465bcbcff0b76e4c1c7b",
+            "x-jsonschema-examples": [
+              "ACea724hac8c30465bcbcff0b76e4c1c7b"
+            ]
           },
           "createdAt": {
             "type": "string",
             "description": "The timestamp when the transcription was created, in ISO 8601 format.",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           },
           "dialogue": {
             "$ref": "#/components/schemas/GetCallTranscriptV1200ResponseDataDialogue"
@@ -27890,7 +28316,10 @@
           "duration": {
             "type": "number",
             "description": "The total duration of the transcribed call in seconds.",
-            "example": 100
+            "example": 100,
+            "x-jsonschema-examples": [
+              100
+            ]
           },
           "status": {
             "$ref": "#/components/schemas/GetCallTranscriptV1200ResponseDataStatus"
@@ -28027,7 +28456,10 @@
             "pattern": "^VM(.*)$",
             "type": "string",
             "description": "The unique identifier of the call voicemail.",
-            "example": "VMaaff8f317e0c4e61953b74a5eb42a370"
+            "example": "VMaaff8f317e0c4e61953b74a5eb42a370",
+            "x-jsonschema-examples": [
+              "VMaaff8f317e0c4e61953b74a5eb42a370"
+            ]
           },
           "transcript": {
             "type": "string",
@@ -28169,12 +28601,18 @@
           "name": {
             "type": "string",
             "description": "The name of the custom contact field. This name is set by users in the Quo interface when the custom field is created.",
-            "example": "Inbound Lead"
+            "example": "Inbound Lead",
+            "x-jsonschema-examples": [
+              "Inbound Lead"
+            ]
           },
           "key": {
             "type": "string",
             "description": "The identifying key for contact custom field.",
-            "example": "inbound-lead"
+            "example": "inbound-lead",
+            "x-jsonschema-examples": [
+              "inbound-lead"
+            ]
           },
           "type": {
             "$ref": "#/components/schemas/GetContactCustomFieldsV1200ResponseDataItemType"
@@ -28353,7 +28791,10 @@
             "pattern": "^(.*)$",
             "type": "string",
             "description": "The unique identifier of the contact.",
-            "example": "664d0db69fcac7cf2e6ec"
+            "example": "664d0db69fcac7cf2e6ec",
+            "x-jsonschema-examples": [
+              "664d0db69fcac7cf2e6ec"
+            ]
           },
           "externalId": {
             "maxLength": 75,
@@ -28393,19 +28834,28 @@
             "type": "string",
             "description": "Timestamp of contact creation in ISO 8601 format.",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           },
           "updatedAt": {
             "type": "string",
             "description": "Timestamp of last contact update in ISO 8601 format.",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           },
           "createdByUserId": {
             "pattern": "^US(.*)$",
             "type": "string",
             "description": "The unique identifier of the user who created the contact.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc"
+            ]
           }
         }
       },
@@ -28559,7 +29009,10 @@
             "pattern": "^(.*)$",
             "type": "string",
             "description": "The unique identifier of the contact.",
-            "example": "664d0db69fcac7cf2e6ec"
+            "example": "664d0db69fcac7cf2e6ec",
+            "x-jsonschema-examples": [
+              "664d0db69fcac7cf2e6ec"
+            ]
           },
           "externalId": {
             "maxLength": 75,
@@ -28599,19 +29052,28 @@
             "type": "string",
             "description": "Timestamp of contact creation in ISO 8601 format.",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           },
           "updatedAt": {
             "type": "string",
             "description": "Timestamp of last contact update in ISO 8601 format.",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           },
           "createdByUserId": {
             "pattern": "^US(.*)$",
             "type": "string",
             "description": "The unique identifier of the user who created the contact.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc"
+            ]
           }
         }
       },
@@ -28765,7 +29227,10 @@
             "pattern": "^(.*)$",
             "type": "string",
             "description": "The unique identifier of the contact.",
-            "example": "664d0db69fcac7cf2e6ec"
+            "example": "664d0db69fcac7cf2e6ec",
+            "x-jsonschema-examples": [
+              "664d0db69fcac7cf2e6ec"
+            ]
           },
           "externalId": {
             "maxLength": 75,
@@ -28805,19 +29270,28 @@
             "type": "string",
             "description": "Timestamp of contact creation in ISO 8601 format.",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           },
           "updatedAt": {
             "type": "string",
             "description": "Timestamp of last contact update in ISO 8601 format.",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           },
           "createdByUserId": {
             "pattern": "^US(.*)$",
             "type": "string",
             "description": "The unique identifier of the user who created the contact.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc"
+            ]
           }
         }
       },
@@ -29012,7 +29486,10 @@
             "pattern": "^(.*)$",
             "type": "string",
             "description": "The unique identifier of the contact.",
-            "example": "664d0db69fcac7cf2e6ec"
+            "example": "664d0db69fcac7cf2e6ec",
+            "x-jsonschema-examples": [
+              "664d0db69fcac7cf2e6ec"
+            ]
           },
           "externalId": {
             "maxLength": 75,
@@ -29052,19 +29529,28 @@
             "type": "string",
             "description": "Timestamp of contact creation in ISO 8601 format.",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           },
           "updatedAt": {
             "type": "string",
             "description": "Timestamp of last contact update in ISO 8601 format.",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           },
           "createdByUserId": {
             "pattern": "^US(.*)$",
             "type": "string",
             "description": "The unique identifier of the user who created the contact.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc"
+            ]
           }
         }
       },
@@ -29366,7 +29852,10 @@
             "pattern": "^CN(.*)$",
             "type": "string",
             "description": "The unique identifier of the conversation.",
-            "example": "CN123abc"
+            "example": "CN123abc",
+            "x-jsonschema-examples": [
+              "CN123abc"
+            ]
           },
           "lastActivityAt": {
             "type": "string",
@@ -29397,14 +29886,20 @@
               "pattern": "^\\\u002B[1-9]\\d{1,14}$",
               "type": "string",
               "description": "A phone number in E.164 format, including the country code.",
-              "example": "\u002B15555555555"
+              "example": "\u002B15555555555",
+              "x-jsonschema-examples": [
+                "\u002B15555555555"
+              ]
             }
           },
           "phoneNumberId": {
             "pattern": "^PN(.*)$",
             "type": "string",
             "description": "The unique identifier of the Quo phone number associated with the conversation.",
-            "example": "PN123abc"
+            "example": "PN123abc",
+            "x-jsonschema-examples": [
+              "PN123abc"
+            ]
           },
           "snoozedUntil": {
             "type": "string",
@@ -29878,7 +30373,10 @@
             "pattern": "^AC(.*)$",
             "type": "string",
             "description": "The unique identifier of the message.",
-            "example": "AC123abc"
+            "example": "AC123abc",
+            "x-jsonschema-examples": [
+              "AC123abc"
+            ]
           },
           "to": {
             "type": "array",
@@ -29886,18 +30384,27 @@
               "pattern": "^\\\u002B[1-9]\\d{1,14}$",
               "type": "string",
               "description": "A phone number in E.164 format, including the country code.",
-              "example": "\u002B15555555555"
+              "example": "\u002B15555555555",
+              "x-jsonschema-examples": [
+                "\u002B15555555555"
+              ]
             }
           },
           "from": {
             "type": "string",
             "description": "The from identifier, typically a E.164 phone number but can be a variety of formats.",
-            "example": "\u002B15555555555"
+            "example": "\u002B15555555555",
+            "x-jsonschema-examples": [
+              "\u002B15555555555"
+            ]
           },
           "text": {
             "type": "string",
             "description": "The content of the message.",
-            "example": "Hello, world!"
+            "example": "Hello, world!",
+            "x-jsonschema-examples": [
+              "Hello, world!"
+            ]
           },
           "phoneNumberId": {
             "pattern": "^PN(.*)$",
@@ -29910,7 +30417,10 @@
             "pattern": "^CN(.*)$",
             "type": "string",
             "description": "The unique identifier of the conversation.",
-            "example": "CN123abc"
+            "example": "CN123abc",
+            "x-jsonschema-examples": [
+              "CN123abc"
+            ]
           },
           "direction": {
             "$ref": "#/components/schemas/SendMessageV1202ResponseDataDirection"
@@ -29919,7 +30429,10 @@
             "pattern": "^US(.*)$",
             "type": "string",
             "description": "The unique identifier of the user who sent the message. Null for incoming messages.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc"
+            ]
           },
           "status": {
             "$ref": "#/components/schemas/SendMessageV1202ResponseDataStatus"
@@ -29928,13 +30441,19 @@
             "type": "string",
             "description": "The timestamp when the message was created at, in ISO 8601 format",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           },
           "updatedAt": {
             "type": "string",
             "description": "The timestamp when the message status was last updated, in ISO 8601 format.",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           }
         }
       },
@@ -30090,7 +30609,10 @@
             "pattern": "^AC(.*)$",
             "type": "string",
             "description": "The unique identifier of the message.",
-            "example": "AC123abc"
+            "example": "AC123abc",
+            "x-jsonschema-examples": [
+              "AC123abc"
+            ]
           },
           "to": {
             "type": "array",
@@ -30098,18 +30620,27 @@
               "pattern": "^\\\u002B[1-9]\\d{1,14}$",
               "type": "string",
               "description": "A phone number in E.164 format, including the country code.",
-              "example": "\u002B15555555555"
+              "example": "\u002B15555555555",
+              "x-jsonschema-examples": [
+                "\u002B15555555555"
+              ]
             }
           },
           "from": {
             "type": "string",
             "description": "The from identifier, typically a E.164 phone number but can be a variety of formats.",
-            "example": "\u002B15555555555"
+            "example": "\u002B15555555555",
+            "x-jsonschema-examples": [
+              "\u002B15555555555"
+            ]
           },
           "text": {
             "type": "string",
             "description": "The content of the message.",
-            "example": "Hello, world!"
+            "example": "Hello, world!",
+            "x-jsonschema-examples": [
+              "Hello, world!"
+            ]
           },
           "phoneNumberId": {
             "pattern": "^PN(.*)$",
@@ -30122,7 +30653,10 @@
             "pattern": "^CN(.*)$",
             "type": "string",
             "description": "The unique identifier of the conversation.",
-            "example": "CN123abc"
+            "example": "CN123abc",
+            "x-jsonschema-examples": [
+              "CN123abc"
+            ]
           },
           "direction": {
             "$ref": "#/components/schemas/ListMessagesV1200ResponseDataItemDirection"
@@ -30131,7 +30665,10 @@
             "pattern": "^US(.*)$",
             "type": "string",
             "description": "The unique identifier of the user who sent the message. Null for incoming messages.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc"
+            ]
           },
           "status": {
             "$ref": "#/components/schemas/ListMessagesV1200ResponseDataItemStatus"
@@ -30140,13 +30677,19 @@
             "type": "string",
             "description": "The timestamp when the message was created at, in ISO 8601 format",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           },
           "updatedAt": {
             "type": "string",
             "description": "The timestamp when the message status was last updated, in ISO 8601 format.",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           }
         }
       },
@@ -30302,7 +30845,10 @@
             "pattern": "^AC(.*)$",
             "type": "string",
             "description": "The unique identifier of the message.",
-            "example": "AC123abc"
+            "example": "AC123abc",
+            "x-jsonschema-examples": [
+              "AC123abc"
+            ]
           },
           "to": {
             "type": "array",
@@ -30310,18 +30856,27 @@
               "pattern": "^\\\u002B[1-9]\\d{1,14}$",
               "type": "string",
               "description": "A phone number in E.164 format, including the country code.",
-              "example": "\u002B15555555555"
+              "example": "\u002B15555555555",
+              "x-jsonschema-examples": [
+                "\u002B15555555555"
+              ]
             }
           },
           "from": {
             "type": "string",
             "description": "The from identifier, typically a E.164 phone number but can be a variety of formats.",
-            "example": "\u002B15555555555"
+            "example": "\u002B15555555555",
+            "x-jsonschema-examples": [
+              "\u002B15555555555"
+            ]
           },
           "text": {
             "type": "string",
             "description": "The content of the message.",
-            "example": "Hello, world!"
+            "example": "Hello, world!",
+            "x-jsonschema-examples": [
+              "Hello, world!"
+            ]
           },
           "phoneNumberId": {
             "pattern": "^PN(.*)$",
@@ -30334,7 +30889,10 @@
             "pattern": "^CN(.*)$",
             "type": "string",
             "description": "The unique identifier of the conversation.",
-            "example": "CN123abc"
+            "example": "CN123abc",
+            "x-jsonschema-examples": [
+              "CN123abc"
+            ]
           },
           "direction": {
             "$ref": "#/components/schemas/GetMessageByIdV1200ResponseDataDirection"
@@ -30343,7 +30901,10 @@
             "pattern": "^US(.*)$",
             "type": "string",
             "description": "The unique identifier of the user who sent the message. Null for incoming messages.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc"
+            ]
           },
           "status": {
             "$ref": "#/components/schemas/GetMessageByIdV1200ResponseDataStatus"
@@ -30352,13 +30913,19 @@
             "type": "string",
             "description": "The timestamp when the message was created at, in ISO 8601 format",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           },
           "updatedAt": {
             "type": "string",
             "description": "The timestamp when the message status was last updated, in ISO 8601 format.",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           }
         }
       },
@@ -30626,12 +31193,18 @@
             "pattern": "^PN(.*)$",
             "type": "string",
             "description": "The unique identifier of Quo phone number.",
-            "example": "PN123bc"
+            "example": "PN123bc",
+            "x-jsonschema-examples": [
+              "PN123bc"
+            ]
           },
           "groupId": {
             "type": "string",
             "description": "The unique identifier of the group to which the Quo number belongs.",
-            "example": "1234"
+            "example": "1234",
+            "x-jsonschema-examples": [
+              "1234"
+            ]
           },
           "portRequestId": {
             "type": "string",
@@ -30654,13 +31227,19 @@
           "name": {
             "type": "string",
             "description": "The display name of the phone number",
-            "example": "My phone number"
+            "example": "My phone number",
+            "x-jsonschema-examples": [
+              "My phone number"
+            ]
           },
           "number": {
             "pattern": "^\\\u002B[1-9]\\d{1,14}$",
             "type": "string",
             "description": "A phone number in E.164 format, including the country code.",
-            "example": "\u002B15555555555"
+            "example": "\u002B15555555555",
+            "x-jsonschema-examples": [
+              "\u002B15555555555"
+            ]
           },
           "portingStatus": {
             "type": "string",
@@ -30683,12 +31262,18 @@
           "createdAt": {
             "type": "string",
             "description": "Timestamp of when the phone number was added to the account in ISO 8601 format.",
-            "example": " \u00272022-01-01T00:00:00Z\u0027"
+            "example": " \u00272022-01-01T00:00:00Z\u0027",
+            "x-jsonschema-examples": [
+              " \u00272022-01-01T00:00:00Z\u0027"
+            ]
           },
           "updatedAt": {
             "type": "string",
             "description": "Timestamp of the last update to the phone number\u0027s details in ISO 8601 format.",
-            "example": " \u00272022-01-01T00:00:00Z\u0027"
+            "example": " \u00272022-01-01T00:00:00Z\u0027",
+            "x-jsonschema-examples": [
+              " \u00272022-01-01T00:00:00Z\u0027"
+            ]
           },
           "restrictions": {
             "$ref": "#/components/schemas/GetPhoneNumberByIdV1200ResponseDataRestrictions"
@@ -32881,13 +33466,19 @@
             "pattern": "^US(.*)$",
             "type": "string",
             "description": "The unique identifier of the user.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc"
+            ]
           },
           "email": {
             "type": "string",
             "description": "The user\u0027s email address.",
             "format": "email",
-            "example": "johndoe@example.com"
+            "example": "johndoe@example.com",
+            "x-jsonschema-examples": [
+              "johndoe@example.com"
+            ]
           },
           "firstName": {
             "type": "string",
@@ -32915,13 +33506,19 @@
             "type": "string",
             "description": "Timestamp of user creation in ISO 8601 format.",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           },
           "updatedAt": {
             "type": "string",
             "description": "Timestamp of last user update in ISO 8601 format.",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           }
         }
       },
@@ -33052,13 +33649,19 @@
             "pattern": "^US(.*)$",
             "type": "string",
             "description": "The unique identifier of the user.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc"
+            ]
           },
           "email": {
             "type": "string",
             "description": "The user\u0027s email address.",
             "format": "email",
-            "example": "johndoe@example.com"
+            "example": "johndoe@example.com",
+            "x-jsonschema-examples": [
+              "johndoe@example.com"
+            ]
           },
           "firstName": {
             "type": "string",
@@ -33086,13 +33689,19 @@
             "type": "string",
             "description": "Timestamp of user creation in ISO 8601 format.",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           },
           "updatedAt": {
             "type": "string",
             "description": "Timestamp of last user update in ISO 8601 format.",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           }
         }
       },
@@ -33227,19 +33836,28 @@
             "pattern": "^WH(.*)$",
             "type": "string",
             "description": "The webhook\u0027s ID",
-            "example": "WHabcd1234"
+            "example": "WHabcd1234",
+            "x-jsonschema-examples": [
+              "WHabcd1234"
+            ]
           },
           "userId": {
             "pattern": "^US(.*)$",
             "type": "string",
             "description": "The unique identifier of the user that created the webhook.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc"
+            ]
           },
           "orgId": {
             "pattern": "^OR(.*)$",
             "type": "string",
             "description": "The unique identifier of the organization the webhook belongs to",
-            "example": "OR1223abc"
+            "example": "OR1223abc",
+            "x-jsonschema-examples": [
+              "OR1223abc"
+            ]
           },
           "label": {
             "type": "string",
@@ -33254,24 +33872,36 @@
             "type": "string",
             "description": "The endpoint that receives events from the webhook.",
             "format": "uri",
-            "example": "https://example.com/"
+            "example": "https://example.com/",
+            "x-jsonschema-examples": [
+              "https://example.com/"
+            ]
           },
           "key": {
             "type": "string",
             "description": "Webhook key",
-            "example": "example-key"
+            "example": "example-key",
+            "x-jsonschema-examples": [
+              "example-key"
+            ]
           },
           "createdAt": {
             "type": "string",
             "description": "The date the webhook was created at, in ISO 8601 format.",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           },
           "updatedAt": {
             "type": "string",
             "description": "The date the webhook was updated at, in ISO 8601 format.",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           },
           "deletedAt": {
             "type": "string",
@@ -33422,19 +34052,28 @@
             "pattern": "^WH(.*)$",
             "type": "string",
             "description": "The webhook\u0027s ID",
-            "example": "WHabcd1234"
+            "example": "WHabcd1234",
+            "x-jsonschema-examples": [
+              "WHabcd1234"
+            ]
           },
           "userId": {
             "pattern": "^US(.*)$",
             "type": "string",
             "description": "The unique identifier of the user that created the webhook.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc"
+            ]
           },
           "orgId": {
             "pattern": "^OR(.*)$",
             "type": "string",
             "description": "The unique identifier of the organization the webhook belongs to",
-            "example": "OR1223abc"
+            "example": "OR1223abc",
+            "x-jsonschema-examples": [
+              "OR1223abc"
+            ]
           },
           "label": {
             "type": "string",
@@ -33449,24 +34088,36 @@
             "type": "string",
             "description": "The endpoint that receives events from the webhook.",
             "format": "uri",
-            "example": "https://example.com/"
+            "example": "https://example.com/",
+            "x-jsonschema-examples": [
+              "https://example.com/"
+            ]
           },
           "key": {
             "type": "string",
             "description": "Webhook key",
-            "example": "example-key"
+            "example": "example-key",
+            "x-jsonschema-examples": [
+              "example-key"
+            ]
           },
           "createdAt": {
             "type": "string",
             "description": "The date the webhook was created at, in ISO 8601 format.",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           },
           "updatedAt": {
             "type": "string",
             "description": "The date the webhook was updated at, in ISO 8601 format.",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           },
           "deletedAt": {
             "type": "string",
@@ -33727,19 +34378,28 @@
             "pattern": "^WH(.*)$",
             "type": "string",
             "description": "The webhook\u0027s ID",
-            "example": "WHabcd1234"
+            "example": "WHabcd1234",
+            "x-jsonschema-examples": [
+              "WHabcd1234"
+            ]
           },
           "userId": {
             "pattern": "^US(.*)$",
             "type": "string",
             "description": "The unique identifier of the user that created the webhook.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc"
+            ]
           },
           "orgId": {
             "pattern": "^OR(.*)$",
             "type": "string",
             "description": "The unique identifier of the organization the webhook belongs to",
-            "example": "OR1223abc"
+            "example": "OR1223abc",
+            "x-jsonschema-examples": [
+              "OR1223abc"
+            ]
           },
           "label": {
             "type": "string",
@@ -33754,24 +34414,36 @@
             "type": "string",
             "description": "The endpoint that receives events from the webhook.",
             "format": "uri",
-            "example": "https://example.com/"
+            "example": "https://example.com/",
+            "x-jsonschema-examples": [
+              "https://example.com/"
+            ]
           },
           "key": {
             "type": "string",
             "description": "Webhook key",
-            "example": "example-key"
+            "example": "example-key",
+            "x-jsonschema-examples": [
+              "example-key"
+            ]
           },
           "createdAt": {
             "type": "string",
             "description": "The date the webhook was created at, in ISO 8601 format.",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           },
           "updatedAt": {
             "type": "string",
             "description": "The date the webhook was updated at, in ISO 8601 format.",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           },
           "deletedAt": {
             "type": "string",
@@ -33922,19 +34594,28 @@
             "pattern": "^WH(.*)$",
             "type": "string",
             "description": "The webhook\u0027s ID",
-            "example": "WHabcd1234"
+            "example": "WHabcd1234",
+            "x-jsonschema-examples": [
+              "WHabcd1234"
+            ]
           },
           "userId": {
             "pattern": "^US(.*)$",
             "type": "string",
             "description": "The unique identifier of the user that created the webhook.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc"
+            ]
           },
           "orgId": {
             "pattern": "^OR(.*)$",
             "type": "string",
             "description": "The unique identifier of the organization the webhook belongs to",
-            "example": "OR1223abc"
+            "example": "OR1223abc",
+            "x-jsonschema-examples": [
+              "OR1223abc"
+            ]
           },
           "label": {
             "type": "string",
@@ -33949,24 +34630,36 @@
             "type": "string",
             "description": "The endpoint that receives events from the webhook.",
             "format": "uri",
-            "example": "https://example.com/"
+            "example": "https://example.com/",
+            "x-jsonschema-examples": [
+              "https://example.com/"
+            ]
           },
           "key": {
             "type": "string",
             "description": "Webhook key",
-            "example": "example-key"
+            "example": "example-key",
+            "x-jsonschema-examples": [
+              "example-key"
+            ]
           },
           "createdAt": {
             "type": "string",
             "description": "The date the webhook was created at, in ISO 8601 format.",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           },
           "updatedAt": {
             "type": "string",
             "description": "The date the webhook was updated at, in ISO 8601 format.",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           },
           "deletedAt": {
             "type": "string",
@@ -34117,19 +34810,28 @@
             "pattern": "^WH(.*)$",
             "type": "string",
             "description": "The webhook\u0027s ID",
-            "example": "WHabcd1234"
+            "example": "WHabcd1234",
+            "x-jsonschema-examples": [
+              "WHabcd1234"
+            ]
           },
           "userId": {
             "pattern": "^US(.*)$",
             "type": "string",
             "description": "The unique identifier of the user that created the webhook.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc"
+            ]
           },
           "orgId": {
             "pattern": "^OR(.*)$",
             "type": "string",
             "description": "The unique identifier of the organization the webhook belongs to",
-            "example": "OR1223abc"
+            "example": "OR1223abc",
+            "x-jsonschema-examples": [
+              "OR1223abc"
+            ]
           },
           "label": {
             "type": "string",
@@ -34144,24 +34846,36 @@
             "type": "string",
             "description": "The endpoint that receives events from the webhook.",
             "format": "uri",
-            "example": "https://example.com/"
+            "example": "https://example.com/",
+            "x-jsonschema-examples": [
+              "https://example.com/"
+            ]
           },
           "key": {
             "type": "string",
             "description": "Webhook key",
-            "example": "example-key"
+            "example": "example-key",
+            "x-jsonschema-examples": [
+              "example-key"
+            ]
           },
           "createdAt": {
             "type": "string",
             "description": "The date the webhook was created at, in ISO 8601 format.",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           },
           "updatedAt": {
             "type": "string",
             "description": "The date the webhook was updated at, in ISO 8601 format.",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           },
           "deletedAt": {
             "type": "string",
@@ -34313,19 +35027,28 @@
             "pattern": "^WH(.*)$",
             "type": "string",
             "description": "The webhook\u0027s ID",
-            "example": "WHabcd1234"
+            "example": "WHabcd1234",
+            "x-jsonschema-examples": [
+              "WHabcd1234"
+            ]
           },
           "userId": {
             "pattern": "^US(.*)$",
             "type": "string",
             "description": "The unique identifier of the user that created the webhook.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc"
+            ]
           },
           "orgId": {
             "pattern": "^OR(.*)$",
             "type": "string",
             "description": "The unique identifier of the organization the webhook belongs to",
-            "example": "OR1223abc"
+            "example": "OR1223abc",
+            "x-jsonschema-examples": [
+              "OR1223abc"
+            ]
           },
           "label": {
             "type": "string",
@@ -34340,24 +35063,36 @@
             "type": "string",
             "description": "The endpoint that receives events from the webhook.",
             "format": "uri",
-            "example": "https://example.com/"
+            "example": "https://example.com/",
+            "x-jsonschema-examples": [
+              "https://example.com/"
+            ]
           },
           "key": {
             "type": "string",
             "description": "Webhook key",
-            "example": "example-key"
+            "example": "example-key",
+            "x-jsonschema-examples": [
+              "example-key"
+            ]
           },
           "createdAt": {
             "type": "string",
             "description": "The date the webhook was created at, in ISO 8601 format.",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           },
           "updatedAt": {
             "type": "string",
             "description": "The date the webhook was updated at, in ISO 8601 format.",
             "format": "date-time",
-            "example": "2022-01-01T00:00:00Z"
+            "example": "2022-01-01T00:00:00Z",
+            "x-jsonschema-examples": [
+              "2022-01-01T00:00:00Z"
+            ]
           },
           "deletedAt": {
             "type": "string",
@@ -34520,17 +35255,26 @@
           "content": {
             "type": "string",
             "description": "The transcribed text of a specific dialogue segment.",
-            "example": "Hello, world!"
+            "example": "Hello, world!",
+            "x-jsonschema-examples": [
+              "Hello, world!"
+            ]
           },
           "start": {
             "type": "number",
             "description": "The start time of the dialogue segment in seconds, relative to the beginning of the call.",
-            "example": 5.123456
+            "example": 5.123456,
+            "x-jsonschema-examples": [
+              5.123456
+            ]
           },
           "end": {
             "type": "number",
             "description": "The end time of the dialogue segment in seconds, relative to the beginning of the call.",
-            "example": 10.123456
+            "example": 10.123456,
+            "x-jsonschema-examples": [
+              10.123456
+            ]
           },
           "identifier": {
             "type": "string",
@@ -35047,7 +35791,10 @@
           "name": {
             "type": "string",
             "description": "The name for the contact\u0027s email address.",
-            "example": "company email"
+            "example": "company email",
+            "x-jsonschema-examples": [
+              "company email"
+            ]
           },
           "value": {
             "type": "string",
@@ -35067,7 +35814,10 @@
           "name": {
             "type": "string",
             "description": "The name of the contact\u0027s phone number.",
-            "example": "company phone"
+            "example": "company phone",
+            "x-jsonschema-examples": [
+              "company phone"
+            ]
           },
           "value": {
             "type": "string",
@@ -35486,7 +36236,10 @@
           "name": {
             "type": "string",
             "description": "The name for the contact\u0027s email address.",
-            "example": "company email"
+            "example": "company email",
+            "x-jsonschema-examples": [
+              "company email"
+            ]
           },
           "value": {
             "type": "string",
@@ -35497,7 +36250,10 @@
           "id": {
             "type": "string",
             "description": "The unique identifier for the contact email field.",
-            "example": "acb123"
+            "example": "acb123",
+            "x-jsonschema-examples": [
+              "acb123"
+            ]
           }
         }
       },
@@ -35511,7 +36267,10 @@
           "name": {
             "type": "string",
             "description": "The name of the contact\u0027s phone number.",
-            "example": "company phone"
+            "example": "company phone",
+            "x-jsonschema-examples": [
+              "company phone"
+            ]
           },
           "value": {
             "type": "string",
@@ -35522,7 +36281,10 @@
           "id": {
             "type": "string",
             "description": "The unique identifier of the contact phone number field.",
-            "example": "acb123"
+            "example": "acb123",
+            "x-jsonschema-examples": [
+              "acb123"
+            ]
           }
         }
       },
@@ -36360,7 +37122,10 @@
             "type": "string",
             "description": "The user\u0027s email address.",
             "format": "email",
-            "example": "johndoe@example.com"
+            "example": "johndoe@example.com",
+            "x-jsonschema-examples": [
+              "johndoe@example.com"
+            ]
           },
           "firstName": {
             "type": "string",
@@ -36378,7 +37143,10 @@
             "pattern": "^US(.*)$",
             "type": "string",
             "description": "The unique identifier of the user.",
-            "example": "US123abc"
+            "example": "US123abc",
+            "x-jsonschema-examples": [
+              "US123abc"
+            ]
           },
           "role": {
             "$ref": "#/components/schemas/GetPhoneNumberByIdV1200ResponseDataUsersItemRole"
@@ -36387,7 +37155,10 @@
             "pattern": "^GR(.*)$",
             "type": "string",
             "description": "The unique identifier of the group to which the user belongs.",
-            "example": "GRcei8k90o"
+            "example": "GRcei8k90o",
+            "x-jsonschema-examples": [
+              "GRcei8k90o"
+            ]
           }
         }
       },
@@ -38222,7 +38993,10 @@
           "name": {
             "type": "string",
             "description": "The name for the contact\u0027s email address.",
-            "example": "company email"
+            "example": "company email",
+            "x-jsonschema-examples": [
+              "company email"
+            ]
           },
           "value": {
             "type": "string",
@@ -38233,7 +39007,10 @@
           "id": {
             "type": "string",
             "description": "The unique identifier for the contact email field.",
-            "example": "acb123"
+            "example": "acb123",
+            "x-jsonschema-examples": [
+              "acb123"
+            ]
           }
         }
       },
@@ -38247,7 +39024,10 @@
           "name": {
             "type": "string",
             "description": "The name of the contact\u0027s phone number.",
-            "example": "company phone"
+            "example": "company phone",
+            "x-jsonschema-examples": [
+              "company phone"
+            ]
           },
           "value": {
             "type": "string",
@@ -38258,7 +39038,10 @@
           "id": {
             "type": "string",
             "description": "The unique identifier of the contact phone number field.",
-            "example": "acb123"
+            "example": "acb123",
+            "x-jsonschema-examples": [
+              "acb123"
+            ]
           }
         }
       },
@@ -38272,7 +39055,10 @@
           "name": {
             "type": "string",
             "description": "The name for the contact\u0027s email address.",
-            "example": "company email"
+            "example": "company email",
+            "x-jsonschema-examples": [
+              "company email"
+            ]
           },
           "value": {
             "type": "string",
@@ -38283,7 +39069,10 @@
           "id": {
             "type": "string",
             "description": "The unique identifier for the contact email field.",
-            "example": "acb123"
+            "example": "acb123",
+            "x-jsonschema-examples": [
+              "acb123"
+            ]
           }
         }
       },
@@ -38297,7 +39086,10 @@
           "name": {
             "type": "string",
             "description": "The name of the contact\u0027s phone number.",
-            "example": "company phone"
+            "example": "company phone",
+            "x-jsonschema-examples": [
+              "company phone"
+            ]
           },
           "value": {
             "type": "string",
@@ -38308,7 +39100,10 @@
           "id": {
             "type": "string",
             "description": "The unique identifier of the contact phone number field.",
-            "example": "acb123"
+            "example": "acb123",
+            "x-jsonschema-examples": [
+              "acb123"
+            ]
           }
         }
       },
@@ -38322,7 +39117,10 @@
           "name": {
             "type": "string",
             "description": "The name for the contact\u0027s email address.",
-            "example": "company email"
+            "example": "company email",
+            "x-jsonschema-examples": [
+              "company email"
+            ]
           },
           "value": {
             "type": "string",
@@ -38333,7 +39131,10 @@
           "id": {
             "type": "string",
             "description": "The unique identifier for the contact email field.",
-            "example": "acb123"
+            "example": "acb123",
+            "x-jsonschema-examples": [
+              "acb123"
+            ]
           }
         }
       },
@@ -38347,7 +39148,10 @@
           "name": {
             "type": "string",
             "description": "The name of the contact\u0027s phone number.",
-            "example": "company phone"
+            "example": "company phone",
+            "x-jsonschema-examples": [
+              "company phone"
+            ]
           },
           "value": {
             "type": "string",
@@ -38358,7 +39162,10 @@
           "id": {
             "type": "string",
             "description": "The unique identifier of the contact phone number field.",
-            "example": "acb123"
+            "example": "acb123",
+            "x-jsonschema-examples": [
+              "acb123"
+            ]
           }
         }
       },
@@ -38372,7 +39179,10 @@
           "name": {
             "type": "string",
             "description": "The name for the contact\u0027s email address.",
-            "example": "company email"
+            "example": "company email",
+            "x-jsonschema-examples": [
+              "company email"
+            ]
           },
           "value": {
             "type": "string",
@@ -38383,7 +39193,10 @@
           "id": {
             "type": "string",
             "description": "The unique identifier for the contact email field.",
-            "example": "acb123"
+            "example": "acb123",
+            "x-jsonschema-examples": [
+              "acb123"
+            ]
           }
         }
       },
@@ -38397,7 +39210,10 @@
           "name": {
             "type": "string",
             "description": "The name of the contact\u0027s phone number.",
-            "example": "company phone"
+            "example": "company phone",
+            "x-jsonschema-examples": [
+              "company phone"
+            ]
           },
           "value": {
             "type": "string",
@@ -38408,7 +39224,10 @@
           "id": {
             "type": "string",
             "description": "The unique identifier of the contact phone number field.",
-            "example": "acb123"
+            "example": "acb123",
+            "x-jsonschema-examples": [
+              "acb123"
+            ]
           }
         }
       },
@@ -38475,6 +39294,11 @@
         "additionalProperties": false,
         "description": "The user\u0027s role in the organization.",
         "example": "owner",
+        "x-jsonschema-examples": [
+          "owner",
+          "admin",
+          "member"
+        ],
         "x-ms-enum": {
           "name": "ListPhoneNumbersResponseDataItemUsersItemRole",
           "modelAsString": false,
@@ -38503,6 +39327,9 @@
         "additionalProperties": false,
         "description": "The phone-number usage restriction status for a specific region",
         "example": "unrestricted",
+        "x-jsonschema-examples": [
+          "unrestricted"
+        ],
         "x-ms-enum": {
           "name": "ListPhoneNumbersResponseDataItemRestrictionsCallingCa",
           "modelAsString": false,
@@ -38527,6 +39354,9 @@
         "additionalProperties": false,
         "description": "The phone-number usage restriction status for a specific region",
         "example": "unrestricted",
+        "x-jsonschema-examples": [
+          "unrestricted"
+        ],
         "x-ms-enum": {
           "name": "ListPhoneNumbersResponseDataItemRestrictionsCallingIntl",
           "modelAsString": false,
@@ -38551,6 +39381,9 @@
         "additionalProperties": false,
         "description": "The phone-number usage restriction status for a specific region",
         "example": "unrestricted",
+        "x-jsonschema-examples": [
+          "unrestricted"
+        ],
         "x-ms-enum": {
           "name": "ListPhoneNumbersResponseDataItemRestrictionsCallingUs",
           "modelAsString": false,
@@ -38575,6 +39408,9 @@
         "additionalProperties": false,
         "description": "The phone-number usage restriction status for a specific region",
         "example": "unrestricted",
+        "x-jsonschema-examples": [
+          "unrestricted"
+        ],
         "x-ms-enum": {
           "name": "ListPhoneNumbersResponseDataItemRestrictionsMessagingCa",
           "modelAsString": false,
@@ -38599,6 +39435,9 @@
         "additionalProperties": false,
         "description": "The phone-number usage restriction status for a specific region",
         "example": "unrestricted",
+        "x-jsonschema-examples": [
+          "unrestricted"
+        ],
         "x-ms-enum": {
           "name": "ListPhoneNumbersResponseDataItemRestrictionsMessagingIntl",
           "modelAsString": false,
@@ -38623,6 +39462,9 @@
         "additionalProperties": false,
         "description": "The phone-number usage restriction status for a specific region",
         "example": "unrestricted",
+        "x-jsonschema-examples": [
+          "unrestricted"
+        ],
         "x-ms-enum": {
           "name": "ListPhoneNumbersResponseDataItemRestrictionsMessagingUs",
           "modelAsString": false,
@@ -38646,6 +39488,9 @@
         "additionalProperties": false,
         "description": "Used to set the status of the related Quo inbox conversation. The default behavior without setting this parameter will be for the message sent to show up as an open conversation in the user\u0027s inbox. Setting the parameter to \u0060\u0027done\u0027\u0060 would move the conversation to the Done inbox view.",
         "example": "done",
+        "x-jsonschema-examples": [
+          "done"
+        ],
         "x-ms-enum": {
           "name": "SendMessageV1RequestSetInboxStatus",
           "modelAsString": false,
@@ -38688,6 +39533,9 @@
         "additionalProperties": false,
         "description": "The status of the webhook.",
         "example": "enabled",
+        "x-jsonschema-examples": [
+          "enabled"
+        ],
         "x-ms-enum": {
           "name": "CreateMessageWebhookV1RequestStatus",
           "modelAsString": false,
@@ -38739,6 +39587,9 @@
         "additionalProperties": false,
         "description": "The status of the webhook.",
         "example": "enabled",
+        "x-jsonschema-examples": [
+          "enabled"
+        ],
         "x-ms-enum": {
           "name": "CreateCallWebhookV1RequestStatus",
           "modelAsString": false,
@@ -38780,6 +39631,9 @@
         "additionalProperties": false,
         "description": "The status of the webhook.",
         "example": "enabled",
+        "x-jsonschema-examples": [
+          "enabled"
+        ],
         "x-ms-enum": {
           "name": "CreateCallSummaryWebhookV1RequestStatus",
           "modelAsString": false,
@@ -38821,6 +39675,9 @@
         "additionalProperties": false,
         "description": "The status of the webhook.",
         "example": "enabled",
+        "x-jsonschema-examples": [
+          "enabled"
+        ],
         "x-ms-enum": {
           "name": "CreateCallTranscriptWebhookV1RequestStatus",
           "modelAsString": false,
@@ -39093,6 +39950,9 @@
         "additionalProperties": false,
         "description": "The direction of the call relative to the Quo number.",
         "example": "incoming",
+        "x-jsonschema-examples": [
+          "incoming"
+        ],
         "x-ms-enum": {
           "name": "ListCallsV1200ResponseDataItemDirection",
           "modelAsString": false,
@@ -39128,6 +39988,9 @@
         "additionalProperties": false,
         "description": "The current status of the call.",
         "example": "completed",
+        "x-jsonschema-examples": [
+          "completed"
+        ],
         "x-ms-enum": {
           "name": "ListCallsV1200ResponseDataItemStatus",
           "modelAsString": false,
@@ -39196,6 +40059,9 @@
         "additionalProperties": false,
         "description": "The direction of the call relative to the Quo number.",
         "example": "incoming",
+        "x-jsonschema-examples": [
+          "incoming"
+        ],
         "x-ms-enum": {
           "name": "GetCallByIdV1200ResponseDataDirection",
           "modelAsString": false,
@@ -39231,6 +40097,9 @@
         "additionalProperties": false,
         "description": "The current status of the call.",
         "example": "completed",
+        "x-jsonschema-examples": [
+          "completed"
+        ],
         "x-ms-enum": {
           "name": "GetCallByIdV1200ResponseDataStatus",
           "modelAsString": false,
@@ -39301,6 +40170,9 @@
         "additionalProperties": false,
         "description": "The status of the call summary.",
         "example": "completed",
+        "x-jsonschema-examples": [
+          "completed"
+        ],
         "x-ms-enum": {
           "name": "GetCallSummaryV1200ResponseDataStatus",
           "modelAsString": false,
@@ -39335,6 +40207,9 @@
         "additionalProperties": false,
         "description": "The status of the call transcription.",
         "example": "completed",
+        "x-jsonschema-examples": [
+          "completed"
+        ],
         "x-ms-enum": {
           "name": "GetCallTranscriptV1200ResponseDataStatus",
           "modelAsString": false,
@@ -39367,6 +40242,10 @@
         "additionalProperties": false,
         "description": "The current status of the call voicemail.",
         "example": "completed",
+        "x-jsonschema-examples": [
+          "completed",
+          "in-progress"
+        ],
         "x-ms-enum": {
           "name": "GetCallVoicemailsV1200ResponseDataStatus",
           "modelAsString": false,
@@ -39396,6 +40275,9 @@
         "additionalProperties": false,
         "description": "The data type of the custom contact field, determining what kind of information can be stored and how it should be formatted.",
         "example": "boolean",
+        "x-jsonschema-examples": [
+          "boolean"
+        ],
         "x-ms-enum": {
           "name": "GetContactCustomFieldsV1200ResponseDataItemType",
           "modelAsString": false,
@@ -39440,6 +40322,9 @@
         "additionalProperties": false,
         "description": "The direction of the message relative to the Quo number.",
         "example": "incoming",
+        "x-jsonschema-examples": [
+          "incoming"
+        ],
         "x-ms-enum": {
           "name": "SendMessageV1202ResponseDataDirection",
           "modelAsString": false,
@@ -39467,6 +40352,9 @@
         "additionalProperties": false,
         "description": "The status of the message.",
         "example": "sent",
+        "x-jsonschema-examples": [
+          "sent"
+        ],
         "x-ms-enum": {
           "name": "SendMessageV1202ResponseDataStatus",
           "modelAsString": false,
@@ -39503,6 +40391,9 @@
         "additionalProperties": false,
         "description": "The direction of the message relative to the Quo number.",
         "example": "incoming",
+        "x-jsonschema-examples": [
+          "incoming"
+        ],
         "x-ms-enum": {
           "name": "ListMessagesV1200ResponseDataItemDirection",
           "modelAsString": false,
@@ -39530,6 +40421,9 @@
         "additionalProperties": false,
         "description": "The status of the message.",
         "example": "sent",
+        "x-jsonschema-examples": [
+          "sent"
+        ],
         "x-ms-enum": {
           "name": "ListMessagesV1200ResponseDataItemStatus",
           "modelAsString": false,
@@ -39566,6 +40460,9 @@
         "additionalProperties": false,
         "description": "The direction of the message relative to the Quo number.",
         "example": "incoming",
+        "x-jsonschema-examples": [
+          "incoming"
+        ],
         "x-ms-enum": {
           "name": "GetMessageByIdV1200ResponseDataDirection",
           "modelAsString": false,
@@ -39593,6 +40490,9 @@
         "additionalProperties": false,
         "description": "The status of the message.",
         "example": "sent",
+        "x-jsonschema-examples": [
+          "sent"
+        ],
         "x-ms-enum": {
           "name": "GetMessageByIdV1200ResponseDataStatus",
           "modelAsString": false,
@@ -39630,6 +40530,11 @@
         "additionalProperties": false,
         "description": "The user\u0027s role in the organization.",
         "example": "owner",
+        "x-jsonschema-examples": [
+          "owner",
+          "admin",
+          "member"
+        ],
         "x-ms-enum": {
           "name": "ListUsersV1200ResponseDataItemRole",
           "modelAsString": false,
@@ -39659,6 +40564,11 @@
         "additionalProperties": false,
         "description": "The user\u0027s role in the organization.",
         "example": "owner",
+        "x-jsonschema-examples": [
+          "owner",
+          "admin",
+          "member"
+        ],
         "x-ms-enum": {
           "name": "GetUserByIdV1200ResponseDataRole",
           "modelAsString": false,
@@ -39687,6 +40597,9 @@
         "additionalProperties": false,
         "description": "The status of the webhook.",
         "example": "enabled",
+        "x-jsonschema-examples": [
+          "enabled"
+        ],
         "x-ms-enum": {
           "name": "ListWebhooksV1200ResponseDataItemStatus",
           "modelAsString": false,
@@ -39733,6 +40646,9 @@
         "additionalProperties": false,
         "description": "The status of the webhook.",
         "example": "enabled",
+        "x-jsonschema-examples": [
+          "enabled"
+        ],
         "x-ms-enum": {
           "name": "GetWebhookByIdV1200ResponseDataStatus",
           "modelAsString": false,
@@ -39779,6 +40695,9 @@
         "additionalProperties": false,
         "description": "The status of the webhook.",
         "example": "enabled",
+        "x-jsonschema-examples": [
+          "enabled"
+        ],
         "x-ms-enum": {
           "name": "CreateMessageWebhookV1201ResponseDataStatus",
           "modelAsString": false,
@@ -39825,6 +40744,9 @@
         "additionalProperties": false,
         "description": "The status of the webhook.",
         "example": "enabled",
+        "x-jsonschema-examples": [
+          "enabled"
+        ],
         "x-ms-enum": {
           "name": "CreateCallWebhookV1201ResponseDataStatus",
           "modelAsString": false,
@@ -39876,6 +40798,9 @@
         "additionalProperties": false,
         "description": "The status of the webhook.",
         "example": "enabled",
+        "x-jsonschema-examples": [
+          "enabled"
+        ],
         "x-ms-enum": {
           "name": "CreateCallSummaryWebhookV1201ResponseDataStatus",
           "modelAsString": false,
@@ -39917,6 +40842,9 @@
         "additionalProperties": false,
         "description": "The status of the webhook.",
         "example": "enabled",
+        "x-jsonschema-examples": [
+          "enabled"
+        ],
         "x-ms-enum": {
           "name": "CreateCallTranscriptWebhookV1201ResponseDataStatus",
           "modelAsString": false,
@@ -39959,6 +40887,11 @@
         "additionalProperties": false,
         "description": "The user\u0027s role in the organization.",
         "example": "owner",
+        "x-jsonschema-examples": [
+          "owner",
+          "admin",
+          "member"
+        ],
         "x-ms-enum": {
           "name": "GetPhoneNumberByIdV1200ResponseDataUsersItemRole",
           "modelAsString": false,
@@ -39987,6 +40920,9 @@
         "additionalProperties": false,
         "description": "The phone-number usage restriction status for a specific region",
         "example": "unrestricted",
+        "x-jsonschema-examples": [
+          "unrestricted"
+        ],
         "x-ms-enum": {
           "name": "GetPhoneNumberByIdV1200ResponseDataRestrictionsCallingCa",
           "modelAsString": false,
@@ -40011,6 +40947,9 @@
         "additionalProperties": false,
         "description": "The phone-number usage restriction status for a specific region",
         "example": "unrestricted",
+        "x-jsonschema-examples": [
+          "unrestricted"
+        ],
         "x-ms-enum": {
           "name": "GetPhoneNumberByIdV1200ResponseDataRestrictionsCallingIntl",
           "modelAsString": false,
@@ -40035,6 +40974,9 @@
         "additionalProperties": false,
         "description": "The phone-number usage restriction status for a specific region",
         "example": "unrestricted",
+        "x-jsonschema-examples": [
+          "unrestricted"
+        ],
         "x-ms-enum": {
           "name": "GetPhoneNumberByIdV1200ResponseDataRestrictionsCallingUs",
           "modelAsString": false,
@@ -40059,6 +41001,9 @@
         "additionalProperties": false,
         "description": "The phone-number usage restriction status for a specific region",
         "example": "unrestricted",
+        "x-jsonschema-examples": [
+          "unrestricted"
+        ],
         "x-ms-enum": {
           "name": "GetPhoneNumberByIdV1200ResponseDataRestrictionsMessagingCa",
           "modelAsString": false,
@@ -40083,6 +41028,9 @@
         "additionalProperties": false,
         "description": "The phone-number usage restriction status for a specific region",
         "example": "unrestricted",
+        "x-jsonschema-examples": [
+          "unrestricted"
+        ],
         "x-ms-enum": {
           "name": "GetPhoneNumberByIdV1200ResponseDataRestrictionsMessagingIntl",
           "modelAsString": false,
@@ -40107,6 +41055,9 @@
         "additionalProperties": false,
         "description": "The phone-number usage restriction status for a specific region",
         "example": "unrestricted",
+        "x-jsonschema-examples": [
+          "unrestricted"
+        ],
         "x-ms-enum": {
           "name": "GetPhoneNumberByIdV1200ResponseDataRestrictionsMessagingUs",
           "modelAsString": false,
@@ -40174,6 +41125,10 @@
     {
       "name": "Conversations",
       "description": "Operations related to conversations"
+    },
+    {
+      "name": "Invites",
+      "description": "Operations related to workspace invitations"
     },
     {
       "name": "Messages",
