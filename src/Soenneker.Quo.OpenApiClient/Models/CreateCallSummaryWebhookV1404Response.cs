@@ -16,9 +16,21 @@ namespace Soenneker.Quo.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The code property</summary>
-        public global::Soenneker.Quo.OpenApiClient.Models.CreateCallSummaryWebhookV1404Response_code? Code { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Code { get; set; }
+#nullable restore
+#else
+        public string Code { get; set; }
+#endif
         /// <summary>The docs property</summary>
-        public global::Soenneker.Quo.OpenApiClient.Models.CreateCallSummaryWebhookV1404Response_docs? Docs { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Docs { get; set; }
+#nullable restore
+#else
+        public string Docs { get; set; }
+#endif
         /// <summary>The errors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -38,9 +50,15 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public string MessageEscaped { get; set; }
 #endif
         /// <summary>The status property</summary>
-        public global::Soenneker.Quo.OpenApiClient.Models.CreateCallSummaryWebhookV1404Response_status? Status { get; set; }
+        public double? Status { get; set; }
         /// <summary>The title property</summary>
-        public global::Soenneker.Quo.OpenApiClient.Models.CreateCallSummaryWebhookV1404Response_title? Title { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Title { get; set; }
+#nullable restore
+#else
+        public string Title { get; set; }
+#endif
         /// <summary>The trace property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -74,12 +92,12 @@ namespace Soenneker.Quo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "code", n => { Code = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.CreateCallSummaryWebhookV1404Response_code>(); } },
-                { "docs", n => { Docs = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.CreateCallSummaryWebhookV1404Response_docs>(); } },
+                { "code", n => { Code = n.GetStringValue(); } },
+                { "docs", n => { Docs = n.GetStringValue(); } },
                 { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.CreateCallSummaryWebhookV1404ResponseErrorsItem>(global::Soenneker.Quo.OpenApiClient.Models.CreateCallSummaryWebhookV1404ResponseErrorsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "message", n => { MessageEscaped = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.CreateCallSummaryWebhookV1404Response_status>(); } },
-                { "title", n => { Title = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.CreateCallSummaryWebhookV1404Response_title>(); } },
+                { "status", n => { Status = n.GetDoubleValue(); } },
+                { "title", n => { Title = n.GetStringValue(); } },
                 { "trace", n => { Trace = n.GetStringValue(); } },
             };
         }
@@ -90,12 +108,12 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.CreateCallSummaryWebhookV1404Response_code>("code", Code);
-            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.CreateCallSummaryWebhookV1404Response_docs>("docs", Docs);
+            writer.WriteStringValue("code", Code);
+            writer.WriteStringValue("docs", Docs);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.CreateCallSummaryWebhookV1404ResponseErrorsItem>("errors", Errors);
             writer.WriteStringValue("message", MessageEscaped);
-            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.CreateCallSummaryWebhookV1404Response_status>("status", Status);
-            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.CreateCallSummaryWebhookV1404Response_title>("title", Title);
+            writer.WriteDoubleValue("status", Status);
+            writer.WriteStringValue("title", Title);
             writer.WriteStringValue("trace", Trace);
             writer.WriteAdditionalData(AdditionalData);
         }

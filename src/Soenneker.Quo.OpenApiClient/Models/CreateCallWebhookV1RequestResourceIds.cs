@@ -8,19 +8,11 @@ using System;
 namespace Soenneker.Quo.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes List&lt;global::Soenneker.Quo.OpenApiClient.Models.CreateCallWebhookV1RequestResourceIdsMember1&gt;, List&lt;string&gt;
+    /// Composed type wrapper for classes List&lt;string&gt;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreateCallWebhookV1RequestResourceIds : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type List&lt;global::Soenneker.Quo.OpenApiClient.Models.CreateCallWebhookV1RequestResourceIdsMember1&gt;</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<global::Soenneker.Quo.OpenApiClient.Models.CreateCallWebhookV1RequestResourceIdsMember1>? CreateCallWebhookV1RequestResourceIdsMember1 { get; set; }
-#nullable restore
-#else
-        public List<global::Soenneker.Quo.OpenApiClient.Models.CreateCallWebhookV1RequestResourceIdsMember1> CreateCallWebhookV1RequestResourceIdsMember1 { get; set; }
-#endif
         /// <summary>Composed type representation for type List&lt;string&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -38,11 +30,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Quo.OpenApiClient.Models.CreateCallWebhookV1RequestResourceIds();
-            if(parseNode.GetCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.CreateCallWebhookV1RequestResourceIdsMember1>(global::Soenneker.Quo.OpenApiClient.Models.CreateCallWebhookV1RequestResourceIdsMember1.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Quo.OpenApiClient.Models.CreateCallWebhookV1RequestResourceIdsMember1> createCallWebhookV1RequestResourceIdsMember1Value)
-            {
-                result.CreateCallWebhookV1RequestResourceIdsMember1 = createCallWebhookV1RequestResourceIdsMember1Value;
-            }
-            else if(parseNode.GetCollectionOfPrimitiveValues<string>()?.AsList() is List<string> stringValue)
+            if(parseNode.GetCollectionOfPrimitiveValues<string>()?.AsList() is List<string> stringValue)
             {
                 result.String = stringValue;
             }
@@ -63,11 +51,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            if(CreateCallWebhookV1RequestResourceIdsMember1 != null)
-            {
-                writer.WriteCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.CreateCallWebhookV1RequestResourceIdsMember1>(null, CreateCallWebhookV1RequestResourceIdsMember1);
-            }
-            else if(String != null)
+            if(String != null)
             {
                 writer.WriteCollectionOfPrimitiveValues<string>(null, String);
             }
