@@ -30,7 +30,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
 #else
         public string NextPageToken { get; set; }
 #endif
-        /// <summary>&quot;Total number of items available. ⚠️ Note: `totalItems` is not accurately returning the total number of items that can be paginated. We are working on fixing this issue.&quot;</summary>
+        /// <summary>Total number of items available. ⚠️ Note: `totalItems` is not accurately returning the total number of items that can be paginated. We are working on fixing this issue.</summary>
         public int? TotalItems { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Quo.OpenApiClient.Models.ListConversationsV1200Response"/> and sets the default values.

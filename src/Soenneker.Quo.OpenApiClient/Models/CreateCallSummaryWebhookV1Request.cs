@@ -17,10 +17,10 @@ namespace Soenneker.Quo.OpenApiClient.Models
         /// <summary>The events property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Quo.OpenApiClient.Models.CreateCallSummaryWebhookV1RequestEventsItem?>? Events { get; set; }
+        public List<global::Soenneker.Quo.OpenApiClient.Models.CallSummaryCompletedItem?>? Events { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Quo.OpenApiClient.Models.CreateCallSummaryWebhookV1RequestEventsItem?> Events { get; set; }
+        public List<global::Soenneker.Quo.OpenApiClient.Models.CallSummaryCompletedItem?> Events { get; set; }
 #endif
         /// <summary>Webhook&apos;s label</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -81,7 +81,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "events", n => { Events = n.GetCollectionOfEnumValues<global::Soenneker.Quo.OpenApiClient.Models.CreateCallSummaryWebhookV1RequestEventsItem>()?.AsList(); } },
+                { "events", n => { Events = n.GetCollectionOfEnumValues<global::Soenneker.Quo.OpenApiClient.Models.CallSummaryCompletedItem>()?.AsList(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "resourceIds", n => { ResourceIds = n.GetObjectValue<global::Soenneker.Quo.OpenApiClient.Models.CreateCallSummaryWebhookV1RequestResourceIds>(global::Soenneker.Quo.OpenApiClient.Models.CreateCallSummaryWebhookV1RequestResourceIds.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.CreateCallSummaryWebhookV1RequestStatus>(); } },
@@ -96,7 +96,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Quo.OpenApiClient.Models.CreateCallSummaryWebhookV1RequestEventsItem>("events", Events);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Quo.OpenApiClient.Models.CallSummaryCompletedItem>("events", Events);
             writer.WriteStringValue("label", Label);
             writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.CreateCallSummaryWebhookV1RequestResourceIds>("resourceIds", ResourceIds);
             writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.CreateCallSummaryWebhookV1RequestStatus>("status", Status);

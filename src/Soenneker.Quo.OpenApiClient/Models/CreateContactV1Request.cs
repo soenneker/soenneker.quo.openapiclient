@@ -46,7 +46,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
 #else
         public string ExternalId { get; set; }
 #endif
-        /// <summary>&quot;The contact&apos;s source. Defaults to `null` for contacts created in the UI. Defaults to `public-api` for contacts created via the public API. Cannot be one of the following reserved words: `openphone`, `device`, `csv`, `zapier`, `google-people`, `other` or start with one of the following reserved prefixes: `openphone`, `csv`.&quot;</summary>
+        /// <summary>The contact&apos;s source. Defaults to `null` for contacts created in the UI. Defaults to `public-api` for contacts created via the public API. Cannot be one of the following reserved words: `openphone`, `device`, `csv`, `zapier`, `google-people`, `other` or start with one of the following reserved prefixes: `openphone`, `csv`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Source { get; set; }

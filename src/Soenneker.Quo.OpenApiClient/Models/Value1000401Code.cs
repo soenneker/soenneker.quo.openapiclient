@@ -5,12 +5,12 @@ namespace Soenneker.Quo.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public enum CreateCallTranscriptWebhookV1201ResponseDataEventsItem
+    public enum Value1000401Code
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "call.transcript.completed")]
+        [EnumMember(Value = "1000401")]
         #pragma warning disable CS1591
-        CallTranscriptCompleted,
+        Value1000401,
         #pragma warning restore CS1591
     }
 }

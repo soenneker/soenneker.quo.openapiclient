@@ -21,10 +21,10 @@ namespace Soenneker.Quo.OpenApiClient.Models
         /// <summary>The events property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Quo.OpenApiClient.Models.CreateCallTranscriptWebhookV1201ResponseDataEventsItem?>? Events { get; set; }
+        public List<global::Soenneker.Quo.OpenApiClient.Models.CallTranscriptCompletedItem?>? Events { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Quo.OpenApiClient.Models.CreateCallTranscriptWebhookV1201ResponseDataEventsItem?> Events { get; set; }
+        public List<global::Soenneker.Quo.OpenApiClient.Models.CallTranscriptCompletedItem?> Events { get; set; }
 #endif
         /// <summary>The webhook&apos;s ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -113,7 +113,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
             {
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "deletedAt", n => { DeletedAt = n.GetDateTimeOffsetValue(); } },
-                { "events", n => { Events = n.GetCollectionOfEnumValues<global::Soenneker.Quo.OpenApiClient.Models.CreateCallTranscriptWebhookV1201ResponseDataEventsItem>()?.AsList(); } },
+                { "events", n => { Events = n.GetCollectionOfEnumValues<global::Soenneker.Quo.OpenApiClient.Models.CallTranscriptCompletedItem>()?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "key", n => { Key = n.GetStringValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
@@ -134,7 +134,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteDateTimeOffsetValue("deletedAt", DeletedAt);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Quo.OpenApiClient.Models.CreateCallTranscriptWebhookV1201ResponseDataEventsItem>("events", Events);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.Quo.OpenApiClient.Models.CallTranscriptCompletedItem>("events", Events);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("key", Key);
             writer.WriteStringValue("label", Label);

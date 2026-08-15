@@ -30,7 +30,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
 #else
         public string AnsweredBy { get; set; }
 #endif
-        /// <summary>&quot;How the call reached the user&apos;s inbox: either by direct dial to their number or routed through a phone menu. Null for outbound calls.&quot;</summary>
+        /// <summary>How the call reached the user&apos;s inbox: either by direct dial to their number or routed through a phone menu. Null for outbound calls.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CallRoute { get; set; }

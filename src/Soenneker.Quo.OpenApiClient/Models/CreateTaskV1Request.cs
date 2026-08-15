@@ -8,35 +8,70 @@ using System;
 namespace Soenneker.Quo.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf1"/>, <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf2"/>, <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf3"/>
+    /// The task to create. Provide exactly one of `phoneNumberId`, `conversationId`, or `activityId` to link the task to that resource.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class CreateTaskV1Request : IComposedTypeWrapper, IParsable
+    public partial class CreateTaskV1Request : IAdditionalDataHolder, IParsable
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf1"/></summary>
+        /// <summary>The activityId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf1? CreateTaskV1RequestAnyOf1 { get; set; }
+        public string? ActivityId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf1 CreateTaskV1RequestAnyOf1 { get; set; }
+        public string ActivityId { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf2"/></summary>
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The assignedTo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf2? CreateTaskV1RequestAnyOf2 { get; set; }
+        public string? AssignedTo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf2 CreateTaskV1RequestAnyOf2 { get; set; }
+        public string AssignedTo { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf3"/></summary>
+        /// <summary>The conversationId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf3? CreateTaskV1RequestAnyOf3 { get; set; }
+        public string? ConversationId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf3 CreateTaskV1RequestAnyOf3 { get; set; }
+        public string ConversationId { get; set; }
 #endif
+        /// <summary>The description of the task.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Description { get; set; }
+#nullable restore
+#else
+        public string Description { get; set; }
+#endif
+        /// <summary>The dueDate property</summary>
+        public DateTimeOffset? DueDate { get; set; }
+        /// <summary>The phoneNumberId property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PhoneNumberId { get; set; }
+#nullable restore
+#else
+        public string PhoneNumberId { get; set; }
+#endif
+        /// <summary>The title of the task.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Title { get; set; }
+#nullable restore
+#else
+        public string Title { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1Request"/> and sets the default values.
+        /// </summary>
+        public CreateTaskV1Request()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -45,11 +80,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public static global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1Request CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var result = new global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1Request();
-            result.CreateTaskV1RequestAnyOf1 = new global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf1();
-            result.CreateTaskV1RequestAnyOf2 = new global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf2();
-            result.CreateTaskV1RequestAnyOf3 = new global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf3();
-            return result;
+            return new global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1Request();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -57,11 +88,16 @@ namespace Soenneker.Quo.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(CreateTaskV1RequestAnyOf1 != null || CreateTaskV1RequestAnyOf2 != null || CreateTaskV1RequestAnyOf3 != null)
+            return new Dictionary<string, Action<IParseNode>>
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(CreateTaskV1RequestAnyOf1, CreateTaskV1RequestAnyOf2, CreateTaskV1RequestAnyOf3);
-            }
-            return new Dictionary<string, Action<IParseNode>>();
+                { "activityId", n => { ActivityId = n.GetStringValue(); } },
+                { "assignedTo", n => { AssignedTo = n.GetStringValue(); } },
+                { "conversationId", n => { ConversationId = n.GetStringValue(); } },
+                { "description", n => { Description = n.GetStringValue(); } },
+                { "dueDate", n => { DueDate = n.GetDateTimeOffsetValue(); } },
+                { "phoneNumberId", n => { PhoneNumberId = n.GetStringValue(); } },
+                { "title", n => { Title = n.GetStringValue(); } },
+            };
         }
         /// <summary>
         /// Serializes information the current object
@@ -70,7 +106,14 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf1>(null, CreateTaskV1RequestAnyOf1, CreateTaskV1RequestAnyOf2, CreateTaskV1RequestAnyOf3);
+            writer.WriteStringValue("activityId", ActivityId);
+            writer.WriteStringValue("assignedTo", AssignedTo);
+            writer.WriteStringValue("conversationId", ConversationId);
+            writer.WriteStringValue("description", Description);
+            writer.WriteDateTimeOffsetValue("dueDate", DueDate);
+            writer.WriteStringValue("phoneNumberId", PhoneNumberId);
+            writer.WriteStringValue("title", Title);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

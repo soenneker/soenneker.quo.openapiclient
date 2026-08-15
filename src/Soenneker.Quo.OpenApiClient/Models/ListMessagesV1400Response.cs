@@ -16,29 +16,11 @@ namespace Soenneker.Quo.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The code property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Code { get; set; }
-#nullable restore
-#else
-        public string Code { get; set; }
-#endif
+        public global::Soenneker.Quo.OpenApiClient.Models.Value0206400Code? Code { get; set; }
         /// <summary>The description property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Description { get; set; }
-#nullable restore
-#else
-        public string Description { get; set; }
-#endif
+        public global::Soenneker.Quo.OpenApiClient.Models.A2PRegistrationNotApprovedDescription? Description { get; set; }
         /// <summary>The docs property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Docs { get; set; }
-#nullable restore
-#else
-        public string Docs { get; set; }
-#endif
+        public global::Soenneker.Quo.OpenApiClient.Models.HttpsColonSlashSlashQuoComDocsDocs? Docs { get; set; }
         /// <summary>The errors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -58,15 +40,9 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public string MessageEscaped { get; set; }
 #endif
         /// <summary>The status property</summary>
-        public double? Status { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.Value400Status? Status { get; set; }
         /// <summary>The title property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Title { get; set; }
-#nullable restore
-#else
-        public string Title { get; set; }
-#endif
+        public global::Soenneker.Quo.OpenApiClient.Models.A2PRegistrationNotApprovedTitle? Title { get; set; }
         /// <summary>The trace property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -100,13 +76,13 @@ namespace Soenneker.Quo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "code", n => { Code = n.GetStringValue(); } },
-                { "description", n => { Description = n.GetStringValue(); } },
-                { "docs", n => { Docs = n.GetStringValue(); } },
+                { "code", n => { Code = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.Value0206400Code>(); } },
+                { "description", n => { Description = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.A2PRegistrationNotApprovedDescription>(); } },
+                { "docs", n => { Docs = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.HttpsColonSlashSlashQuoComDocsDocs>(); } },
                 { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.ListMessagesV1400ResponseErrorsItem>(global::Soenneker.Quo.OpenApiClient.Models.ListMessagesV1400ResponseErrorsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "message", n => { MessageEscaped = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetDoubleValue(); } },
-                { "title", n => { Title = n.GetStringValue(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.Value400Status>(); } },
+                { "title", n => { Title = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.A2PRegistrationNotApprovedTitle>(); } },
                 { "trace", n => { Trace = n.GetStringValue(); } },
             };
         }
@@ -117,13 +93,13 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("code", Code);
-            writer.WriteStringValue("description", Description);
-            writer.WriteStringValue("docs", Docs);
+            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.Value0206400Code>("code", Code);
+            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.A2PRegistrationNotApprovedDescription>("description", Description);
+            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.HttpsColonSlashSlashQuoComDocsDocs>("docs", Docs);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.ListMessagesV1400ResponseErrorsItem>("errors", Errors);
             writer.WriteStringValue("message", MessageEscaped);
-            writer.WriteDoubleValue("status", Status);
-            writer.WriteStringValue("title", Title);
+            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.Value400Status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.A2PRegistrationNotApprovedTitle>("title", Title);
             writer.WriteStringValue("trace", Trace);
             writer.WriteAdditionalData(AdditionalData);
         }

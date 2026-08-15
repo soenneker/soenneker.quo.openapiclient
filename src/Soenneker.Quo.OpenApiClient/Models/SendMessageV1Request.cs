@@ -40,7 +40,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public string PhoneNumberId { get; set; }
 #endif
         /// <summary>Used to set the status of the related Quo inbox conversation. The default behavior without setting this parameter will be for the message sent to show up as an open conversation in the user&apos;s inbox. Setting the parameter to `&apos;done&apos;` would move the conversation to the Done inbox view.</summary>
-        public global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1RequestSetInboxStatus? SetInboxStatus { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.DoneSetInboxStatus? SetInboxStatus { get; set; }
         /// <summary>The to property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -85,7 +85,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
                 { "content", n => { Content = n.GetStringValue(); } },
                 { "from", n => { From = n.GetObjectValue<global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1RequestFrom>(global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1RequestFrom.CreateFromDiscriminatorValue); } },
                 { "phoneNumberId", n => { PhoneNumberId = n.GetStringValue(); } },
-                { "setInboxStatus", n => { SetInboxStatus = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1RequestSetInboxStatus>(); } },
+                { "setInboxStatus", n => { SetInboxStatus = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.DoneSetInboxStatus>(); } },
                 { "to", n => { To = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "userId", n => { UserId = n.GetStringValue(); } },
             };
@@ -100,7 +100,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
             writer.WriteStringValue("content", Content);
             writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1RequestFrom>("from", From);
             writer.WriteStringValue("phoneNumberId", PhoneNumberId);
-            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1RequestSetInboxStatus>("setInboxStatus", SetInboxStatus);
+            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.DoneSetInboxStatus>("setInboxStatus", SetInboxStatus);
             writer.WriteCollectionOfPrimitiveValues<string>("to", To);
             writer.WriteStringValue("userId", UserId);
             writer.WriteAdditionalData(AdditionalData);
