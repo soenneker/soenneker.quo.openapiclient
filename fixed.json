@@ -35,7 +35,7 @@
               "examples": [
                 "AC3700e624eca547eb9f749a06f"
               ],
-              "pattern": "^AC(.*)$",
+              "pattern": "^AC[A-Za-z0-9_-]\u002B$",
               "type": "string",
               "description": "The unique identifier of the call for which recordings are being retrieved."
             },
@@ -128,7 +128,7 @@
               "examples": [
                 "PN123abc"
               ],
-              "pattern": "^PN(.*)$",
+              "pattern": "^PN[A-Za-z0-9_-]\u002B$",
               "type": "string",
               "description": "The unique identifier of the Quo number associated with the call."
             },
@@ -141,7 +141,7 @@
               "examples": [
                 "US123abc"
               ],
-              "pattern": "^US(.*)$",
+              "pattern": "^US[A-Za-z0-9_:-]\u002B$",
               "type": "string",
               "description": "The unique identifier of the user whose access scope is applied to the results. Scopes the response to calls accessible to the specified user. Defaults to the workspace owner."
             },
@@ -161,7 +161,7 @@
                 "minLength": 1,
                 "type": "string"
               },
-              "description": "The phone numbers of participants involved in the call conversation, excluding your Quo number. Each number should contain the country code and conform to the E.164 format. Currently limited to one-to-one (1:1) conversations only."
+              "description": "The phone numbers of participants involved in the call conversation, excluding your Quo number. Each number should contain the country code and conform to the E.164 format. Currently limited to one-to-one (1:1) conversations only. Pass the \u0022participants\u0022 key without brackets, e.g. \u0022participants=%2B15555555555\u0022."
             },
             "example": "\u002B15555555555"
           },
@@ -311,7 +311,7 @@
               "examples": [
                 "AC3700e624eca547eb9f749a06f2eb1"
               ],
-              "pattern": "^AC(.*)$",
+              "pattern": "^AC[A-Za-z0-9_-]\u002B$",
               "type": "string",
               "description": "Unique identifier of the call."
             },
@@ -404,7 +404,7 @@
               "examples": [
                 "AC3700e624eca547eb9f749a06f"
               ],
-              "pattern": "^AC(.*)$",
+              "pattern": "^AC[A-Za-z0-9_-]\u002B$",
               "type": "string",
               "description": "The unique identifier of the call associated with the summary."
             },
@@ -497,7 +497,7 @@
               "examples": [
                 "AC3700e624eca547eb9f749a06f2eb1"
               ],
-              "pattern": "^AC(.*)$",
+              "pattern": "^AC[A-Za-z0-9_-]\u002B$",
               "type": "string",
               "description": "Unique identifier of the call associated with this transcript."
             },
@@ -590,7 +590,7 @@
               "examples": [
                 "AC3700e624eca547eb9f749a06f"
               ],
-              "pattern": "^AC(.*)$",
+              "pattern": "^AC[A-Za-z0-9_-]\u002B$",
               "type": "string",
               "description": "The unique identifier of the call for which a voicemail is being retrieved."
             },
@@ -996,7 +996,7 @@
               "examples": [
                 "66d0d87e8dc1211467372303"
               ],
-              "pattern": "^(.*)$",
+              "pattern": "^[A-Za-z0-9_-]\u002B$",
               "type": "string",
               "description": "The unique identifier of the contact."
             },
@@ -1097,7 +1097,7 @@
               "examples": [
                 "66d0d87e8dc1211467372303"
               ],
-              "pattern": "^(.*)$",
+              "pattern": "^[A-Za-z0-9_-]\u002B$",
               "type": "string",
               "description": "The unique identifier of the contact."
             },
@@ -1208,7 +1208,7 @@
               "examples": [
                 "66d0d87e8dc1211467372303"
               ],
-              "pattern": "^(.*)$",
+              "pattern": "^[A-Za-z0-9_-]\u002B$",
               "type": "string",
               "description": "The unique identifier of the contact."
             },
@@ -1315,7 +1315,7 @@
                   "description": "A phone number in E.164 format, including the country code."
                 },
                 {
-                  "pattern": "^PN(.*)$",
+                  "pattern": "^PN[A-Za-z0-9_-]\u002B$",
                   "type": "string"
                 }
               ],
@@ -1349,7 +1349,7 @@
                     "description": "A phone number in E.164 format, including the country code."
                   },
                   {
-                    "pattern": "^PN(.*)$",
+                    "pattern": "^PN[A-Za-z0-9_-]\u002B$",
                     "type": "string"
                   }
                 ]
@@ -1368,7 +1368,7 @@
               "examples": [
                 "US123abc"
               ],
-              "pattern": "^US(.*)$",
+              "pattern": "^US[A-Za-z0-9_:-]\u002B$",
               "type": "string",
               "description": "The unique identifier of the user whose access scope is applied to the results. Scopes the response to conversations accessible to the specified user."
             },
@@ -1544,7 +1544,7 @@
               "examples": [
                 "CN123abc"
               ],
-              "pattern": "^CN(.*)$",
+              "pattern": "^CN[A-Za-z0-9_-]\u002B$",
               "type": "string",
               "description": "The unique identifier of the conversation to mark as read."
             },
@@ -1637,7 +1637,7 @@
               "examples": [
                 "CN123abc"
               ],
-              "pattern": "^CN(.*)$",
+              "pattern": "^CN[A-Za-z0-9_-]\u002B$",
               "type": "string",
               "description": "The unique identifier of the conversation to mark as done."
             },
@@ -1730,7 +1730,7 @@
               "examples": [
                 "CN123abc"
               ],
-              "pattern": "^CN(.*)$",
+              "pattern": "^CN[A-Za-z0-9_-]\u002B$",
               "type": "string",
               "description": "The unique identifier of the conversation to mark as open."
             },
@@ -1918,7 +1918,7 @@
               "examples": [
                 "OP123abc"
               ],
-              "pattern": "^PN(.*)$",
+              "pattern": "^PN[A-Za-z0-9_-]\u002B$",
               "type": "string",
               "description": "The unique identifier of the Quo number used to send or receive the messages. PhoneNumberID can be retrieved via the Get Phone Numbers endpoint."
             },
@@ -1931,7 +1931,7 @@
               "examples": [
                 "US123abc"
               ],
-              "pattern": "^US(.*)$",
+              "pattern": "^US[A-Za-z0-9_:-]\u002B$",
               "type": "string",
               "description": "The unique identifier of the user the message was sent from."
             },
@@ -1955,7 +1955,7 @@
                 "type": "string",
                 "description": "A phone number in E.164 format, including the country code."
               },
-              "description": "Array of phone numbers involved in the conversation, excluding your Quo number, in E.164 format. Passing a single participant will retrieve their conversation messages. Passing multiple participants will retrieve group conversation messages."
+              "description": "Array of phone numbers involved in the conversation, excluding your Quo number, in E.164 format. Passing a single participant will retrieve their conversation messages. Passing multiple participants will retrieve group conversation messages. Repeat the \u0022participants\u0022 key for each phone number without brackets, e.g. \u0022participants=%2B15555555555\u0026participants=%2B15555555556\u0022."
             },
             "example": "\u002B15555555555"
           },
@@ -2115,7 +2115,7 @@
               "examples": [
                 "AC123abc"
               ],
-              "pattern": "^AC(.*)$",
+              "pattern": "^AC[A-Za-z0-9_-]\u002B$",
               "type": "string",
               "description": "The unique identifier of a message"
             },
@@ -2217,7 +2217,7 @@
               "examples": [
                 "US123abc"
               ],
-              "pattern": "^US(.*)$",
+              "pattern": "^US[A-Za-z0-9_:-]\u002B$",
               "type": "string",
               "description": "Filter results to return only phone numbers associated with the specified user\u0022s unique identifier."
             },
@@ -2310,7 +2310,7 @@
               "examples": [
                 "PNlja6rrtI"
               ],
-              "pattern": "^PN(.*)$",
+              "pattern": "^PN[A-Za-z0-9_-]\u002B$",
               "type": "string",
               "description": "Unique identifier of the phone number."
             },
@@ -2603,7 +2603,7 @@
             "in": "path",
             "required": true,
             "schema": {
-              "pattern": "^TK(.*)$",
+              "pattern": "^TK[0-9a-f]{32}$",
               "type": "string"
             }
           }
@@ -2699,7 +2699,7 @@
             "in": "path",
             "required": true,
             "schema": {
-              "pattern": "^TK(.*)$",
+              "pattern": "^TK[0-9a-f]{32}$",
               "type": "string"
             }
           }
@@ -2788,7 +2788,7 @@
             "in": "path",
             "required": true,
             "schema": {
-              "pattern": "^TK(.*)$",
+              "pattern": "^TK[0-9a-f]{32}$",
               "type": "string"
             }
           }
@@ -2896,7 +2896,7 @@
             "in": "path",
             "required": true,
             "schema": {
-              "pattern": "^TK(.*)$",
+              "pattern": "^TK[0-9a-f]{32}$",
               "type": "string"
             }
           }
@@ -2994,7 +2994,7 @@
             "in": "path",
             "required": true,
             "schema": {
-              "pattern": "^TK(.*)$",
+              "pattern": "^TK[0-9a-f]{32}$",
               "type": "string"
             }
           }
@@ -3102,7 +3102,7 @@
             "in": "path",
             "required": true,
             "schema": {
-              "pattern": "^TK(.*)$",
+              "pattern": "^TK[0-9a-f]{32}$",
               "type": "string"
             }
           }
@@ -3210,7 +3210,7 @@
             "in": "path",
             "required": true,
             "schema": {
-              "pattern": "^TK(.*)$",
+              "pattern": "^TK[0-9a-f]{32}$",
               "type": "string"
             }
           }
@@ -3308,7 +3308,7 @@
             "in": "path",
             "required": true,
             "schema": {
-              "pattern": "^TK(.*)$",
+              "pattern": "^TK[0-9a-f]{32}$",
               "type": "string"
             }
           }
@@ -3416,7 +3416,7 @@
             "in": "path",
             "required": true,
             "schema": {
-              "pattern": "^TK(.*)$",
+              "pattern": "^TK[0-9a-f]{32}$",
               "type": "string"
             }
           }
@@ -3524,7 +3524,7 @@
             "in": "path",
             "required": true,
             "schema": {
-              "pattern": "^TK(.*)$",
+              "pattern": "^TK[0-9a-f]{32}$",
               "type": "string"
             }
           }
@@ -3632,7 +3632,7 @@
             "in": "path",
             "required": true,
             "schema": {
-              "pattern": "^TK(.*)$",
+              "pattern": "^TK[0-9a-f]{32}$",
               "type": "string"
             }
           }
@@ -3831,7 +3831,7 @@
               "examples": [
                 "US123abc"
               ],
-              "pattern": "^US(.*)$",
+              "pattern": "^US[A-Za-z0-9_:-]\u002B$",
               "type": "string",
               "description": "The unique identifier of the user being retrieved."
             },
@@ -3923,7 +3923,7 @@
               "examples": [
                 "U55wgP5I5"
               ],
-              "pattern": "^US(.*)$",
+              "pattern": "^US[A-Za-z0-9_:-]\u002B$",
               "type": "string",
               "description": "The unique identifier the user. Defaults to the workspace owner."
             },
@@ -4016,7 +4016,7 @@
               "examples": [
                 "WH12345"
               ],
-              "pattern": "^WH(.*)$",
+              "pattern": "^WH[0-9a-fA-F]{12}4[0-9a-fA-F]{19}$",
               "type": "string",
               "description": "The unique identifier of a webhook"
             },
@@ -4107,7 +4107,7 @@
               "examples": [
                 "WH12345"
               ],
-              "pattern": "^WH(.*)$",
+              "pattern": "^WH[0-9a-fA-F]{12}4[0-9a-fA-F]{19}$",
               "type": "string",
               "description": "The unique identifier of a webhook"
             },
@@ -4581,7 +4581,7 @@
             "examples": [
               "US123abc"
             ],
-            "pattern": "^US(.*)$",
+            "pattern": "^US[A-Za-z0-9_:-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the user.",
             "example": "US123abc"
@@ -4593,7 +4593,7 @@
             "examples": [
               "GRcei8k90o"
             ],
-            "pattern": "^GR(.*)$",
+            "pattern": "^GR[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the group to which the user belongs.",
             "example": "GRcei8k90o"
@@ -4639,7 +4639,7 @@
             "examples": [
               "US123abc"
             ],
-            "pattern": "^US(.*)$",
+            "pattern": "^US[A-Za-z0-9_:-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the user.",
             "example": "US123abc"
@@ -4659,7 +4659,7 @@
             "examples": [
               "GRcei8k90o"
             ],
-            "pattern": "^GR(.*)$",
+            "pattern": "^GR[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the group to which the user belongs.",
             "example": "GRcei8k90o"
@@ -4688,7 +4688,7 @@
             "examples": [
               "PN123bc"
             ],
-            "pattern": "^PN(.*)$",
+            "pattern": "^PN[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of Quo phone number.",
             "example": "PN123bc"
@@ -6231,7 +6231,7 @@
             "examples": [
               "US123abc"
             ],
-            "pattern": "^US(.*)$",
+            "pattern": "^US[A-Za-z0-9_:-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the user who created the contact.",
             "example": "US123abc"
@@ -7744,7 +7744,7 @@
             "examples": [
               "CN123abc"
             ],
-            "pattern": "^CN(.*)$",
+            "pattern": "^CN[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the conversation.",
             "example": "CN123abc"
@@ -7757,7 +7757,7 @@
             "format": "date-time"
           },
           "lastActivityId": {
-            "pattern": "^AC(.*)$",
+            "pattern": "^AC[A-Za-z0-9_-]\u002B$",
             "type": [
               "null",
               "string"
@@ -7796,7 +7796,7 @@
             "examples": [
               "PN123abc"
             ],
-            "pattern": "^PN(.*)$",
+            "pattern": "^PN[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the Quo phone number associated with the conversation.",
             "example": "PN123abc"
@@ -8039,7 +8039,7 @@
             "examples": [
               "CN123abc"
             ],
-            "pattern": "^CN(.*)$",
+            "pattern": "^CN[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the conversation.",
             "example": "CN123abc"
@@ -8052,7 +8052,7 @@
             "format": "date-time"
           },
           "lastActivityId": {
-            "pattern": "^AC(.*)$",
+            "pattern": "^AC[A-Za-z0-9_-]\u002B$",
             "type": [
               "null",
               "string"
@@ -8091,7 +8091,7 @@
             "examples": [
               "PN123abc"
             ],
-            "pattern": "^PN(.*)$",
+            "pattern": "^PN[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the Quo phone number associated with the conversation.",
             "example": "PN123abc"
@@ -8334,7 +8334,7 @@
             "examples": [
               "CN123abc"
             ],
-            "pattern": "^CN(.*)$",
+            "pattern": "^CN[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the conversation.",
             "example": "CN123abc"
@@ -8347,7 +8347,7 @@
             "format": "date-time"
           },
           "lastActivityId": {
-            "pattern": "^AC(.*)$",
+            "pattern": "^AC[A-Za-z0-9_-]\u002B$",
             "type": [
               "null",
               "string"
@@ -8386,7 +8386,7 @@
             "examples": [
               "PN123abc"
             ],
-            "pattern": "^PN(.*)$",
+            "pattern": "^PN[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the Quo phone number associated with the conversation.",
             "example": "PN123abc"
@@ -8610,7 +8610,7 @@
             "examples": [
               "OP1232abc"
             ],
-            "pattern": "^PN(.*)$",
+            "pattern": "^PN[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "DEPRECATED, use \u0022from\u0022 instead. Quo phone number ID to send a message from",
             "example": "OP1232abc",
@@ -8631,7 +8631,7 @@
             "examples": [
               "US123abc"
             ],
-            "pattern": "^US(.*)$",
+            "pattern": "^US[A-Za-z0-9_:-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the Quo user sending the message. If not provided, defaults to the phone number owner.",
             "example": "US123abc"
@@ -10010,19 +10010,19 @@
             "format": "date-time"
           },
           "assignedTo": {
-            "pattern": "^US(.*)$",
+            "pattern": "^US[A-Za-z0-9_:-]\u002B$",
             "type": "string"
           },
           "phoneNumberId": {
-            "pattern": "^PN(.*)$",
+            "pattern": "^PN[A-Za-z0-9_-]\u002B$",
             "type": "string"
           },
           "conversationId": {
-            "pattern": "^CN(.*)$",
+            "pattern": "^CN[A-Za-z0-9_-]\u002B$",
             "type": "string"
           },
           "activityId": {
-            "pattern": "^AC(.*)$",
+            "pattern": "^AC[A-Za-z0-9_-]\u002B$",
             "type": "string"
           }
         },
@@ -11185,7 +11185,7 @@
         "type": "object",
         "properties": {
           "conversationId": {
-            "pattern": "^CN(.*)$",
+            "pattern": "^CN[A-Za-z0-9_-]\u002B$",
             "type": "string"
           }
         }
@@ -11424,7 +11424,7 @@
         "type": "object",
         "properties": {
           "conversationId": {
-            "pattern": "^CN(.*)$",
+            "pattern": "^CN[A-Za-z0-9_-]\u002B$",
             "type": "string"
           }
         }
@@ -11890,7 +11890,7 @@
         "type": "object",
         "properties": {
           "userId": {
-            "pattern": "^US(.*)$",
+            "pattern": "^US[A-Za-z0-9_:-]\u002B$",
             "type": "string"
           }
         },
@@ -12130,7 +12130,7 @@
         "type": "object",
         "properties": {
           "userId": {
-            "pattern": "^US(.*)$",
+            "pattern": "^US[A-Za-z0-9_:-]\u002B$",
             "type": "string"
           }
         },
@@ -13844,7 +13844,7 @@
             "examples": [
               "US123abc"
             ],
-            "pattern": "^US(.*)$",
+            "pattern": "^US[A-Za-z0-9_:-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the user that creates the webhook. If not provided, default to workspace owner.",
             "example": "US123abc"
@@ -14075,7 +14075,7 @@
             "examples": [
               "US123abc"
             ],
-            "pattern": "^US(.*)$",
+            "pattern": "^US[A-Za-z0-9_:-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the user that creates the webhook. If not provided, default to workspace owner.",
             "example": "US123abc"
@@ -14329,7 +14329,7 @@
             "examples": [
               "US123abc"
             ],
-            "pattern": "^US(.*)$",
+            "pattern": "^US[A-Za-z0-9_:-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the user that creates the webhook. If not provided, default to workspace owner.",
             "example": "US123abc"
@@ -14572,7 +14572,7 @@
             "examples": [
               "US123abc"
             ],
-            "pattern": "^US(.*)$",
+            "pattern": "^US[A-Za-z0-9_:-]\u002B$",
             "type": "string",
             "description": "The ID of the user that creates the webhook. If not provided, default to workspace owner.",
             "example": "US123abc"
@@ -14797,7 +14797,7 @@
                 "example": "\u002B15555555555"
               },
               {
-                "pattern": "^US(.*)$",
+                "pattern": "^US[A-Za-z0-9_:-]\u002B$",
                 "type": "string"
               }
             ],
@@ -14828,7 +14828,7 @@
                 "example": "\u002B15555555555"
               },
               {
-                "pattern": "^US(.*)$",
+                "pattern": "^US[A-Za-z0-9_:-]\u002B$",
                 "type": "string"
               }
             ],
@@ -14859,7 +14859,7 @@
                 "example": "\u002B15555555555"
               },
               {
-                "pattern": "^US(.*)$",
+                "pattern": "^US[A-Za-z0-9_:-]\u002B$",
                 "type": "string"
               }
             ],
@@ -14890,7 +14890,7 @@
                 "example": "\u002B15555555555"
               },
               {
-                "pattern": "^US(.*)$",
+                "pattern": "^US[A-Za-z0-9_:-]\u002B$",
                 "type": "string"
               }
             ],
@@ -15155,11 +15155,11 @@
             "type": "object",
             "anyOf": [
               {
-                "pattern": "^US(.*)$",
+                "pattern": "^US[A-Za-z0-9_:-]\u002B$",
                 "type": "string"
               },
               {
-                "pattern": "^SYU(.*)$",
+                "pattern": "^SYU[A-Za-z0-9_-]\u002B$",
                 "type": "string"
               }
             ],
@@ -15182,11 +15182,11 @@
             "type": "object",
             "anyOf": [
               {
-                "pattern": "^US(.*)$",
+                "pattern": "^US[A-Za-z0-9_:-]\u002B$",
                 "type": "string"
               },
               {
-                "pattern": "^SYU(.*)$",
+                "pattern": "^SYU[A-Za-z0-9_-]\u002B$",
                 "type": "string"
               }
             ],
@@ -15209,11 +15209,11 @@
             "type": "object",
             "anyOf": [
               {
-                "pattern": "^US(.*)$",
+                "pattern": "^US[A-Za-z0-9_:-]\u002B$",
                 "type": "string"
               },
               {
-                "pattern": "^SYU(.*)$",
+                "pattern": "^SYU[A-Za-z0-9_-]\u002B$",
                 "type": "string"
               }
             ],
@@ -15236,11 +15236,11 @@
             "type": "object",
             "anyOf": [
               {
-                "pattern": "^US(.*)$",
+                "pattern": "^US[A-Za-z0-9_:-]\u002B$",
                 "type": "string"
               },
               {
-                "pattern": "^SYU(.*)$",
+                "pattern": "^SYU[A-Za-z0-9_-]\u002B$",
                 "type": "string"
               }
             ],
@@ -15259,7 +15259,7 @@
         "type": "object",
         "anyOf": [
           {
-            "pattern": "^PN(.*)$",
+            "pattern": "^PN[A-Za-z0-9_-]\u002B$",
             "type": "string"
           },
           {
@@ -15300,11 +15300,11 @@
             "type": "object",
             "anyOf": [
               {
-                "pattern": "^US(.*)$",
+                "pattern": "^US[A-Za-z0-9_:-]\u002B$",
                 "type": "string"
               },
               {
-                "pattern": "^SYU(.*)$",
+                "pattern": "^SYU[A-Za-z0-9_-]\u002B$",
                 "type": "string"
               }
             ]
@@ -15321,11 +15321,11 @@
             "type": "object",
             "anyOf": [
               {
-                "pattern": "^US(.*)$",
+                "pattern": "^US[A-Za-z0-9_:-]\u002B$",
                 "type": "string"
               },
               {
-                "pattern": "^SYU(.*)$",
+                "pattern": "^SYU[A-Za-z0-9_-]\u002B$",
                 "type": "string"
               }
             ]
@@ -15342,11 +15342,11 @@
             "type": "object",
             "anyOf": [
               {
-                "pattern": "^US(.*)$",
+                "pattern": "^US[A-Za-z0-9_:-]\u002B$",
                 "type": "string"
               },
               {
-                "pattern": "^SYU(.*)$",
+                "pattern": "^SYU[A-Za-z0-9_-]\u002B$",
                 "type": "string"
               }
             ]
@@ -15363,11 +15363,11 @@
             "type": "object",
             "anyOf": [
               {
-                "pattern": "^US(.*)$",
+                "pattern": "^US[A-Za-z0-9_:-]\u002B$",
                 "type": "string"
               },
               {
-                "pattern": "^SYU(.*)$",
+                "pattern": "^SYU[A-Za-z0-9_-]\u002B$",
                 "type": "string"
               }
             ]
@@ -15388,7 +15388,7 @@
           {
             "type": "array",
             "items": {
-              "pattern": "^PN(.*)$",
+              "pattern": "^PN[A-Za-z0-9_-]\u002B$",
               "type": "string"
             }
           },
@@ -15415,7 +15415,7 @@
           {
             "type": "array",
             "items": {
-              "pattern": "^PN(.*)$",
+              "pattern": "^PN[A-Za-z0-9_-]\u002B$",
               "type": "string"
             }
           },
@@ -15442,7 +15442,7 @@
           {
             "type": "array",
             "items": {
-              "pattern": "^PN(.*)$",
+              "pattern": "^PN[A-Za-z0-9_-]\u002B$",
               "type": "string"
             }
           },
@@ -15466,7 +15466,7 @@
           {
             "type": "array",
             "items": {
-              "pattern": "^PN(.*)$",
+              "pattern": "^PN[A-Za-z0-9_-]\u002B$",
               "type": "string"
             }
           },
@@ -15490,7 +15490,7 @@
           {
             "type": "array",
             "items": {
-              "pattern": "^PN(.*)$",
+              "pattern": "^PN[A-Za-z0-9_-]\u002B$",
               "type": "string"
             }
           },
@@ -15514,7 +15514,7 @@
           {
             "type": "array",
             "items": {
-              "pattern": "^PN(.*)$",
+              "pattern": "^PN[A-Za-z0-9_-]\u002B$",
               "type": "string"
             }
           },
@@ -15538,7 +15538,7 @@
           {
             "type": "array",
             "items": {
-              "pattern": "^PN(.*)$",
+              "pattern": "^PN[A-Za-z0-9_-]\u002B$",
               "type": "string"
             }
           },
@@ -15562,7 +15562,7 @@
           {
             "type": "array",
             "items": {
-              "pattern": "^PN(.*)$",
+              "pattern": "^PN[A-Za-z0-9_-]\u002B$",
               "type": "string"
             }
           },
@@ -15584,7 +15584,7 @@
           {
             "type": "array",
             "items": {
-              "pattern": "^PN(.*)$",
+              "pattern": "^PN[A-Za-z0-9_-]\u002B$",
               "type": "string"
             }
           },
@@ -15609,7 +15609,7 @@
           {
             "type": "array",
             "items": {
-              "pattern": "^PN(.*)$",
+              "pattern": "^PN[A-Za-z0-9_-]\u002B$",
               "type": "string"
             }
           },
@@ -16154,7 +16154,7 @@
             "examples": [
               "AC123abc"
             ],
-            "pattern": "^AC(.*)$",
+            "pattern": "^AC[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the call.",
             "example": "AC123abc"
@@ -16163,7 +16163,7 @@
             "examples": [
               "PN123abc"
             ],
-            "pattern": "^PN(.*)$",
+            "pattern": "^PN[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the Quo number associated with the call.",
             "example": "PN123abc"
@@ -16194,7 +16194,7 @@
             "examples": [
               "US123abc"
             ],
-            "pattern": "^US(.*)$",
+            "pattern": "^US[A-Za-z0-9_:-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the Quo user account associated with the call.",
             "example": "US123abc"
@@ -16417,7 +16417,7 @@
             "examples": [
               "AC123abc"
             ],
-            "pattern": "^AC(.*)$",
+            "pattern": "^AC[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the call.",
             "example": "AC123abc"
@@ -16426,7 +16426,7 @@
             "examples": [
               "PN123abc"
             ],
-            "pattern": "^PN(.*)$",
+            "pattern": "^PN[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the Quo number associated with the call.",
             "example": "PN123abc"
@@ -16457,7 +16457,7 @@
             "examples": [
               "US123abc"
             ],
-            "pattern": "^US(.*)$",
+            "pattern": "^US[A-Za-z0-9_:-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the Quo user account associated with the call.",
             "example": "US123abc"
@@ -16891,7 +16891,7 @@
             "examples": [
               "VMaaff8f317e0c4e61953b74a5eb42a370"
             ],
-            "pattern": "^VM(.*)$",
+            "pattern": "^VM[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the call voicemail.",
             "example": "VMaaff8f317e0c4e61953b74a5eb42a370"
@@ -17238,7 +17238,7 @@
             "examples": [
               "664d0db69fcac7cf2e6ec"
             ],
-            "pattern": "^(.*)$",
+            "pattern": "^[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the contact.",
             "example": "664d0db69fcac7cf2e6ec"
@@ -17305,7 +17305,7 @@
             "examples": [
               "US123abc"
             ],
-            "pattern": "^US(.*)$",
+            "pattern": "^US[A-Za-z0-9_:-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the user who created the contact.",
             "example": "US123abc"
@@ -17462,7 +17462,7 @@
             "examples": [
               "664d0db69fcac7cf2e6ec"
             ],
-            "pattern": "^(.*)$",
+            "pattern": "^[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the contact.",
             "example": "664d0db69fcac7cf2e6ec"
@@ -17529,7 +17529,7 @@
             "examples": [
               "US123abc"
             ],
-            "pattern": "^US(.*)$",
+            "pattern": "^US[A-Za-z0-9_:-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the user who created the contact.",
             "example": "US123abc"
@@ -17686,7 +17686,7 @@
             "examples": [
               "664d0db69fcac7cf2e6ec"
             ],
-            "pattern": "^(.*)$",
+            "pattern": "^[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the contact.",
             "example": "664d0db69fcac7cf2e6ec"
@@ -17753,7 +17753,7 @@
             "examples": [
               "US123abc"
             ],
-            "pattern": "^US(.*)$",
+            "pattern": "^US[A-Za-z0-9_:-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the user who created the contact.",
             "example": "US123abc"
@@ -17959,7 +17959,7 @@
             "examples": [
               "664d0db69fcac7cf2e6ec"
             ],
-            "pattern": "^(.*)$",
+            "pattern": "^[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the contact.",
             "example": "664d0db69fcac7cf2e6ec"
@@ -18026,7 +18026,7 @@
             "examples": [
               "US123abc"
             ],
-            "pattern": "^US(.*)$",
+            "pattern": "^US[A-Za-z0-9_:-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the user who created the contact.",
             "example": "US123abc"
@@ -18335,7 +18335,7 @@
             "examples": [
               "CN123abc"
             ],
-            "pattern": "^CN(.*)$",
+            "pattern": "^CN[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the conversation.",
             "example": "CN123abc"
@@ -18348,7 +18348,7 @@
             "format": "date-time"
           },
           "lastActivityId": {
-            "pattern": "^AC(.*)$",
+            "pattern": "^AC[A-Za-z0-9_-]\u002B$",
             "type": [
               "null",
               "string"
@@ -18387,7 +18387,7 @@
             "examples": [
               "PN123abc"
             ],
-            "pattern": "^PN(.*)$",
+            "pattern": "^PN[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the Quo phone number associated with the conversation.",
             "example": "PN123abc"
@@ -18868,7 +18868,7 @@
             "examples": [
               "AC123abc"
             ],
-            "pattern": "^AC(.*)$",
+            "pattern": "^AC[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the message.",
             "example": "AC123abc"
@@ -18902,7 +18902,7 @@
             "example": "Hello, world!"
           },
           "phoneNumberId": {
-            "pattern": "^PN(.*)$",
+            "pattern": "^PN[A-Za-z0-9_-]\u002B$",
             "type": [
               "null",
               "string"
@@ -18914,7 +18914,7 @@
             "examples": [
               "CN123abc"
             ],
-            "pattern": "^CN(.*)$",
+            "pattern": "^CN[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the conversation.",
             "example": "CN123abc"
@@ -18923,11 +18923,11 @@
             "$ref": "#/components/schemas/SendMessageV1202ResponseDataDirection"
           },
           "userId": {
-            "examples": [
-              "US123abc"
+            "pattern": "^US[A-Za-z0-9_:-]\u002B$",
+            "type": [
+              "null",
+              "string"
             ],
-            "pattern": "^US(.*)$",
-            "type": "string",
             "description": "The unique identifier of the user who sent the message. Null for incoming messages.",
             "example": "US123abc"
           },
@@ -18951,6 +18951,12 @@
             "description": "The timestamp when the message status was last updated, in ISO 8601 format.",
             "format": "date-time",
             "example": "2022-01-01T00:00:00Z"
+          },
+          "media": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SendMessageV1202ResponseDataMediaItem"
+            }
           }
         }
       },
@@ -19106,7 +19112,7 @@
             "examples": [
               "AC123abc"
             ],
-            "pattern": "^AC(.*)$",
+            "pattern": "^AC[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the message.",
             "example": "AC123abc"
@@ -19140,7 +19146,7 @@
             "example": "Hello, world!"
           },
           "phoneNumberId": {
-            "pattern": "^PN(.*)$",
+            "pattern": "^PN[A-Za-z0-9_-]\u002B$",
             "type": [
               "null",
               "string"
@@ -19152,7 +19158,7 @@
             "examples": [
               "CN123abc"
             ],
-            "pattern": "^CN(.*)$",
+            "pattern": "^CN[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the conversation.",
             "example": "CN123abc"
@@ -19161,11 +19167,11 @@
             "$ref": "#/components/schemas/ListMessagesV1200ResponseDataItemDirection"
           },
           "userId": {
-            "examples": [
-              "US123abc"
+            "pattern": "^US[A-Za-z0-9_:-]\u002B$",
+            "type": [
+              "null",
+              "string"
             ],
-            "pattern": "^US(.*)$",
-            "type": "string",
             "description": "The unique identifier of the user who sent the message. Null for incoming messages.",
             "example": "US123abc"
           },
@@ -19189,6 +19195,12 @@
             "description": "The timestamp when the message status was last updated, in ISO 8601 format.",
             "format": "date-time",
             "example": "2022-01-01T00:00:00Z"
+          },
+          "media": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ListMessagesV1200ResponseDataItemMediaItem"
+            }
           }
         }
       },
@@ -19344,7 +19356,7 @@
             "examples": [
               "AC123abc"
             ],
-            "pattern": "^AC(.*)$",
+            "pattern": "^AC[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the message.",
             "example": "AC123abc"
@@ -19378,7 +19390,7 @@
             "example": "Hello, world!"
           },
           "phoneNumberId": {
-            "pattern": "^PN(.*)$",
+            "pattern": "^PN[A-Za-z0-9_-]\u002B$",
             "type": [
               "null",
               "string"
@@ -19390,7 +19402,7 @@
             "examples": [
               "CN123abc"
             ],
-            "pattern": "^CN(.*)$",
+            "pattern": "^CN[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the conversation.",
             "example": "CN123abc"
@@ -19399,11 +19411,11 @@
             "$ref": "#/components/schemas/GetMessageByIdV1200ResponseDataDirection"
           },
           "userId": {
-            "examples": [
-              "US123abc"
+            "pattern": "^US[A-Za-z0-9_:-]\u002B$",
+            "type": [
+              "null",
+              "string"
             ],
-            "pattern": "^US(.*)$",
-            "type": "string",
             "description": "The unique identifier of the user who sent the message. Null for incoming messages.",
             "example": "US123abc"
           },
@@ -19427,6 +19439,12 @@
             "description": "The timestamp when the message status was last updated, in ISO 8601 format.",
             "format": "date-time",
             "example": "2022-01-01T00:00:00Z"
+          },
+          "media": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetMessageByIdV1200ResponseDataMediaItem"
+            }
           }
         }
       },
@@ -19694,7 +19712,7 @@
             "examples": [
               "PN123bc"
             ],
-            "pattern": "^PN(.*)$",
+            "pattern": "^PN[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of Quo phone number.",
             "example": "PN123bc"
@@ -19923,25 +19941,25 @@
         "type": "object",
         "properties": {
           "taskId": {
-            "pattern": "^TK(.*)$",
+            "pattern": "^TK[0-9a-f]{32}$",
             "type": "string"
           },
           "phoneNumberId": {
-            "pattern": "^PN(.*)$",
+            "pattern": "^PN[A-Za-z0-9_-]\u002B$",
             "type": [
               "null",
               "string"
             ]
           },
           "conversationId": {
-            "pattern": "^CN(.*)$",
+            "pattern": "^CN[A-Za-z0-9_-]\u002B$",
             "type": [
               "null",
               "string"
             ]
           },
           "activityId": {
-            "pattern": "^AC(.*)$",
+            "pattern": "^AC[A-Za-z0-9_-]\u002B$",
             "type": [
               "null",
               "string"
@@ -19954,7 +19972,7 @@
             ]
           },
           "orgId": {
-            "pattern": "^OR(.*)$",
+            "pattern": "^OR[A-Za-z0-9_-]\u002B$",
             "type": "string"
           },
           "title": {
@@ -20141,22 +20159,22 @@
         "type": "object",
         "properties": {
           "taskId": {
-            "pattern": "^TK(.*)$",
+            "pattern": "^TK[0-9a-f]{32}$",
             "type": "string"
           },
           "revision": {
             "type": "string"
           },
           "phoneNumberId": {
-            "pattern": "^PN(.*)$",
+            "pattern": "^PN[A-Za-z0-9_-]\u002B$",
             "type": "string"
           },
           "conversationId": {
-            "pattern": "^CN(.*)$",
+            "pattern": "^CN[A-Za-z0-9_-]\u002B$",
             "type": "string"
           },
           "activityId": {
-            "pattern": "^AC(.*)$",
+            "pattern": "^AC[A-Za-z0-9_-]\u002B$",
             "type": "string"
           }
         }
@@ -20315,25 +20333,25 @@
         "type": "object",
         "properties": {
           "taskId": {
-            "pattern": "^TK(.*)$",
+            "pattern": "^TK[0-9a-f]{32}$",
             "type": "string"
           },
           "phoneNumberId": {
-            "pattern": "^PN(.*)$",
+            "pattern": "^PN[A-Za-z0-9_-]\u002B$",
             "type": [
               "null",
               "string"
             ]
           },
           "conversationId": {
-            "pattern": "^CN(.*)$",
+            "pattern": "^CN[A-Za-z0-9_-]\u002B$",
             "type": [
               "null",
               "string"
             ]
           },
           "activityId": {
-            "pattern": "^AC(.*)$",
+            "pattern": "^AC[A-Za-z0-9_-]\u002B$",
             "type": [
               "null",
               "string"
@@ -20346,7 +20364,7 @@
             ]
           },
           "orgId": {
-            "pattern": "^OR(.*)$",
+            "pattern": "^OR[A-Za-z0-9_-]\u002B$",
             "type": "string"
           },
           "title": {
@@ -20664,7 +20682,7 @@
         "type": "object",
         "properties": {
           "taskId": {
-            "pattern": "^TK(.*)$",
+            "pattern": "^TK[0-9a-f]{32}$",
             "type": "string"
           },
           "revision": {
@@ -20812,7 +20830,7 @@
         "type": "object",
         "properties": {
           "taskId": {
-            "pattern": "^TK(.*)$",
+            "pattern": "^TK[0-9a-f]{32}$",
             "type": "string"
           },
           "revision": {
@@ -20960,7 +20978,7 @@
         "type": "object",
         "properties": {
           "taskId": {
-            "pattern": "^TK(.*)$",
+            "pattern": "^TK[0-9a-f]{32}$",
             "type": "string"
           },
           "revision": {
@@ -21108,7 +21126,7 @@
         "type": "object",
         "properties": {
           "taskId": {
-            "pattern": "^TK(.*)$",
+            "pattern": "^TK[0-9a-f]{32}$",
             "type": "string"
           },
           "revision": {
@@ -21256,7 +21274,7 @@
         "type": "object",
         "properties": {
           "taskId": {
-            "pattern": "^TK(.*)$",
+            "pattern": "^TK[0-9a-f]{32}$",
             "type": "string"
           },
           "revision": {
@@ -21404,7 +21422,7 @@
         "type": "object",
         "properties": {
           "taskId": {
-            "pattern": "^TK(.*)$",
+            "pattern": "^TK[0-9a-f]{32}$",
             "type": "string"
           },
           "revision": {
@@ -21552,7 +21570,7 @@
         "type": "object",
         "properties": {
           "taskId": {
-            "pattern": "^TK(.*)$",
+            "pattern": "^TK[0-9a-f]{32}$",
             "type": "string"
           },
           "revision": {
@@ -21700,7 +21718,7 @@
         "type": "object",
         "properties": {
           "taskId": {
-            "pattern": "^TK(.*)$",
+            "pattern": "^TK[0-9a-f]{32}$",
             "type": "string"
           },
           "revision": {
@@ -21848,7 +21866,7 @@
         "type": "object",
         "properties": {
           "taskId": {
-            "pattern": "^TK(.*)$",
+            "pattern": "^TK[0-9a-f]{32}$",
             "type": "string"
           },
           "revision": {
@@ -22005,7 +22023,7 @@
             "examples": [
               "US123abc"
             ],
-            "pattern": "^US(.*)$",
+            "pattern": "^US[A-Za-z0-9_:-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the user.",
             "example": "US123abc"
@@ -22194,7 +22212,7 @@
             "examples": [
               "US123abc"
             ],
-            "pattern": "^US(.*)$",
+            "pattern": "^US[A-Za-z0-9_:-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the user.",
             "example": "US123abc"
@@ -22387,7 +22405,7 @@
             "examples": [
               "WHabcd1234"
             ],
-            "pattern": "^WH(.*)$",
+            "pattern": "^WH[0-9a-fA-F]{12}4[0-9a-fA-F]{19}$",
             "type": "string",
             "description": "The webhook\u0027s ID",
             "example": "WHabcd1234"
@@ -22396,7 +22414,7 @@
             "examples": [
               "US123abc"
             ],
-            "pattern": "^US(.*)$",
+            "pattern": "^US[A-Za-z0-9_:-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the user that created the webhook.",
             "example": "US123abc"
@@ -22405,7 +22423,7 @@
             "examples": [
               "OR1223abc"
             ],
-            "pattern": "^OR(.*)$",
+            "pattern": "^OR[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the organization the webhook belongs to",
             "example": "OR1223abc"
@@ -22607,7 +22625,7 @@
             "examples": [
               "WHabcd1234"
             ],
-            "pattern": "^WH(.*)$",
+            "pattern": "^WH[0-9a-fA-F]{12}4[0-9a-fA-F]{19}$",
             "type": "string",
             "description": "The webhook\u0027s ID",
             "example": "WHabcd1234"
@@ -22616,7 +22634,7 @@
             "examples": [
               "US123abc"
             ],
-            "pattern": "^US(.*)$",
+            "pattern": "^US[A-Za-z0-9_:-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the user that created the webhook.",
             "example": "US123abc"
@@ -22625,7 +22643,7 @@
             "examples": [
               "OR1223abc"
             ],
-            "pattern": "^OR(.*)$",
+            "pattern": "^OR[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the organization the webhook belongs to",
             "example": "OR1223abc"
@@ -22937,7 +22955,7 @@
             "examples": [
               "WHabcd1234"
             ],
-            "pattern": "^WH(.*)$",
+            "pattern": "^WH[0-9a-fA-F]{12}4[0-9a-fA-F]{19}$",
             "type": "string",
             "description": "The webhook\u0027s ID",
             "example": "WHabcd1234"
@@ -22946,7 +22964,7 @@
             "examples": [
               "US123abc"
             ],
-            "pattern": "^US(.*)$",
+            "pattern": "^US[A-Za-z0-9_:-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the user that created the webhook.",
             "example": "US123abc"
@@ -22955,7 +22973,7 @@
             "examples": [
               "OR1223abc"
             ],
-            "pattern": "^OR(.*)$",
+            "pattern": "^OR[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the organization the webhook belongs to",
             "example": "OR1223abc"
@@ -23157,7 +23175,7 @@
             "examples": [
               "WHabcd1234"
             ],
-            "pattern": "^WH(.*)$",
+            "pattern": "^WH[0-9a-fA-F]{12}4[0-9a-fA-F]{19}$",
             "type": "string",
             "description": "The webhook\u0027s ID",
             "example": "WHabcd1234"
@@ -23166,7 +23184,7 @@
             "examples": [
               "US123abc"
             ],
-            "pattern": "^US(.*)$",
+            "pattern": "^US[A-Za-z0-9_:-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the user that created the webhook.",
             "example": "US123abc"
@@ -23175,7 +23193,7 @@
             "examples": [
               "OR1223abc"
             ],
-            "pattern": "^OR(.*)$",
+            "pattern": "^OR[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the organization the webhook belongs to",
             "example": "OR1223abc"
@@ -23377,7 +23395,7 @@
             "examples": [
               "WHabcd1234"
             ],
-            "pattern": "^WH(.*)$",
+            "pattern": "^WH[0-9a-fA-F]{12}4[0-9a-fA-F]{19}$",
             "type": "string",
             "description": "The webhook\u0027s ID",
             "example": "WHabcd1234"
@@ -23386,7 +23404,7 @@
             "examples": [
               "US123abc"
             ],
-            "pattern": "^US(.*)$",
+            "pattern": "^US[A-Za-z0-9_:-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the user that created the webhook.",
             "example": "US123abc"
@@ -23395,7 +23413,7 @@
             "examples": [
               "OR1223abc"
             ],
-            "pattern": "^OR(.*)$",
+            "pattern": "^OR[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the organization the webhook belongs to",
             "example": "OR1223abc"
@@ -23598,7 +23616,7 @@
             "examples": [
               "WHabcd1234"
             ],
-            "pattern": "^WH(.*)$",
+            "pattern": "^WH[0-9a-fA-F]{12}4[0-9a-fA-F]{19}$",
             "type": "string",
             "description": "The webhook\u0027s ID",
             "example": "WHabcd1234"
@@ -23607,7 +23625,7 @@
             "examples": [
               "US123abc"
             ],
-            "pattern": "^US(.*)$",
+            "pattern": "^US[A-Za-z0-9_:-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the user that created the webhook.",
             "example": "US123abc"
@@ -23616,7 +23634,7 @@
             "examples": [
               "OR1223abc"
             ],
-            "pattern": "^OR(.*)$",
+            "pattern": "^OR[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the organization the webhook belongs to",
             "example": "OR1223abc"
@@ -23860,7 +23878,7 @@
             "example": "\u002B19876543210"
           },
           "userId": {
-            "pattern": "^US(.*)$",
+            "pattern": "^US[A-Za-z0-9_:-]\u002B$",
             "type": [
               "null",
               "string"
@@ -25404,6 +25422,25 @@
           }
         }
       },
+      "SendMessageV1202ResponseDataMediaItem": {
+        "required": [
+          "url"
+        ],
+        "type": "object",
+        "properties": {
+          "url": {
+            "examples": [
+              "https://example.com/image.png"
+            ],
+            "type": "string",
+            "description": "The URL of the attached media.",
+            "example": "https://example.com/image.png"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SendMessageV1202ResponseDataMediaItemType"
+          }
+        }
+      },
       "SendMessageV1400ResponseErrorsItemValue": {
         "type": "object"
       },
@@ -25488,6 +25525,25 @@
           }
         }
       },
+      "ListMessagesV1200ResponseDataItemMediaItem": {
+        "required": [
+          "url"
+        ],
+        "type": "object",
+        "properties": {
+          "url": {
+            "examples": [
+              "https://example.com/image.png"
+            ],
+            "type": "string",
+            "description": "The URL of the attached media.",
+            "example": "https://example.com/image.png"
+          },
+          "type": {
+            "$ref": "#/components/schemas/ListMessagesV1200ResponseDataItemMediaItemType"
+          }
+        }
+      },
       "ListMessagesV1400ResponseErrorsItemValue": {
         "type": "object"
       },
@@ -25569,6 +25625,25 @@
         "properties": {
           "type": {
             "type": "string"
+          }
+        }
+      },
+      "GetMessageByIdV1200ResponseDataMediaItem": {
+        "required": [
+          "url"
+        ],
+        "type": "object",
+        "properties": {
+          "url": {
+            "examples": [
+              "https://example.com/image.png"
+            ],
+            "type": "string",
+            "description": "The URL of the attached media.",
+            "example": "https://example.com/image.png"
+          },
+          "type": {
+            "$ref": "#/components/schemas/GetMessageByIdV1200ResponseDataMediaItemType"
           }
         }
       },
@@ -25766,7 +25841,7 @@
             "examples": [
               "US123abc"
             ],
-            "pattern": "^US(.*)$",
+            "pattern": "^US[A-Za-z0-9_:-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the user.",
             "example": "US123abc"
@@ -25778,7 +25853,7 @@
             "examples": [
               "GRcei8k90o"
             ],
-            "pattern": "^GR(.*)$",
+            "pattern": "^GR[A-Za-z0-9_-]\u002B$",
             "type": "string",
             "description": "The unique identifier of the group to which the user belongs.",
             "example": "GRcei8k90o"
@@ -30987,6 +31062,906 @@
             {
               "value": "disabled",
               "name": "Disabled"
+            }
+          ]
+        }
+      },
+      "SendMessageV1202ResponseDataMediaItemType": {
+        "examples": [
+          "image/png"
+        ],
+        "enum": [
+          "application/msword",
+          "application/octet-stream",
+          "application/pdf",
+          "application/postscript",
+          "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "application/x-iwork-pages-sffpages",
+          "application/x-zip-compressed",
+          "application/zip",
+          "audio/3gpp",
+          "audio/3gpp2",
+          "audio/ac3",
+          "audio/amr-nb",
+          "audio/amr",
+          "audio/basic",
+          "audio/L24",
+          "audio/mp4",
+          "audio/mpeg",
+          "audio/ogg",
+          "audio/vnd.rn-realaudio",
+          "audio/vnd.wave",
+          "audio/vorbis",
+          "audio/wav",
+          "audio/webm",
+          "audio/x-caf",
+          "audio/x-m4a",
+          "image/avif",
+          "image/bmp",
+          "image/gif",
+          "image/heic",
+          "image/heif",
+          "image/jpeg",
+          "image/png",
+          "image/svg\u002Bxml",
+          "image/webp",
+          "text/calendar",
+          "text/csv",
+          "text/directory",
+          "text/plain",
+          "text/richtext",
+          "text/rtf",
+          "text/vcard",
+          "text/x-uri",
+          "text/x-vcard",
+          "video/3gpp-tt",
+          "video/3gpp",
+          "video/3gpp2",
+          "video/H261",
+          "video/H263-1998",
+          "video/H263-2000",
+          "video/H263",
+          "video/H264",
+          "video/mp4",
+          "video/mpeg",
+          "video/quicktime",
+          "video/webm"
+        ],
+        "type": [
+          "null",
+          "string"
+        ],
+        "additionalProperties": false,
+        "description": "The MIME type of the attached media.",
+        "example": "image/png",
+        "x-ms-enum": {
+          "name": "SendMessageV1202ResponseDataMediaItemType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "application/msword",
+              "name": "ApplicationMsword"
+            },
+            {
+              "value": "application/octet-stream",
+              "name": "ApplicationOctetStream"
+            },
+            {
+              "value": "application/pdf",
+              "name": "ApplicationPdf"
+            },
+            {
+              "value": "application/postscript",
+              "name": "ApplicationPostscript"
+            },
+            {
+              "value": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+              "name": "ApplicationVndOpenxmlformatsOfficedocumentSpreadsheetmlSheet"
+            },
+            {
+              "value": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+              "name": "ApplicationVndOpenxmlformatsOfficedocumentWordprocessingmlDocument"
+            },
+            {
+              "value": "application/x-iwork-pages-sffpages",
+              "name": "ApplicationXIworkPagesSffpages"
+            },
+            {
+              "value": "application/x-zip-compressed",
+              "name": "ApplicationXZipCompressed"
+            },
+            {
+              "value": "application/zip",
+              "name": "ApplicationZip"
+            },
+            {
+              "value": "audio/3gpp",
+              "name": "Audio3Gpp"
+            },
+            {
+              "value": "audio/3gpp2",
+              "name": "Audio3Gpp2"
+            },
+            {
+              "value": "audio/ac3",
+              "name": "AudioAc3"
+            },
+            {
+              "value": "audio/amr-nb",
+              "name": "AudioAmrNb"
+            },
+            {
+              "value": "audio/amr",
+              "name": "AudioAmr"
+            },
+            {
+              "value": "audio/basic",
+              "name": "AudioBasic"
+            },
+            {
+              "value": "audio/L24",
+              "name": "AudioL24"
+            },
+            {
+              "value": "audio/mp4",
+              "name": "AudioMp4"
+            },
+            {
+              "value": "audio/mpeg",
+              "name": "AudioMpeg"
+            },
+            {
+              "value": "audio/ogg",
+              "name": "AudioOgg"
+            },
+            {
+              "value": "audio/vnd.rn-realaudio",
+              "name": "AudioVndRnRealaudio"
+            },
+            {
+              "value": "audio/vnd.wave",
+              "name": "AudioVndWave"
+            },
+            {
+              "value": "audio/vorbis",
+              "name": "AudioVorbis"
+            },
+            {
+              "value": "audio/wav",
+              "name": "AudioWav"
+            },
+            {
+              "value": "audio/webm",
+              "name": "AudioWebm"
+            },
+            {
+              "value": "audio/x-caf",
+              "name": "AudioXCaf"
+            },
+            {
+              "value": "audio/x-m4a",
+              "name": "AudioXM4A"
+            },
+            {
+              "value": "image/avif",
+              "name": "ImageAvif"
+            },
+            {
+              "value": "image/bmp",
+              "name": "ImageBmp"
+            },
+            {
+              "value": "image/gif",
+              "name": "ImageGif"
+            },
+            {
+              "value": "image/heic",
+              "name": "ImageHeic"
+            },
+            {
+              "value": "image/heif",
+              "name": "ImageHeif"
+            },
+            {
+              "value": "image/jpeg",
+              "name": "ImageJpeg"
+            },
+            {
+              "value": "image/png",
+              "name": "ImagePng"
+            },
+            {
+              "value": "image/svg\u002Bxml",
+              "name": "ImageSvgPlusXml"
+            },
+            {
+              "value": "image/webp",
+              "name": "ImageWebp"
+            },
+            {
+              "value": "text/calendar",
+              "name": "TextCalendar"
+            },
+            {
+              "value": "text/csv",
+              "name": "TextCsv"
+            },
+            {
+              "value": "text/directory",
+              "name": "TextDirectory"
+            },
+            {
+              "value": "text/plain",
+              "name": "TextPlain"
+            },
+            {
+              "value": "text/richtext",
+              "name": "TextRichtext"
+            },
+            {
+              "value": "text/rtf",
+              "name": "TextRtf"
+            },
+            {
+              "value": "text/vcard",
+              "name": "TextVcard"
+            },
+            {
+              "value": "text/x-uri",
+              "name": "TextXUri"
+            },
+            {
+              "value": "text/x-vcard",
+              "name": "TextXVcard"
+            },
+            {
+              "value": "video/3gpp-tt",
+              "name": "Video3GppTt"
+            },
+            {
+              "value": "video/3gpp",
+              "name": "Video3Gpp"
+            },
+            {
+              "value": "video/3gpp2",
+              "name": "Video3Gpp2"
+            },
+            {
+              "value": "video/H261",
+              "name": "VideoH261"
+            },
+            {
+              "value": "video/H263-1998",
+              "name": "VideoH2631998"
+            },
+            {
+              "value": "video/H263-2000",
+              "name": "VideoH2632000"
+            },
+            {
+              "value": "video/H263",
+              "name": "VideoH263"
+            },
+            {
+              "value": "video/H264",
+              "name": "VideoH264"
+            },
+            {
+              "value": "video/mp4",
+              "name": "VideoMp4"
+            },
+            {
+              "value": "video/mpeg",
+              "name": "VideoMpeg"
+            },
+            {
+              "value": "video/quicktime",
+              "name": "VideoQuicktime"
+            },
+            {
+              "value": "video/webm",
+              "name": "VideoWebm"
+            }
+          ]
+        }
+      },
+      "ListMessagesV1200ResponseDataItemMediaItemType": {
+        "examples": [
+          "image/png"
+        ],
+        "enum": [
+          "application/msword",
+          "application/octet-stream",
+          "application/pdf",
+          "application/postscript",
+          "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "application/x-iwork-pages-sffpages",
+          "application/x-zip-compressed",
+          "application/zip",
+          "audio/3gpp",
+          "audio/3gpp2",
+          "audio/ac3",
+          "audio/amr-nb",
+          "audio/amr",
+          "audio/basic",
+          "audio/L24",
+          "audio/mp4",
+          "audio/mpeg",
+          "audio/ogg",
+          "audio/vnd.rn-realaudio",
+          "audio/vnd.wave",
+          "audio/vorbis",
+          "audio/wav",
+          "audio/webm",
+          "audio/x-caf",
+          "audio/x-m4a",
+          "image/avif",
+          "image/bmp",
+          "image/gif",
+          "image/heic",
+          "image/heif",
+          "image/jpeg",
+          "image/png",
+          "image/svg\u002Bxml",
+          "image/webp",
+          "text/calendar",
+          "text/csv",
+          "text/directory",
+          "text/plain",
+          "text/richtext",
+          "text/rtf",
+          "text/vcard",
+          "text/x-uri",
+          "text/x-vcard",
+          "video/3gpp-tt",
+          "video/3gpp",
+          "video/3gpp2",
+          "video/H261",
+          "video/H263-1998",
+          "video/H263-2000",
+          "video/H263",
+          "video/H264",
+          "video/mp4",
+          "video/mpeg",
+          "video/quicktime",
+          "video/webm"
+        ],
+        "type": [
+          "null",
+          "string"
+        ],
+        "additionalProperties": false,
+        "description": "The MIME type of the attached media.",
+        "example": "image/png",
+        "x-ms-enum": {
+          "name": "ListMessagesV1200ResponseDataItemMediaItemType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "application/msword",
+              "name": "ApplicationMsword"
+            },
+            {
+              "value": "application/octet-stream",
+              "name": "ApplicationOctetStream"
+            },
+            {
+              "value": "application/pdf",
+              "name": "ApplicationPdf"
+            },
+            {
+              "value": "application/postscript",
+              "name": "ApplicationPostscript"
+            },
+            {
+              "value": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+              "name": "ApplicationVndOpenxmlformatsOfficedocumentSpreadsheetmlSheet"
+            },
+            {
+              "value": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+              "name": "ApplicationVndOpenxmlformatsOfficedocumentWordprocessingmlDocument"
+            },
+            {
+              "value": "application/x-iwork-pages-sffpages",
+              "name": "ApplicationXIworkPagesSffpages"
+            },
+            {
+              "value": "application/x-zip-compressed",
+              "name": "ApplicationXZipCompressed"
+            },
+            {
+              "value": "application/zip",
+              "name": "ApplicationZip"
+            },
+            {
+              "value": "audio/3gpp",
+              "name": "Audio3Gpp"
+            },
+            {
+              "value": "audio/3gpp2",
+              "name": "Audio3Gpp2"
+            },
+            {
+              "value": "audio/ac3",
+              "name": "AudioAc3"
+            },
+            {
+              "value": "audio/amr-nb",
+              "name": "AudioAmrNb"
+            },
+            {
+              "value": "audio/amr",
+              "name": "AudioAmr"
+            },
+            {
+              "value": "audio/basic",
+              "name": "AudioBasic"
+            },
+            {
+              "value": "audio/L24",
+              "name": "AudioL24"
+            },
+            {
+              "value": "audio/mp4",
+              "name": "AudioMp4"
+            },
+            {
+              "value": "audio/mpeg",
+              "name": "AudioMpeg"
+            },
+            {
+              "value": "audio/ogg",
+              "name": "AudioOgg"
+            },
+            {
+              "value": "audio/vnd.rn-realaudio",
+              "name": "AudioVndRnRealaudio"
+            },
+            {
+              "value": "audio/vnd.wave",
+              "name": "AudioVndWave"
+            },
+            {
+              "value": "audio/vorbis",
+              "name": "AudioVorbis"
+            },
+            {
+              "value": "audio/wav",
+              "name": "AudioWav"
+            },
+            {
+              "value": "audio/webm",
+              "name": "AudioWebm"
+            },
+            {
+              "value": "audio/x-caf",
+              "name": "AudioXCaf"
+            },
+            {
+              "value": "audio/x-m4a",
+              "name": "AudioXM4A"
+            },
+            {
+              "value": "image/avif",
+              "name": "ImageAvif"
+            },
+            {
+              "value": "image/bmp",
+              "name": "ImageBmp"
+            },
+            {
+              "value": "image/gif",
+              "name": "ImageGif"
+            },
+            {
+              "value": "image/heic",
+              "name": "ImageHeic"
+            },
+            {
+              "value": "image/heif",
+              "name": "ImageHeif"
+            },
+            {
+              "value": "image/jpeg",
+              "name": "ImageJpeg"
+            },
+            {
+              "value": "image/png",
+              "name": "ImagePng"
+            },
+            {
+              "value": "image/svg\u002Bxml",
+              "name": "ImageSvgPlusXml"
+            },
+            {
+              "value": "image/webp",
+              "name": "ImageWebp"
+            },
+            {
+              "value": "text/calendar",
+              "name": "TextCalendar"
+            },
+            {
+              "value": "text/csv",
+              "name": "TextCsv"
+            },
+            {
+              "value": "text/directory",
+              "name": "TextDirectory"
+            },
+            {
+              "value": "text/plain",
+              "name": "TextPlain"
+            },
+            {
+              "value": "text/richtext",
+              "name": "TextRichtext"
+            },
+            {
+              "value": "text/rtf",
+              "name": "TextRtf"
+            },
+            {
+              "value": "text/vcard",
+              "name": "TextVcard"
+            },
+            {
+              "value": "text/x-uri",
+              "name": "TextXUri"
+            },
+            {
+              "value": "text/x-vcard",
+              "name": "TextXVcard"
+            },
+            {
+              "value": "video/3gpp-tt",
+              "name": "Video3GppTt"
+            },
+            {
+              "value": "video/3gpp",
+              "name": "Video3Gpp"
+            },
+            {
+              "value": "video/3gpp2",
+              "name": "Video3Gpp2"
+            },
+            {
+              "value": "video/H261",
+              "name": "VideoH261"
+            },
+            {
+              "value": "video/H263-1998",
+              "name": "VideoH2631998"
+            },
+            {
+              "value": "video/H263-2000",
+              "name": "VideoH2632000"
+            },
+            {
+              "value": "video/H263",
+              "name": "VideoH263"
+            },
+            {
+              "value": "video/H264",
+              "name": "VideoH264"
+            },
+            {
+              "value": "video/mp4",
+              "name": "VideoMp4"
+            },
+            {
+              "value": "video/mpeg",
+              "name": "VideoMpeg"
+            },
+            {
+              "value": "video/quicktime",
+              "name": "VideoQuicktime"
+            },
+            {
+              "value": "video/webm",
+              "name": "VideoWebm"
+            }
+          ]
+        }
+      },
+      "GetMessageByIdV1200ResponseDataMediaItemType": {
+        "examples": [
+          "image/png"
+        ],
+        "enum": [
+          "application/msword",
+          "application/octet-stream",
+          "application/pdf",
+          "application/postscript",
+          "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "application/x-iwork-pages-sffpages",
+          "application/x-zip-compressed",
+          "application/zip",
+          "audio/3gpp",
+          "audio/3gpp2",
+          "audio/ac3",
+          "audio/amr-nb",
+          "audio/amr",
+          "audio/basic",
+          "audio/L24",
+          "audio/mp4",
+          "audio/mpeg",
+          "audio/ogg",
+          "audio/vnd.rn-realaudio",
+          "audio/vnd.wave",
+          "audio/vorbis",
+          "audio/wav",
+          "audio/webm",
+          "audio/x-caf",
+          "audio/x-m4a",
+          "image/avif",
+          "image/bmp",
+          "image/gif",
+          "image/heic",
+          "image/heif",
+          "image/jpeg",
+          "image/png",
+          "image/svg\u002Bxml",
+          "image/webp",
+          "text/calendar",
+          "text/csv",
+          "text/directory",
+          "text/plain",
+          "text/richtext",
+          "text/rtf",
+          "text/vcard",
+          "text/x-uri",
+          "text/x-vcard",
+          "video/3gpp-tt",
+          "video/3gpp",
+          "video/3gpp2",
+          "video/H261",
+          "video/H263-1998",
+          "video/H263-2000",
+          "video/H263",
+          "video/H264",
+          "video/mp4",
+          "video/mpeg",
+          "video/quicktime",
+          "video/webm"
+        ],
+        "type": [
+          "null",
+          "string"
+        ],
+        "additionalProperties": false,
+        "description": "The MIME type of the attached media.",
+        "example": "image/png",
+        "x-ms-enum": {
+          "name": "GetMessageByIdV1200ResponseDataMediaItemType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "application/msword",
+              "name": "ApplicationMsword"
+            },
+            {
+              "value": "application/octet-stream",
+              "name": "ApplicationOctetStream"
+            },
+            {
+              "value": "application/pdf",
+              "name": "ApplicationPdf"
+            },
+            {
+              "value": "application/postscript",
+              "name": "ApplicationPostscript"
+            },
+            {
+              "value": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+              "name": "ApplicationVndOpenxmlformatsOfficedocumentSpreadsheetmlSheet"
+            },
+            {
+              "value": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+              "name": "ApplicationVndOpenxmlformatsOfficedocumentWordprocessingmlDocument"
+            },
+            {
+              "value": "application/x-iwork-pages-sffpages",
+              "name": "ApplicationXIworkPagesSffpages"
+            },
+            {
+              "value": "application/x-zip-compressed",
+              "name": "ApplicationXZipCompressed"
+            },
+            {
+              "value": "application/zip",
+              "name": "ApplicationZip"
+            },
+            {
+              "value": "audio/3gpp",
+              "name": "Audio3Gpp"
+            },
+            {
+              "value": "audio/3gpp2",
+              "name": "Audio3Gpp2"
+            },
+            {
+              "value": "audio/ac3",
+              "name": "AudioAc3"
+            },
+            {
+              "value": "audio/amr-nb",
+              "name": "AudioAmrNb"
+            },
+            {
+              "value": "audio/amr",
+              "name": "AudioAmr"
+            },
+            {
+              "value": "audio/basic",
+              "name": "AudioBasic"
+            },
+            {
+              "value": "audio/L24",
+              "name": "AudioL24"
+            },
+            {
+              "value": "audio/mp4",
+              "name": "AudioMp4"
+            },
+            {
+              "value": "audio/mpeg",
+              "name": "AudioMpeg"
+            },
+            {
+              "value": "audio/ogg",
+              "name": "AudioOgg"
+            },
+            {
+              "value": "audio/vnd.rn-realaudio",
+              "name": "AudioVndRnRealaudio"
+            },
+            {
+              "value": "audio/vnd.wave",
+              "name": "AudioVndWave"
+            },
+            {
+              "value": "audio/vorbis",
+              "name": "AudioVorbis"
+            },
+            {
+              "value": "audio/wav",
+              "name": "AudioWav"
+            },
+            {
+              "value": "audio/webm",
+              "name": "AudioWebm"
+            },
+            {
+              "value": "audio/x-caf",
+              "name": "AudioXCaf"
+            },
+            {
+              "value": "audio/x-m4a",
+              "name": "AudioXM4A"
+            },
+            {
+              "value": "image/avif",
+              "name": "ImageAvif"
+            },
+            {
+              "value": "image/bmp",
+              "name": "ImageBmp"
+            },
+            {
+              "value": "image/gif",
+              "name": "ImageGif"
+            },
+            {
+              "value": "image/heic",
+              "name": "ImageHeic"
+            },
+            {
+              "value": "image/heif",
+              "name": "ImageHeif"
+            },
+            {
+              "value": "image/jpeg",
+              "name": "ImageJpeg"
+            },
+            {
+              "value": "image/png",
+              "name": "ImagePng"
+            },
+            {
+              "value": "image/svg\u002Bxml",
+              "name": "ImageSvgPlusXml"
+            },
+            {
+              "value": "image/webp",
+              "name": "ImageWebp"
+            },
+            {
+              "value": "text/calendar",
+              "name": "TextCalendar"
+            },
+            {
+              "value": "text/csv",
+              "name": "TextCsv"
+            },
+            {
+              "value": "text/directory",
+              "name": "TextDirectory"
+            },
+            {
+              "value": "text/plain",
+              "name": "TextPlain"
+            },
+            {
+              "value": "text/richtext",
+              "name": "TextRichtext"
+            },
+            {
+              "value": "text/rtf",
+              "name": "TextRtf"
+            },
+            {
+              "value": "text/vcard",
+              "name": "TextVcard"
+            },
+            {
+              "value": "text/x-uri",
+              "name": "TextXUri"
+            },
+            {
+              "value": "text/x-vcard",
+              "name": "TextXVcard"
+            },
+            {
+              "value": "video/3gpp-tt",
+              "name": "Video3GppTt"
+            },
+            {
+              "value": "video/3gpp",
+              "name": "Video3Gpp"
+            },
+            {
+              "value": "video/3gpp2",
+              "name": "Video3Gpp2"
+            },
+            {
+              "value": "video/H261",
+              "name": "VideoH261"
+            },
+            {
+              "value": "video/H263-1998",
+              "name": "VideoH2631998"
+            },
+            {
+              "value": "video/H263-2000",
+              "name": "VideoH2632000"
+            },
+            {
+              "value": "video/H263",
+              "name": "VideoH263"
+            },
+            {
+              "value": "video/H264",
+              "name": "VideoH264"
+            },
+            {
+              "value": "video/mp4",
+              "name": "VideoMp4"
+            },
+            {
+              "value": "video/mpeg",
+              "name": "VideoMpeg"
+            },
+            {
+              "value": "video/quicktime",
+              "name": "VideoQuicktime"
+            },
+            {
+              "value": "video/webm",
+              "name": "VideoWebm"
             }
           ]
         }

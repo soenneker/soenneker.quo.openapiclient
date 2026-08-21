@@ -42,6 +42,14 @@ namespace Soenneker.Quo.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
+        /// <summary>The media property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1202ResponseDataMediaItem>? Media { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1202ResponseDataMediaItem> Media { get; set; }
+#endif
         /// <summary>The unique identifier of the Quo phone number that the message was sent from.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -108,6 +116,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
                 { "direction", n => { Direction = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1202ResponseDataDirection>(); } },
                 { "from", n => { From = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
+                { "media", n => { Media = n.GetCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1202ResponseDataMediaItem>(global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1202ResponseDataMediaItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "phoneNumberId", n => { PhoneNumberId = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1202ResponseDataStatus>(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
@@ -128,6 +137,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1202ResponseDataDirection>("direction", Direction);
             writer.WriteStringValue("from", From);
             writer.WriteStringValue("id", Id);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1202ResponseDataMediaItem>("media", Media);
             writer.WriteStringValue("phoneNumberId", PhoneNumberId);
             writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1202ResponseDataStatus>("status", Status);
             writer.WriteStringValue("text", Text);
