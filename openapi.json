@@ -30,7 +30,7 @@
               "examples": [
                 "AC3700e624eca547eb9f749a06f"
               ],
-              "pattern": "^AC[A-Za-z0-9_-]+$",
+              "pattern": "^AC(.*)$",
               "type": "string"
             },
             "example": "AC3700e624eca547eb9f749a06f"
@@ -551,7 +551,7 @@
               "examples": [
                 "PN123abc"
               ],
-              "pattern": "^PN[A-Za-z0-9_-]+$",
+              "pattern": "^PN(.*)$",
               "type": "string"
             },
             "example": "PN123abc"
@@ -565,7 +565,7 @@
               "examples": [
                 "US123abc"
               ],
-              "pattern": "^US[A-Za-z0-9_:-]+$",
+              "pattern": "^US(.*)$",
               "type": "string"
             },
             "example": "US123abc"
@@ -844,7 +844,7 @@
                                     "example": "+15555555555"
                                   },
                                   {
-                                    "pattern": "^US[A-Za-z0-9_:-]+$",
+                                    "pattern": "^US(.*)$",
                                     "type": "string"
                                   }
                                 ]
@@ -873,7 +873,7 @@
                                     "example": "+15555555555"
                                   },
                                   {
-                                    "pattern": "^US[A-Za-z0-9_:-]+$",
+                                    "pattern": "^US(.*)$",
                                     "type": "string"
                                   }
                                 ]
@@ -903,7 +903,7 @@
                             "examples": [
                               "AC123abc"
                             ],
-                            "pattern": "^AC[A-Za-z0-9_-]+$",
+                            "pattern": "^AC(.*)$",
                             "type": "string",
                             "example": "AC123abc"
                           },
@@ -912,7 +912,7 @@
                             "examples": [
                               "PN123abc"
                             ],
-                            "pattern": "^PN[A-Za-z0-9_-]+$",
+                            "pattern": "^PN(.*)$",
                             "type": "string",
                             "example": "PN123abc"
                           },
@@ -950,7 +950,7 @@
                             "examples": [
                               "US123abc"
                             ],
-                            "pattern": "^US[A-Za-z0-9_:-]+$",
+                            "pattern": "^US(.*)$",
                             "type": "string",
                             "example": "US123abc"
                           }
@@ -1367,7 +1367,7 @@
               "examples": [
                 "AC3700e624eca547eb9f749a06f2eb1"
               ],
-              "pattern": "^AC[A-Za-z0-9_-]+$",
+              "pattern": "^AC(.*)$",
               "type": "string"
             },
             "example": "AC3700e624eca547eb9f749a06f2eb1"
@@ -1561,7 +1561,7 @@
                                   "example": "+15555555555"
                                 },
                                 {
-                                  "pattern": "^US[A-Za-z0-9_:-]+$",
+                                  "pattern": "^US(.*)$",
                                   "type": "string"
                                 }
                               ]
@@ -1590,7 +1590,7 @@
                                   "example": "+15555555555"
                                 },
                                 {
-                                  "pattern": "^US[A-Za-z0-9_:-]+$",
+                                  "pattern": "^US(.*)$",
                                   "type": "string"
                                 }
                               ]
@@ -1620,7 +1620,7 @@
                           "examples": [
                             "AC123abc"
                           ],
-                          "pattern": "^AC[A-Za-z0-9_-]+$",
+                          "pattern": "^AC(.*)$",
                           "type": "string",
                           "example": "AC123abc"
                         },
@@ -1629,7 +1629,7 @@
                           "examples": [
                             "PN123abc"
                           ],
-                          "pattern": "^PN[A-Za-z0-9_-]+$",
+                          "pattern": "^PN(.*)$",
                           "type": "string",
                           "example": "PN123abc"
                         },
@@ -1667,7 +1667,7 @@
                           "examples": [
                             "US123abc"
                           ],
-                          "pattern": "^US[A-Za-z0-9_:-]+$",
+                          "pattern": "^US(.*)$",
                           "type": "string",
                           "example": "US123abc"
                         }
@@ -2069,7 +2069,7 @@
               "examples": [
                 "AC3700e624eca547eb9f749a06f"
               ],
-              "pattern": "^AC[A-Za-z0-9_-]+$",
+              "pattern": "^AC(.*)$",
               "type": "string"
             },
             "example": "AC3700e624eca547eb9f749a06f"
@@ -2606,7 +2606,7 @@
               "examples": [
                 "AC3700e624eca547eb9f749a06f2eb1"
               ],
-              "pattern": "^AC[A-Za-z0-9_-]+$",
+              "pattern": "^AC(.*)$",
               "type": "string"
             },
             "example": "AC3700e624eca547eb9f749a06f2eb1"
@@ -2715,7 +2715,7 @@
                                         "examples": [
                                           "US123abc"
                                         ],
-                                        "pattern": "^US[A-Za-z0-9_:-]+$",
+                                        "pattern": "^US(.*)$",
                                         "type": "string",
                                         "example": "US123abc"
                                       },
@@ -3142,7 +3142,7 @@
               "examples": [
                 "AC3700e624eca547eb9f749a06f"
               ],
-              "pattern": "^AC[A-Za-z0-9_-]+$",
+              "pattern": "^AC(.*)$",
               "type": "string"
             },
             "example": "AC3700e624eca547eb9f749a06f"
@@ -3195,7 +3195,7 @@
                           "examples": [
                             "VMaaff8f317e0c4e61953b74a5eb42a370"
                           ],
-                          "pattern": "^VM[A-Za-z0-9_-]+$",
+                          "pattern": "^VM(.*)$",
                           "type": "string",
                           "example": "VMaaff8f317e0c4e61953b74a5eb42a370"
                         },
@@ -4368,7 +4368,7 @@
                     "examples": [
                       "US123abc"
                     ],
-                    "pattern": "^US[A-Za-z0-9_:-]+$",
+                    "pattern": "^US(.*)$",
                     "type": "string",
                     "example": "US123abc"
                   },
@@ -4448,7 +4448,7 @@
                           "examples": [
                             "664d0db69fcac7cf2e6ec"
                           ],
-                          "pattern": "^[A-Za-z0-9_-]+$",
+                          "pattern": "^(.*)$",
                           "type": "string",
                           "example": "664d0db69fcac7cf2e6ec"
                         },
@@ -4891,7 +4891,7 @@
                           "examples": [
                             "US123abc"
                           ],
-                          "pattern": "^US[A-Za-z0-9_:-]+$",
+                          "pattern": "^US(.*)$",
                           "type": "string",
                           "example": "US123abc"
                         }
@@ -5449,7 +5449,7 @@
                             "examples": [
                               "664d0db69fcac7cf2e6ec"
                             ],
-                            "pattern": "^[A-Za-z0-9_-]+$",
+                            "pattern": "^(.*)$",
                             "type": "string",
                             "example": "664d0db69fcac7cf2e6ec"
                           },
@@ -5892,7 +5892,7 @@
                             "examples": [
                               "US123abc"
                             ],
-                            "pattern": "^US[A-Za-z0-9_:-]+$",
+                            "pattern": "^US(.*)$",
                             "type": "string",
                             "example": "US123abc"
                           }
@@ -6381,7 +6381,7 @@
               "examples": [
                 "66d0d87e8dc1211467372303"
               ],
-              "pattern": "^[A-Za-z0-9_-]+$",
+              "pattern": "^(.*)$",
               "type": "string"
             },
             "example": "66d0d87e8dc1211467372303"
@@ -6422,7 +6422,7 @@
                           "examples": [
                             "664d0db69fcac7cf2e6ec"
                           ],
-                          "pattern": "^[A-Za-z0-9_-]+$",
+                          "pattern": "^(.*)$",
                           "type": "string",
                           "example": "664d0db69fcac7cf2e6ec"
                         },
@@ -6865,7 +6865,7 @@
                           "examples": [
                             "US123abc"
                           ],
-                          "pattern": "^US[A-Za-z0-9_:-]+$",
+                          "pattern": "^US(.*)$",
                           "type": "string",
                           "example": "US123abc"
                         }
@@ -7337,7 +7337,7 @@
               "examples": [
                 "66d0d87e8dc1211467372303"
               ],
-              "pattern": "^[A-Za-z0-9_-]+$",
+              "pattern": "^(.*)$",
               "type": "string"
             },
             "example": "66d0d87e8dc1211467372303"
@@ -7750,7 +7750,7 @@
                           "examples": [
                             "664d0db69fcac7cf2e6ec"
                           ],
-                          "pattern": "^[A-Za-z0-9_-]+$",
+                          "pattern": "^(.*)$",
                           "type": "string",
                           "example": "664d0db69fcac7cf2e6ec"
                         },
@@ -8185,7 +8185,7 @@
                           "examples": [
                             "US123abc"
                           ],
-                          "pattern": "^US[A-Za-z0-9_:-]+$",
+                          "pattern": "^US(.*)$",
                           "type": "string",
                           "example": "US123abc"
                         }
@@ -8657,7 +8657,7 @@
               "examples": [
                 "66d0d87e8dc1211467372303"
               ],
-              "pattern": "^[A-Za-z0-9_-]+$",
+              "pattern": "^(.*)$",
               "type": "string"
             },
             "example": "66d0d87e8dc1211467372303"
@@ -9147,7 +9147,7 @@
                   "type": "string"
                 },
                 {
-                  "pattern": "^PN[A-Za-z0-9_-]+$",
+                  "pattern": "^PN(.*)$",
                   "type": "string"
                 }
               ]
@@ -9180,7 +9180,7 @@
                     "type": "string"
                   },
                   {
-                    "pattern": "^PN[A-Za-z0-9_-]+$",
+                    "pattern": "^PN(.*)$",
                     "type": "string"
                   }
                 ]
@@ -9200,7 +9200,7 @@
               "examples": [
                 "US123abc"
               ],
-              "pattern": "^US[A-Za-z0-9_:-]+$",
+              "pattern": "^US(.*)$",
               "type": "string"
             },
             "example": "US123abc"
@@ -9343,11 +9343,11 @@
                                 "example": "US123abc",
                                 "anyOf": [
                                   {
-                                    "pattern": "^US[A-Za-z0-9_:-]+$",
+                                    "pattern": "^US(.*)$",
                                     "type": "string"
                                   },
                                   {
-                                    "pattern": "^SYU[A-Za-z0-9_-]+$",
+                                    "pattern": "^SYU(.*)$",
                                     "type": "string"
                                   }
                                 ]
@@ -9384,7 +9384,7 @@
                             "examples": [
                               "CN123abc"
                             ],
-                            "pattern": "^CN[A-Za-z0-9_-]+$",
+                            "pattern": "^CN(.*)$",
                             "type": "string",
                             "example": "CN123abc"
                           },
@@ -9406,7 +9406,7 @@
                                 "examples": [
                                   "AC123abc"
                                 ],
-                                "pattern": "^AC[A-Za-z0-9_-]+$",
+                                "pattern": "^AC(.*)$",
                                 "type": "string",
                                 "example": "AC123abc"
                               },
@@ -9458,7 +9458,7 @@
                             "examples": [
                               "PN123abc"
                             ],
-                            "pattern": "^PN[A-Za-z0-9_-]+$",
+                            "pattern": "^PN(.*)$",
                             "type": "string",
                             "example": "PN123abc"
                           },
@@ -9892,7 +9892,7 @@
               "examples": [
                 "CN123abc"
               ],
-              "pattern": "^CN[A-Za-z0-9_-]+$",
+              "pattern": "^CN(.*)$",
               "type": "string"
             },
             "example": "CN123abc"
@@ -9936,11 +9936,11 @@
                           "example": "US123abc",
                           "anyOf": [
                             {
-                              "pattern": "^US[A-Za-z0-9_:-]+$",
+                              "pattern": "^US(.*)$",
                               "type": "string"
                             },
                             {
-                              "pattern": "^SYU[A-Za-z0-9_-]+$",
+                              "pattern": "^SYU(.*)$",
                               "type": "string"
                             }
                           ]
@@ -9977,7 +9977,7 @@
                       "examples": [
                         "CN123abc"
                       ],
-                      "pattern": "^CN[A-Za-z0-9_-]+$",
+                      "pattern": "^CN(.*)$",
                       "type": "string",
                       "example": "CN123abc"
                     },
@@ -9999,7 +9999,7 @@
                           "examples": [
                             "AC123abc"
                           ],
-                          "pattern": "^AC[A-Za-z0-9_-]+$",
+                          "pattern": "^AC(.*)$",
                           "type": "string",
                           "example": "AC123abc"
                         },
@@ -10051,7 +10051,7 @@
                       "examples": [
                         "PN123abc"
                       ],
-                      "pattern": "^PN[A-Za-z0-9_-]+$",
+                      "pattern": "^PN(.*)$",
                       "type": "string",
                       "example": "PN123abc"
                     },
@@ -10468,7 +10468,7 @@
               "examples": [
                 "CN123abc"
               ],
-              "pattern": "^CN[A-Za-z0-9_-]+$",
+              "pattern": "^CN(.*)$",
               "type": "string"
             },
             "example": "CN123abc"
@@ -10512,11 +10512,11 @@
                           "example": "US123abc",
                           "anyOf": [
                             {
-                              "pattern": "^US[A-Za-z0-9_:-]+$",
+                              "pattern": "^US(.*)$",
                               "type": "string"
                             },
                             {
-                              "pattern": "^SYU[A-Za-z0-9_-]+$",
+                              "pattern": "^SYU(.*)$",
                               "type": "string"
                             }
                           ]
@@ -10553,7 +10553,7 @@
                       "examples": [
                         "CN123abc"
                       ],
-                      "pattern": "^CN[A-Za-z0-9_-]+$",
+                      "pattern": "^CN(.*)$",
                       "type": "string",
                       "example": "CN123abc"
                     },
@@ -10575,7 +10575,7 @@
                           "examples": [
                             "AC123abc"
                           ],
-                          "pattern": "^AC[A-Za-z0-9_-]+$",
+                          "pattern": "^AC(.*)$",
                           "type": "string",
                           "example": "AC123abc"
                         },
@@ -10627,7 +10627,7 @@
                       "examples": [
                         "PN123abc"
                       ],
-                      "pattern": "^PN[A-Za-z0-9_-]+$",
+                      "pattern": "^PN(.*)$",
                       "type": "string",
                       "example": "PN123abc"
                     },
@@ -11044,7 +11044,7 @@
               "examples": [
                 "CN123abc"
               ],
-              "pattern": "^CN[A-Za-z0-9_-]+$",
+              "pattern": "^CN(.*)$",
               "type": "string"
             },
             "example": "CN123abc"
@@ -11088,11 +11088,11 @@
                           "example": "US123abc",
                           "anyOf": [
                             {
-                              "pattern": "^US[A-Za-z0-9_:-]+$",
+                              "pattern": "^US(.*)$",
                               "type": "string"
                             },
                             {
-                              "pattern": "^SYU[A-Za-z0-9_-]+$",
+                              "pattern": "^SYU(.*)$",
                               "type": "string"
                             }
                           ]
@@ -11129,7 +11129,7 @@
                       "examples": [
                         "CN123abc"
                       ],
-                      "pattern": "^CN[A-Za-z0-9_-]+$",
+                      "pattern": "^CN(.*)$",
                       "type": "string",
                       "example": "CN123abc"
                     },
@@ -11151,7 +11151,7 @@
                           "examples": [
                             "AC123abc"
                           ],
-                          "pattern": "^AC[A-Za-z0-9_-]+$",
+                          "pattern": "^AC(.*)$",
                           "type": "string",
                           "example": "AC123abc"
                         },
@@ -11203,7 +11203,7 @@
                       "examples": [
                         "PN123abc"
                       ],
-                      "pattern": "^PN[A-Za-z0-9_-]+$",
+                      "pattern": "^PN(.*)$",
                       "type": "string",
                       "example": "PN123abc"
                     },
@@ -11641,7 +11641,7 @@
                       "OP1232abc"
                     ],
                     "deprecated": true,
-                    "pattern": "^PN[A-Za-z0-9_-]+$",
+                    "pattern": "^PN(.*)$",
                     "type": "string",
                     "example": "OP1232abc"
                   },
@@ -11653,7 +11653,7 @@
                     "example": "+15555555555",
                     "anyOf": [
                       {
-                        "pattern": "^PN[A-Za-z0-9_-]+$",
+                        "pattern": "^PN(.*)$",
                         "type": "string"
                       },
                       {
@@ -11694,7 +11694,7 @@
                     "examples": [
                       "US123abc"
                     ],
-                    "pattern": "^US[A-Za-z0-9_:-]+$",
+                    "pattern": "^US(.*)$",
                     "type": "string",
                     "example": "US123abc"
                   },
@@ -11746,7 +11746,7 @@
                           "examples": [
                             "AC123abc"
                           ],
-                          "pattern": "^AC[A-Za-z0-9_-]+$",
+                          "pattern": "^AC(.*)$",
                           "type": "string",
                           "example": "AC123abc"
                         },
@@ -11785,7 +11785,7 @@
                               "examples": [
                                 "PN123abc"
                               ],
-                              "pattern": "^PN[A-Za-z0-9_-]+$",
+                              "pattern": "^PN(.*)$",
                               "type": "string",
                               "example": "PN123abc"
                             },
@@ -11799,7 +11799,7 @@
                           "examples": [
                             "CN123abc"
                           ],
-                          "pattern": "^CN[A-Za-z0-9_-]+$",
+                          "pattern": "^CN(.*)$",
                           "type": "string",
                           "example": "CN123abc"
                         },
@@ -11822,7 +11822,7 @@
                               "examples": [
                                 "US123abc"
                               ],
-                              "pattern": "^US[A-Za-z0-9_:-]+$",
+                              "pattern": "^US(.*)$",
                               "type": "string",
                               "example": "US123abc"
                             },
@@ -11888,64 +11888,6 @@
                                 "example": "image/png",
                                 "anyOf": [
                                   {
-                                    "enum": [
-                                      "application/msword",
-                                      "application/octet-stream",
-                                      "application/pdf",
-                                      "application/postscript",
-                                      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                                      "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-                                      "application/x-iwork-pages-sffpages",
-                                      "application/x-zip-compressed",
-                                      "application/zip",
-                                      "audio/3gpp",
-                                      "audio/3gpp2",
-                                      "audio/ac3",
-                                      "audio/amr-nb",
-                                      "audio/amr",
-                                      "audio/basic",
-                                      "audio/L24",
-                                      "audio/mp4",
-                                      "audio/mpeg",
-                                      "audio/ogg",
-                                      "audio/vnd.rn-realaudio",
-                                      "audio/vnd.wave",
-                                      "audio/vorbis",
-                                      "audio/wav",
-                                      "audio/webm",
-                                      "audio/x-caf",
-                                      "audio/x-m4a",
-                                      "image/avif",
-                                      "image/bmp",
-                                      "image/gif",
-                                      "image/heic",
-                                      "image/heif",
-                                      "image/jpeg",
-                                      "image/png",
-                                      "image/svg+xml",
-                                      "image/webp",
-                                      "text/calendar",
-                                      "text/csv",
-                                      "text/directory",
-                                      "text/plain",
-                                      "text/richtext",
-                                      "text/rtf",
-                                      "text/vcard",
-                                      "text/x-uri",
-                                      "text/x-vcard",
-                                      "video/3gpp-tt",
-                                      "video/3gpp",
-                                      "video/3gpp2",
-                                      "video/H261",
-                                      "video/H263-1998",
-                                      "video/H263-2000",
-                                      "video/H263",
-                                      "video/H264",
-                                      "video/mp4",
-                                      "video/mpeg",
-                                      "video/quicktime",
-                                      "video/webm"
-                                    ],
                                     "type": "string"
                                   },
                                   {
@@ -12429,7 +12371,7 @@
               "examples": [
                 "OP123abc"
               ],
-              "pattern": "^PN[A-Za-z0-9_-]+$",
+              "pattern": "^PN(.*)$",
               "type": "string"
             },
             "example": "OP123abc"
@@ -12443,7 +12385,7 @@
               "examples": [
                 "US123abc"
               ],
-              "pattern": "^US[A-Za-z0-9_:-]+$",
+              "pattern": "^US(.*)$",
               "type": "string"
             },
             "example": "US123abc"
@@ -12575,7 +12517,7 @@
                             "examples": [
                               "AC123abc"
                             ],
-                            "pattern": "^AC[A-Za-z0-9_-]+$",
+                            "pattern": "^AC(.*)$",
                             "type": "string",
                             "example": "AC123abc"
                           },
@@ -12614,7 +12556,7 @@
                                 "examples": [
                                   "PN123abc"
                                 ],
-                                "pattern": "^PN[A-Za-z0-9_-]+$",
+                                "pattern": "^PN(.*)$",
                                 "type": "string",
                                 "example": "PN123abc"
                               },
@@ -12628,7 +12570,7 @@
                             "examples": [
                               "CN123abc"
                             ],
-                            "pattern": "^CN[A-Za-z0-9_-]+$",
+                            "pattern": "^CN(.*)$",
                             "type": "string",
                             "example": "CN123abc"
                           },
@@ -12651,7 +12593,7 @@
                                 "examples": [
                                   "US123abc"
                                 ],
-                                "pattern": "^US[A-Za-z0-9_:-]+$",
+                                "pattern": "^US(.*)$",
                                 "type": "string",
                                 "example": "US123abc"
                               },
@@ -12717,64 +12659,6 @@
                                   "example": "image/png",
                                   "anyOf": [
                                     {
-                                      "enum": [
-                                        "application/msword",
-                                        "application/octet-stream",
-                                        "application/pdf",
-                                        "application/postscript",
-                                        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                                        "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-                                        "application/x-iwork-pages-sffpages",
-                                        "application/x-zip-compressed",
-                                        "application/zip",
-                                        "audio/3gpp",
-                                        "audio/3gpp2",
-                                        "audio/ac3",
-                                        "audio/amr-nb",
-                                        "audio/amr",
-                                        "audio/basic",
-                                        "audio/L24",
-                                        "audio/mp4",
-                                        "audio/mpeg",
-                                        "audio/ogg",
-                                        "audio/vnd.rn-realaudio",
-                                        "audio/vnd.wave",
-                                        "audio/vorbis",
-                                        "audio/wav",
-                                        "audio/webm",
-                                        "audio/x-caf",
-                                        "audio/x-m4a",
-                                        "image/avif",
-                                        "image/bmp",
-                                        "image/gif",
-                                        "image/heic",
-                                        "image/heif",
-                                        "image/jpeg",
-                                        "image/png",
-                                        "image/svg+xml",
-                                        "image/webp",
-                                        "text/calendar",
-                                        "text/csv",
-                                        "text/directory",
-                                        "text/plain",
-                                        "text/richtext",
-                                        "text/rtf",
-                                        "text/vcard",
-                                        "text/x-uri",
-                                        "text/x-vcard",
-                                        "video/3gpp-tt",
-                                        "video/3gpp",
-                                        "video/3gpp2",
-                                        "video/H261",
-                                        "video/H263-1998",
-                                        "video/H263-2000",
-                                        "video/H263",
-                                        "video/H264",
-                                        "video/mp4",
-                                        "video/mpeg",
-                                        "video/quicktime",
-                                        "video/webm"
-                                      ],
                                       "type": "string"
                                     },
                                     {
@@ -13275,7 +13159,7 @@
               "examples": [
                 "AC123abc"
               ],
-              "pattern": "^AC[A-Za-z0-9_-]+$",
+              "pattern": "^AC(.*)$",
               "type": "string"
             },
             "example": "AC123abc"
@@ -13318,7 +13202,7 @@
                           "examples": [
                             "AC123abc"
                           ],
-                          "pattern": "^AC[A-Za-z0-9_-]+$",
+                          "pattern": "^AC(.*)$",
                           "type": "string",
                           "example": "AC123abc"
                         },
@@ -13357,7 +13241,7 @@
                               "examples": [
                                 "PN123abc"
                               ],
-                              "pattern": "^PN[A-Za-z0-9_-]+$",
+                              "pattern": "^PN(.*)$",
                               "type": "string",
                               "example": "PN123abc"
                             },
@@ -13371,7 +13255,7 @@
                           "examples": [
                             "CN123abc"
                           ],
-                          "pattern": "^CN[A-Za-z0-9_-]+$",
+                          "pattern": "^CN(.*)$",
                           "type": "string",
                           "example": "CN123abc"
                         },
@@ -13394,7 +13278,7 @@
                               "examples": [
                                 "US123abc"
                               ],
-                              "pattern": "^US[A-Za-z0-9_:-]+$",
+                              "pattern": "^US(.*)$",
                               "type": "string",
                               "example": "US123abc"
                             },
@@ -13460,64 +13344,6 @@
                                 "example": "image/png",
                                 "anyOf": [
                                   {
-                                    "enum": [
-                                      "application/msword",
-                                      "application/octet-stream",
-                                      "application/pdf",
-                                      "application/postscript",
-                                      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                                      "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-                                      "application/x-iwork-pages-sffpages",
-                                      "application/x-zip-compressed",
-                                      "application/zip",
-                                      "audio/3gpp",
-                                      "audio/3gpp2",
-                                      "audio/ac3",
-                                      "audio/amr-nb",
-                                      "audio/amr",
-                                      "audio/basic",
-                                      "audio/L24",
-                                      "audio/mp4",
-                                      "audio/mpeg",
-                                      "audio/ogg",
-                                      "audio/vnd.rn-realaudio",
-                                      "audio/vnd.wave",
-                                      "audio/vorbis",
-                                      "audio/wav",
-                                      "audio/webm",
-                                      "audio/x-caf",
-                                      "audio/x-m4a",
-                                      "image/avif",
-                                      "image/bmp",
-                                      "image/gif",
-                                      "image/heic",
-                                      "image/heif",
-                                      "image/jpeg",
-                                      "image/png",
-                                      "image/svg+xml",
-                                      "image/webp",
-                                      "text/calendar",
-                                      "text/csv",
-                                      "text/directory",
-                                      "text/plain",
-                                      "text/richtext",
-                                      "text/rtf",
-                                      "text/vcard",
-                                      "text/x-uri",
-                                      "text/x-vcard",
-                                      "video/3gpp-tt",
-                                      "video/3gpp",
-                                      "video/3gpp2",
-                                      "video/H261",
-                                      "video/H263-1998",
-                                      "video/H263-2000",
-                                      "video/H263",
-                                      "video/H264",
-                                      "video/mp4",
-                                      "video/mpeg",
-                                      "video/quicktime",
-                                      "video/webm"
-                                    ],
                                     "type": "string"
                                   },
                                   {
@@ -14003,7 +13829,7 @@
               "examples": [
                 "US123abc"
               ],
-              "pattern": "^US[A-Za-z0-9_:-]+$",
+              "pattern": "^US(.*)$",
               "type": "string"
             },
             "example": "US123abc"
@@ -14406,7 +14232,7 @@
               "examples": [
                 "PNlja6rrtI"
               ],
-              "pattern": "^PN[A-Za-z0-9_-]+$",
+              "pattern": "^PN(.*)$",
               "type": "string"
             },
             "example": "PNlja6rrtI"
@@ -14451,7 +14277,7 @@
                           "examples": [
                             "PN123bc"
                           ],
-                          "pattern": "^PN[A-Za-z0-9_-]+$",
+                          "pattern": "^PN(.*)$",
                           "type": "string",
                           "example": "PN123bc"
                         },
@@ -14614,7 +14440,7 @@
                                     "examples": [
                                       "US123abc"
                                     ],
-                                    "pattern": "^US[A-Za-z0-9_:-]+$",
+                                    "pattern": "^US(.*)$",
                                     "type": "string",
                                     "example": "US123abc"
                                   },
@@ -14646,7 +14472,7 @@
                                     "examples": [
                                       "GRcei8k90o"
                                     ],
-                                    "pattern": "^GR[A-Za-z0-9_-]+$",
+                                    "pattern": "^GR(.*)$",
                                     "type": "string",
                                     "example": "GRcei8k90o"
                                   }
@@ -15213,13 +15039,13 @@
                         ],
                         "properties": {
                           "taskId": {
-                            "pattern": "^TK[0-9a-f]{32}$",
+                            "pattern": "^TK(.*)$",
                             "type": "string"
                           },
                           "phoneNumberId": {
                             "anyOf": [
                               {
-                                "pattern": "^PN[A-Za-z0-9_-]+$",
+                                "pattern": "^PN(.*)$",
                                 "type": "string"
                               },
                               {
@@ -15230,7 +15056,7 @@
                           "conversationId": {
                             "anyOf": [
                               {
-                                "pattern": "^CN[A-Za-z0-9_-]+$",
+                                "pattern": "^CN(.*)$",
                                 "type": "string"
                               },
                               {
@@ -15241,7 +15067,7 @@
                           "activityId": {
                             "anyOf": [
                               {
-                                "pattern": "^AC[A-Za-z0-9_-]+$",
+                                "pattern": "^AC(.*)$",
                                 "type": "string"
                               },
                               {
@@ -15260,7 +15086,7 @@
                             ]
                           },
                           "orgId": {
-                            "pattern": "^OR[A-Za-z0-9_-]+$",
+                            "pattern": "^OR(.*)$",
                             "type": "string"
                           },
                           "title": {
@@ -15299,11 +15125,11 @@
                               {
                                 "anyOf": [
                                   {
-                                    "pattern": "^US[A-Za-z0-9_:-]+$",
+                                    "pattern": "^US(.*)$",
                                     "type": "string"
                                   },
                                   {
-                                    "pattern": "^SYU[A-Za-z0-9_-]+$",
+                                    "pattern": "^SYU(.*)$",
                                     "type": "string"
                                   }
                                 ]
@@ -15318,11 +15144,11 @@
                               {
                                 "anyOf": [
                                   {
-                                    "pattern": "^US[A-Za-z0-9_:-]+$",
+                                    "pattern": "^US(.*)$",
                                     "type": "string"
                                   },
                                   {
-                                    "pattern": "^SYU[A-Za-z0-9_-]+$",
+                                    "pattern": "^SYU(.*)$",
                                     "type": "string"
                                   }
                                 ]
@@ -15847,11 +15673,11 @@
                         "type": "string"
                       },
                       "assignedTo": {
-                        "pattern": "^US[A-Za-z0-9_:-]+$",
+                        "pattern": "^US(.*)$",
                         "type": "string"
                       },
                       "phoneNumberId": {
-                        "pattern": "^PN[A-Za-z0-9_-]+$",
+                        "pattern": "^PN(.*)$",
                         "type": "string"
                       }
                     }
@@ -15886,11 +15712,11 @@
                         "type": "string"
                       },
                       "assignedTo": {
-                        "pattern": "^US[A-Za-z0-9_:-]+$",
+                        "pattern": "^US(.*)$",
                         "type": "string"
                       },
                       "conversationId": {
-                        "pattern": "^CN[A-Za-z0-9_-]+$",
+                        "pattern": "^CN(.*)$",
                         "type": "string"
                       }
                     }
@@ -15925,11 +15751,11 @@
                         "type": "string"
                       },
                       "assignedTo": {
-                        "pattern": "^US[A-Za-z0-9_:-]+$",
+                        "pattern": "^US(.*)$",
                         "type": "string"
                       },
                       "activityId": {
-                        "pattern": "^AC[A-Za-z0-9_-]+$",
+                        "pattern": "^AC(.*)$",
                         "type": "string"
                       }
                     }
@@ -15959,22 +15785,22 @@
                       ],
                       "properties": {
                         "taskId": {
-                          "pattern": "^TK[0-9a-f]{32}$",
+                          "pattern": "^TK(.*)$",
                           "type": "string"
                         },
                         "revision": {
                           "type": "string"
                         },
                         "phoneNumberId": {
-                          "pattern": "^PN[A-Za-z0-9_-]+$",
+                          "pattern": "^PN(.*)$",
                           "type": "string"
                         },
                         "conversationId": {
-                          "pattern": "^CN[A-Za-z0-9_-]+$",
+                          "pattern": "^CN(.*)$",
                           "type": "string"
                         },
                         "activityId": {
-                          "pattern": "^AC[A-Za-z0-9_-]+$",
+                          "pattern": "^AC(.*)$",
                           "type": "string"
                         }
                       }
@@ -16433,7 +16259,7 @@
             "name": "taskId",
             "required": true,
             "schema": {
-              "pattern": "^TK[0-9a-f]{32}$",
+              "pattern": "^TK(.*)$",
               "type": "string"
             }
           }
@@ -16476,13 +16302,13 @@
                       ],
                       "properties": {
                         "taskId": {
-                          "pattern": "^TK[0-9a-f]{32}$",
+                          "pattern": "^TK(.*)$",
                           "type": "string"
                         },
                         "phoneNumberId": {
                           "anyOf": [
                             {
-                              "pattern": "^PN[A-Za-z0-9_-]+$",
+                              "pattern": "^PN(.*)$",
                               "type": "string"
                             },
                             {
@@ -16493,7 +16319,7 @@
                         "conversationId": {
                           "anyOf": [
                             {
-                              "pattern": "^CN[A-Za-z0-9_-]+$",
+                              "pattern": "^CN(.*)$",
                               "type": "string"
                             },
                             {
@@ -16504,7 +16330,7 @@
                         "activityId": {
                           "anyOf": [
                             {
-                              "pattern": "^AC[A-Za-z0-9_-]+$",
+                              "pattern": "^AC(.*)$",
                               "type": "string"
                             },
                             {
@@ -16523,7 +16349,7 @@
                           ]
                         },
                         "orgId": {
-                          "pattern": "^OR[A-Za-z0-9_-]+$",
+                          "pattern": "^OR(.*)$",
                           "type": "string"
                         },
                         "title": {
@@ -16562,11 +16388,11 @@
                             {
                               "anyOf": [
                                 {
-                                  "pattern": "^US[A-Za-z0-9_:-]+$",
+                                  "pattern": "^US(.*)$",
                                   "type": "string"
                                 },
                                 {
-                                  "pattern": "^SYU[A-Za-z0-9_-]+$",
+                                  "pattern": "^SYU(.*)$",
                                   "type": "string"
                                 }
                               ]
@@ -16581,11 +16407,11 @@
                             {
                               "anyOf": [
                                 {
-                                  "pattern": "^US[A-Za-z0-9_:-]+$",
+                                  "pattern": "^US(.*)$",
                                   "type": "string"
                                 },
                                 {
-                                  "pattern": "^SYU[A-Za-z0-9_-]+$",
+                                  "pattern": "^SYU(.*)$",
                                   "type": "string"
                                 }
                               ]
@@ -17065,7 +16891,7 @@
             "name": "taskId",
             "required": true,
             "schema": {
-              "pattern": "^TK[0-9a-f]{32}$",
+              "pattern": "^TK(.*)$",
               "type": "string"
             }
           }
@@ -17526,7 +17352,7 @@
             "name": "taskId",
             "required": true,
             "schema": {
-              "pattern": "^TK[0-9a-f]{32}$",
+              "pattern": "^TK(.*)$",
               "type": "string"
             }
           }
@@ -17588,7 +17414,7 @@
                       ],
                       "properties": {
                         "taskId": {
-                          "pattern": "^TK[0-9a-f]{32}$",
+                          "pattern": "^TK(.*)$",
                           "type": "string"
                         },
                         "revision": {
@@ -18050,7 +17876,7 @@
             "name": "taskId",
             "required": true,
             "schema": {
-              "pattern": "^TK[0-9a-f]{32}$",
+              "pattern": "^TK(.*)$",
               "type": "string"
             }
           }
@@ -18079,7 +17905,7 @@
                       ],
                       "properties": {
                         "taskId": {
-                          "pattern": "^TK[0-9a-f]{32}$",
+                          "pattern": "^TK(.*)$",
                           "type": "string"
                         },
                         "revision": {
@@ -18541,7 +18367,7 @@
             "name": "taskId",
             "required": true,
             "schema": {
-              "pattern": "^TK[0-9a-f]{32}$",
+              "pattern": "^TK(.*)$",
               "type": "string"
             }
           }
@@ -18562,7 +18388,7 @@
                 ],
                 "properties": {
                   "conversationId": {
-                    "pattern": "^CN[A-Za-z0-9_-]+$",
+                    "pattern": "^CN(.*)$",
                     "type": "string"
                   }
                 }
@@ -18589,7 +18415,7 @@
                       ],
                       "properties": {
                         "taskId": {
-                          "pattern": "^TK[0-9a-f]{32}$",
+                          "pattern": "^TK(.*)$",
                           "type": "string"
                         },
                         "revision": {
@@ -19051,7 +18877,7 @@
             "name": "taskId",
             "required": true,
             "schema": {
-              "pattern": "^TK[0-9a-f]{32}$",
+              "pattern": "^TK(.*)$",
               "type": "string"
             }
           }
@@ -19072,7 +18898,7 @@
                 ],
                 "properties": {
                   "conversationId": {
-                    "pattern": "^CN[A-Za-z0-9_-]+$",
+                    "pattern": "^CN(.*)$",
                     "type": "string"
                   }
                 }
@@ -19099,7 +18925,7 @@
                       ],
                       "properties": {
                         "taskId": {
-                          "pattern": "^TK[0-9a-f]{32}$",
+                          "pattern": "^TK(.*)$",
                           "type": "string"
                         },
                         "revision": {
@@ -19561,7 +19387,7 @@
             "name": "taskId",
             "required": true,
             "schema": {
-              "pattern": "^TK[0-9a-f]{32}$",
+              "pattern": "^TK(.*)$",
               "type": "string"
             }
           }
@@ -19590,7 +19416,7 @@
                       ],
                       "properties": {
                         "taskId": {
-                          "pattern": "^TK[0-9a-f]{32}$",
+                          "pattern": "^TK(.*)$",
                           "type": "string"
                         },
                         "revision": {
@@ -20052,7 +19878,7 @@
             "name": "taskId",
             "required": true,
             "schema": {
-              "pattern": "^TK[0-9a-f]{32}$",
+              "pattern": "^TK(.*)$",
               "type": "string"
             }
           }
@@ -20074,7 +19900,7 @@
                 ],
                 "properties": {
                   "userId": {
-                    "pattern": "^US[A-Za-z0-9_:-]+$",
+                    "pattern": "^US(.*)$",
                     "type": "string"
                   }
                 }
@@ -20101,7 +19927,7 @@
                       ],
                       "properties": {
                         "taskId": {
-                          "pattern": "^TK[0-9a-f]{32}$",
+                          "pattern": "^TK(.*)$",
                           "type": "string"
                         },
                         "revision": {
@@ -20563,7 +20389,7 @@
             "name": "taskId",
             "required": true,
             "schema": {
-              "pattern": "^TK[0-9a-f]{32}$",
+              "pattern": "^TK(.*)$",
               "type": "string"
             }
           }
@@ -20585,7 +20411,7 @@
                 ],
                 "properties": {
                   "userId": {
-                    "pattern": "^US[A-Za-z0-9_:-]+$",
+                    "pattern": "^US(.*)$",
                     "type": "string"
                   }
                 }
@@ -20612,7 +20438,7 @@
                       ],
                       "properties": {
                         "taskId": {
-                          "pattern": "^TK[0-9a-f]{32}$",
+                          "pattern": "^TK(.*)$",
                           "type": "string"
                         },
                         "revision": {
@@ -21074,7 +20900,7 @@
             "name": "taskId",
             "required": true,
             "schema": {
-              "pattern": "^TK[0-9a-f]{32}$",
+              "pattern": "^TK(.*)$",
               "type": "string"
             }
           }
@@ -21123,7 +20949,7 @@
                       ],
                       "properties": {
                         "taskId": {
-                          "pattern": "^TK[0-9a-f]{32}$",
+                          "pattern": "^TK(.*)$",
                           "type": "string"
                         },
                         "revision": {
@@ -21585,7 +21411,7 @@
             "name": "taskId",
             "required": true,
             "schema": {
-              "pattern": "^TK[0-9a-f]{32}$",
+              "pattern": "^TK(.*)$",
               "type": "string"
             }
           }
@@ -21614,7 +21440,7 @@
                       ],
                       "properties": {
                         "taskId": {
-                          "pattern": "^TK[0-9a-f]{32}$",
+                          "pattern": "^TK(.*)$",
                           "type": "string"
                         },
                         "revision": {
@@ -22130,7 +21956,7 @@
                             "examples": [
                               "US123abc"
                             ],
-                            "pattern": "^US[A-Za-z0-9_:-]+$",
+                            "pattern": "^US(.*)$",
                             "type": "string",
                             "example": "US123abc"
                           },
@@ -22625,7 +22451,7 @@
               "examples": [
                 "US123abc"
               ],
-              "pattern": "^US[A-Za-z0-9_:-]+$",
+              "pattern": "^US(.*)$",
               "type": "string"
             },
             "example": "US123abc"
@@ -22665,7 +22491,7 @@
                           "examples": [
                             "US123abc"
                           ],
-                          "pattern": "^US[A-Za-z0-9_:-]+$",
+                          "pattern": "^US(.*)$",
                           "type": "string",
                           "example": "US123abc"
                         },
@@ -23145,7 +22971,7 @@
               "examples": [
                 "U55wgP5I5"
               ],
-              "pattern": "^US[A-Za-z0-9_:-]+$",
+              "pattern": "^US(.*)$",
               "type": "string"
             },
             "example": "U55wgP5I5"
@@ -23193,7 +23019,7 @@
                                 "examples": [
                                   "WHabcd1234"
                                 ],
-                                "pattern": "^WH[0-9a-fA-F]{12}4[0-9a-fA-F]{19}$",
+                                "pattern": "^WH(.*)$",
                                 "type": "string",
                                 "example": "WHabcd1234"
                               },
@@ -23202,7 +23028,7 @@
                                 "examples": [
                                   "US123abc"
                                 ],
-                                "pattern": "^US[A-Za-z0-9_:-]+$",
+                                "pattern": "^US(.*)$",
                                 "type": "string",
                                 "example": "US123abc"
                               },
@@ -23211,7 +23037,7 @@
                                 "examples": [
                                   "OR1223abc"
                                 ],
-                                "pattern": "^OR[A-Za-z0-9_-]+$",
+                                "pattern": "^OR(.*)$",
                                 "type": "string",
                                 "example": "OR1223abc"
                               },
@@ -23318,7 +23144,7 @@
                                   {
                                     "type": "array",
                                     "items": {
-                                      "pattern": "^PN[A-Za-z0-9_-]+$",
+                                      "pattern": "^PN(.*)$",
                                       "type": "string"
                                     }
                                   },
@@ -23355,7 +23181,7 @@
                                 "examples": [
                                   "WHabcd1234"
                                 ],
-                                "pattern": "^WH[0-9a-fA-F]{12}4[0-9a-fA-F]{19}$",
+                                "pattern": "^WH(.*)$",
                                 "type": "string",
                                 "example": "WHabcd1234"
                               },
@@ -23364,7 +23190,7 @@
                                 "examples": [
                                   "US123abc"
                                 ],
-                                "pattern": "^US[A-Za-z0-9_:-]+$",
+                                "pattern": "^US(.*)$",
                                 "type": "string",
                                 "example": "US123abc"
                               },
@@ -23373,7 +23199,7 @@
                                 "examples": [
                                   "OR1223abc"
                                 ],
-                                "pattern": "^OR[A-Za-z0-9_-]+$",
+                                "pattern": "^OR(.*)$",
                                 "type": "string",
                                 "example": "OR1223abc"
                               },
@@ -23481,7 +23307,7 @@
                                   {
                                     "type": "array",
                                     "items": {
-                                      "pattern": "^PN[A-Za-z0-9_-]+$",
+                                      "pattern": "^PN(.*)$",
                                       "type": "string"
                                     }
                                   },
@@ -23518,7 +23344,7 @@
                                 "examples": [
                                   "WHabcd1234"
                                 ],
-                                "pattern": "^WH[0-9a-fA-F]{12}4[0-9a-fA-F]{19}$",
+                                "pattern": "^WH(.*)$",
                                 "type": "string",
                                 "example": "WHabcd1234"
                               },
@@ -23527,7 +23353,7 @@
                                 "examples": [
                                   "US123abc"
                                 ],
-                                "pattern": "^US[A-Za-z0-9_:-]+$",
+                                "pattern": "^US(.*)$",
                                 "type": "string",
                                 "example": "US123abc"
                               },
@@ -23536,7 +23362,7 @@
                                 "examples": [
                                   "OR1223abc"
                                 ],
-                                "pattern": "^OR[A-Za-z0-9_-]+$",
+                                "pattern": "^OR(.*)$",
                                 "type": "string",
                                 "example": "OR1223abc"
                               },
@@ -23643,7 +23469,7 @@
                                   {
                                     "type": "array",
                                     "items": {
-                                      "pattern": "^PN[A-Za-z0-9_-]+$",
+                                      "pattern": "^PN(.*)$",
                                       "type": "string"
                                     }
                                   },
@@ -23680,7 +23506,7 @@
                                 "examples": [
                                   "WHabcd1234"
                                 ],
-                                "pattern": "^WH[0-9a-fA-F]{12}4[0-9a-fA-F]{19}$",
+                                "pattern": "^WH(.*)$",
                                 "type": "string",
                                 "example": "WHabcd1234"
                               },
@@ -23689,7 +23515,7 @@
                                 "examples": [
                                   "US123abc"
                                 ],
-                                "pattern": "^US[A-Za-z0-9_:-]+$",
+                                "pattern": "^US(.*)$",
                                 "type": "string",
                                 "example": "US123abc"
                               },
@@ -23698,7 +23524,7 @@
                                 "examples": [
                                   "OR1223abc"
                                 ],
-                                "pattern": "^OR[A-Za-z0-9_-]+$",
+                                "pattern": "^OR(.*)$",
                                 "type": "string",
                                 "example": "OR1223abc"
                               },
@@ -23805,7 +23631,7 @@
                                   {
                                     "type": "array",
                                     "items": {
-                                      "pattern": "^PN[A-Za-z0-9_-]+$",
+                                      "pattern": "^PN(.*)$",
                                       "type": "string"
                                     }
                                   },
@@ -23842,7 +23668,7 @@
                                 "examples": [
                                   "WHabcd1234"
                                 ],
-                                "pattern": "^WH[0-9a-fA-F]{12}4[0-9a-fA-F]{19}$",
+                                "pattern": "^WH(.*)$",
                                 "type": "string",
                                 "example": "WHabcd1234"
                               },
@@ -23851,7 +23677,7 @@
                                 "examples": [
                                   "US123abc"
                                 ],
-                                "pattern": "^US[A-Za-z0-9_:-]+$",
+                                "pattern": "^US(.*)$",
                                 "type": "string",
                                 "example": "US123abc"
                               },
@@ -23860,7 +23686,7 @@
                                 "examples": [
                                   "OR1223abc"
                                 ],
-                                "pattern": "^OR[A-Za-z0-9_-]+$",
+                                "pattern": "^OR(.*)$",
                                 "type": "string",
                                 "example": "OR1223abc"
                               },
@@ -24359,7 +24185,7 @@
               "examples": [
                 "WH12345"
               ],
-              "pattern": "^WH[0-9a-fA-F]{12}4[0-9a-fA-F]{19}$",
+              "pattern": "^WH(.*)$",
               "type": "string"
             },
             "example": "WH12345"
@@ -24405,7 +24231,7 @@
                               "examples": [
                                 "WHabcd1234"
                               ],
-                              "pattern": "^WH[0-9a-fA-F]{12}4[0-9a-fA-F]{19}$",
+                              "pattern": "^WH(.*)$",
                               "type": "string",
                               "example": "WHabcd1234"
                             },
@@ -24414,7 +24240,7 @@
                               "examples": [
                                 "US123abc"
                               ],
-                              "pattern": "^US[A-Za-z0-9_:-]+$",
+                              "pattern": "^US(.*)$",
                               "type": "string",
                               "example": "US123abc"
                             },
@@ -24423,7 +24249,7 @@
                               "examples": [
                                 "OR1223abc"
                               ],
-                              "pattern": "^OR[A-Za-z0-9_-]+$",
+                              "pattern": "^OR(.*)$",
                               "type": "string",
                               "example": "OR1223abc"
                             },
@@ -24530,7 +24356,7 @@
                                 {
                                   "type": "array",
                                   "items": {
-                                    "pattern": "^PN[A-Za-z0-9_-]+$",
+                                    "pattern": "^PN(.*)$",
                                     "type": "string"
                                   }
                                 },
@@ -24567,7 +24393,7 @@
                               "examples": [
                                 "WHabcd1234"
                               ],
-                              "pattern": "^WH[0-9a-fA-F]{12}4[0-9a-fA-F]{19}$",
+                              "pattern": "^WH(.*)$",
                               "type": "string",
                               "example": "WHabcd1234"
                             },
@@ -24576,7 +24402,7 @@
                               "examples": [
                                 "US123abc"
                               ],
-                              "pattern": "^US[A-Za-z0-9_:-]+$",
+                              "pattern": "^US(.*)$",
                               "type": "string",
                               "example": "US123abc"
                             },
@@ -24585,7 +24411,7 @@
                               "examples": [
                                 "OR1223abc"
                               ],
-                              "pattern": "^OR[A-Za-z0-9_-]+$",
+                              "pattern": "^OR(.*)$",
                               "type": "string",
                               "example": "OR1223abc"
                             },
@@ -24693,7 +24519,7 @@
                                 {
                                   "type": "array",
                                   "items": {
-                                    "pattern": "^PN[A-Za-z0-9_-]+$",
+                                    "pattern": "^PN(.*)$",
                                     "type": "string"
                                   }
                                 },
@@ -24730,7 +24556,7 @@
                               "examples": [
                                 "WHabcd1234"
                               ],
-                              "pattern": "^WH[0-9a-fA-F]{12}4[0-9a-fA-F]{19}$",
+                              "pattern": "^WH(.*)$",
                               "type": "string",
                               "example": "WHabcd1234"
                             },
@@ -24739,7 +24565,7 @@
                               "examples": [
                                 "US123abc"
                               ],
-                              "pattern": "^US[A-Za-z0-9_:-]+$",
+                              "pattern": "^US(.*)$",
                               "type": "string",
                               "example": "US123abc"
                             },
@@ -24748,7 +24574,7 @@
                               "examples": [
                                 "OR1223abc"
                               ],
-                              "pattern": "^OR[A-Za-z0-9_-]+$",
+                              "pattern": "^OR(.*)$",
                               "type": "string",
                               "example": "OR1223abc"
                             },
@@ -24855,7 +24681,7 @@
                                 {
                                   "type": "array",
                                   "items": {
-                                    "pattern": "^PN[A-Za-z0-9_-]+$",
+                                    "pattern": "^PN(.*)$",
                                     "type": "string"
                                   }
                                 },
@@ -24892,7 +24718,7 @@
                               "examples": [
                                 "WHabcd1234"
                               ],
-                              "pattern": "^WH[0-9a-fA-F]{12}4[0-9a-fA-F]{19}$",
+                              "pattern": "^WH(.*)$",
                               "type": "string",
                               "example": "WHabcd1234"
                             },
@@ -24901,7 +24727,7 @@
                               "examples": [
                                 "US123abc"
                               ],
-                              "pattern": "^US[A-Za-z0-9_:-]+$",
+                              "pattern": "^US(.*)$",
                               "type": "string",
                               "example": "US123abc"
                             },
@@ -24910,7 +24736,7 @@
                               "examples": [
                                 "OR1223abc"
                               ],
-                              "pattern": "^OR[A-Za-z0-9_-]+$",
+                              "pattern": "^OR(.*)$",
                               "type": "string",
                               "example": "OR1223abc"
                             },
@@ -25017,7 +24843,7 @@
                                 {
                                   "type": "array",
                                   "items": {
-                                    "pattern": "^PN[A-Za-z0-9_-]+$",
+                                    "pattern": "^PN(.*)$",
                                     "type": "string"
                                   }
                                 },
@@ -25054,7 +24880,7 @@
                               "examples": [
                                 "WHabcd1234"
                               ],
-                              "pattern": "^WH[0-9a-fA-F]{12}4[0-9a-fA-F]{19}$",
+                              "pattern": "^WH(.*)$",
                               "type": "string",
                               "example": "WHabcd1234"
                             },
@@ -25063,7 +24889,7 @@
                               "examples": [
                                 "US123abc"
                               ],
-                              "pattern": "^US[A-Za-z0-9_:-]+$",
+                              "pattern": "^US(.*)$",
                               "type": "string",
                               "example": "US123abc"
                             },
@@ -25072,7 +24898,7 @@
                               "examples": [
                                 "OR1223abc"
                               ],
-                              "pattern": "^OR[A-Za-z0-9_-]+$",
+                              "pattern": "^OR(.*)$",
                               "type": "string",
                               "example": "OR1223abc"
                             },
@@ -25568,7 +25394,7 @@
               "examples": [
                 "WH12345"
               ],
-              "pattern": "^WH[0-9a-fA-F]{12}4[0-9a-fA-F]{19}$",
+              "pattern": "^WH(.*)$",
               "type": "string"
             },
             "example": "WH12345"
@@ -26008,7 +25834,7 @@
                       {
                         "type": "array",
                         "items": {
-                          "pattern": "^PN[A-Za-z0-9_-]+$",
+                          "pattern": "^PN(.*)$",
                           "type": "string"
                         }
                       },
@@ -26048,7 +25874,7 @@
                     "examples": [
                       "US123abc"
                     ],
-                    "pattern": "^US[A-Za-z0-9_:-]+$",
+                    "pattern": "^US(.*)$",
                     "type": "string",
                     "example": "US123abc"
                   }
@@ -26090,7 +25916,7 @@
                           "examples": [
                             "WHabcd1234"
                           ],
-                          "pattern": "^WH[0-9a-fA-F]{12}4[0-9a-fA-F]{19}$",
+                          "pattern": "^WH(.*)$",
                           "type": "string",
                           "example": "WHabcd1234"
                         },
@@ -26099,7 +25925,7 @@
                           "examples": [
                             "US123abc"
                           ],
-                          "pattern": "^US[A-Za-z0-9_:-]+$",
+                          "pattern": "^US(.*)$",
                           "type": "string",
                           "example": "US123abc"
                         },
@@ -26108,7 +25934,7 @@
                           "examples": [
                             "OR1223abc"
                           ],
-                          "pattern": "^OR[A-Za-z0-9_-]+$",
+                          "pattern": "^OR(.*)$",
                           "type": "string",
                           "example": "OR1223abc"
                         },
@@ -26215,7 +26041,7 @@
                             {
                               "type": "array",
                               "items": {
-                                "pattern": "^PN[A-Za-z0-9_-]+$",
+                                "pattern": "^PN(.*)$",
                                 "type": "string"
                               }
                             },
@@ -26662,7 +26488,7 @@
                       {
                         "type": "array",
                         "items": {
-                          "pattern": "^PN[A-Za-z0-9_-]+$",
+                          "pattern": "^PN(.*)$",
                           "type": "string"
                         }
                       },
@@ -26680,7 +26506,7 @@
                     "examples": [
                       "US123abc"
                     ],
-                    "pattern": "^US[A-Za-z0-9_:-]+$",
+                    "pattern": "^US(.*)$",
                     "type": "string",
                     "example": "US123abc"
                   },
@@ -26743,7 +26569,7 @@
                           "examples": [
                             "WHabcd1234"
                           ],
-                          "pattern": "^WH[0-9a-fA-F]{12}4[0-9a-fA-F]{19}$",
+                          "pattern": "^WH(.*)$",
                           "type": "string",
                           "example": "WHabcd1234"
                         },
@@ -26752,7 +26578,7 @@
                           "examples": [
                             "US123abc"
                           ],
-                          "pattern": "^US[A-Za-z0-9_:-]+$",
+                          "pattern": "^US(.*)$",
                           "type": "string",
                           "example": "US123abc"
                         },
@@ -26761,7 +26587,7 @@
                           "examples": [
                             "OR1223abc"
                           ],
-                          "pattern": "^OR[A-Za-z0-9_-]+$",
+                          "pattern": "^OR(.*)$",
                           "type": "string",
                           "example": "OR1223abc"
                         },
@@ -26869,7 +26695,7 @@
                             {
                               "type": "array",
                               "items": {
-                                "pattern": "^PN[A-Za-z0-9_-]+$",
+                                "pattern": "^PN(.*)$",
                                 "type": "string"
                               }
                             },
@@ -27314,7 +27140,7 @@
                       {
                         "type": "array",
                         "items": {
-                          "pattern": "^PN[A-Za-z0-9_-]+$",
+                          "pattern": "^PN(.*)$",
                           "type": "string"
                         }
                       },
@@ -27354,7 +27180,7 @@
                     "examples": [
                       "US123abc"
                     ],
-                    "pattern": "^US[A-Za-z0-9_:-]+$",
+                    "pattern": "^US(.*)$",
                     "type": "string",
                     "example": "US123abc"
                   }
@@ -27396,7 +27222,7 @@
                           "examples": [
                             "WHabcd1234"
                           ],
-                          "pattern": "^WH[0-9a-fA-F]{12}4[0-9a-fA-F]{19}$",
+                          "pattern": "^WH(.*)$",
                           "type": "string",
                           "example": "WHabcd1234"
                         },
@@ -27405,7 +27231,7 @@
                           "examples": [
                             "US123abc"
                           ],
-                          "pattern": "^US[A-Za-z0-9_:-]+$",
+                          "pattern": "^US(.*)$",
                           "type": "string",
                           "example": "US123abc"
                         },
@@ -27414,7 +27240,7 @@
                           "examples": [
                             "OR1223abc"
                           ],
-                          "pattern": "^OR[A-Za-z0-9_-]+$",
+                          "pattern": "^OR(.*)$",
                           "type": "string",
                           "example": "OR1223abc"
                         },
@@ -27521,7 +27347,7 @@
                             {
                               "type": "array",
                               "items": {
-                                "pattern": "^PN[A-Za-z0-9_-]+$",
+                                "pattern": "^PN(.*)$",
                                 "type": "string"
                               }
                             },
@@ -27962,7 +27788,7 @@
                       {
                         "type": "array",
                         "items": {
-                          "pattern": "^PN[A-Za-z0-9_-]+$",
+                          "pattern": "^PN(.*)$",
                           "type": "string"
                         }
                       },
@@ -28001,7 +27827,7 @@
                     "examples": [
                       "US123abc"
                     ],
-                    "pattern": "^US[A-Za-z0-9_:-]+$",
+                    "pattern": "^US(.*)$",
                     "type": "string",
                     "example": "US123abc"
                   }
@@ -28043,7 +27869,7 @@
                           "examples": [
                             "WHabcd1234"
                           ],
-                          "pattern": "^WH[0-9a-fA-F]{12}4[0-9a-fA-F]{19}$",
+                          "pattern": "^WH(.*)$",
                           "type": "string",
                           "example": "WHabcd1234"
                         },
@@ -28052,7 +27878,7 @@
                           "examples": [
                             "US123abc"
                           ],
-                          "pattern": "^US[A-Za-z0-9_:-]+$",
+                          "pattern": "^US(.*)$",
                           "type": "string",
                           "example": "US123abc"
                         },
@@ -28061,7 +27887,7 @@
                           "examples": [
                             "OR1223abc"
                           ],
-                          "pattern": "^OR[A-Za-z0-9_-]+$",
+                          "pattern": "^OR(.*)$",
                           "type": "string",
                           "example": "OR1223abc"
                         },
@@ -28168,7 +27994,7 @@
                             {
                               "type": "array",
                               "items": {
-                                "pattern": "^PN[A-Za-z0-9_-]+$",
+                                "pattern": "^PN(.*)$",
                                 "type": "string"
                               }
                             },
@@ -28590,7 +28416,7 @@
                   "examples": [
                     "PN123bc"
                   ],
-                  "pattern": "^PN[A-Za-z0-9_-]+$",
+                  "pattern": "^PN(.*)$",
                   "type": "string",
                   "example": "PN123bc"
                 },
@@ -28753,7 +28579,7 @@
                             "examples": [
                               "US123abc"
                             ],
-                            "pattern": "^US[A-Za-z0-9_:-]+$",
+                            "pattern": "^US(.*)$",
                             "type": "string",
                             "example": "US123abc"
                           },
@@ -28785,7 +28611,7 @@
                             "examples": [
                               "GRcei8k90o"
                             ],
-                            "pattern": "^GR[A-Za-z0-9_-]+$",
+                            "pattern": "^GR(.*)$",
                             "type": "string",
                             "example": "GRcei8k90o"
                           }
