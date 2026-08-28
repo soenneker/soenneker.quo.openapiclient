@@ -99,7 +99,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Contacts.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200Response>(requestInfo, global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Modify an existing contact in your Quo workspace using the contact&apos;s unique identifier.
+        /// Modify an existing contact in your Quo workspace using the contact&apos;s unique identifier. This endpoint replaces the contact rather than merging into it: any defaultFields.emails, defaultFields.phoneNumbers or customFields you omit from the request body is deleted on the contact. Always send the full set of fields, emails, and phone numbers you want the contact to have, not just the ones you&apos;re changing.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1200Response"/></returns>
         /// <param name="body">The request body</param>
@@ -172,7 +172,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Contacts.Item
             return requestInfo;
         }
         /// <summary>
-        /// Modify an existing contact in your Quo workspace using the contact&apos;s unique identifier.
+        /// Modify an existing contact in your Quo workspace using the contact&apos;s unique identifier. This endpoint replaces the contact rather than merging into it: any defaultFields.emails, defaultFields.phoneNumbers or customFields you omit from the request body is deleted on the contact. Always send the full set of fields, emails, and phone numbers you want the contact to have, not just the ones you&apos;re changing.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

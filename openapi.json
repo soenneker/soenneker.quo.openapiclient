@@ -857,11 +857,13 @@
                           "forwardedTo": {
                             "anyOf": [
                               {
-                                "description": "The phone number or Quo user ID to which the call was forwarded. Null if the call was not forwarded.",
+                                "description": "The phone number, Quo phone number ID, or Quo user ID to which the call was forwarded. Null if the call was not forwarded.",
                                 "examples": [
+                                  "+15555555555",
+                                  "PN123abc",
                                   "US123abc"
                                 ],
-                                "example": "US123abc",
+                                "example": "+15555555555",
                                 "anyOf": [
                                   {
                                     "description": "A phone number in E.164 format, including the country code.",
@@ -871,6 +873,10 @@
                                     "pattern": "^\\+[1-9]\\d{1,14}$",
                                     "type": "string",
                                     "example": "+15555555555"
+                                  },
+                                  {
+                                    "pattern": "^PN(.*)$",
+                                    "type": "string"
                                   },
                                   {
                                     "pattern": "^US(.*)$",
@@ -1574,11 +1580,13 @@
                         "forwardedTo": {
                           "anyOf": [
                             {
-                              "description": "The phone number or Quo user ID to which the call was forwarded. Null if the call was not forwarded.",
+                              "description": "The phone number, Quo phone number ID, or Quo user ID to which the call was forwarded. Null if the call was not forwarded.",
                               "examples": [
+                                "+15555555555",
+                                "PN123abc",
                                 "US123abc"
                               ],
-                              "example": "US123abc",
+                              "example": "+15555555555",
                               "anyOf": [
                                 {
                                   "description": "A phone number in E.164 format, including the country code.",
@@ -1588,6 +1596,10 @@
                                   "pattern": "^\\+[1-9]\\d{1,14}$",
                                   "type": "string",
                                   "example": "+15555555555"
+                                },
+                                {
+                                  "pattern": "^PN(.*)$",
+                                  "type": "string"
                                 },
                                 {
                                   "pattern": "^US(.*)$",
@@ -7325,7 +7337,7 @@
           "Contacts"
         ],
         "summary": "Update a contact by ID",
-        "description": "Modify an existing contact in your Quo workspace using the contact's unique identifier.",
+        "description": "Modify an existing contact in your Quo workspace using the contact's unique identifier. This endpoint replaces the contact rather than merging into it: any defaultFields.emails, defaultFields.phoneNumbers or customFields you omit from the request body is deleted on the contact. Always send the full set of fields, emails, and phone numbers you want the contact to have, not just the ones you're changing.",
         "operationId": "updateContactById_v1",
         "parameters": [
           {
@@ -7445,7 +7457,7 @@
                             "value": {
                               "anyOf": [
                                 {
-                                  "description": "The contact's email address. If set to null during a patch operation, it will remove the email item from the contact.",
+                                  "description": "The contact's email address. Setting this to null removes the email item from the contact. Note that omitting the `emails` array entirely from a PATCH request also removes all of the contact's existing emails, since this endpoint replaces the full list rather than merging into it.",
                                   "examples": [
                                     "info@openphone.com"
                                   ],
@@ -7518,7 +7530,7 @@
                             "value": {
                               "anyOf": [
                                 {
-                                  "description": "The contact's phone number. If set to null during a patch operation, it will remove the phone number item from the contact.",
+                                  "description": "The contact's phone number. Setting this to null removes the phone number item from the contact. Note that omitting the `phoneNumbers` array entirely from a PATCH request also removes all of the contact's existing phone numbers, since this endpoint replaces the full list rather than merging into it.",
                                   "examples": [
                                     "+15555555555"
                                   ],
@@ -11690,7 +11702,7 @@
                     }
                   },
                   "userId": {
-                    "description": "The unique identifier of the Quo user sending the message. If not provided, defaults to the phone number owner.",
+                    "description": "The unique identifier of the Quo user sending the message. If not provided, the message is attributed to the owner of the phone number it is sent from. The sending user must be a member of the phone number the message is sent from.",
                     "examples": [
                       "US123abc"
                     ],
@@ -21900,7 +21912,7 @@
           {
             "in": "query",
             "name": "maxResults",
-            "required": true,
+            "required": false,
             "schema": {
               "description": "Maximum number of results to return per page.",
               "default": 10,

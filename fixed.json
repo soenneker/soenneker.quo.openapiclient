@@ -1086,7 +1086,7 @@
           "Contacts"
         ],
         "summary": "Update a contact by ID",
-        "description": "Modify an existing contact in your Quo workspace using the contact\u0027s unique identifier.",
+        "description": "Modify an existing contact in your Quo workspace using the contact\u0027s unique identifier. This endpoint replaces the contact rather than merging into it: any defaultFields.emails, defaultFields.phoneNumbers or customFields you omit from the request body is deleted on the contact. Always send the full set of fields, emails, and phone numbers you want the contact to have, not just the ones you\u0027re changing.",
         "operationId": "UpdateContactByIdV1",
         "parameters": [
           {
@@ -3728,7 +3728,6 @@
           {
             "name": "maxResults",
             "in": "query",
-            "required": true,
             "schema": {
               "maximum": 50,
               "minimum": 1,
@@ -8633,7 +8632,7 @@
             ],
             "pattern": "^US(.*)$",
             "type": "string",
-            "description": "The unique identifier of the Quo user sending the message. If not provided, defaults to the phone number owner.",
+            "description": "The unique identifier of the Quo user sending the message. If not provided, the message is attributed to the owner of the phone number it is sent from. The sending user must be a member of the phone number the message is sent from.",
             "example": "US123abc"
           },
           "setInboxStatus": {
@@ -14814,6 +14813,8 @@
         "anyOf": [
           {
             "examples": [
+              "\u002B15555555555",
+              "PN123abc",
               "US123abc"
             ],
             "type": "object",
@@ -14828,12 +14829,16 @@
                 "example": "\u002B15555555555"
               },
               {
+                "pattern": "^PN(.*)$",
+                "type": "string"
+              },
+              {
                 "pattern": "^US(.*)$",
                 "type": "string"
               }
             ],
-            "description": "The phone number or Quo user ID to which the call was forwarded. Null if the call was not forwarded.",
-            "example": "US123abc"
+            "description": "The phone number, Quo phone number ID, or Quo user ID to which the call was forwarded. Null if the call was not forwarded.",
+            "example": "\u002B15555555555"
           },
           {
             "type": "null"
@@ -14876,6 +14881,8 @@
         "anyOf": [
           {
             "examples": [
+              "\u002B15555555555",
+              "PN123abc",
               "US123abc"
             ],
             "type": "object",
@@ -14890,12 +14897,16 @@
                 "example": "\u002B15555555555"
               },
               {
+                "pattern": "^PN(.*)$",
+                "type": "string"
+              },
+              {
                 "pattern": "^US(.*)$",
                 "type": "string"
               }
             ],
-            "description": "The phone number or Quo user ID to which the call was forwarded. Null if the call was not forwarded.",
-            "example": "US123abc"
+            "description": "The phone number, Quo phone number ID, or Quo user ID to which the call was forwarded. Null if the call was not forwarded.",
+            "example": "\u002B15555555555"
           },
           {
             "type": "null"
@@ -24871,7 +24882,7 @@
               "null",
               "string"
             ],
-            "description": "The contact\u0027s email address. If set to null during a patch operation, it will remove the email item from the contact.",
+            "description": "The contact\u0027s email address. Setting this to null removes the email item from the contact. Note that omitting the \u0060emails\u0060 array entirely from a PATCH request also removes all of the contact\u0027s existing emails, since this endpoint replaces the full list rather than merging into it.",
             "example": "info@openphone.com"
           },
           "id": {
@@ -24904,7 +24915,7 @@
               "null",
               "string"
             ],
-            "description": "The contact\u0027s phone number. If set to null during a patch operation, it will remove the phone number item from the contact.",
+            "description": "The contact\u0027s phone number. Setting this to null removes the phone number item from the contact. Note that omitting the \u0060phoneNumbers\u0060 array entirely from a PATCH request also removes all of the contact\u0027s existing phone numbers, since this endpoint replaces the full list rather than merging into it.",
             "example": "\u002B15555555555"
           },
           "id": {

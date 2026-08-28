@@ -30,7 +30,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The contact&apos;s email address. If set to null during a patch operation, it will remove the email item from the contact.</summary>
+        /// <summary>The contact&apos;s email address. Setting this to null removes the email item from the contact. Note that omitting the `emails` array entirely from a PATCH request also removes all of the contact&apos;s existing emails, since this endpoint replaces the full list rather than merging into it.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Value { get; set; }

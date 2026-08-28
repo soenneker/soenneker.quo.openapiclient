@@ -30,7 +30,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The contact&apos;s phone number. If set to null during a patch operation, it will remove the phone number item from the contact.</summary>
+        /// <summary>The contact&apos;s phone number. Setting this to null removes the phone number item from the contact. Note that omitting the `phoneNumbers` array entirely from a PATCH request also removes all of the contact&apos;s existing phone numbers, since this endpoint replaces the full list rather than merging into it.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Value { get; set; }

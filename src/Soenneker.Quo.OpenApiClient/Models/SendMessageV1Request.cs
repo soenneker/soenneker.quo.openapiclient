@@ -49,7 +49,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
 #else
         public List<string> To { get; set; }
 #endif
-        /// <summary>The unique identifier of the Quo user sending the message. If not provided, defaults to the phone number owner.</summary>
+        /// <summary>The unique identifier of the Quo user sending the message. If not provided, the message is attributed to the owner of the phone number it is sent from. The sending user must be a member of the phone number the message is sent from.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UserId { get; set; }
