@@ -19,10 +19,10 @@ namespace Soenneker.Quo.OpenApiClient.Models
         /// <summary>Value defined for the multi select type custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1200ResponseDataCustomFieldsItemAllOf1Value? Value { get; set; }
+        public List<string>? Value { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1200ResponseDataCustomFieldsItemAllOf1Value Value { get; set; }
+        public List<string> Value { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1200ResponseDataCustomFieldsItemAllOf1"/> and sets the default values.
@@ -50,7 +50,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1200ResponseDataCustomFieldsItemAllOf1Type>(); } },
-                { "value", n => { Value = n.GetObjectValue<global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1200ResponseDataCustomFieldsItemAllOf1Value>(global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1200ResponseDataCustomFieldsItemAllOf1Value.CreateFromDiscriminatorValue); } },
+                { "value", n => { Value = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1200ResponseDataCustomFieldsItemAllOf1Type>("type", Type);
-            writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1200ResponseDataCustomFieldsItemAllOf1Value>("value", Value);
+            writer.WriteCollectionOfPrimitiveValues<string>("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

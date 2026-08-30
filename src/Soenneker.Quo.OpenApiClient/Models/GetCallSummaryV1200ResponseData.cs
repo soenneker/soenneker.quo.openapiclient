@@ -25,28 +25,28 @@ namespace Soenneker.Quo.OpenApiClient.Models
         /// <summary>The jobs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataJobsAnyOf1Item>? Jobs { get; set; }
+        public List<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataJobsItem>? Jobs { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataJobsAnyOf1Item> Jobs { get; set; }
+        public List<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataJobsItem> Jobs { get; set; }
 #endif
         /// <summary>The nextSteps property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataNextSteps? NextSteps { get; set; }
+        public List<string>? NextSteps { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataNextSteps NextSteps { get; set; }
+        public List<string> NextSteps { get; set; }
 #endif
         /// <summary>The status of the call summary.</summary>
         public global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataStatus? Status { get; set; }
         /// <summary>The summary property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataSummary? Summary { get; set; }
+        public List<string>? Summary { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataSummary Summary { get; set; }
+        public List<string> Summary { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseData"/> and sets the default values.
@@ -74,10 +74,10 @@ namespace Soenneker.Quo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "callId", n => { CallId = n.GetStringValue(); } },
-                { "jobs", n => { Jobs = n.GetCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataJobsAnyOf1Item>(global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataJobsAnyOf1Item.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "nextSteps", n => { NextSteps = n.GetObjectValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataNextSteps>(global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataNextSteps.CreateFromDiscriminatorValue); } },
+                { "jobs", n => { Jobs = n.GetCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataJobsItem>(global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataJobsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "nextSteps", n => { NextSteps = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataStatus>(); } },
-                { "summary", n => { Summary = n.GetObjectValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataSummary>(global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataSummary.CreateFromDiscriminatorValue); } },
+                { "summary", n => { Summary = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -88,10 +88,10 @@ namespace Soenneker.Quo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("callId", CallId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataJobsAnyOf1Item>("jobs", Jobs);
-            writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataNextSteps>("nextSteps", NextSteps);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataJobsItem>("jobs", Jobs);
+            writer.WriteCollectionOfPrimitiveValues<string>("nextSteps", NextSteps);
             writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataStatus>("status", Status);
-            writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataSummary>("summary", Summary);
+            writer.WriteCollectionOfPrimitiveValues<string>("summary", Summary);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

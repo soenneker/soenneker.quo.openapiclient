@@ -46,7 +46,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public global::Soenneker.Quo.OpenApiClient.Models.GetCallByIdV1200ResponseDataDirection? Direction { get; set; }
         /// <summary>The total duration of the call in seconds.</summary>
         public int? Duration { get; set; }
-        /// <summary>The forwardedFrom property</summary>
+        /// <summary>The phone number or Quo user ID from which the call was forwarded. Null if the call was not forwarded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Quo.OpenApiClient.Models.GetCallByIdV1200ResponseDataForwardedFrom? ForwardedFrom { get; set; }
@@ -54,7 +54,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
 #else
         public global::Soenneker.Quo.OpenApiClient.Models.GetCallByIdV1200ResponseDataForwardedFrom ForwardedFrom { get; set; }
 #endif
-        /// <summary>The forwardedTo property</summary>
+        /// <summary>The phone number, Quo phone number ID, or Quo user ID to which the call was forwarded. Null if the call was not forwarded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Quo.OpenApiClient.Models.GetCallByIdV1200ResponseDataForwardedTo? ForwardedTo { get; set; }

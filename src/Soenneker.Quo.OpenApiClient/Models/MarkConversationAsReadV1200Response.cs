@@ -14,7 +14,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The assignedTo property</summary>
+        /// <summary>The unique identifier of the user or system user the conversation is assigned to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsReadV1200ResponseAssignedTo? AssignedTo { get; set; }

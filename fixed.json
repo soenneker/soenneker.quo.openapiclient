@@ -1304,7 +1304,6 @@
                 "\u002B15555555555",
                 "PN123abc"
               ],
-              "type": "object",
               "anyOf": [
                 {
                   "examples": [
@@ -1338,7 +1337,6 @@
               "minItems": 1,
               "type": "array",
               "items": {
-                "type": "object",
                 "anyOf": [
                   {
                     "examples": [
@@ -14778,196 +14776,116 @@
         "description": "Placeholder schema for path example refs"
       },
       "ListCallsV1200ResponseDataItemForwardedFrom": {
-        "type": "object",
+        "type": [
+          "null",
+          "object"
+        ],
         "anyOf": [
           {
             "examples": [
-              "US123abc"
+              "\u002B15555555555"
             ],
-            "type": "object",
-            "anyOf": [
-              {
-                "examples": [
-                  "\u002B15555555555"
-                ],
-                "pattern": "^\\\u002B[1-9]\\d{1,14}$",
-                "type": "string",
-                "description": "A phone number in E.164 format, including the country code.",
-                "example": "\u002B15555555555"
-              },
-              {
-                "pattern": "^US(.*)$",
-                "type": "string"
-              }
-            ],
-            "description": "The phone number or Quo user ID from which the call was forwarded. Null if the call was not forwarded.",
-            "example": "US123abc"
+            "pattern": "^\\\u002B[1-9]\\d{1,14}$",
+            "type": "string",
+            "description": "A phone number in E.164 format, including the country code.",
+            "example": "\u002B15555555555"
           },
           {
-            "type": "null"
+            "pattern": "^US(.*)$",
+            "type": "string"
           }
-        ]
+        ],
+        "description": "The phone number or Quo user ID from which the call was forwarded. Null if the call was not forwarded.",
+        "example": "US123abc"
       },
       "ListCallsV1200ResponseDataItemForwardedTo": {
-        "type": "object",
+        "type": [
+          "null",
+          "object"
+        ],
         "anyOf": [
           {
             "examples": [
-              "\u002B15555555555",
-              "PN123abc",
-              "US123abc"
+              "\u002B15555555555"
             ],
-            "type": "object",
-            "anyOf": [
-              {
-                "examples": [
-                  "\u002B15555555555"
-                ],
-                "pattern": "^\\\u002B[1-9]\\d{1,14}$",
-                "type": "string",
-                "description": "A phone number in E.164 format, including the country code.",
-                "example": "\u002B15555555555"
-              },
-              {
-                "pattern": "^PN(.*)$",
-                "type": "string"
-              },
-              {
-                "pattern": "^US(.*)$",
-                "type": "string"
-              }
-            ],
-            "description": "The phone number, Quo phone number ID, or Quo user ID to which the call was forwarded. Null if the call was not forwarded.",
+            "pattern": "^\\\u002B[1-9]\\d{1,14}$",
+            "type": "string",
+            "description": "A phone number in E.164 format, including the country code.",
             "example": "\u002B15555555555"
           },
           {
-            "type": "null"
+            "pattern": "^PN(.*)$",
+            "type": "string"
+          },
+          {
+            "pattern": "^US(.*)$",
+            "type": "string"
           }
-        ]
+        ],
+        "description": "The phone number, Quo phone number ID, or Quo user ID to which the call was forwarded. Null if the call was not forwarded.",
+        "example": "\u002B15555555555"
       },
       "GetCallByIdV1200ResponseDataForwardedFrom": {
-        "type": "object",
+        "type": [
+          "null",
+          "object"
+        ],
         "anyOf": [
           {
             "examples": [
-              "US123abc"
+              "\u002B15555555555"
             ],
-            "type": "object",
-            "anyOf": [
-              {
-                "examples": [
-                  "\u002B15555555555"
-                ],
-                "pattern": "^\\\u002B[1-9]\\d{1,14}$",
-                "type": "string",
-                "description": "A phone number in E.164 format, including the country code.",
-                "example": "\u002B15555555555"
-              },
-              {
-                "pattern": "^US(.*)$",
-                "type": "string"
-              }
-            ],
-            "description": "The phone number or Quo user ID from which the call was forwarded. Null if the call was not forwarded.",
-            "example": "US123abc"
-          },
-          {
-            "type": "null"
-          }
-        ]
-      },
-      "GetCallByIdV1200ResponseDataForwardedTo": {
-        "type": "object",
-        "anyOf": [
-          {
-            "examples": [
-              "\u002B15555555555",
-              "PN123abc",
-              "US123abc"
-            ],
-            "type": "object",
-            "anyOf": [
-              {
-                "examples": [
-                  "\u002B15555555555"
-                ],
-                "pattern": "^\\\u002B[1-9]\\d{1,14}$",
-                "type": "string",
-                "description": "A phone number in E.164 format, including the country code.",
-                "example": "\u002B15555555555"
-              },
-              {
-                "pattern": "^PN(.*)$",
-                "type": "string"
-              },
-              {
-                "pattern": "^US(.*)$",
-                "type": "string"
-              }
-            ],
-            "description": "The phone number, Quo phone number ID, or Quo user ID to which the call was forwarded. Null if the call was not forwarded.",
+            "pattern": "^\\\u002B[1-9]\\d{1,14}$",
+            "type": "string",
+            "description": "A phone number in E.164 format, including the country code.",
             "example": "\u002B15555555555"
           },
           {
-            "type": "null"
+            "pattern": "^US(.*)$",
+            "type": "string"
           }
-        ]
+        ],
+        "description": "The phone number or Quo user ID from which the call was forwarded. Null if the call was not forwarded.",
+        "example": "US123abc"
       },
-      "GetCallSummaryV1200ResponseDataNextSteps": {
+      "GetCallByIdV1200ResponseDataForwardedTo": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "anyOf": [
+          {
+            "examples": [
+              "\u002B15555555555"
+            ],
+            "pattern": "^\\\u002B[1-9]\\d{1,14}$",
+            "type": "string",
+            "description": "A phone number in E.164 format, including the country code.",
+            "example": "\u002B15555555555"
+          },
+          {
+            "pattern": "^PN(.*)$",
+            "type": "string"
+          },
+          {
+            "pattern": "^US(.*)$",
+            "type": "string"
+          }
+        ],
+        "description": "The phone number, Quo phone number ID, or Quo user ID to which the call was forwarded. Null if the call was not forwarded.",
+        "example": "\u002B15555555555"
+      },
+      "GetCallSummaryV1200ResponseDataJobsItemResultDataItemValue": {
         "type": "object",
         "anyOf": [
           {
-            "type": "array",
-            "items": {
-              "examples": [
-                "Bring an umbrella."
-              ],
-              "type": "string",
-              "example": "Bring an umbrella."
-            }
+            "type": "string"
           },
           {
-            "type": "null"
-          }
-        ]
-      },
-      "GetCallSummaryV1200ResponseDataSummary": {
-        "type": "object",
-        "anyOf": [
-          {
-            "type": "array",
-            "items": {
-              "examples": [
-                "You talked about the weather."
-              ],
-              "type": "string",
-              "example": "You talked about the weather."
-            }
+            "type": "number"
           },
           {
-            "type": "null"
-          }
-        ]
-      },
-      "GetCallSummaryV1200ResponseDataJobs": {
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GetCallSummaryV1200ResponseDataJobsAnyOf1"
-          },
-          {
-            "type": "null"
-          }
-        ]
-      },
-      "GetCallTranscriptV1200ResponseDataDialogue": {
-        "type": "object",
-        "anyOf": [
-          {
-            "$ref": "#/components/schemas/GetCallTranscriptV1200ResponseDataDialogueAnyOf1"
-          },
-          {
-            "type": "null"
+            "type": "boolean"
           }
         ]
       },
@@ -15156,112 +15074,76 @@
         }
       },
       "ListConversationsV1200ResponseDataItemAssignedTo": {
-        "type": "object",
+        "type": [
+          "null",
+          "object"
+        ],
         "anyOf": [
           {
-            "examples": [
-              "US123abc",
-              "SYU123abc"
-            ],
-            "type": "object",
-            "anyOf": [
-              {
-                "pattern": "^US(.*)$",
-                "type": "string"
-              },
-              {
-                "pattern": "^SYU(.*)$",
-                "type": "string"
-              }
-            ],
-            "description": "The unique identifier of the user or system user the conversation is assigned to.",
-            "example": "US123abc"
+            "pattern": "^US(.*)$",
+            "type": "string"
           },
           {
-            "type": "null"
+            "pattern": "^SYU(.*)$",
+            "type": "string"
           }
-        ]
+        ],
+        "description": "The unique identifier of the user or system user the conversation is assigned to.",
+        "example": "US123abc"
       },
       "MarkConversationAsReadV1200ResponseAssignedTo": {
-        "type": "object",
+        "type": [
+          "null",
+          "object"
+        ],
         "anyOf": [
           {
-            "examples": [
-              "US123abc",
-              "SYU123abc"
-            ],
-            "type": "object",
-            "anyOf": [
-              {
-                "pattern": "^US(.*)$",
-                "type": "string"
-              },
-              {
-                "pattern": "^SYU(.*)$",
-                "type": "string"
-              }
-            ],
-            "description": "The unique identifier of the user or system user the conversation is assigned to.",
-            "example": "US123abc"
+            "pattern": "^US(.*)$",
+            "type": "string"
           },
           {
-            "type": "null"
+            "pattern": "^SYU(.*)$",
+            "type": "string"
           }
-        ]
+        ],
+        "description": "The unique identifier of the user or system user the conversation is assigned to.",
+        "example": "US123abc"
       },
       "MarkConversationAsDoneV1200ResponseAssignedTo": {
-        "type": "object",
+        "type": [
+          "null",
+          "object"
+        ],
         "anyOf": [
           {
-            "examples": [
-              "US123abc",
-              "SYU123abc"
-            ],
-            "type": "object",
-            "anyOf": [
-              {
-                "pattern": "^US(.*)$",
-                "type": "string"
-              },
-              {
-                "pattern": "^SYU(.*)$",
-                "type": "string"
-              }
-            ],
-            "description": "The unique identifier of the user or system user the conversation is assigned to.",
-            "example": "US123abc"
+            "pattern": "^US(.*)$",
+            "type": "string"
           },
           {
-            "type": "null"
+            "pattern": "^SYU(.*)$",
+            "type": "string"
           }
-        ]
+        ],
+        "description": "The unique identifier of the user or system user the conversation is assigned to.",
+        "example": "US123abc"
       },
       "MarkConversationAsOpenV1200ResponseAssignedTo": {
-        "type": "object",
+        "type": [
+          "null",
+          "object"
+        ],
         "anyOf": [
           {
-            "examples": [
-              "US123abc",
-              "SYU123abc"
-            ],
-            "type": "object",
-            "anyOf": [
-              {
-                "pattern": "^US(.*)$",
-                "type": "string"
-              },
-              {
-                "pattern": "^SYU(.*)$",
-                "type": "string"
-              }
-            ],
-            "description": "The unique identifier of the user or system user the conversation is assigned to.",
-            "example": "US123abc"
+            "pattern": "^US(.*)$",
+            "type": "string"
           },
           {
-            "type": "null"
+            "pattern": "^SYU(.*)$",
+            "type": "string"
           }
-        ]
+        ],
+        "description": "The unique identifier of the user or system user the conversation is assigned to.",
+        "example": "US123abc"
       },
       "SendMessageV1RequestFrom": {
         "examples": [
@@ -15305,86 +15187,66 @@
         ]
       },
       "ListTasksV1200ResponseDataItemAssignedTo": {
-        "type": "object",
+        "type": [
+          "null",
+          "object"
+        ],
         "anyOf": [
           {
-            "type": "object",
-            "anyOf": [
-              {
-                "pattern": "^US(.*)$",
-                "type": "string"
-              },
-              {
-                "pattern": "^SYU(.*)$",
-                "type": "string"
-              }
-            ]
+            "pattern": "^US(.*)$",
+            "type": "string"
           },
           {
-            "type": "null"
+            "pattern": "^SYU(.*)$",
+            "type": "string"
           }
         ]
       },
       "ListTasksV1200ResponseDataItemAssignedBy": {
-        "type": "object",
+        "type": [
+          "null",
+          "object"
+        ],
         "anyOf": [
           {
-            "type": "object",
-            "anyOf": [
-              {
-                "pattern": "^US(.*)$",
-                "type": "string"
-              },
-              {
-                "pattern": "^SYU(.*)$",
-                "type": "string"
-              }
-            ]
+            "pattern": "^US(.*)$",
+            "type": "string"
           },
           {
-            "type": "null"
+            "pattern": "^SYU(.*)$",
+            "type": "string"
           }
         ]
       },
       "GetTaskByIdV1200ResponseDataAssignedTo": {
-        "type": "object",
+        "type": [
+          "null",
+          "object"
+        ],
         "anyOf": [
           {
-            "type": "object",
-            "anyOf": [
-              {
-                "pattern": "^US(.*)$",
-                "type": "string"
-              },
-              {
-                "pattern": "^SYU(.*)$",
-                "type": "string"
-              }
-            ]
+            "pattern": "^US(.*)$",
+            "type": "string"
           },
           {
-            "type": "null"
+            "pattern": "^SYU(.*)$",
+            "type": "string"
           }
         ]
       },
       "GetTaskByIdV1200ResponseDataAssignedBy": {
-        "type": "object",
+        "type": [
+          "null",
+          "object"
+        ],
         "anyOf": [
           {
-            "type": "object",
-            "anyOf": [
-              {
-                "pattern": "^US(.*)$",
-                "type": "string"
-              },
-              {
-                "pattern": "^SYU(.*)$",
-                "type": "string"
-              }
-            ]
+            "pattern": "^US(.*)$",
+            "type": "string"
           },
           {
-            "type": "null"
+            "pattern": "^SYU(.*)$",
+            "type": "string"
           }
         ]
       },
@@ -15633,18 +15495,6 @@
         ],
         "description": "The unique identifiers of the phone numbers associated with the webhook."
       },
-      "GetCallSummaryV1200ResponseDataJobsAnyOf1": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/GetCallSummaryV1200ResponseDataJobsAnyOf1Item"
-        }
-      },
-      "GetCallTranscriptV1200ResponseDataDialogueAnyOf1": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/GetCallTranscriptV1200ResponseDataDialogueAnyOf1Item"
-        }
-      },
       "CreateContactV1RequestCustomFieldsItemAllOf1": {
         "required": [
           "value"
@@ -15652,7 +15502,24 @@
         "type": "object",
         "properties": {
           "value": {
-            "$ref": "#/components/schemas/CreateContactV1RequestCustomFieldsItemAllOf1Value"
+            "examples": [
+              [
+                "option1",
+                "option2"
+              ]
+            ],
+            "type": [
+              "null",
+              "array"
+            ],
+            "items": {
+              "type": "string"
+            },
+            "description": "Value defined for the multi select type custom field.",
+            "example": [
+              "option1",
+              "option2"
+            ]
           }
         }
       },
@@ -15667,7 +15534,24 @@
             "$ref": "#/components/schemas/CreateContactV1201ResponseDataCustomFieldsItemAllOf1Type"
           },
           "value": {
-            "$ref": "#/components/schemas/CreateContactV1201ResponseDataCustomFieldsItemAllOf1Value"
+            "examples": [
+              [
+                "option1",
+                "option2"
+              ]
+            ],
+            "type": [
+              "null",
+              "array"
+            ],
+            "items": {
+              "type": "string"
+            },
+            "description": "Value defined for the multi select type custom field.",
+            "example": [
+              "option1",
+              "option2"
+            ]
           }
         }
       },
@@ -15682,7 +15566,24 @@
             "$ref": "#/components/schemas/ListContactsV1200ResponseDataItemCustomFieldsItemAllOf1Type"
           },
           "value": {
-            "$ref": "#/components/schemas/ListContactsV1200ResponseDataItemCustomFieldsItemAllOf1Value"
+            "examples": [
+              [
+                "option1",
+                "option2"
+              ]
+            ],
+            "type": [
+              "null",
+              "array"
+            ],
+            "items": {
+              "type": "string"
+            },
+            "description": "Value defined for the multi select type custom field.",
+            "example": [
+              "option1",
+              "option2"
+            ]
           }
         }
       },
@@ -15697,7 +15598,24 @@
             "$ref": "#/components/schemas/GetContactByIdV1200ResponseDataCustomFieldsItemAllOf1Type"
           },
           "value": {
-            "$ref": "#/components/schemas/GetContactByIdV1200ResponseDataCustomFieldsItemAllOf1Value"
+            "examples": [
+              [
+                "option1",
+                "option2"
+              ]
+            ],
+            "type": [
+              "null",
+              "array"
+            ],
+            "items": {
+              "type": "string"
+            },
+            "description": "Value defined for the multi select type custom field.",
+            "example": [
+              "option1",
+              "option2"
+            ]
           }
         }
       },
@@ -15708,7 +15626,24 @@
         "type": "object",
         "properties": {
           "value": {
-            "$ref": "#/components/schemas/UpdateContactByIdV1RequestCustomFieldsItemAllOf1Value"
+            "examples": [
+              [
+                "option1",
+                "option2"
+              ]
+            ],
+            "type": [
+              "null",
+              "array"
+            ],
+            "items": {
+              "type": "string"
+            },
+            "description": "Value defined for the multi select type custom field.",
+            "example": [
+              "option1",
+              "option2"
+            ]
           }
         }
       },
@@ -15723,173 +15658,26 @@
             "$ref": "#/components/schemas/UpdateContactByIdV1200ResponseDataCustomFieldsItemAllOf1Type"
           },
           "value": {
-            "$ref": "#/components/schemas/UpdateContactByIdV1200ResponseDataCustomFieldsItemAllOf1Value"
+            "examples": [
+              [
+                "option1",
+                "option2"
+              ]
+            ],
+            "type": [
+              "null",
+              "array"
+            ],
+            "items": {
+              "type": "string"
+            },
+            "description": "Value defined for the multi select type custom field.",
+            "example": [
+              "option1",
+              "option2"
+            ]
           }
         }
-      },
-      "GetCallSummaryV1200ResponseDataJobsAnyOf1ItemResultDataItemValue": {
-        "type": "object",
-        "anyOf": [
-          {
-            "type": "string"
-          },
-          {
-            "type": "number"
-          },
-          {
-            "type": "boolean"
-          }
-        ]
-      },
-      "CreateContactV1RequestCustomFieldsItemAllOf1Value": {
-        "examples": [
-          [
-            "option1",
-            "option2"
-          ]
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          {
-            "type": "null"
-          }
-        ],
-        "description": "Value defined for the multi select type custom field.",
-        "example": [
-          "option1",
-          "option2"
-        ]
-      },
-      "CreateContactV1201ResponseDataCustomFieldsItemAllOf1Value": {
-        "examples": [
-          [
-            "option1",
-            "option2"
-          ]
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          {
-            "type": "null"
-          }
-        ],
-        "description": "Value defined for the multi select type custom field.",
-        "example": [
-          "option1",
-          "option2"
-        ]
-      },
-      "ListContactsV1200ResponseDataItemCustomFieldsItemAllOf1Value": {
-        "examples": [
-          [
-            "option1",
-            "option2"
-          ]
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          {
-            "type": "null"
-          }
-        ],
-        "description": "Value defined for the multi select type custom field.",
-        "example": [
-          "option1",
-          "option2"
-        ]
-      },
-      "GetContactByIdV1200ResponseDataCustomFieldsItemAllOf1Value": {
-        "examples": [
-          [
-            "option1",
-            "option2"
-          ]
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          {
-            "type": "null"
-          }
-        ],
-        "description": "Value defined for the multi select type custom field.",
-        "example": [
-          "option1",
-          "option2"
-        ]
-      },
-      "UpdateContactByIdV1RequestCustomFieldsItemAllOf1Value": {
-        "examples": [
-          [
-            "option1",
-            "option2"
-          ]
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          {
-            "type": "null"
-          }
-        ],
-        "description": "Value defined for the multi select type custom field.",
-        "example": [
-          "option1",
-          "option2"
-        ]
-      },
-      "UpdateContactByIdV1200ResponseDataCustomFieldsItemAllOf1Value": {
-        "examples": [
-          [
-            "option1",
-            "option2"
-          ]
-        ],
-        "type": "object",
-        "anyOf": [
-          {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          {
-            "type": "null"
-          }
-        ],
-        "description": "Value defined for the multi select type custom field.",
-        "example": [
-          "option1",
-          "option2"
-        ]
       },
       "GetCallRecordingsV1200ResponseDataItem": {
         "required": [
@@ -16604,16 +16392,42 @@
             "example": "ACea724hac8c30465bcbcff0b76e4c1c7b"
           },
           "nextSteps": {
-            "$ref": "#/components/schemas/GetCallSummaryV1200ResponseDataNextSteps"
+            "type": [
+              "null",
+              "array"
+            ],
+            "items": {
+              "examples": [
+                "Bring an umbrella."
+              ],
+              "type": "string",
+              "example": "Bring an umbrella."
+            }
           },
           "status": {
             "$ref": "#/components/schemas/GetCallSummaryV1200ResponseDataStatus"
           },
           "summary": {
-            "$ref": "#/components/schemas/GetCallSummaryV1200ResponseDataSummary"
+            "type": [
+              "null",
+              "array"
+            ],
+            "items": {
+              "examples": [
+                "You talked about the weather."
+              ],
+              "type": "string",
+              "example": "You talked about the weather."
+            }
           },
           "jobs": {
-            "$ref": "#/components/schemas/GetCallSummaryV1200ResponseDataJobs"
+            "type": [
+              "null",
+              "array"
+            ],
+            "items": {
+              "$ref": "#/components/schemas/GetCallSummaryV1200ResponseDataJobsItem"
+            }
           }
         }
       },
@@ -16755,7 +16569,13 @@
             "example": "2022-01-01T00:00:00Z"
           },
           "dialogue": {
-            "$ref": "#/components/schemas/GetCallTranscriptV1200ResponseDataDialogue"
+            "type": [
+              "null",
+              "array"
+            ],
+            "items": {
+              "$ref": "#/components/schemas/GetCallTranscriptV1200ResponseDataDialogueItem"
+            }
           },
           "duration": {
             "examples": [
@@ -23827,78 +23647,6 @@
           }
         }
       },
-      "GetCallSummaryV1200ResponseDataJobsAnyOf1Item": {
-        "required": [
-          "icon",
-          "name",
-          "result"
-        ],
-        "type": "object",
-        "properties": {
-          "icon": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "result": {
-            "$ref": "#/components/schemas/GetCallSummaryV1200ResponseDataJobsAnyOf1ItemResult"
-          }
-        }
-      },
-      "GetCallTranscriptV1200ResponseDataDialogueAnyOf1Item": {
-        "required": [
-          "content",
-          "start",
-          "end",
-          "identifier",
-          "userId"
-        ],
-        "type": "object",
-        "properties": {
-          "content": {
-            "examples": [
-              "Hello, world!"
-            ],
-            "type": "string",
-            "description": "The transcribed text of a specific dialogue segment.",
-            "example": "Hello, world!"
-          },
-          "start": {
-            "examples": [
-              5.123456
-            ],
-            "type": "number",
-            "description": "The start time of the dialogue segment in seconds, relative to the beginning of the call.",
-            "example": 5.123456
-          },
-          "end": {
-            "examples": [
-              10.123456
-            ],
-            "type": "number",
-            "description": "The end time of the dialogue segment in seconds, relative to the beginning of the call.",
-            "example": 10.123456
-          },
-          "identifier": {
-            "type": [
-              "null",
-              "string"
-            ],
-            "description": "The phone number of the participant who spoke during this dialogue segment.",
-            "example": "\u002B19876543210"
-          },
-          "userId": {
-            "pattern": "^US(.*)$",
-            "type": [
-              "null",
-              "string"
-            ],
-            "description": "The unique identifier of the Quo user who spoke during this dialogue segment. Null for external participants or if user identification is not available.",
-            "example": "US123abc"
-          }
-        }
-      },
       "GetCallRecordingsV1400ResponseErrorsItemValue": {
         "type": "object"
       },
@@ -24109,6 +23857,25 @@
           }
         }
       },
+      "GetCallSummaryV1200ResponseDataJobsItem": {
+        "required": [
+          "icon",
+          "name",
+          "result"
+        ],
+        "type": "object",
+        "properties": {
+          "icon": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "result": {
+            "$ref": "#/components/schemas/GetCallSummaryV1200ResponseDataJobsItemResult"
+          }
+        }
+      },
       "GetCallSummaryV1400ResponseErrorsItemValue": {
         "type": "object"
       },
@@ -24176,6 +23943,59 @@
         "properties": {
           "type": {
             "type": "string"
+          }
+        }
+      },
+      "GetCallTranscriptV1200ResponseDataDialogueItem": {
+        "required": [
+          "content",
+          "start",
+          "end",
+          "identifier",
+          "userId"
+        ],
+        "type": "object",
+        "properties": {
+          "content": {
+            "examples": [
+              "Hello, world!"
+            ],
+            "type": "string",
+            "description": "The transcribed text of a specific dialogue segment.",
+            "example": "Hello, world!"
+          },
+          "start": {
+            "examples": [
+              5.123456
+            ],
+            "type": "number",
+            "description": "The start time of the dialogue segment in seconds, relative to the beginning of the call.",
+            "example": 5.123456
+          },
+          "end": {
+            "examples": [
+              10.123456
+            ],
+            "type": "number",
+            "description": "The end time of the dialogue segment in seconds, relative to the beginning of the call.",
+            "example": 10.123456
+          },
+          "identifier": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "The phone number of the participant who spoke during this dialogue segment.",
+            "example": "\u002B19876543210"
+          },
+          "userId": {
+            "pattern": "^US(.*)$",
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "The unique identifier of the Quo user who spoke during this dialogue segment. Null for external participants or if user identification is not available.",
+            "example": "US123abc"
           }
         }
       },
@@ -27702,7 +27522,7 @@
           }
         }
       },
-      "GetCallSummaryV1200ResponseDataJobsAnyOf1ItemResult": {
+      "GetCallSummaryV1200ResponseDataJobsItemResult": {
         "required": [
           "data"
         ],
@@ -27711,7 +27531,7 @@
           "data": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/GetCallSummaryV1200ResponseDataJobsAnyOf1ItemResultDataItem"
+              "$ref": "#/components/schemas/GetCallSummaryV1200ResponseDataJobsItemResultDataItem"
             }
           }
         }
@@ -28018,7 +27838,7 @@
           }
         }
       },
-      "GetCallSummaryV1200ResponseDataJobsAnyOf1ItemResultDataItem": {
+      "GetCallSummaryV1200ResponseDataJobsItemResultDataItem": {
         "required": [
           "name",
           "value"
@@ -28029,7 +27849,7 @@
             "type": "string"
           },
           "value": {
-            "$ref": "#/components/schemas/GetCallSummaryV1200ResponseDataJobsAnyOf1ItemResultDataItemValue"
+            "$ref": "#/components/schemas/GetCallSummaryV1200ResponseDataJobsItemResultDataItemValue"
           }
         }
       },

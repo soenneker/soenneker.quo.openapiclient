@@ -8,11 +8,15 @@ using System;
 namespace Soenneker.Quo.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="string"/>
+    /// Composed type wrapper for classes <see cref="bool"/>, <see cref="double"/>, <see cref="string"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ListTasksV1200ResponseDataItemAssignedBy : IComposedTypeWrapper, IParsable
+    public partial class GetCallSummaryV1200ResponseDataJobsItemResultDataItemValue : IComposedTypeWrapper, IParsable
     {
+        /// <summary>Composed type representation for type <see cref="bool"/></summary>
+        public bool? Boolean { get; set; }
+        /// <summary>Composed type representation for type <see cref="double"/></summary>
+        public double? Double { get; set; }
         /// <summary>Composed type representation for type <see cref="string"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -24,13 +28,21 @@ namespace Soenneker.Quo.OpenApiClient.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.ListTasksV1200ResponseDataItemAssignedBy"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataJobsItemResultDataItemValue"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Quo.OpenApiClient.Models.ListTasksV1200ResponseDataItemAssignedBy CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataJobsItemResultDataItemValue CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var result = new global::Soenneker.Quo.OpenApiClient.Models.ListTasksV1200ResponseDataItemAssignedBy();
-            if(parseNode.GetStringValue() is string stringValue)
+            var result = new global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataJobsItemResultDataItemValue();
+            if(parseNode.GetBoolValue() is bool booleanValue)
+            {
+                result.Boolean = booleanValue;
+            }
+            else if(parseNode.GetDoubleValue() is double doubleValue)
+            {
+                result.Double = doubleValue;
+            }
+            else if(parseNode.GetStringValue() is string stringValue)
             {
                 result.String = stringValue;
             }
@@ -51,7 +63,15 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            if(String != null)
+            if(Boolean != null)
+            {
+                writer.WriteBoolValue(null, Boolean);
+            }
+            else if(Double != null)
+            {
+                writer.WriteDoubleValue(null, Double);
+            }
+            else if(String != null)
             {
                 writer.WriteStringValue(null, String);
             }
