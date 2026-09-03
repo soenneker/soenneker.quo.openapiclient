@@ -671,6 +671,7 @@
                   ],
                   "properties": {
                     "data": {
+                      "description": "Array of items",
                       "type": "array",
                       "items": {
                         "additionalProperties": false,
@@ -924,6 +925,15 @@
                           },
                           "participants": {
                             "maxItems": 2,
+                            "description": "An array of phone numbers involved in the call, including the Quo number. Each number includes the country code and conforms to the E.164 format. Currently limited to one-to-one conversations.",
+                            "examples": [
+                              [
+                                "+15555555555"
+                              ]
+                            ],
+                            "example": [
+                              "+15555555555"
+                            ],
                             "type": "array",
                             "items": {
                               "description": "A phone number in E.164 format, including the country code.",
@@ -1647,6 +1657,15 @@
                         },
                         "participants": {
                           "maxItems": 2,
+                          "description": "An array of phone numbers involved in the call, including the Quo number. Each number includes the country code and conforms to the E.164 format. Currently limited to one-to-one conversations.",
+                          "examples": [
+                            [
+                              "+15555555555"
+                            ]
+                          ],
+                          "example": [
+                            "+15555555555"
+                          ],
                           "type": "array",
                           "items": {
                             "description": "A phone number in E.164 format, including the country code.",
@@ -2123,6 +2142,7 @@
                         "nextSteps": {
                           "anyOf": [
                             {
+                              "description": "An array of suggested next actions or follow-up items derived from the call content. Null if no next steps were identified or if no call summary is available.",
                               "type": "array",
                               "items": {
                                 "examples": [
@@ -2154,6 +2174,7 @@
                         "summary": {
                           "anyOf": [
                             {
+                              "description": "An array of statements that encapsulate the key points or main topics discussed during the call. For Sona-generated summaries, this includes structured Q&A pairs. Null if the summary is not yet generated or if no call summary is available.",
                               "type": "array",
                               "items": {
                                 "examples": [
@@ -2171,6 +2192,7 @@
                         "jobs": {
                           "anyOf": [
                             {
+                              "description": "Structured job results from Sona, Quo's AI voice assistant. Contains Q&A pairs, task completions, and other job-specific data collected during the call. Only present for calls handled by Sona.",
                               "type": "array",
                               "items": {
                                 "type": "object",
@@ -2670,6 +2692,7 @@
                         "dialogue": {
                           "anyOf": [
                             {
+                              "description": "An array of objects representing individual segments of the transcribed conversation. Null if the transcription is not available or in progress.",
                               "type": "array",
                               "items": {
                                 "type": "object",
@@ -5441,6 +5464,7 @@
                   ],
                   "properties": {
                     "data": {
+                      "description": "Array of items",
                       "type": "array",
                       "items": {
                         "type": "object",
@@ -9134,7 +9158,7 @@
         "tags": [
           "Conversations"
         ],
-        "summary": "List Conversations",
+        "summary": "List conversations",
         "description": "Fetch a paginated list of conversations of Quo conversations. Can be filtered by user and/or phone numbers. Defaults to all conversations in the Quo organization. Results are returned in descending order based on the most recent conversation.",
         "operationId": "listConversations_v1",
         "parameters": [
@@ -9326,6 +9350,7 @@
                   ],
                   "properties": {
                     "data": {
+                      "description": "Array of items",
                       "type": "array",
                       "items": {
                         "type": "object",
@@ -9454,13 +9479,16 @@
                             ]
                           },
                           "participants": {
+                            "description": "An array of phone numbers involved in the call, excluding your Quo number. Each number is either a phone number in E.164 format, a short code (5-6 digits, no country code), or a non-phone-number caller ID (`Anonymous`, `Blocked`, or `Restricted`).",
                             "type": "array",
                             "items": {
-                              "description": "A phone number in E.164 format, including the country code.",
+                              "description": "A phone number in E.164 format, a short code (5-6 digits, no country code), or a non-phone-number caller ID (`Anonymous`, `Blocked`, or `Restricted`).",
                               "examples": [
-                                "+15555555555"
+                                "+15555555555",
+                                "12345",
+                                "Anonymous"
                               ],
-                              "pattern": "^\\+[1-9]\\d{1,14}$",
+                              "pattern": "^(?:\\+[1-9]\\d{1,14}|\\d{5,6}|[aA](?:nonymous|NONYMOUS)|[bB](?:locked|LOCKED)|[rR](?:estricted|ESTRICTED))$",
                               "type": "string",
                               "example": "+15555555555"
                             }
@@ -10047,13 +10075,16 @@
                       ]
                     },
                     "participants": {
+                      "description": "An array of phone numbers involved in the call, excluding your Quo number. Each number is either a phone number in E.164 format, a short code (5-6 digits, no country code), or a non-phone-number caller ID (`Anonymous`, `Blocked`, or `Restricted`).",
                       "type": "array",
                       "items": {
-                        "description": "A phone number in E.164 format, including the country code.",
+                        "description": "A phone number in E.164 format, a short code (5-6 digits, no country code), or a non-phone-number caller ID (`Anonymous`, `Blocked`, or `Restricted`).",
                         "examples": [
-                          "+15555555555"
+                          "+15555555555",
+                          "12345",
+                          "Anonymous"
                         ],
-                        "pattern": "^\\+[1-9]\\d{1,14}$",
+                        "pattern": "^(?:\\+[1-9]\\d{1,14}|\\d{5,6}|[aA](?:nonymous|NONYMOUS)|[bB](?:locked|LOCKED)|[rR](?:estricted|ESTRICTED))$",
                         "type": "string",
                         "example": "+15555555555"
                       }
@@ -10623,13 +10654,16 @@
                       ]
                     },
                     "participants": {
+                      "description": "An array of phone numbers involved in the call, excluding your Quo number. Each number is either a phone number in E.164 format, a short code (5-6 digits, no country code), or a non-phone-number caller ID (`Anonymous`, `Blocked`, or `Restricted`).",
                       "type": "array",
                       "items": {
-                        "description": "A phone number in E.164 format, including the country code.",
+                        "description": "A phone number in E.164 format, a short code (5-6 digits, no country code), or a non-phone-number caller ID (`Anonymous`, `Blocked`, or `Restricted`).",
                         "examples": [
-                          "+15555555555"
+                          "+15555555555",
+                          "12345",
+                          "Anonymous"
                         ],
-                        "pattern": "^\\+[1-9]\\d{1,14}$",
+                        "pattern": "^(?:\\+[1-9]\\d{1,14}|\\d{5,6}|[aA](?:nonymous|NONYMOUS)|[bB](?:locked|LOCKED)|[rR](?:estricted|ESTRICTED))$",
                         "type": "string",
                         "example": "+15555555555"
                       }
@@ -11199,13 +11233,16 @@
                       ]
                     },
                     "participants": {
+                      "description": "An array of phone numbers involved in the call, excluding your Quo number. Each number is either a phone number in E.164 format, a short code (5-6 digits, no country code), or a non-phone-number caller ID (`Anonymous`, `Blocked`, or `Restricted`).",
                       "type": "array",
                       "items": {
-                        "description": "A phone number in E.164 format, including the country code.",
+                        "description": "A phone number in E.164 format, a short code (5-6 digits, no country code), or a non-phone-number caller ID (`Anonymous`, `Blocked`, or `Restricted`).",
                         "examples": [
-                          "+15555555555"
+                          "+15555555555",
+                          "12345",
+                          "Anonymous"
                         ],
-                        "pattern": "^\\+[1-9]\\d{1,14}$",
+                        "pattern": "^(?:\\+[1-9]\\d{1,14}|\\d{5,6}|[aA](?:nonymous|NONYMOUS)|[bB](?:locked|LOCKED)|[rR](?:estricted|ESTRICTED))$",
                         "type": "string",
                         "example": "+15555555555"
                       }
@@ -11682,6 +11719,15 @@
                   "to": {
                     "minItems": 1,
                     "maxItems": 10,
+                    "description": "Array of recipient phone numbers in E.164 format. Currently supports a maximum of 10 recipients",
+                    "examples": [
+                      [
+                        "+15555555555"
+                      ]
+                    ],
+                    "example": [
+                      "+15555555555"
+                    ],
                     "type": "array",
                     "items": {
                       "anyOf": [
@@ -11763,6 +11809,15 @@
                           "example": "AC123abc"
                         },
                         "to": {
+                          "description": "Array of recipient phone numbers in E.164 format. Includes your Quo number for incoming messages.",
+                          "examples": [
+                            [
+                              "+15555555555"
+                            ]
+                          ],
+                          "example": [
+                            "+15555555555"
+                          ],
                           "type": "array",
                           "items": {
                             "description": "A phone number in E.164 format, including the country code.",
@@ -11877,6 +11932,7 @@
                           "example": "2022-01-01T00:00:00Z"
                         },
                         "media": {
+                          "description": "Media attached to the message.",
                           "type": "array",
                           "items": {
                             "type": "object",
@@ -12144,7 +12200,7 @@
             }
           },
           "403": {
-            "description": "Not Phone Number User",
+            "description": "A2P Daily Message Cap Reached",
             "content": {
               "application/json": {
                 "schema": {
@@ -12162,7 +12218,7 @@
                       "type": "string"
                     },
                     "code": {
-                      "const": "0202403",
+                      "const": "0204403",
                       "type": "string"
                     },
                     "status": {
@@ -12174,7 +12230,7 @@
                       "type": "string"
                     },
                     "title": {
-                      "const": "Not Phone Number User",
+                      "const": "A2P 10DLC Daily Message Cap Reached",
                       "type": "string"
                     },
                     "trace": {
@@ -12212,7 +12268,7 @@
                       }
                     },
                     "description": {
-                      "const": "Not Phone Number User",
+                      "const": "A2P 10DLC Daily limit reached. For help increasing this limit, visit https://support.quo.com/help/submit-a-request",
                       "type": "string"
                     }
                   }
@@ -12507,6 +12563,7 @@
                   ],
                   "properties": {
                     "data": {
+                      "description": "Array of items",
                       "type": "array",
                       "items": {
                         "type": "object",
@@ -12534,6 +12591,15 @@
                             "example": "AC123abc"
                           },
                           "to": {
+                            "description": "Array of recipient phone numbers in E.164 format. Includes your Quo number for incoming messages.",
+                            "examples": [
+                              [
+                                "+15555555555"
+                              ]
+                            ],
+                            "example": [
+                              "+15555555555"
+                            ],
                             "type": "array",
                             "items": {
                               "description": "A phone number in E.164 format, including the country code.",
@@ -12648,6 +12714,7 @@
                             "example": "2022-01-01T00:00:00Z"
                           },
                           "media": {
+                            "description": "Media attached to the message.",
                             "type": "array",
                             "items": {
                               "type": "object",
@@ -12930,7 +12997,7 @@
             }
           },
           "403": {
-            "description": "Not Phone Number User",
+            "description": "A2P Daily Message Cap Reached",
             "content": {
               "application/json": {
                 "schema": {
@@ -12948,7 +13015,7 @@
                       "type": "string"
                     },
                     "code": {
-                      "const": "0202403",
+                      "const": "0204403",
                       "type": "string"
                     },
                     "status": {
@@ -12960,7 +13027,7 @@
                       "type": "string"
                     },
                     "title": {
-                      "const": "Not Phone Number User",
+                      "const": "A2P 10DLC Daily Message Cap Reached",
                       "type": "string"
                     },
                     "trace": {
@@ -12998,7 +13065,7 @@
                       }
                     },
                     "description": {
-                      "const": "Not Phone Number User",
+                      "const": "A2P 10DLC Daily limit reached. For help increasing this limit, visit https://support.quo.com/help/submit-a-request",
                       "type": "string"
                     }
                   }
@@ -13219,6 +13286,15 @@
                           "example": "AC123abc"
                         },
                         "to": {
+                          "description": "Array of recipient phone numbers in E.164 format. Includes your Quo number for incoming messages.",
+                          "examples": [
+                            [
+                              "+15555555555"
+                            ]
+                          ],
+                          "example": [
+                            "+15555555555"
+                          ],
                           "type": "array",
                           "items": {
                             "description": "A phone number in E.164 format, including the country code.",
@@ -13333,6 +13409,7 @@
                           "example": "2022-01-01T00:00:00Z"
                         },
                         "media": {
+                          "description": "Media attached to the message.",
                           "type": "array",
                           "items": {
                             "type": "object",
@@ -13600,7 +13677,7 @@
             }
           },
           "403": {
-            "description": "Not Phone Number User",
+            "description": "A2P Daily Message Cap Reached",
             "content": {
               "application/json": {
                 "schema": {
@@ -13618,7 +13695,7 @@
                       "type": "string"
                     },
                     "code": {
-                      "const": "0202403",
+                      "const": "0204403",
                       "type": "string"
                     },
                     "status": {
@@ -13630,7 +13707,7 @@
                       "type": "string"
                     },
                     "title": {
-                      "const": "Not Phone Number User",
+                      "const": "A2P 10DLC Daily Message Cap Reached",
                       "type": "string"
                     },
                     "trace": {
@@ -13668,7 +13745,7 @@
                       }
                     },
                     "description": {
-                      "const": "Not Phone Number User",
+                      "const": "A2P 10DLC Daily limit reached. For help increasing this limit, visit https://support.quo.com/help/submit-a-request",
                       "type": "string"
                     }
                   }
@@ -15028,6 +15105,7 @@
                   ],
                   "properties": {
                     "data": {
+                      "description": "Array of items",
                       "type": "array",
                       "items": {
                         "type": "object",
@@ -21949,6 +22027,7 @@
                   ],
                   "properties": {
                     "data": {
+                      "description": "Array of items",
                       "type": "array",
                       "items": {
                         "type": "object",
@@ -23133,6 +23212,15 @@
                                 ]
                               },
                               "events": {
+                                "description": "The event associated with the webhook.",
+                                "examples": [
+                                  [
+                                    "message.received"
+                                  ]
+                                ],
+                                "example": [
+                                  "message.received"
+                                ],
                                 "type": "array",
                                 "items": {
                                   "type": "string",
@@ -23295,6 +23383,15 @@
                                 ]
                               },
                               "events": {
+                                "description": "An event associated with the webhook.",
+                                "examples": [
+                                  [
+                                    "call.completed"
+                                  ]
+                                ],
+                                "example": [
+                                  "call.completed"
+                                ],
                                 "type": "array",
                                 "items": {
                                   "type": "string",
@@ -23459,6 +23556,15 @@
                               },
                               "events": {
                                 "minItems": 1,
+                                "description": "An event associated with the Webhook.",
+                                "examples": [
+                                  [
+                                    "call.summary.completed"
+                                  ]
+                                ],
+                                "example": [
+                                  "call.summary.completed"
+                                ],
                                 "type": "array",
                                 "items": {
                                   "type": "string",
@@ -23621,6 +23727,15 @@
                               },
                               "events": {
                                 "minItems": 1,
+                                "description": "The event associated with the webhook.",
+                                "examples": [
+                                  [
+                                    "call.transcript.completed"
+                                  ]
+                                ],
+                                "example": [
+                                  "call.transcript.completed"
+                                ],
                                 "type": "array",
                                 "items": {
                                   "type": "string",
@@ -23783,6 +23898,15 @@
                               },
                               "events": {
                                 "minItems": 1,
+                                "description": "An event associated with the webhook.",
+                                "examples": [
+                                  [
+                                    "contact.updated"
+                                  ]
+                                ],
+                                "example": [
+                                  "contact.updated"
+                                ],
                                 "type": "array",
                                 "items": {
                                   "type": "string",
@@ -23795,6 +23919,15 @@
                               "resourceIds": {
                                 "minItems": 1,
                                 "maxItems": 1,
+                                "description": "Contact webhooks are org-wide. This field is always [\"*\"].",
+                                "examples": [
+                                  [
+                                    "*"
+                                  ]
+                                ],
+                                "example": [
+                                  "*"
+                                ],
                                 "type": "array",
                                 "items": {
                                   "const": "*",
@@ -24345,6 +24478,15 @@
                               ]
                             },
                             "events": {
+                              "description": "The event associated with the webhook.",
+                              "examples": [
+                                [
+                                  "message.received"
+                                ]
+                              ],
+                              "example": [
+                                "message.received"
+                              ],
                               "type": "array",
                               "items": {
                                 "type": "string",
@@ -24507,6 +24649,15 @@
                               ]
                             },
                             "events": {
+                              "description": "An event associated with the webhook.",
+                              "examples": [
+                                [
+                                  "call.completed"
+                                ]
+                              ],
+                              "example": [
+                                "call.completed"
+                              ],
                               "type": "array",
                               "items": {
                                 "type": "string",
@@ -24671,6 +24822,15 @@
                             },
                             "events": {
                               "minItems": 1,
+                              "description": "An event associated with the Webhook.",
+                              "examples": [
+                                [
+                                  "call.summary.completed"
+                                ]
+                              ],
+                              "example": [
+                                "call.summary.completed"
+                              ],
                               "type": "array",
                               "items": {
                                 "type": "string",
@@ -24833,6 +24993,15 @@
                             },
                             "events": {
                               "minItems": 1,
+                              "description": "The event associated with the webhook.",
+                              "examples": [
+                                [
+                                  "call.transcript.completed"
+                                ]
+                              ],
+                              "example": [
+                                "call.transcript.completed"
+                              ],
                               "type": "array",
                               "items": {
                                 "type": "string",
@@ -24995,6 +25164,15 @@
                             },
                             "events": {
                               "minItems": 1,
+                              "description": "An event associated with the webhook.",
+                              "examples": [
+                                [
+                                  "contact.updated"
+                                ]
+                              ],
+                              "example": [
+                                "contact.updated"
+                              ],
                               "type": "array",
                               "items": {
                                 "type": "string",
@@ -25007,6 +25185,15 @@
                             "resourceIds": {
                               "minItems": 1,
                               "maxItems": 1,
+                              "description": "Contact webhooks are org-wide. This field is always [\"*\"].",
+                              "examples": [
+                                [
+                                  "*"
+                                ]
+                              ],
+                              "example": [
+                                "*"
+                              ],
                               "type": "array",
                               "items": {
                                 "const": "*",
@@ -25815,6 +26002,15 @@
                 ],
                 "properties": {
                   "events": {
+                    "description": "An event associated with the webhook.",
+                    "examples": [
+                      [
+                        "message.received"
+                      ]
+                    ],
+                    "example": [
+                      "message.received"
+                    ],
                     "type": "array",
                     "items": {
                       "type": "string",
@@ -26030,6 +26226,15 @@
                           ]
                         },
                         "events": {
+                          "description": "The event associated with the webhook.",
+                          "examples": [
+                            [
+                              "message.received"
+                            ]
+                          ],
+                          "example": [
+                            "message.received"
+                          ],
                           "type": "array",
                           "items": {
                             "type": "string",
@@ -26476,6 +26681,15 @@
                     "example": "https://example.com/"
                   },
                   "events": {
+                    "description": "An event associated with the webhook.",
+                    "examples": [
+                      [
+                        "call.completed"
+                      ]
+                    ],
+                    "example": [
+                      "call.completed"
+                    ],
                     "type": "array",
                     "items": {
                       "type": "string",
@@ -26683,6 +26897,15 @@
                           ]
                         },
                         "events": {
+                          "description": "An event associated with the webhook.",
+                          "examples": [
+                            [
+                              "call.completed"
+                            ]
+                          ],
+                          "example": [
+                            "call.completed"
+                          ],
                           "type": "array",
                           "items": {
                             "type": "string",
@@ -27122,6 +27345,15 @@
                 "properties": {
                   "events": {
                     "minItems": 1,
+                    "description": "An event associated with the webhook.",
+                    "examples": [
+                      [
+                        "call.summary.completed"
+                      ]
+                    ],
+                    "example": [
+                      "call.summary.completed"
+                    ],
                     "type": "array",
                     "items": {
                       "type": "string",
@@ -27337,6 +27569,15 @@
                         },
                         "events": {
                           "minItems": 1,
+                          "description": "An event associated with the Webhook.",
+                          "examples": [
+                            [
+                              "call.summary.completed"
+                            ]
+                          ],
+                          "example": [
+                            "call.summary.completed"
+                          ],
                           "type": "array",
                           "items": {
                             "type": "string",
@@ -27774,6 +28015,15 @@
                 "properties": {
                   "events": {
                     "minItems": 1,
+                    "description": "The event associated with the webhook.",
+                    "examples": [
+                      [
+                        "call.transcript.completed"
+                      ]
+                    ],
+                    "example": [
+                      "call.transcript.completed"
+                    ],
                     "type": "array",
                     "items": {
                       "type": "string",
@@ -27984,6 +28234,15 @@
                         },
                         "events": {
                           "minItems": 1,
+                          "description": "The event associated with the webhook.",
+                          "examples": [
+                            [
+                              "call.transcript.completed"
+                            ]
+                          ],
+                          "example": [
+                            "call.transcript.completed"
+                          ],
                           "type": "array",
                           "items": {
                             "type": "string",
@@ -28809,6 +29068,10 @@
     {
       "description": "Operations related to text messages",
       "name": "Messages"
+    },
+    {
+      "description": "Operations related to the organization",
+      "name": "Organization"
     },
     {
       "description": "Operations related to phone numbers",

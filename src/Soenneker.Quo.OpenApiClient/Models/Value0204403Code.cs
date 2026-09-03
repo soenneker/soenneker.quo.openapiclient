@@ -5,12 +5,12 @@ namespace Soenneker.Quo.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public enum Value0202403Code
+    public enum Value0204403Code
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "0202403")]
+        [EnumMember(Value = "0204403")]
         #pragma warning disable CS1591
-        Value0202403,
+        Value0204403,
         #pragma warning restore CS1591
     }
 }

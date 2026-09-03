@@ -22,7 +22,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
 #else
         public string CallId { get; set; }
 #endif
-        /// <summary>The jobs property</summary>
+        /// <summary>Structured job results from Sona, Quo&apos;s AI voice assistant. Contains Q&amp;A pairs, task completions, and other job-specific data collected during the call. Only present for calls handled by Sona.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataJobsItem>? Jobs { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
 #else
         public List<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataJobsItem> Jobs { get; set; }
 #endif
-        /// <summary>The nextSteps property</summary>
+        /// <summary>An array of suggested next actions or follow-up items derived from the call content. Null if no next steps were identified or if no call summary is available.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? NextSteps { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
 #endif
         /// <summary>The status of the call summary.</summary>
         public global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataStatus? Status { get; set; }
-        /// <summary>The summary property</summary>
+        /// <summary>An array of statements that encapsulate the key points or main topics discussed during the call. For Sona-generated summaries, this includes structured Q&amp;A pairs. Null if the summary is not yet generated or if no call summary is available.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Summary { get; set; }

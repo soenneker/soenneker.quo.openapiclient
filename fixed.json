@@ -1292,7 +1292,7 @@
         "tags": [
           "Conversations"
         ],
-        "summary": "List Conversations",
+        "summary": "List conversations",
         "description": "Fetch a paginated list of conversations of Quo conversations. Can be filtered by user and/or phone numbers. Defaults to all conversations in the Quo organization. Results are returned in descending order based on the most recent conversation.",
         "operationId": "ListConversationsV1",
         "parameters": [
@@ -1864,7 +1864,7 @@
             }
           },
           "403": {
-            "description": "Not Phone Number User",
+            "description": "A2P Daily Message Cap Reached",
             "content": {
               "application/json": {
                 "schema": {
@@ -2059,7 +2059,7 @@
             }
           },
           "403": {
-            "description": "Not Phone Number User",
+            "description": "A2P Daily Message Cap Reached",
             "content": {
               "application/json": {
                 "schema": {
@@ -2162,7 +2162,7 @@
             }
           },
           "403": {
-            "description": "Not Phone Number User",
+            "description": "A2P Daily Message Cap Reached",
             "content": {
               "application/json": {
                 "schema": {
@@ -5041,7 +5041,8 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ListCallsV1200ResponseDataItem"
-            }
+            },
+            "description": "Array of items"
           },
           "totalItems": {
             "type": "integer",
@@ -6516,7 +6517,8 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ListContactsV1200ResponseDataItem"
-            }
+            },
+            "description": "Array of items"
           },
           "totalItems": {
             "type": "integer",
@@ -7505,7 +7507,8 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ListConversationsV1200ResponseDataItem"
-            }
+            },
+            "description": "Array of items"
           },
           "totalItems": {
             "type": "integer",
@@ -7781,13 +7784,16 @@
             "type": "array",
             "items": {
               "examples": [
-                "\u002B15555555555"
+                "\u002B15555555555",
+                "12345",
+                "Anonymous"
               ],
-              "pattern": "^\\\u002B[1-9]\\d{1,14}$",
+              "pattern": "^(?:\\\u002B[1-9]\\d{1,14}|\\d{5,6}|[aA](?:nonymous|NONYMOUS)|[bB](?:locked|LOCKED)|[rR](?:estricted|ESTRICTED))$",
               "type": "string",
-              "description": "A phone number in E.164 format, including the country code.",
+              "description": "A phone number in E.164 format, a short code (5-6 digits, no country code), or a non-phone-number caller ID (\u0060Anonymous\u0060, \u0060Blocked\u0060, or \u0060Restricted\u0060).",
               "example": "\u002B15555555555"
-            }
+            },
+            "description": "An array of phone numbers involved in the call, excluding your Quo number. Each number is either a phone number in E.164 format, a short code (5-6 digits, no country code), or a non-phone-number caller ID (\u0060Anonymous\u0060, \u0060Blocked\u0060, or \u0060Restricted\u0060)."
           },
           "phoneNumberId": {
             "examples": [
@@ -8076,13 +8082,16 @@
             "type": "array",
             "items": {
               "examples": [
-                "\u002B15555555555"
+                "\u002B15555555555",
+                "12345",
+                "Anonymous"
               ],
-              "pattern": "^\\\u002B[1-9]\\d{1,14}$",
+              "pattern": "^(?:\\\u002B[1-9]\\d{1,14}|\\d{5,6}|[aA](?:nonymous|NONYMOUS)|[bB](?:locked|LOCKED)|[rR](?:estricted|ESTRICTED))$",
               "type": "string",
-              "description": "A phone number in E.164 format, including the country code.",
+              "description": "A phone number in E.164 format, a short code (5-6 digits, no country code), or a non-phone-number caller ID (\u0060Anonymous\u0060, \u0060Blocked\u0060, or \u0060Restricted\u0060).",
               "example": "\u002B15555555555"
-            }
+            },
+            "description": "An array of phone numbers involved in the call, excluding your Quo number. Each number is either a phone number in E.164 format, a short code (5-6 digits, no country code), or a non-phone-number caller ID (\u0060Anonymous\u0060, \u0060Blocked\u0060, or \u0060Restricted\u0060)."
           },
           "phoneNumberId": {
             "examples": [
@@ -8371,13 +8380,16 @@
             "type": "array",
             "items": {
               "examples": [
-                "\u002B15555555555"
+                "\u002B15555555555",
+                "12345",
+                "Anonymous"
               ],
-              "pattern": "^\\\u002B[1-9]\\d{1,14}$",
+              "pattern": "^(?:\\\u002B[1-9]\\d{1,14}|\\d{5,6}|[aA](?:nonymous|NONYMOUS)|[bB](?:locked|LOCKED)|[rR](?:estricted|ESTRICTED))$",
               "type": "string",
-              "description": "A phone number in E.164 format, including the country code.",
+              "description": "A phone number in E.164 format, a short code (5-6 digits, no country code), or a non-phone-number caller ID (\u0060Anonymous\u0060, \u0060Blocked\u0060, or \u0060Restricted\u0060).",
               "example": "\u002B15555555555"
-            }
+            },
+            "description": "An array of phone numbers involved in the call, excluding your Quo number. Each number is either a phone number in E.164 format, a short code (5-6 digits, no country code), or a non-phone-number caller ID (\u0060Anonymous\u0060, \u0060Blocked\u0060, or \u0060Restricted\u0060)."
           },
           "phoneNumberId": {
             "examples": [
@@ -8617,12 +8629,18 @@
             "$ref": "#/components/schemas/SendMessageV1RequestFrom"
           },
           "to": {
+            "examples": [
+              [
+                "\u002B15555555555"
+              ]
+            ],
             "maxItems": 10,
             "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/SendMessageV1RequestToItem"
-            }
+            },
+            "description": "Array of recipient phone numbers in E.164 format. Currently supports a maximum of 10 recipients"
           },
           "userId": {
             "examples": [
@@ -8780,7 +8798,7 @@
             "type": "string"
           },
           "code": {
-            "$ref": "#/components/schemas/Value0202403Code"
+            "$ref": "#/components/schemas/Value0204403Code"
           },
           "status": {
             "$ref": "#/components/schemas/Value403Status"
@@ -8789,7 +8807,7 @@
             "$ref": "#/components/schemas/HttpsColonSlashSlashQuoComDocsDocs"
           },
           "title": {
-            "$ref": "#/components/schemas/NotPhoneNumberUserTitle"
+            "$ref": "#/components/schemas/A2P10DlcDailyMessageCapReachedTitle"
           },
           "trace": {
             "type": "string"
@@ -8801,7 +8819,7 @@
             }
           },
           "description": {
-            "$ref": "#/components/schemas/NotPhoneNumberUserDescription"
+            "$ref": "#/components/schemas/A2P10DlcDailyLimitReachedForHelpIncreasingThisLimitCommaVisitHttpsColonSlashSlashSupportQuoComHelpSubmitARequestDescription"
           }
         }
       },
@@ -8889,7 +8907,8 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ListMessagesV1200ResponseDataItem"
-            }
+            },
+            "description": "Array of items"
           },
           "totalItems": {
             "type": "integer",
@@ -9034,7 +9053,7 @@
             "type": "string"
           },
           "code": {
-            "$ref": "#/components/schemas/Value0202403Code"
+            "$ref": "#/components/schemas/Value0204403Code"
           },
           "status": {
             "$ref": "#/components/schemas/Value403Status"
@@ -9043,7 +9062,7 @@
             "$ref": "#/components/schemas/HttpsColonSlashSlashQuoComDocsDocs"
           },
           "title": {
-            "$ref": "#/components/schemas/NotPhoneNumberUserTitle"
+            "$ref": "#/components/schemas/A2P10DlcDailyMessageCapReachedTitle"
           },
           "trace": {
             "type": "string"
@@ -9055,7 +9074,7 @@
             }
           },
           "description": {
-            "$ref": "#/components/schemas/NotPhoneNumberUserDescription"
+            "$ref": "#/components/schemas/A2P10DlcDailyLimitReachedForHelpIncreasingThisLimitCommaVisitHttpsColonSlashSlashSupportQuoComHelpSubmitARequestDescription"
           }
         }
       },
@@ -9273,7 +9292,7 @@
             "type": "string"
           },
           "code": {
-            "$ref": "#/components/schemas/Value0202403Code"
+            "$ref": "#/components/schemas/Value0204403Code"
           },
           "status": {
             "$ref": "#/components/schemas/Value403Status"
@@ -9282,7 +9301,7 @@
             "$ref": "#/components/schemas/HttpsColonSlashSlashQuoComDocsDocs"
           },
           "title": {
-            "$ref": "#/components/schemas/NotPhoneNumberUserTitle"
+            "$ref": "#/components/schemas/A2P10DlcDailyMessageCapReachedTitle"
           },
           "trace": {
             "type": "string"
@@ -9294,7 +9313,7 @@
             }
           },
           "description": {
-            "$ref": "#/components/schemas/NotPhoneNumberUserDescription"
+            "$ref": "#/components/schemas/A2P10DlcDailyLimitReachedForHelpIncreasingThisLimitCommaVisitHttpsColonSlashSlashSupportQuoComHelpSubmitARequestDescription"
           }
         }
       },
@@ -9752,7 +9771,8 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ListTasksV1200ResponseDataItem"
-            }
+            },
+            "description": "Array of items"
           },
           "nextPageToken": {
             "type": "string"
@@ -12839,7 +12859,8 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ListUsersV1200ResponseDataItem"
-            }
+            },
+            "description": "Array of items"
           },
           "totalItems": {
             "type": "integer",
@@ -13809,10 +13830,16 @@
         "type": "object",
         "properties": {
           "events": {
+            "examples": [
+              [
+                "message.received"
+              ]
+            ],
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/CreateMessageWebhookV1RequestEventsItem"
-            }
+            },
+            "description": "An event associated with the webhook."
           },
           "label": {
             "examples": [
@@ -14060,10 +14087,16 @@
             "example": "https://example.com/"
           },
           "events": {
+            "examples": [
+              [
+                "call.completed"
+              ]
+            ],
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/CreateCallWebhookV1RequestEventsItem"
-            }
+            },
+            "description": "An event associated with the webhook."
           },
           "resourceIds": {
             "$ref": "#/components/schemas/CreateCallWebhookV1RequestResourceIds"
@@ -14293,11 +14326,17 @@
         "type": "object",
         "properties": {
           "events": {
+            "examples": [
+              [
+                "call.summary.completed"
+              ]
+            ],
             "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/CallSummaryCompletedItem"
-            }
+            },
+            "description": "An event associated with the webhook."
           },
           "label": {
             "examples": [
@@ -14536,11 +14575,17 @@
         "type": "object",
         "properties": {
           "events": {
+            "examples": [
+              [
+                "call.transcript.completed"
+              ]
+            ],
             "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/CallTranscriptCompletedItem"
-            }
+            },
+            "description": "The event associated with the webhook."
           },
           "label": {
             "examples": [
@@ -15968,6 +16013,11 @@
             "example": "PN123abc"
           },
           "participants": {
+            "examples": [
+              [
+                "\u002B15555555555"
+              ]
+            ],
             "maxItems": 2,
             "type": "array",
             "items": {
@@ -15978,7 +16028,8 @@
               "type": "string",
               "description": "A phone number in E.164 format, including the country code.",
               "example": "\u002B15555555555"
-            }
+            },
+            "description": "An array of phone numbers involved in the call, including the Quo number. Each number includes the country code and conforms to the E.164 format. Currently limited to one-to-one conversations."
           },
           "updatedAt": {
             "type": [
@@ -16231,6 +16282,11 @@
             "example": "PN123abc"
           },
           "participants": {
+            "examples": [
+              [
+                "\u002B15555555555"
+              ]
+            ],
             "maxItems": 2,
             "type": "array",
             "items": {
@@ -16241,7 +16297,8 @@
               "type": "string",
               "description": "A phone number in E.164 format, including the country code.",
               "example": "\u002B15555555555"
-            }
+            },
+            "description": "An array of phone numbers involved in the call, including the Quo number. Each number includes the country code and conforms to the E.164 format. Currently limited to one-to-one conversations."
           },
           "updatedAt": {
             "type": [
@@ -16402,7 +16459,8 @@
               ],
               "type": "string",
               "example": "Bring an umbrella."
-            }
+            },
+            "description": "An array of suggested next actions or follow-up items derived from the call content. Null if no next steps were identified or if no call summary is available."
           },
           "status": {
             "$ref": "#/components/schemas/GetCallSummaryV1200ResponseDataStatus"
@@ -16418,7 +16476,8 @@
               ],
               "type": "string",
               "example": "You talked about the weather."
-            }
+            },
+            "description": "An array of statements that encapsulate the key points or main topics discussed during the call. For Sona-generated summaries, this includes structured Q\u0026A pairs. Null if the summary is not yet generated or if no call summary is available."
           },
           "jobs": {
             "type": [
@@ -16427,7 +16486,8 @@
             ],
             "items": {
               "$ref": "#/components/schemas/GetCallSummaryV1200ResponseDataJobsItem"
-            }
+            },
+            "description": "Structured job results from Sona, Quo\u0027s AI voice assistant. Contains Q\u0026A pairs, task completions, and other job-specific data collected during the call. Only present for calls handled by Sona."
           }
         }
       },
@@ -16575,7 +16635,8 @@
             ],
             "items": {
               "$ref": "#/components/schemas/GetCallTranscriptV1200ResponseDataDialogueItem"
-            }
+            },
+            "description": "An array of objects representing individual segments of the transcribed conversation. Null if the transcription is not available or in progress."
           },
           "duration": {
             "examples": [
@@ -18206,13 +18267,16 @@
             "type": "array",
             "items": {
               "examples": [
-                "\u002B15555555555"
+                "\u002B15555555555",
+                "12345",
+                "Anonymous"
               ],
-              "pattern": "^\\\u002B[1-9]\\d{1,14}$",
+              "pattern": "^(?:\\\u002B[1-9]\\d{1,14}|\\d{5,6}|[aA](?:nonymous|NONYMOUS)|[bB](?:locked|LOCKED)|[rR](?:estricted|ESTRICTED))$",
               "type": "string",
-              "description": "A phone number in E.164 format, including the country code.",
+              "description": "A phone number in E.164 format, a short code (5-6 digits, no country code), or a non-phone-number caller ID (\u0060Anonymous\u0060, \u0060Blocked\u0060, or \u0060Restricted\u0060).",
               "example": "\u002B15555555555"
-            }
+            },
+            "description": "An array of phone numbers involved in the call, excluding your Quo number. Each number is either a phone number in E.164 format, a short code (5-6 digits, no country code), or a non-phone-number caller ID (\u0060Anonymous\u0060, \u0060Blocked\u0060, or \u0060Restricted\u0060)."
           },
           "phoneNumberId": {
             "examples": [
@@ -18705,6 +18769,11 @@
             "example": "AC123abc"
           },
           "to": {
+            "examples": [
+              [
+                "\u002B15555555555"
+              ]
+            ],
             "type": "array",
             "items": {
               "examples": [
@@ -18714,7 +18783,8 @@
               "type": "string",
               "description": "A phone number in E.164 format, including the country code.",
               "example": "\u002B15555555555"
-            }
+            },
+            "description": "Array of recipient phone numbers in E.164 format. Includes your Quo number for incoming messages."
           },
           "from": {
             "examples": [
@@ -18787,7 +18857,8 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/SendMessageV1202ResponseDataMediaItem"
-            }
+            },
+            "description": "Media attached to the message."
           }
         }
       },
@@ -18949,6 +19020,11 @@
             "example": "AC123abc"
           },
           "to": {
+            "examples": [
+              [
+                "\u002B15555555555"
+              ]
+            ],
             "type": "array",
             "items": {
               "examples": [
@@ -18958,7 +19034,8 @@
               "type": "string",
               "description": "A phone number in E.164 format, including the country code.",
               "example": "\u002B15555555555"
-            }
+            },
+            "description": "Array of recipient phone numbers in E.164 format. Includes your Quo number for incoming messages."
           },
           "from": {
             "examples": [
@@ -19031,7 +19108,8 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ListMessagesV1200ResponseDataItemMediaItem"
-            }
+            },
+            "description": "Media attached to the message."
           }
         }
       },
@@ -19193,6 +19271,11 @@
             "example": "AC123abc"
           },
           "to": {
+            "examples": [
+              [
+                "\u002B15555555555"
+              ]
+            ],
             "type": "array",
             "items": {
               "examples": [
@@ -19202,7 +19285,8 @@
               "type": "string",
               "description": "A phone number in E.164 format, including the country code.",
               "example": "\u002B15555555555"
-            }
+            },
+            "description": "Array of recipient phone numbers in E.164 format. Includes your Quo number for incoming messages."
           },
           "from": {
             "examples": [
@@ -19275,7 +19359,8 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/GetMessageByIdV1200ResponseDataMediaItem"
-            }
+            },
+            "description": "Media attached to the message."
           }
         }
       },
@@ -22315,10 +22400,19 @@
             "example": "2022-01-01T00:00:00Z"
           },
           "events": {
+            "examples": [
+              [
+                "message.received"
+              ]
+            ],
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ListWebhooksV1200ResponseDataItemEventsItem"
-            }
+            },
+            "description": "The event associated with the webhook.",
+            "example": [
+              "message.received"
+            ]
           },
           "resourceIds": {
             "$ref": "#/components/schemas/ListWebhooksV1200ResponseDataItemResourceIds"
@@ -22535,10 +22629,19 @@
             "example": "2022-01-01T00:00:00Z"
           },
           "events": {
+            "examples": [
+              [
+                "message.received"
+              ]
+            ],
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/GetWebhookByIdV1200ResponseDataEventsItem"
-            }
+            },
+            "description": "The event associated with the webhook.",
+            "example": [
+              "message.received"
+            ]
           },
           "resourceIds": {
             "$ref": "#/components/schemas/GetWebhookByIdV1200ResponseDataResourceIds"
@@ -22865,10 +22968,16 @@
             "example": "2022-01-01T00:00:00Z"
           },
           "events": {
+            "examples": [
+              [
+                "message.received"
+              ]
+            ],
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/CreateMessageWebhookV1201ResponseDataEventsItem"
-            }
+            },
+            "description": "The event associated with the webhook."
           },
           "resourceIds": {
             "$ref": "#/components/schemas/CreateMessageWebhookV1201ResponseDataResourceIds"
@@ -23085,10 +23194,16 @@
             "example": "2022-01-01T00:00:00Z"
           },
           "events": {
+            "examples": [
+              [
+                "call.completed"
+              ]
+            ],
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/CreateCallWebhookV1201ResponseDataEventsItem"
-            }
+            },
+            "description": "An event associated with the webhook."
           },
           "resourceIds": {
             "$ref": "#/components/schemas/CreateCallWebhookV1201ResponseDataResourceIds"
@@ -23305,11 +23420,17 @@
             "example": "2022-01-01T00:00:00Z"
           },
           "events": {
+            "examples": [
+              [
+                "call.summary.completed"
+              ]
+            ],
             "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/CallSummaryCompletedItem"
-            }
+            },
+            "description": "An event associated with the Webhook."
           },
           "resourceIds": {
             "$ref": "#/components/schemas/CreateCallSummaryWebhookV1201ResponseDataResourceIds"
@@ -23526,11 +23647,17 @@
             "example": "2022-01-01T00:00:00Z"
           },
           "events": {
+            "examples": [
+              [
+                "call.transcript.completed"
+              ]
+            ],
             "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/CallTranscriptCompletedItem"
-            }
+            },
+            "description": "The event associated with the webhook."
           },
           "resourceIds": {
             "$ref": "#/components/schemas/CreateCallTranscriptWebhookV1201ResponseDataResourceIds"
@@ -29187,19 +29314,53 @@
           ]
         }
       },
-      "Value0202403Code": {
+      "Value0204403Code": {
         "const": null,
         "enum": [
-          "0202403"
+          "0204403"
         ],
         "type": "string",
         "x-ms-enum": {
-          "name": "Value0202403Code",
+          "name": "Value0204403Code",
           "modelAsString": false,
           "values": [
             {
-              "value": "0202403",
-              "name": "Value0202403"
+              "value": "0204403",
+              "name": "Value0204403"
+            }
+          ]
+        }
+      },
+      "A2P10DlcDailyMessageCapReachedTitle": {
+        "const": null,
+        "enum": [
+          "A2P 10DLC Daily Message Cap Reached"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "A2P10DlcDailyMessageCapReachedTitle",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "A2P 10DLC Daily Message Cap Reached",
+              "name": "A2P10DlcDailyMessageCapReached"
+            }
+          ]
+        }
+      },
+      "A2P10DlcDailyLimitReachedForHelpIncreasingThisLimitCommaVisitHttpsColonSlashSlashSupportQuoComHelpSubmitARequestDescription": {
+        "const": null,
+        "enum": [
+          "A2P 10DLC Daily limit reached. For help increasing this limit, visit https://support.quo.com/help/submit-a-request"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "A2P10DlcDailyLimitReachedForHelpIncreasingThisLimitCommaVisitHttpsColonSlashSlashSupportQuoComHelpSubmitARequestDescription",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "A2P 10DLC Daily limit reached. For help increasing this limit, visit https://support.quo.com/help/submit-a-request",
+              "name": "A2P10DLCDailyLimitReachedForHelpIncreasingThisLimitCommaVisitHttpsColonSlashSlashSupportQuoComHelpSubmitARequest"
             }
           ]
         }
@@ -31171,6 +31332,10 @@
     {
       "name": "Messages",
       "description": "Operations related to text messages"
+    },
+    {
+      "name": "Organization",
+      "description": "Operations related to the organization"
     },
     {
       "name": "Phone Numbers",

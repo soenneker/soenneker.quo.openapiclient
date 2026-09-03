@@ -54,7 +54,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The participants property</summary>
+        /// <summary>An array of phone numbers involved in the call, excluding your Quo number. Each number is either a phone number in E.164 format, a short code (5-6 digits, no country code), or a non-phone-number caller ID (`Anonymous`, `Blocked`, or `Restricted`).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Participants { get; set; }

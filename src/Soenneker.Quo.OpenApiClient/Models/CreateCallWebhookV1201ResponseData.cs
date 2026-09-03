@@ -18,7 +18,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>The date the webhook was deleted at, in ISO 8601 format.</summary>
         public DateTimeOffset? DeletedAt { get; set; }
-        /// <summary>The events property</summary>
+        /// <summary>An event associated with the webhook.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Quo.OpenApiClient.Models.CreateCallWebhookV1201ResponseDataEventsItem?>? Events { get; set; }

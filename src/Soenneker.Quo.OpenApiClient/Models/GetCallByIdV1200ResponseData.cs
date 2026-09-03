@@ -78,7 +78,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
 #else
         public string InitiatedBy { get; set; }
 #endif
-        /// <summary>The participants property</summary>
+        /// <summary>An array of phone numbers involved in the call, including the Quo number. Each number includes the country code and conforms to the E.164 format. Currently limited to one-to-one conversations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Participants { get; set; }

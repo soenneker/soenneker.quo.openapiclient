@@ -42,7 +42,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>The media property</summary>
+        /// <summary>Media attached to the message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Quo.OpenApiClient.Models.ListMessagesV1200ResponseDataItemMediaItem>? Media { get; set; }
@@ -68,7 +68,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
 #else
         public string Text { get; set; }
 #endif
-        /// <summary>The to property</summary>
+        /// <summary>Array of recipient phone numbers in E.164 format. Includes your Quo number for incoming messages.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? To { get; set; }

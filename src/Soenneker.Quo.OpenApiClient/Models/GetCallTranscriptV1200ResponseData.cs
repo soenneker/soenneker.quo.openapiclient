@@ -24,7 +24,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
 #endif
         /// <summary>The timestamp when the transcription was created, in ISO 8601 format.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
-        /// <summary>The dialogue property</summary>
+        /// <summary>An array of objects representing individual segments of the transcribed conversation. Null if the transcription is not available or in progress.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Quo.OpenApiClient.Models.GetCallTranscriptV1200ResponseDataDialogueItem>? Dialogue { get; set; }

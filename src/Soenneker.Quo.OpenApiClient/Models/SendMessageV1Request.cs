@@ -41,7 +41,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
 #endif
         /// <summary>Used to set the status of the related Quo inbox conversation. The default behavior without setting this parameter will be for the message sent to show up as an open conversation in the user&apos;s inbox. Setting the parameter to `&apos;done&apos;` would move the conversation to the Done inbox view.</summary>
         public global::Soenneker.Quo.OpenApiClient.Models.DoneSetInboxStatus? SetInboxStatus { get; set; }
-        /// <summary>The to property</summary>
+        /// <summary>Array of recipient phone numbers in E.164 format. Currently supports a maximum of 10 recipients</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? To { get; set; }
