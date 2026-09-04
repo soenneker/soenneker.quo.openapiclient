@@ -128,7 +128,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Messages
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesRequestBuilder.MessagesRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/v1/messages?maxResults={maxResults}&participants={participants}&phoneNumberId={phoneNumberId}{&createdAfter*,createdBefore*,pageToken*,since*,userId*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/v1/messages?maxResults={maxResults}&phoneNumberId={phoneNumberId}{&createdAfter*,createdBefore*,pageToken*,since*,userId*,participants*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -170,50 +170,74 @@ namespace Soenneker.Quo.OpenApiClient.V1.Messages
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class MessagesRequestBuilderGetQueryParameters 
         {
+            #pragma warning disable CS1591
             [QueryParameter("createdAfter")]
             public DateTimeOffset? CreatedAfter { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("createdBefore")]
             public DateTimeOffset? CreatedBefore { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("maxResults")]
             public int? MaxResults { get; set; }
+            #pragma warning restore CS1591
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("pageToken")]
             public string? PageToken { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("pageToken")]
             public string PageToken { get; set; }
+            #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("participants")]
             public string[]? Participants { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("participants")]
             public string[] Participants { get; set; }
+            #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("phoneNumberId")]
             public string? PhoneNumberId { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("phoneNumberId")]
             public string PhoneNumberId { get; set; }
+            #pragma warning restore CS1591
 #endif
             [Obsolete("")]
+            #pragma warning disable CS1591
             [QueryParameter("since")]
             public DateTimeOffset? Since { get; set; }
+            #pragma warning restore CS1591
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("userId")]
             public string? UserId { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("userId")]
             public string UserId { get; set; }
+            #pragma warning restore CS1591
 #endif
         }
     }

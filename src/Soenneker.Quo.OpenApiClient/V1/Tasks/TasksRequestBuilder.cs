@@ -170,16 +170,22 @@ namespace Soenneker.Quo.OpenApiClient.V1.Tasks
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class TasksRequestBuilderGetQueryParameters 
         {
+            #pragma warning disable CS1591
             [QueryParameter("maxResults")]
             public int? MaxResults { get; set; }
+            #pragma warning restore CS1591
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("pageToken")]
             public string? PageToken { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("pageToken")]
             public string PageToken { get; set; }
+            #pragma warning restore CS1591
 #endif
         }
     }

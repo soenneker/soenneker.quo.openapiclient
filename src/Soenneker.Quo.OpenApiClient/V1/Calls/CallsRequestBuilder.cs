@@ -35,7 +35,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Calls
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CallsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/calls?maxResults={maxResults}&participants={participants}&phoneNumberId={phoneNumberId}{&createdAfter*,createdBefore*,pageToken*,since*,userId*}", pathParameters)
+        public CallsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/calls?maxResults={maxResults}&phoneNumberId={phoneNumberId}{&createdAfter*,createdBefore*,pageToken*,since*,userId*,participants*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Calls
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CallsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/calls?maxResults={maxResults}&participants={participants}&phoneNumberId={phoneNumberId}{&createdAfter*,createdBefore*,pageToken*,since*,userId*}", rawUrl)
+        public CallsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/calls?maxResults={maxResults}&phoneNumberId={phoneNumberId}{&createdAfter*,createdBefore*,pageToken*,since*,userId*,participants*}", rawUrl)
         {
         }
         /// <summary>
@@ -111,50 +111,74 @@ namespace Soenneker.Quo.OpenApiClient.V1.Calls
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class CallsRequestBuilderGetQueryParameters 
         {
+            #pragma warning disable CS1591
             [QueryParameter("createdAfter")]
             public DateTimeOffset? CreatedAfter { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("createdBefore")]
             public DateTimeOffset? CreatedBefore { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("maxResults")]
             public int? MaxResults { get; set; }
+            #pragma warning restore CS1591
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("pageToken")]
             public string? PageToken { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("pageToken")]
             public string PageToken { get; set; }
+            #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("participants")]
             public string[]? Participants { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("participants")]
             public string[] Participants { get; set; }
+            #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("phoneNumberId")]
             public string? PhoneNumberId { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("phoneNumberId")]
             public string PhoneNumberId { get; set; }
+            #pragma warning restore CS1591
 #endif
             [Obsolete("")]
+            #pragma warning disable CS1591
             [QueryParameter("since")]
             public DateTimeOffset? Since { get; set; }
+            #pragma warning restore CS1591
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("userId")]
             public string? UserId { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("userId")]
             public string UserId { get; set; }
+            #pragma warning restore CS1591
 #endif
         }
     }
