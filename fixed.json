@@ -4540,15 +4540,24 @@
       },
       "ListPhoneNumbersResponseDataItemUsersItem": {
         "required": [
+          "id",
           "email",
           "firstName",
           "lastName",
-          "id",
           "role",
           "groupId"
         ],
         "type": "object",
         "properties": {
+          "id": {
+            "examples": [
+              "US123abc"
+            ],
+            "pattern": "^US(.*)$",
+            "type": "string",
+            "description": "The unique identifier of the user.",
+            "example": "US123abc"
+          },
           "email": {
             "examples": [
               "johndoe@example.com"
@@ -4573,15 +4582,6 @@
             ],
             "description": "The user\u0027s last name.",
             "example": "Doe"
-          },
-          "id": {
-            "examples": [
-              "US123abc"
-            ],
-            "pattern": "^US(.*)$",
-            "type": "string",
-            "description": "The unique identifier of the user.",
-            "example": "US123abc"
           },
           "role": {
             "$ref": "#/components/schemas/ListPhoneNumbersResponseDataItemUsersItemRole"
@@ -4599,14 +4599,23 @@
       },
       "ListPhoneNumbersResponseDataItemUsersItemAllOf1": {
         "required": [
+          "id",
           "email",
           "firstName",
           "lastName",
-          "id",
           "role"
         ],
         "type": "object",
         "properties": {
+          "id": {
+            "examples": [
+              "US123abc"
+            ],
+            "pattern": "^US(.*)$",
+            "type": "string",
+            "description": "The unique identifier of the user.",
+            "example": "US123abc"
+          },
           "email": {
             "examples": [
               "johndoe@example.com"
@@ -4631,15 +4640,6 @@
             ],
             "description": "The user\u0027s last name.",
             "example": "Doe"
-          },
-          "id": {
-            "examples": [
-              "US123abc"
-            ],
-            "pattern": "^US(.*)$",
-            "type": "string",
-            "description": "The unique identifier of the user.",
-            "example": "US123abc"
           },
           "role": {
             "$ref": "#/components/schemas/ListPhoneNumbersResponseDataItemUsersItemRole"
@@ -15399,9 +15399,7 @@
       },
       "CreateCallWebhookV1RequestResourceIds": {
         "examples": [
-          [
-            "PN1234"
-          ]
+          "PN1234"
         ],
         "type": "object",
         "anyOf": [
@@ -15419,7 +15417,8 @@
             }
           }
         ],
-        "description": "The unique identifiers of the phone numbers associated with the webhook."
+        "description": "The unique identifiers of the phone numbers associated with the webhook.",
+        "example": "PN1234"
       },
       "CreateCallWebhookV1201ResponseDataResourceIds": {
         "examples": [
@@ -25785,15 +25784,24 @@
       },
       "GetPhoneNumberByIdV1200ResponseDataUsersItem": {
         "required": [
+          "id",
           "email",
           "firstName",
           "lastName",
-          "id",
           "role",
           "groupId"
         ],
         "type": "object",
         "properties": {
+          "id": {
+            "examples": [
+              "US123abc"
+            ],
+            "pattern": "^US(.*)$",
+            "type": "string",
+            "description": "The unique identifier of the user.",
+            "example": "US123abc"
+          },
           "email": {
             "examples": [
               "johndoe@example.com"
@@ -25818,15 +25826,6 @@
             ],
             "description": "The user\u0027s last name.",
             "example": "Doe"
-          },
-          "id": {
-            "examples": [
-              "US123abc"
-            ],
-            "pattern": "^US(.*)$",
-            "type": "string",
-            "description": "The unique identifier of the user.",
-            "example": "US123abc"
           },
           "role": {
             "$ref": "#/components/schemas/GetPhoneNumberByIdV1200ResponseDataUsersItemRole"
@@ -31293,6 +31292,14 @@
     }
   ],
   "tags": [
+    {
+      "name": "A2P Registration",
+      "description": "Operations related to the organization\u0027s A2P registration"
+    },
+    {
+      "name": "Agent Calls",
+      "description": "Operations related to calls placed by an AI agent"
+    },
     {
       "name": "Calls",
       "description": "Operations related to calls"
