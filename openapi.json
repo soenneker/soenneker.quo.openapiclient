@@ -29034,6 +29034,10 @@
       "name": "Agent Calls"
     },
     {
+      "description": "Operations related to text conversations held by an AI agent",
+      "name": "Agent Conversations"
+    },
+    {
       "description": "Operations related to calls",
       "name": "Calls"
     },

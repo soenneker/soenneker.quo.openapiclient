@@ -31301,6 +31301,10 @@
       "description": "Operations related to calls placed by an AI agent"
     },
     {
+      "name": "Agent Conversations",
+      "description": "Operations related to text conversations held by an AI agent"
+    },
+    {
       "name": "Calls",
       "description": "Operations related to calls"
     },
