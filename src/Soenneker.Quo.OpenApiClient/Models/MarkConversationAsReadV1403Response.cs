@@ -17,8 +17,6 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The code property</summary>
         public global::Soenneker.Quo.OpenApiClient.Models.Value1001403Code? Code { get; set; }
-        /// <summary>The description property</summary>
-        public global::Soenneker.Quo.OpenApiClient.Models.NotPhoneNumberUserDescription? Description { get; set; }
         /// <summary>The docs property</summary>
         public global::Soenneker.Quo.OpenApiClient.Models.HttpsColonSlashSlashQuoComDocsDocs? Docs { get; set; }
         /// <summary>The errors property</summary>
@@ -77,7 +75,6 @@ namespace Soenneker.Quo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "code", n => { Code = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.Value1001403Code>(); } },
-                { "description", n => { Description = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.NotPhoneNumberUserDescription>(); } },
                 { "docs", n => { Docs = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.HttpsColonSlashSlashQuoComDocsDocs>(); } },
                 { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsReadV1403ResponseErrorsItem>(global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsReadV1403ResponseErrorsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "message", n => { MessageEscaped = n.GetStringValue(); } },
@@ -94,7 +91,6 @@ namespace Soenneker.Quo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.Value1001403Code>("code", Code);
-            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.NotPhoneNumberUserDescription>("description", Description);
             writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.HttpsColonSlashSlashQuoComDocsDocs>("docs", Docs);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsReadV1403ResponseErrorsItem>("errors", Errors);
             writer.WriteStringValue("message", MessageEscaped);

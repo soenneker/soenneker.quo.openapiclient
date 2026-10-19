@@ -19,6 +19,14 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public global::Soenneker.Quo.OpenApiClient.Models.Value0600401Code? Code { get; set; }
         /// <summary>The docs property</summary>
         public global::Soenneker.Quo.OpenApiClient.Models.HttpsColonSlashSlashQuoComDocsDocs? Docs { get; set; }
+        /// <summary>The error property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1401ResponseError? Error { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1401ResponseError Error { get; set; }
+#endif
         /// <summary>The errors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -76,6 +84,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
             {
                 { "code", n => { Code = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.Value0600401Code>(); } },
                 { "docs", n => { Docs = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.HttpsColonSlashSlashQuoComDocsDocs>(); } },
+                { "error", n => { Error = n.GetObjectValue<global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1401ResponseError>(global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1401ResponseError.CreateFromDiscriminatorValue); } },
                 { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1401ResponseErrorsItem>(global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1401ResponseErrorsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "message", n => { MessageEscaped = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.Value401Status>(); } },
@@ -92,6 +101,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.Value0600401Code>("code", Code);
             writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.HttpsColonSlashSlashQuoComDocsDocs>("docs", Docs);
+            writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1401ResponseError>("error", Error);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1401ResponseErrorsItem>("errors", Errors);
             writer.WriteStringValue("message", MessageEscaped);
             writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.Value401Status>("status", Status);

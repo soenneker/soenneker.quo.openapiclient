@@ -1883,6 +1883,16 @@
               }
             }
           },
+          "429": {
+            "description": "Too Many Requests. \u0060RATE_LIMIT_EXCEEDED\u0060: the API key sent too many requests per second; retry after a short delay. \u00600200429\u0060: the organization reached its daily outbound conversation limit.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SendMessageV1429Response"
+                }
+              }
+            }
+          },
           "500": {
             "description": "Unknown Error",
             "content": {
@@ -4886,15 +4896,11 @@
         }
       },
       "GetCallRecordingsV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/GetCallRecordingsV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -5062,8 +5068,7 @@
           "code",
           "status",
           "docs",
-          "title",
-          "description"
+          "title"
         ],
         "type": "object",
         "properties": {
@@ -5090,22 +5095,15 @@
             "items": {
               "$ref": "#/components/schemas/ListCallsV1400ResponseErrorsItem"
             }
-          },
-          "description": {
-            "$ref": "#/components/schemas/TooManyParticipantsDescription"
           }
         }
       },
       "ListCallsV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/ListCallsV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -5138,8 +5136,7 @@
           "code",
           "status",
           "docs",
-          "title",
-          "description"
+          "title"
         ],
         "type": "object",
         "properties": {
@@ -5166,9 +5163,6 @@
             "items": {
               "$ref": "#/components/schemas/ListCallsV1403ResponseErrorsItem"
             }
-          },
-          "description": {
-            "$ref": "#/components/schemas/NotPhoneNumberUserDescription"
           }
         }
       },
@@ -5261,8 +5255,7 @@
           "code",
           "status",
           "docs",
-          "title",
-          "description"
+          "title"
         ],
         "type": "object",
         "properties": {
@@ -5289,22 +5282,15 @@
             "items": {
               "$ref": "#/components/schemas/GetCallByIdV1400ResponseErrorsItem"
             }
-          },
-          "description": {
-            "$ref": "#/components/schemas/TooManyParticipantsDescription"
           }
         }
       },
       "GetCallByIdV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/GetCallByIdV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -5337,8 +5323,7 @@
           "code",
           "status",
           "docs",
-          "title",
-          "description"
+          "title"
         ],
         "type": "object",
         "properties": {
@@ -5365,9 +5350,6 @@
             "items": {
               "$ref": "#/components/schemas/GetCallByIdV1403ResponseErrorsItem"
             }
-          },
-          "description": {
-            "$ref": "#/components/schemas/NotPhoneNumberUserDescription"
           }
         }
       },
@@ -5491,15 +5473,11 @@
         }
       },
       "GetCallSummaryV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/GetCallSummaryV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -5682,15 +5660,11 @@
         }
       },
       "GetCallTranscriptV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/GetCallTranscriptV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -5873,15 +5847,11 @@
         }
       },
       "GetCallVoicemailsV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/GetCallVoicemailsV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -6067,15 +6037,11 @@
         }
       },
       "GetContactCustomFieldsV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/GetContactCustomFieldsV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -6287,8 +6253,7 @@
           "code",
           "status",
           "docs",
-          "title",
-          "description"
+          "title"
         ],
         "type": "object",
         "properties": {
@@ -6315,22 +6280,15 @@
             "items": {
               "$ref": "#/components/schemas/CreateContactV1400ResponseErrorsItem"
             }
-          },
-          "description": {
-            "$ref": "#/components/schemas/InvalidCustomFieldItemDescription"
           }
         }
       },
       "CreateContactV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/CreateContactV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -6538,8 +6496,7 @@
           "code",
           "status",
           "docs",
-          "title",
-          "description"
+          "title"
         ],
         "type": "object",
         "properties": {
@@ -6566,22 +6523,15 @@
             "items": {
               "$ref": "#/components/schemas/ListContactsV1400ResponseErrorsItem"
             }
-          },
-          "description": {
-            "$ref": "#/components/schemas/InvalidCustomFieldItemDescription"
           }
         }
       },
       "ListContactsV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/ListContactsV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -6773,8 +6723,7 @@
           "code",
           "status",
           "docs",
-          "title",
-          "description"
+          "title"
         ],
         "type": "object",
         "properties": {
@@ -6801,22 +6750,15 @@
             "items": {
               "$ref": "#/components/schemas/GetContactByIdV1400ResponseErrorsItem"
             }
-          },
-          "description": {
-            "$ref": "#/components/schemas/InvalidCustomFieldItemDescription"
           }
         }
       },
       "GetContactByIdV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/GetContactByIdV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -7053,8 +6995,7 @@
           "code",
           "status",
           "docs",
-          "title",
-          "description"
+          "title"
         ],
         "type": "object",
         "properties": {
@@ -7081,22 +7022,15 @@
             "items": {
               "$ref": "#/components/schemas/UpdateContactByIdV1400ResponseErrorsItem"
             }
-          },
-          "description": {
-            "$ref": "#/components/schemas/InvalidCustomFieldItemDescription"
           }
         }
       },
       "UpdateContactByIdV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/UpdateContactByIdV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -7277,8 +7211,7 @@
           "code",
           "status",
           "docs",
-          "title",
-          "description"
+          "title"
         ],
         "type": "object",
         "properties": {
@@ -7305,22 +7238,15 @@
             "items": {
               "$ref": "#/components/schemas/DeleteContactV1400ResponseErrorsItem"
             }
-          },
-          "description": {
-            "$ref": "#/components/schemas/InvalidCustomFieldItemDescription"
           }
         }
       },
       "DeleteContactV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/DeleteContactV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -7559,15 +7485,11 @@
         }
       },
       "ListConversationsV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/ListConversationsV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -7600,8 +7522,7 @@
           "code",
           "status",
           "docs",
-          "title",
-          "description"
+          "title"
         ],
         "type": "object",
         "properties": {
@@ -7628,9 +7549,6 @@
             "items": {
               "$ref": "#/components/schemas/ListConversationsV1403ResponseErrorsItem"
             }
-          },
-          "description": {
-            "$ref": "#/components/schemas/NotPhoneNumberUserDescription"
           }
         }
       },
@@ -7857,15 +7775,11 @@
         }
       },
       "MarkConversationAsReadV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/MarkConversationAsReadV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -7898,8 +7812,7 @@
           "code",
           "status",
           "docs",
-          "title",
-          "description"
+          "title"
         ],
         "type": "object",
         "properties": {
@@ -7926,9 +7839,6 @@
             "items": {
               "$ref": "#/components/schemas/MarkConversationAsReadV1403ResponseErrorsItem"
             }
-          },
-          "description": {
-            "$ref": "#/components/schemas/NotPhoneNumberUserDescription"
           }
         }
       },
@@ -8155,15 +8065,11 @@
         }
       },
       "MarkConversationAsDoneV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/MarkConversationAsDoneV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -8196,8 +8102,7 @@
           "code",
           "status",
           "docs",
-          "title",
-          "description"
+          "title"
         ],
         "type": "object",
         "properties": {
@@ -8224,9 +8129,6 @@
             "items": {
               "$ref": "#/components/schemas/MarkConversationAsDoneV1403ResponseErrorsItem"
             }
-          },
-          "description": {
-            "$ref": "#/components/schemas/NotPhoneNumberUserDescription"
           }
         }
       },
@@ -8453,15 +8355,11 @@
         }
       },
       "MarkConversationAsOpenV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/MarkConversationAsOpenV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -8494,8 +8392,7 @@
           "code",
           "status",
           "docs",
-          "title",
-          "description"
+          "title"
         ],
         "type": "object",
         "properties": {
@@ -8522,9 +8419,6 @@
             "items": {
               "$ref": "#/components/schemas/MarkConversationAsOpenV1403ResponseErrorsItem"
             }
-          },
-          "description": {
-            "$ref": "#/components/schemas/NotPhoneNumberUserDescription"
           }
         }
       },
@@ -8673,8 +8567,7 @@
           "code",
           "status",
           "docs",
-          "title",
-          "description"
+          "title"
         ],
         "type": "object",
         "properties": {
@@ -8701,22 +8594,15 @@
             "items": {
               "$ref": "#/components/schemas/SendMessageV1400ResponseErrorsItem"
             }
-          },
-          "description": {
-            "$ref": "#/components/schemas/A2PRegistrationNotApprovedDescription"
           }
         }
       },
       "SendMessageV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/SendMessageV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -8789,8 +8675,7 @@
           "code",
           "status",
           "docs",
-          "title",
-          "description"
+          "title"
         ],
         "type": "object",
         "properties": {
@@ -8798,7 +8683,7 @@
             "type": "string"
           },
           "code": {
-            "$ref": "#/components/schemas/Value0204403Code"
+            "$ref": "#/components/schemas/Value0200403Code"
           },
           "status": {
             "$ref": "#/components/schemas/Value403Status"
@@ -8807,7 +8692,7 @@
             "$ref": "#/components/schemas/HttpsColonSlashSlashQuoComDocsDocs"
           },
           "title": {
-            "$ref": "#/components/schemas/A2P10DlcDailyMessageCapReachedTitle"
+            "$ref": "#/components/schemas/ForbiddenTitle"
           },
           "trace": {
             "type": "string"
@@ -8817,9 +8702,6 @@
             "items": {
               "$ref": "#/components/schemas/SendMessageV1403ResponseErrorsItem"
             }
-          },
-          "description": {
-            "$ref": "#/components/schemas/A2P10DlcDailyLimitReachedForHelpIncreasingThisLimitCommaVisitHttpsColonSlashSlashSupportQuoComHelpSubmitARequestDescription"
           }
         }
       },
@@ -8855,6 +8737,42 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/SendMessageV1404ResponseErrorsItem"
+            }
+          }
+        }
+      },
+      "SendMessageV1429Response": {
+        "required": [
+          "message",
+          "code",
+          "status",
+          "docs",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/Value0200429Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/Value429Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/HttpsColonSlashSlashQuoComDocsDocs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/DailyConversationLimitReachedTitle"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SendMessageV1429ResponseErrorsItem"
             }
           }
         }
@@ -8928,8 +8846,7 @@
           "code",
           "status",
           "docs",
-          "title",
-          "description"
+          "title"
         ],
         "type": "object",
         "properties": {
@@ -8956,22 +8873,15 @@
             "items": {
               "$ref": "#/components/schemas/ListMessagesV1400ResponseErrorsItem"
             }
-          },
-          "description": {
-            "$ref": "#/components/schemas/A2PRegistrationNotApprovedDescription"
           }
         }
       },
       "ListMessagesV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/ListMessagesV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -9044,8 +8954,7 @@
           "code",
           "status",
           "docs",
-          "title",
-          "description"
+          "title"
         ],
         "type": "object",
         "properties": {
@@ -9072,9 +8981,6 @@
             "items": {
               "$ref": "#/components/schemas/ListMessagesV1403ResponseErrorsItem"
             }
-          },
-          "description": {
-            "$ref": "#/components/schemas/A2P10DlcDailyLimitReachedForHelpIncreasingThisLimitCommaVisitHttpsColonSlashSlashSupportQuoComHelpSubmitARequestDescription"
           }
         }
       },
@@ -9167,8 +9073,7 @@
           "code",
           "status",
           "docs",
-          "title",
-          "description"
+          "title"
         ],
         "type": "object",
         "properties": {
@@ -9195,22 +9100,15 @@
             "items": {
               "$ref": "#/components/schemas/GetMessageByIdV1400ResponseErrorsItem"
             }
-          },
-          "description": {
-            "$ref": "#/components/schemas/A2PRegistrationNotApprovedDescription"
           }
         }
       },
       "GetMessageByIdV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/GetMessageByIdV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -9283,8 +9181,7 @@
           "code",
           "status",
           "docs",
-          "title",
-          "description"
+          "title"
         ],
         "type": "object",
         "properties": {
@@ -9311,9 +9208,6 @@
             "items": {
               "$ref": "#/components/schemas/GetMessageByIdV1403ResponseErrorsItem"
             }
-          },
-          "description": {
-            "$ref": "#/components/schemas/A2P10DlcDailyLimitReachedForHelpIncreasingThisLimitCommaVisitHttpsColonSlashSlashSupportQuoComHelpSubmitARequestDescription"
           }
         }
       },
@@ -9426,15 +9320,11 @@
         }
       },
       "ListPhoneNumbersV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/ListPhoneNumbersV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -9617,15 +9507,11 @@
         }
       },
       "GetPhoneNumberByIdV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/GetPhoneNumberByIdV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -9820,15 +9706,11 @@
         }
       },
       "ListTasksV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/ListTasksV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -10093,15 +9975,11 @@
         }
       },
       "CreateTaskV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/CreateTaskV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -10320,15 +10198,11 @@
         }
       },
       "GetTaskByIdV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/GetTaskByIdV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -10536,15 +10410,11 @@
         }
       },
       "DeleteTaskV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/DeleteTaskV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -10789,15 +10659,11 @@
         }
       },
       "UpdateTaskV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/UpdateTaskV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -11016,15 +10882,11 @@
         }
       },
       "CompleteTaskV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/CompleteTaskV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -11255,15 +11117,11 @@
         }
       },
       "LinkTaskToConversationV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/LinkTaskToConversationV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -11494,15 +11352,11 @@
         }
       },
       "UnlinkTaskFromConversationV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/UnlinkTaskFromConversationV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -11721,15 +11575,11 @@
         }
       },
       "ReopenTaskV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/ReopenTaskV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -11961,15 +11811,11 @@
         }
       },
       "AssignTaskV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/AssignTaskV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -12201,15 +12047,11 @@
         }
       },
       "UnassignTaskV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/UnassignTaskV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -12441,15 +12283,11 @@
         }
       },
       "ChangeTaskDueDateV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/ChangeTaskDueDateV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -12668,15 +12506,11 @@
         }
       },
       "RemoveTaskDueDateV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/RemoveTaskDueDateV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -12911,15 +12745,11 @@
         }
       },
       "ListUsersV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/ListUsersV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -13102,15 +12932,11 @@
         }
       },
       "GetUserByIdV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/GetUserByIdV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -13300,15 +13126,11 @@
         }
       },
       "ListWebhooksV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/ListWebhooksV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -13495,15 +13317,11 @@
         }
       },
       "GetWebhookByIdV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/GetWebhookByIdV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -13679,15 +13497,11 @@
         }
       },
       "DeleteWebhookByIdV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/DeleteWebhookByIdV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -13927,15 +13741,11 @@
         }
       },
       "CreateMessageWebhookV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/CreateMessageWebhookV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -14175,15 +13985,11 @@
         }
       },
       "CreateCallWebhookV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/CreateCallWebhookV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -14424,15 +14230,11 @@
         }
       },
       "CreateCallSummaryWebhookV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/CreateCallSummaryWebhookV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -14673,15 +14475,11 @@
         }
       },
       "CreateCallTranscriptWebhookV1401Response": {
-        "required": [
-          "message",
-          "code",
-          "status",
-          "docs",
-          "title"
-        ],
         "type": "object",
         "properties": {
+          "error": {
+            "$ref": "#/components/schemas/CreateCallTranscriptWebhookV1401ResponseError"
+          },
           "message": {
             "type": "string"
           },
@@ -15804,6 +15602,24 @@
           }
         }
       },
+      "GetCallRecordingsV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
+          }
+        }
+      },
       "GetCallRecordingsV1401ResponseErrorsItem": {
         "required": [
           "path",
@@ -16070,6 +15886,24 @@
           },
           "schema": {
             "$ref": "#/components/schemas/ListCallsV1400ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "ListCallsV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
           }
         }
       },
@@ -16342,6 +16176,24 @@
           }
         }
       },
+      "GetCallByIdV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
+          }
+        }
+      },
       "GetCallByIdV1401ResponseErrorsItem": {
         "required": [
           "path",
@@ -16512,6 +16364,24 @@
           }
         }
       },
+      "GetCallSummaryV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
+          }
+        }
+      },
       "GetCallSummaryV1401ResponseErrorsItem": {
         "required": [
           "path",
@@ -16669,6 +16539,24 @@
           },
           "schema": {
             "$ref": "#/components/schemas/GetCallTranscriptV1400ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "GetCallTranscriptV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
           }
         }
       },
@@ -16832,6 +16720,24 @@
           }
         }
       },
+      "GetCallVoicemailsV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
+          }
+        }
+      },
       "GetCallVoicemailsV1401ResponseErrorsItem": {
         "required": [
           "path",
@@ -16968,6 +16874,24 @@
           },
           "schema": {
             "$ref": "#/components/schemas/GetContactCustomFieldsV1400ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "GetContactCustomFieldsV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
           }
         }
       },
@@ -17225,6 +17149,24 @@
           }
         }
       },
+      "CreateContactV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
+          }
+        }
+      },
       "CreateContactV1401ResponseErrorsItem": {
         "required": [
           "path",
@@ -17449,6 +17391,24 @@
           }
         }
       },
+      "ListContactsV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
+          }
+        }
+      },
       "ListContactsV1401ResponseErrorsItem": {
         "required": [
           "path",
@@ -17670,6 +17630,24 @@
           },
           "schema": {
             "$ref": "#/components/schemas/GetContactByIdV1400ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "GetContactByIdV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
           }
         }
       },
@@ -17946,6 +17924,24 @@
           }
         }
       },
+      "UpdateContactByIdV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
+          }
+        }
+      },
       "UpdateContactByIdV1401ResponseErrorsItem": {
         "required": [
           "path",
@@ -18075,6 +18071,24 @@
           },
           "schema": {
             "$ref": "#/components/schemas/DeleteContactV1400ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "DeleteContactV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
           }
         }
       },
@@ -18324,6 +18338,24 @@
           }
         }
       },
+      "ListConversationsV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
+          }
+        }
+      },
       "ListConversationsV1401ResponseErrorsItem": {
         "required": [
           "path",
@@ -18431,6 +18463,24 @@
           },
           "schema": {
             "$ref": "#/components/schemas/MarkConversationAsReadV1400ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "MarkConversationAsReadV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
           }
         }
       },
@@ -18544,6 +18594,24 @@
           }
         }
       },
+      "MarkConversationAsDoneV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
+          }
+        }
+      },
       "MarkConversationAsDoneV1401ResponseErrorsItem": {
         "required": [
           "path",
@@ -18651,6 +18719,24 @@
           },
           "schema": {
             "$ref": "#/components/schemas/MarkConversationAsOpenV1400ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "MarkConversationAsOpenV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
           }
         }
       },
@@ -18883,6 +18969,24 @@
           }
         }
       },
+      "SendMessageV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
+          }
+        }
+      },
       "SendMessageV1401ResponseErrorsItem": {
         "required": [
           "path",
@@ -18968,6 +19072,28 @@
           },
           "schema": {
             "$ref": "#/components/schemas/SendMessageV1404ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "SendMessageV1429ResponseErrorsItem": {
+        "required": [
+          "path",
+          "message",
+          "schema"
+        ],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "value": {
+            "$ref": "#/components/schemas/SendMessageV1429ResponseErrorsItemValue"
+          },
+          "schema": {
+            "$ref": "#/components/schemas/SendMessageV1429ResponseErrorsItemSchema"
           }
         }
       },
@@ -19131,6 +19257,24 @@
           },
           "schema": {
             "$ref": "#/components/schemas/ListMessagesV1400ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "ListMessagesV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
           }
         }
       },
@@ -19385,6 +19529,24 @@
           }
         }
       },
+      "GetMessageByIdV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
+          }
+        }
+      },
       "GetMessageByIdV1401ResponseErrorsItem": {
         "required": [
           "path",
@@ -19514,6 +19676,24 @@
           },
           "schema": {
             "$ref": "#/components/schemas/ListPhoneNumbersV1400ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "ListPhoneNumbersV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
           }
         }
       },
@@ -19746,6 +19926,24 @@
           }
         }
       },
+      "GetPhoneNumberByIdV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
+          }
+        }
+      },
       "GetPhoneNumberByIdV1401ResponseErrorsItem": {
         "required": [
           "path",
@@ -19955,6 +20153,24 @@
           }
         }
       },
+      "ListTasksV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
+          }
+        }
+      },
       "ListTasksV1401ResponseErrorsItem": {
         "required": [
           "path",
@@ -20113,6 +20329,24 @@
           },
           "schema": {
             "$ref": "#/components/schemas/CreateTaskV1400ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "CreateTaskV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
           }
         }
       },
@@ -20347,6 +20581,24 @@
           }
         }
       },
+      "GetTaskByIdV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
+          }
+        }
+      },
       "GetTaskByIdV1401ResponseErrorsItem": {
         "required": [
           "path",
@@ -20476,6 +20728,24 @@
           },
           "schema": {
             "$ref": "#/components/schemas/DeleteTaskV1400ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "DeleteTaskV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
           }
         }
       },
@@ -20627,6 +20897,24 @@
           }
         }
       },
+      "UpdateTaskV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
+          }
+        }
+      },
       "UpdateTaskV1401ResponseErrorsItem": {
         "required": [
           "path",
@@ -20772,6 +21060,24 @@
           },
           "schema": {
             "$ref": "#/components/schemas/CompleteTaskV1400ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "CompleteTaskV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
           }
         }
       },
@@ -20923,6 +21229,24 @@
           }
         }
       },
+      "LinkTaskToConversationV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
+          }
+        }
+      },
       "LinkTaskToConversationV1401ResponseErrorsItem": {
         "required": [
           "path",
@@ -21068,6 +21392,24 @@
           },
           "schema": {
             "$ref": "#/components/schemas/UnlinkTaskFromConversationV1400ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "UnlinkTaskFromConversationV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
           }
         }
       },
@@ -21219,6 +21561,24 @@
           }
         }
       },
+      "ReopenTaskV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
+          }
+        }
+      },
       "ReopenTaskV1401ResponseErrorsItem": {
         "required": [
           "path",
@@ -21364,6 +21724,24 @@
           },
           "schema": {
             "$ref": "#/components/schemas/AssignTaskV1400ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "AssignTaskV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
           }
         }
       },
@@ -21515,6 +21893,24 @@
           }
         }
       },
+      "UnassignTaskV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
+          }
+        }
+      },
       "UnassignTaskV1401ResponseErrorsItem": {
         "required": [
           "path",
@@ -21663,6 +22059,24 @@
           }
         }
       },
+      "ChangeTaskDueDateV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
+          }
+        }
+      },
       "ChangeTaskDueDateV1401ResponseErrorsItem": {
         "required": [
           "path",
@@ -21808,6 +22222,24 @@
           },
           "schema": {
             "$ref": "#/components/schemas/RemoveTaskDueDateV1400ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "RemoveTaskDueDateV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
           }
         }
       },
@@ -22022,6 +22454,24 @@
           }
         }
       },
+      "ListUsersV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
+          }
+        }
+      },
       "ListUsersV1401ResponseErrorsItem": {
         "required": [
           "path",
@@ -22208,6 +22658,24 @@
           },
           "schema": {
             "$ref": "#/components/schemas/GetUserByIdV1400ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "GetUserByIdV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
           }
         }
       },
@@ -22440,6 +22908,24 @@
           }
         }
       },
+      "ListWebhooksV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
+          }
+        }
+      },
       "ListWebhooksV1401ResponseErrorsItem": {
         "required": [
           "path",
@@ -22669,6 +23155,24 @@
           }
         }
       },
+      "GetWebhookByIdV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
+          }
+        }
+      },
       "GetWebhookByIdV1401ResponseErrorsItem": {
         "required": [
           "path",
@@ -22776,6 +23280,24 @@
           },
           "schema": {
             "$ref": "#/components/schemas/DeleteWebhookByIdV1400ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "DeleteWebhookByIdV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
           }
         }
       },
@@ -23005,6 +23527,24 @@
           }
         }
       },
+      "CreateMessageWebhookV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
+          }
+        }
+      },
       "CreateMessageWebhookV1401ResponseErrorsItem": {
         "required": [
           "path",
@@ -23228,6 +23768,24 @@
           },
           "schema": {
             "$ref": "#/components/schemas/CreateCallWebhookV1400ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "CreateCallWebhookV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
           }
         }
       },
@@ -23458,6 +24016,24 @@
           }
         }
       },
+      "CreateCallSummaryWebhookV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
+          }
+        }
+      },
       "CreateCallSummaryWebhookV1401ResponseErrorsItem": {
         "required": [
           "path",
@@ -23682,6 +24258,24 @@
           },
           "schema": {
             "$ref": "#/components/schemas/CreateCallTranscriptWebhookV1400ResponseErrorsItemSchema"
+          }
+        }
+      },
+      "CreateCallTranscriptWebhookV1401ResponseError": {
+        "required": [
+          "message",
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "key": {
+            "$ref": "#/components/schemas/UnauthorizedKey"
+          },
+          "trace": {
+            "type": "string"
           }
         }
       },
@@ -25466,6 +26060,20 @@
         "type": "object"
       },
       "SendMessageV1404ResponseErrorsItemSchema": {
+        "required": [
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "SendMessageV1429ResponseErrorsItemValue": {
+        "type": "object"
+      },
+      "SendMessageV1429ResponseErrorsItemSchema": {
         "required": [
           "type"
         ],
@@ -28451,23 +29059,6 @@
           ]
         }
       },
-      "TooManyParticipantsDescription": {
-        "const": null,
-        "enum": [
-          "Too Many Participants"
-        ],
-        "type": "string",
-        "x-ms-enum": {
-          "name": "TooManyParticipantsDescription",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "Too Many Participants",
-              "name": "TooManyParticipants"
-            }
-          ]
-        }
-      },
       "Value0100401Code": {
         "const": null,
         "enum": [
@@ -28510,23 +29101,6 @@
         "type": "string",
         "x-ms-enum": {
           "name": "NotPhoneNumberUserTitle",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "Not Phone Number User",
-              "name": "NotPhoneNumberUser"
-            }
-          ]
-        }
-      },
-      "NotPhoneNumberUserDescription": {
-        "const": null,
-        "enum": [
-          "Not Phone Number User"
-        ],
-        "type": "string",
-        "x-ms-enum": {
-          "name": "NotPhoneNumberUserDescription",
           "modelAsString": false,
           "values": [
             {
@@ -28944,23 +29518,6 @@
           ]
         }
       },
-      "InvalidCustomFieldItemDescription": {
-        "const": null,
-        "enum": [
-          "Invalid Custom Field Item"
-        ],
-        "type": "string",
-        "x-ms-enum": {
-          "name": "InvalidCustomFieldItemDescription",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "Invalid Custom Field Item",
-              "name": "InvalidCustomFieldItem"
-            }
-          ]
-        }
-      },
       "Value0800401Code": {
         "const": null,
         "enum": [
@@ -28991,6 +29548,23 @@
             {
               "value": "0801403",
               "name": "Value0801403"
+            }
+          ]
+        }
+      },
+      "NotPhoneNumberUserDescription": {
+        "const": null,
+        "enum": [
+          "Not Phone Number User"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "NotPhoneNumberUserDescription",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "Not Phone Number User",
+              "name": "NotPhoneNumberUser"
             }
           ]
         }
@@ -29211,23 +29785,6 @@
           ]
         }
       },
-      "A2PRegistrationNotApprovedDescription": {
-        "const": null,
-        "enum": [
-          "A2P Registration Not Approved"
-        ],
-        "type": "string",
-        "x-ms-enum": {
-          "name": "A2PRegistrationNotApprovedDescription",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "A2P Registration Not Approved",
-              "name": "A2PRegistrationNotApproved"
-            }
-          ]
-        }
-      },
       "Value0200401Code": {
         "const": null,
         "enum": [
@@ -29313,6 +29870,108 @@
           ]
         }
       },
+      "Value0200403Code": {
+        "const": null,
+        "enum": [
+          "0200403"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "Value0200403Code",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "0200403",
+              "name": "Value0200403"
+            }
+          ]
+        }
+      },
+      "Value0200404Code": {
+        "const": null,
+        "enum": [
+          "0200404"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "Value0200404Code",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "0200404",
+              "name": "Value0200404"
+            }
+          ]
+        }
+      },
+      "Value0200429Code": {
+        "const": null,
+        "enum": [
+          "0200429"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "Value0200429Code",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "0200429",
+              "name": "Value0200429"
+            }
+          ]
+        }
+      },
+      "Value429Status": {
+        "const": null,
+        "enum": [
+          "429"
+        ],
+        "type": "number",
+        "x-ms-enum": {
+          "name": "Value429Status",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "429",
+              "name": "Value429"
+            }
+          ]
+        }
+      },
+      "DailyConversationLimitReachedTitle": {
+        "const": null,
+        "enum": [
+          "Daily Conversation Limit Reached"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "DailyConversationLimitReachedTitle",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "Daily Conversation Limit Reached",
+              "name": "DailyConversationLimitReached"
+            }
+          ]
+        }
+      },
+      "Value0201500Code": {
+        "const": null,
+        "enum": [
+          "0201500"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "Value0201500Code",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "0201500",
+              "name": "Value0201500"
+            }
+          ]
+        }
+      },
       "Value0204403Code": {
         "const": null,
         "enum": [
@@ -29343,57 +30002,6 @@
             {
               "value": "A2P 10DLC Daily Message Cap Reached",
               "name": "A2P10DlcDailyMessageCapReached"
-            }
-          ]
-        }
-      },
-      "A2P10DlcDailyLimitReachedForHelpIncreasingThisLimitCommaVisitHttpsColonSlashSlashSupportQuoComHelpSubmitARequestDescription": {
-        "const": null,
-        "enum": [
-          "A2P 10DLC Daily limit reached. For help increasing this limit, visit https://support.quo.com/help/submit-a-request"
-        ],
-        "type": "string",
-        "x-ms-enum": {
-          "name": "A2P10DlcDailyLimitReachedForHelpIncreasingThisLimitCommaVisitHttpsColonSlashSlashSupportQuoComHelpSubmitARequestDescription",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "A2P 10DLC Daily limit reached. For help increasing this limit, visit https://support.quo.com/help/submit-a-request",
-              "name": "A2P10DLCDailyLimitReachedForHelpIncreasingThisLimitCommaVisitHttpsColonSlashSlashSupportQuoComHelpSubmitARequest"
-            }
-          ]
-        }
-      },
-      "Value0200404Code": {
-        "const": null,
-        "enum": [
-          "0200404"
-        ],
-        "type": "string",
-        "x-ms-enum": {
-          "name": "Value0200404Code",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "0200404",
-              "name": "Value0200404"
-            }
-          ]
-        }
-      },
-      "Value0201500Code": {
-        "const": null,
-        "enum": [
-          "0201500"
-        ],
-        "type": "string",
-        "x-ms-enum": {
-          "name": "Value0201500Code",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "0201500",
-              "name": "Value0201500"
             }
           ]
         }
@@ -30178,6 +30786,13 @@
             }
           ]
         }
+      },
+      "UnauthorizedKey": {
+        "const": null,
+        "enum": [
+          "Unauthorized"
+        ],
+        "type": "string"
       },
       "ListCallsV1200ResponseDataItemDirection": {
         "examples": [

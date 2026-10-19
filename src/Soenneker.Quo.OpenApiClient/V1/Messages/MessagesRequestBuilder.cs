@@ -91,6 +91,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Messages
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1402Response">When receiving a 402 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1404Response">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1429Response">When receiving a 429 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1500Response">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -110,6 +111,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Messages
                 { "402", global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1402Response.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1403Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1404Response.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1500Response.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1202Response>(requestInfo, global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1202Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);

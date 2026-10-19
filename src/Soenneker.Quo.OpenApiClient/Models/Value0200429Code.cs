@@ -5,12 +5,12 @@ namespace Soenneker.Quo.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public enum InvalidCustomFieldItemDescription
+    public enum Value0200429Code
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "Invalid Custom Field Item")]
+        [EnumMember(Value = "0200429")]
         #pragma warning disable CS1591
-        InvalidCustomFieldItem,
+        Value0200429,
         #pragma warning restore CS1591
     }
 }

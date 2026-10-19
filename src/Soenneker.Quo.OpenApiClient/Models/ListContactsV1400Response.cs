@@ -17,8 +17,6 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The code property</summary>
         public global::Soenneker.Quo.OpenApiClient.Models.Value0801400Code? Code { get; set; }
-        /// <summary>The description property</summary>
-        public global::Soenneker.Quo.OpenApiClient.Models.InvalidCustomFieldItemDescription? Description { get; set; }
         /// <summary>The docs property</summary>
         public global::Soenneker.Quo.OpenApiClient.Models.HttpsColonSlashSlashQuoComDocsDocs? Docs { get; set; }
         /// <summary>The errors property</summary>
@@ -77,7 +75,6 @@ namespace Soenneker.Quo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "code", n => { Code = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.Value0801400Code>(); } },
-                { "description", n => { Description = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.InvalidCustomFieldItemDescription>(); } },
                 { "docs", n => { Docs = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.HttpsColonSlashSlashQuoComDocsDocs>(); } },
                 { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.ListContactsV1400ResponseErrorsItem>(global::Soenneker.Quo.OpenApiClient.Models.ListContactsV1400ResponseErrorsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "message", n => { MessageEscaped = n.GetStringValue(); } },
@@ -94,7 +91,6 @@ namespace Soenneker.Quo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.Value0801400Code>("code", Code);
-            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.InvalidCustomFieldItemDescription>("description", Description);
             writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.HttpsColonSlashSlashQuoComDocsDocs>("docs", Docs);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.ListContactsV1400ResponseErrorsItem>("errors", Errors);
             writer.WriteStringValue("message", MessageEscaped);

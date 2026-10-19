@@ -5,12 +5,12 @@ namespace Soenneker.Quo.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public enum A2PRegistrationNotApprovedDescription
+    public enum Value0200403Code
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "A2P Registration Not Approved")]
+        [EnumMember(Value = "0200403")]
         #pragma warning disable CS1591
-        A2PRegistrationNotApproved,
+        Value0200403,
         #pragma warning restore CS1591
     }
 }

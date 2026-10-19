@@ -5,12 +5,12 @@ namespace Soenneker.Quo.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public enum TooManyParticipantsDescription
+    public enum UnauthorizedKey
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "Too Many Participants")]
+        [EnumMember(Value = "Unauthorized")]
         #pragma warning disable CS1591
-        TooManyParticipants,
+        Unauthorized,
         #pragma warning restore CS1591
     }
 }
