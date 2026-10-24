@@ -16,9 +16,9 @@ namespace Soenneker.Quo.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The code property</summary>
-        public global::Soenneker.Quo.OpenApiClient.Models.Value0600402Code? Code { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1402ResponseCode? Code { get; set; }
         /// <summary>The docs property</summary>
-        public global::Soenneker.Quo.OpenApiClient.Models.HttpsColonSlashSlashQuoComDocsDocs? Docs { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1402ResponseDocs? Docs { get; set; }
         /// <summary>The errors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -38,9 +38,9 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public string MessageEscaped { get; set; }
 #endif
         /// <summary>The status property</summary>
-        public global::Soenneker.Quo.OpenApiClient.Models.Value402Status? Status { get; set; }
+        public double? Status { get; set; }
         /// <summary>The title property</summary>
-        public global::Soenneker.Quo.OpenApiClient.Models.OpenTasksLimitReachedTitle? Title { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1402ResponseTitle? Title { get; set; }
         /// <summary>The trace property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -74,12 +74,12 @@ namespace Soenneker.Quo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "code", n => { Code = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.Value0600402Code>(); } },
-                { "docs", n => { Docs = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.HttpsColonSlashSlashQuoComDocsDocs>(); } },
+                { "code", n => { Code = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1402ResponseCode>(); } },
+                { "docs", n => { Docs = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1402ResponseDocs>(); } },
                 { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1402ResponseErrorsItem>(global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1402ResponseErrorsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "message", n => { MessageEscaped = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.Value402Status>(); } },
-                { "title", n => { Title = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.OpenTasksLimitReachedTitle>(); } },
+                { "status", n => { Status = n.GetDoubleValue(); } },
+                { "title", n => { Title = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1402ResponseTitle>(); } },
                 { "trace", n => { Trace = n.GetStringValue(); } },
             };
         }
@@ -90,12 +90,12 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.Value0600402Code>("code", Code);
-            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.HttpsColonSlashSlashQuoComDocsDocs>("docs", Docs);
+            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1402ResponseCode>("code", Code);
+            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1402ResponseDocs>("docs", Docs);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1402ResponseErrorsItem>("errors", Errors);
             writer.WriteStringValue("message", MessageEscaped);
-            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.Value402Status>("status", Status);
-            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.OpenTasksLimitReachedTitle>("title", Title);
+            writer.WriteDoubleValue("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1402ResponseTitle>("title", Title);
             writer.WriteStringValue("trace", Trace);
             writer.WriteAdditionalData(AdditionalData);
         }

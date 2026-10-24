@@ -41,10 +41,10 @@ namespace Soenneker.Quo.OpenApiClient.Models
         /// <summary>The value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Quo.OpenApiClient.Models.DeleteTaskV1403ResponseErrorsItemValue? Value { get; set; }
+        public UntypedNode? Value { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Quo.OpenApiClient.Models.DeleteTaskV1403ResponseErrorsItemValue Value { get; set; }
+        public UntypedNode Value { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Quo.OpenApiClient.Models.DeleteTaskV1403ResponseErrorsItem"/> and sets the default values.
@@ -74,7 +74,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "path", n => { Path = n.GetStringValue(); } },
                 { "schema", n => { Schema = n.GetObjectValue<global::Soenneker.Quo.OpenApiClient.Models.DeleteTaskV1403ResponseErrorsItemSchema>(global::Soenneker.Quo.OpenApiClient.Models.DeleteTaskV1403ResponseErrorsItemSchema.CreateFromDiscriminatorValue); } },
-                { "value", n => { Value = n.GetObjectValue<global::Soenneker.Quo.OpenApiClient.Models.DeleteTaskV1403ResponseErrorsItemValue>(global::Soenneker.Quo.OpenApiClient.Models.DeleteTaskV1403ResponseErrorsItemValue.CreateFromDiscriminatorValue); } },
+                { "value", n => { Value = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -87,7 +87,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
             writer.WriteStringValue("message", Message);
             writer.WriteStringValue("path", Path);
             writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.DeleteTaskV1403ResponseErrorsItemSchema>("schema", Schema);
-            writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.DeleteTaskV1403ResponseErrorsItemValue>("value", Value);
+            writer.WriteObjectValue<UntypedNode>("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

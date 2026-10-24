@@ -7,92 +7,52 @@ using System.IO;
 using System;
 namespace Soenneker.Quo.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataAnyOf1"/>, <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataAnyOf2"/>, <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataAnyOf3"/>, <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataAnyOf4"/>, <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataAnyOf5"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class GetWebhookByIdV1200ResponseData : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class GetWebhookByIdV1200ResponseData : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The date the webhook was created at, in ISO 8601 format.</summary>
-        public DateTimeOffset? CreatedAt { get; set; }
-        /// <summary>The date the webhook was deleted at, in ISO 8601 format.</summary>
-        public DateTimeOffset? DeletedAt { get; set; }
-        /// <summary>The event associated with the webhook.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataAnyOf1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataEventsItem?>? Events { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataAnyOf1? GetWebhookByIdV1200ResponseDataAnyOf1 { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataEventsItem?> Events { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataAnyOf1 GetWebhookByIdV1200ResponseDataAnyOf1 { get; set; }
 #endif
-        /// <summary>The webhook&apos;s ID</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataAnyOf2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataAnyOf2? GetWebhookByIdV1200ResponseDataAnyOf2 { get; set; }
 #nullable restore
 #else
-        public string Id { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataAnyOf2 GetWebhookByIdV1200ResponseDataAnyOf2 { get; set; }
 #endif
-        /// <summary>Webhook key</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataAnyOf3"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Key { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataAnyOf3? GetWebhookByIdV1200ResponseDataAnyOf3 { get; set; }
 #nullable restore
 #else
-        public string Key { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataAnyOf3 GetWebhookByIdV1200ResponseDataAnyOf3 { get; set; }
 #endif
-        /// <summary>The webhook&apos;s label.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataAnyOf4"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Label { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataAnyOf4? GetWebhookByIdV1200ResponseDataAnyOf4 { get; set; }
 #nullable restore
 #else
-        public string Label { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataAnyOf4 GetWebhookByIdV1200ResponseDataAnyOf4 { get; set; }
 #endif
-        /// <summary>The unique identifier of the organization the webhook belongs to</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataAnyOf5"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OrgId { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataAnyOf5? GetWebhookByIdV1200ResponseDataAnyOf5 { get; set; }
 #nullable restore
 #else
-        public string OrgId { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataAnyOf5 GetWebhookByIdV1200ResponseDataAnyOf5 { get; set; }
 #endif
-        /// <summary>The unique identifiers of the phone numbers associated with the webhook.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataResourceIds? ResourceIds { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataResourceIds ResourceIds { get; set; }
-#endif
-        /// <summary>The status of the webhook.</summary>
-        public global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataStatus? Status { get; set; }
-        /// <summary>The date the webhook was updated at, in ISO 8601 format.</summary>
-        public DateTimeOffset? UpdatedAt { get; set; }
-        /// <summary>The endpoint that receives events from the webhook.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Url { get; set; }
-#nullable restore
-#else
-        public string Url { get; set; }
-#endif
-        /// <summary>The unique identifier of the user that created the webhook.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? UserId { get; set; }
-#nullable restore
-#else
-        public string UserId { get; set; }
-#endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseData"/> and sets the default values.
-        /// </summary>
-        public GetWebhookByIdV1200ResponseData()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -101,7 +61,13 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public static global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseData();
+            var result = new global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseData();
+            result.GetWebhookByIdV1200ResponseDataAnyOf1 = new global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataAnyOf1();
+            result.GetWebhookByIdV1200ResponseDataAnyOf2 = new global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataAnyOf2();
+            result.GetWebhookByIdV1200ResponseDataAnyOf3 = new global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataAnyOf3();
+            result.GetWebhookByIdV1200ResponseDataAnyOf4 = new global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataAnyOf4();
+            result.GetWebhookByIdV1200ResponseDataAnyOf5 = new global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataAnyOf5();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -109,21 +75,11 @@ namespace Soenneker.Quo.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(GetWebhookByIdV1200ResponseDataAnyOf1 != null || GetWebhookByIdV1200ResponseDataAnyOf2 != null || GetWebhookByIdV1200ResponseDataAnyOf3 != null || GetWebhookByIdV1200ResponseDataAnyOf4 != null || GetWebhookByIdV1200ResponseDataAnyOf5 != null)
             {
-                { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "deletedAt", n => { DeletedAt = n.GetDateTimeOffsetValue(); } },
-                { "events", n => { Events = n.GetCollectionOfEnumValues<global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataEventsItem>()?.AsList(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
-                { "key", n => { Key = n.GetStringValue(); } },
-                { "label", n => { Label = n.GetStringValue(); } },
-                { "orgId", n => { OrgId = n.GetStringValue(); } },
-                { "resourceIds", n => { ResourceIds = n.GetObjectValue<global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataResourceIds>(global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataResourceIds.CreateFromDiscriminatorValue); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataStatus>(); } },
-                { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
-                { "url", n => { Url = n.GetStringValue(); } },
-                { "userId", n => { UserId = n.GetStringValue(); } },
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(GetWebhookByIdV1200ResponseDataAnyOf1, GetWebhookByIdV1200ResponseDataAnyOf2, GetWebhookByIdV1200ResponseDataAnyOf3, GetWebhookByIdV1200ResponseDataAnyOf4, GetWebhookByIdV1200ResponseDataAnyOf5);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -132,19 +88,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
-            writer.WriteDateTimeOffsetValue("deletedAt", DeletedAt);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataEventsItem>("events", Events);
-            writer.WriteStringValue("id", Id);
-            writer.WriteStringValue("key", Key);
-            writer.WriteStringValue("label", Label);
-            writer.WriteStringValue("orgId", OrgId);
-            writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataResourceIds>("resourceIds", ResourceIds);
-            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataStatus>("status", Status);
-            writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
-            writer.WriteStringValue("url", Url);
-            writer.WriteStringValue("userId", UserId);
-            writer.WriteAdditionalData(AdditionalData);
+            writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200ResponseDataAnyOf1>(null, GetWebhookByIdV1200ResponseDataAnyOf1, GetWebhookByIdV1200ResponseDataAnyOf2, GetWebhookByIdV1200ResponseDataAnyOf3, GetWebhookByIdV1200ResponseDataAnyOf4, GetWebhookByIdV1200ResponseDataAnyOf5);
         }
     }
 }

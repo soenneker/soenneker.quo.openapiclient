@@ -46,21 +46,21 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public global::Soenneker.Quo.OpenApiClient.Models.ListCallsV1200ResponseDataItemDirection? Direction { get; set; }
         /// <summary>The total duration of the call in seconds.</summary>
         public int? Duration { get; set; }
-        /// <summary>The phone number or Quo user ID from which the call was forwarded. Null if the call was not forwarded.</summary>
+        /// <summary>The forwardedFrom property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Quo.OpenApiClient.Models.ListCallsV1200ResponseDataItemForwardedFrom? ForwardedFrom { get; set; }
+        public UntypedNode? ForwardedFrom { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Quo.OpenApiClient.Models.ListCallsV1200ResponseDataItemForwardedFrom ForwardedFrom { get; set; }
+        public UntypedNode ForwardedFrom { get; set; }
 #endif
-        /// <summary>The phone number, Quo phone number ID, or Quo user ID to which the call was forwarded. Null if the call was not forwarded.</summary>
+        /// <summary>The forwardedTo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Quo.OpenApiClient.Models.ListCallsV1200ResponseDataItemForwardedTo? ForwardedTo { get; set; }
+        public UntypedNode? ForwardedTo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Quo.OpenApiClient.Models.ListCallsV1200ResponseDataItemForwardedTo ForwardedTo { get; set; }
+        public UntypedNode ForwardedTo { get; set; }
 #endif
         /// <summary>The unique identifier of the call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -132,8 +132,8 @@ namespace Soenneker.Quo.OpenApiClient.Models
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "direction", n => { Direction = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.ListCallsV1200ResponseDataItemDirection>(); } },
                 { "duration", n => { Duration = n.GetIntValue(); } },
-                { "forwardedFrom", n => { ForwardedFrom = n.GetObjectValue<global::Soenneker.Quo.OpenApiClient.Models.ListCallsV1200ResponseDataItemForwardedFrom>(global::Soenneker.Quo.OpenApiClient.Models.ListCallsV1200ResponseDataItemForwardedFrom.CreateFromDiscriminatorValue); } },
-                { "forwardedTo", n => { ForwardedTo = n.GetObjectValue<global::Soenneker.Quo.OpenApiClient.Models.ListCallsV1200ResponseDataItemForwardedTo>(global::Soenneker.Quo.OpenApiClient.Models.ListCallsV1200ResponseDataItemForwardedTo.CreateFromDiscriminatorValue); } },
+                { "forwardedFrom", n => { ForwardedFrom = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "forwardedTo", n => { ForwardedTo = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "initiatedBy", n => { InitiatedBy = n.GetStringValue(); } },
                 { "participants", n => { Participants = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -158,8 +158,8 @@ namespace Soenneker.Quo.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.ListCallsV1200ResponseDataItemDirection>("direction", Direction);
             writer.WriteIntValue("duration", Duration);
-            writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.ListCallsV1200ResponseDataItemForwardedFrom>("forwardedFrom", ForwardedFrom);
-            writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.ListCallsV1200ResponseDataItemForwardedTo>("forwardedTo", ForwardedTo);
+            writer.WriteObjectValue<UntypedNode>("forwardedFrom", ForwardedFrom);
+            writer.WriteObjectValue<UntypedNode>("forwardedTo", ForwardedTo);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("initiatedBy", InitiatedBy);
             writer.WriteCollectionOfPrimitiveValues<string>("participants", Participants);

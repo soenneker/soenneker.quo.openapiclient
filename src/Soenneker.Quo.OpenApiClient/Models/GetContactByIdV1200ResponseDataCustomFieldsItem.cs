@@ -7,69 +7,88 @@ using System.IO;
 using System;
 namespace Soenneker.Quo.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemMember1"/>, <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemMember2"/>, <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemMember3"/>, <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemMember4"/>, <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemMember5"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class GetContactByIdV1200ResponseDataCustomFieldsItem : global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemAllOf1, IParsable
-    #pragma warning restore CS1591
+    public partial class GetContactByIdV1200ResponseDataCustomFieldsItem : IComposedTypeWrapper, IParsable
     {
-        /// <summary>The unique identifier for the contact custom field.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemMember1? GetContactByIdV1200ResponseDataCustomFieldsItemMember1 { get; set; }
 #nullable restore
 #else
-        public string Id { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemMember1 GetContactByIdV1200ResponseDataCustomFieldsItemMember1 { get; set; }
 #endif
-        /// <summary>The identifying key for contact custom field.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemMember2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Key { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemMember2? GetContactByIdV1200ResponseDataCustomFieldsItemMember2 { get; set; }
 #nullable restore
 #else
-        public string Key { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemMember2 GetContactByIdV1200ResponseDataCustomFieldsItemMember2 { get; set; }
 #endif
-        /// <summary>The name of the custom contact field. This name is set by users in the Quo interface when the custom field is created.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemMember3"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemMember3? GetContactByIdV1200ResponseDataCustomFieldsItemMember3 { get; set; }
 #nullable restore
 #else
-        public string Name { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemMember3 GetContactByIdV1200ResponseDataCustomFieldsItemMember3 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemMember4"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemMember4? GetContactByIdV1200ResponseDataCustomFieldsItemMember4 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemMember4 GetContactByIdV1200ResponseDataCustomFieldsItemMember4 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemMember5"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemMember5? GetContactByIdV1200ResponseDataCustomFieldsItemMember5 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemMember5 GetContactByIdV1200ResponseDataCustomFieldsItemMember5 { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItem"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItem CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItem();
+            var result = new global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItem();
+            result.GetContactByIdV1200ResponseDataCustomFieldsItemMember1 = new global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemMember1();
+            result.GetContactByIdV1200ResponseDataCustomFieldsItemMember2 = new global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemMember2();
+            result.GetContactByIdV1200ResponseDataCustomFieldsItemMember3 = new global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemMember3();
+            result.GetContactByIdV1200ResponseDataCustomFieldsItemMember4 = new global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemMember4();
+            result.GetContactByIdV1200ResponseDataCustomFieldsItemMember5 = new global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemMember5();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            if(GetContactByIdV1200ResponseDataCustomFieldsItemMember1 != null || GetContactByIdV1200ResponseDataCustomFieldsItemMember2 != null || GetContactByIdV1200ResponseDataCustomFieldsItemMember3 != null || GetContactByIdV1200ResponseDataCustomFieldsItemMember4 != null || GetContactByIdV1200ResponseDataCustomFieldsItemMember5 != null)
             {
-                { "id", n => { Id = n.GetStringValue(); } },
-                { "key", n => { Key = n.GetStringValue(); } },
-                { "name", n => { Name = n.GetStringValue(); } },
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(GetContactByIdV1200ResponseDataCustomFieldsItemMember1, GetContactByIdV1200ResponseDataCustomFieldsItemMember2, GetContactByIdV1200ResponseDataCustomFieldsItemMember3, GetContactByIdV1200ResponseDataCustomFieldsItemMember4, GetContactByIdV1200ResponseDataCustomFieldsItemMember5);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
-            writer.WriteStringValue("id", Id);
-            writer.WriteStringValue("key", Key);
-            writer.WriteStringValue("name", Name);
+            writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemMember1>(null, GetContactByIdV1200ResponseDataCustomFieldsItemMember1, GetContactByIdV1200ResponseDataCustomFieldsItemMember2, GetContactByIdV1200ResponseDataCustomFieldsItemMember3, GetContactByIdV1200ResponseDataCustomFieldsItemMember4, GetContactByIdV1200ResponseDataCustomFieldsItemMember5);
         }
     }
 }

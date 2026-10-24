@@ -25,18 +25,18 @@ namespace Soenneker.Quo.OpenApiClient.Models
         /// <summary>The assignedBy property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1200ResponseDataAssignedBy? AssignedBy { get; set; }
+        public UntypedNode? AssignedBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1200ResponseDataAssignedBy AssignedBy { get; set; }
+        public UntypedNode AssignedBy { get; set; }
 #endif
         /// <summary>The assignedTo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1200ResponseDataAssignedTo? AssignedTo { get; set; }
+        public UntypedNode? AssignedTo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1200ResponseDataAssignedTo AssignedTo { get; set; }
+        public UntypedNode AssignedTo { get; set; }
 #endif
         /// <summary>The completed property</summary>
         public bool? Completed { get; set; }
@@ -144,8 +144,8 @@ namespace Soenneker.Quo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "activityId", n => { ActivityId = n.GetStringValue(); } },
-                { "assignedBy", n => { AssignedBy = n.GetObjectValue<global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1200ResponseDataAssignedBy>(global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1200ResponseDataAssignedBy.CreateFromDiscriminatorValue); } },
-                { "assignedTo", n => { AssignedTo = n.GetObjectValue<global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1200ResponseDataAssignedTo>(global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1200ResponseDataAssignedTo.CreateFromDiscriminatorValue); } },
+                { "assignedBy", n => { AssignedBy = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "assignedTo", n => { AssignedTo = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "completed", n => { Completed = n.GetBoolValue(); } },
                 { "conversationId", n => { ConversationId = n.GetStringValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
@@ -169,8 +169,8 @@ namespace Soenneker.Quo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("activityId", ActivityId);
-            writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1200ResponseDataAssignedBy>("assignedBy", AssignedBy);
-            writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1200ResponseDataAssignedTo>("assignedTo", AssignedTo);
+            writer.WriteObjectValue<UntypedNode>("assignedBy", AssignedBy);
+            writer.WriteObjectValue<UntypedNode>("assignedTo", AssignedTo);
             writer.WriteBoolValue("completed", Completed);
             writer.WriteStringValue("conversationId", ConversationId);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);

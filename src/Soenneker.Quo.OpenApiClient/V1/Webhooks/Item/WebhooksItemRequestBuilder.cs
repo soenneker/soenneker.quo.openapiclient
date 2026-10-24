@@ -39,7 +39,6 @@ namespace Soenneker.Quo.OpenApiClient.V1.Webhooks.Item
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.DeleteWebhookByIdV1400Response">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.DeleteWebhookByIdV1401Response">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.DeleteWebhookByIdV1403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.DeleteWebhookByIdV1404Response">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.DeleteWebhookByIdV1500Response">When receiving a 500 status code</exception>
@@ -56,7 +55,6 @@ namespace Soenneker.Quo.OpenApiClient.V1.Webhooks.Item
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Quo.OpenApiClient.Models.DeleteWebhookByIdV1400Response.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Quo.OpenApiClient.Models.DeleteWebhookByIdV1401Response.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Quo.OpenApiClient.Models.DeleteWebhookByIdV1403Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Quo.OpenApiClient.Models.DeleteWebhookByIdV1404Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Quo.OpenApiClient.Models.DeleteWebhookByIdV1500Response.CreateFromDiscriminatorValue },
@@ -70,7 +68,6 @@ namespace Soenneker.Quo.OpenApiClient.V1.Webhooks.Item
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1400Response">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1401Response">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1404Response">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1500Response">When receiving a 500 status code</exception>
@@ -87,7 +84,6 @@ namespace Soenneker.Quo.OpenApiClient.V1.Webhooks.Item
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1400Response.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1401Response.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1403Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1404Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1500Response.CreateFromDiscriminatorValue },

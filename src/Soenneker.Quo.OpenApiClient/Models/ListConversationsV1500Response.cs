@@ -18,7 +18,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
         /// <summary>The code property</summary>
         public global::Soenneker.Quo.OpenApiClient.Models.Value1001500Code? Code { get; set; }
         /// <summary>The docs property</summary>
-        public global::Soenneker.Quo.OpenApiClient.Models.HttpsColonSlashSlashQuoComDocsDocs? Docs { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.ListConversationsV1500ResponseDocs? Docs { get; set; }
         /// <summary>The errors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -38,9 +38,9 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public string MessageEscaped { get; set; }
 #endif
         /// <summary>The status property</summary>
-        public global::Soenneker.Quo.OpenApiClient.Models.Value500Status? Status { get; set; }
+        public double? Status { get; set; }
         /// <summary>The title property</summary>
-        public global::Soenneker.Quo.OpenApiClient.Models.UnknownTitle? Title { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.ListConversationsV1500ResponseTitle? Title { get; set; }
         /// <summary>The trace property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -75,11 +75,11 @@ namespace Soenneker.Quo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "code", n => { Code = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.Value1001500Code>(); } },
-                { "docs", n => { Docs = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.HttpsColonSlashSlashQuoComDocsDocs>(); } },
+                { "docs", n => { Docs = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.ListConversationsV1500ResponseDocs>(); } },
                 { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.ListConversationsV1500ResponseErrorsItem>(global::Soenneker.Quo.OpenApiClient.Models.ListConversationsV1500ResponseErrorsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "message", n => { MessageEscaped = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.Value500Status>(); } },
-                { "title", n => { Title = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.UnknownTitle>(); } },
+                { "status", n => { Status = n.GetDoubleValue(); } },
+                { "title", n => { Title = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.ListConversationsV1500ResponseTitle>(); } },
                 { "trace", n => { Trace = n.GetStringValue(); } },
             };
         }
@@ -91,11 +91,11 @@ namespace Soenneker.Quo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.Value1001500Code>("code", Code);
-            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.HttpsColonSlashSlashQuoComDocsDocs>("docs", Docs);
+            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.ListConversationsV1500ResponseDocs>("docs", Docs);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.ListConversationsV1500ResponseErrorsItem>("errors", Errors);
             writer.WriteStringValue("message", MessageEscaped);
-            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.Value500Status>("status", Status);
-            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.UnknownTitle>("title", Title);
+            writer.WriteDoubleValue("status", Status);
+            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.ListConversationsV1500ResponseTitle>("title", Title);
             writer.WriteStringValue("trace", Trace);
             writer.WriteAdditionalData(AdditionalData);
         }

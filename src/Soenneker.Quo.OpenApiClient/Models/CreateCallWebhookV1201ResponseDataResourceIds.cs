@@ -8,18 +8,18 @@ using System;
 namespace Soenneker.Quo.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes List&lt;global::Soenneker.Quo.OpenApiClient.Models.AsteriskItem&gt;, List&lt;string&gt;
+    /// Composed type wrapper for classes List&lt;global::Soenneker.Quo.OpenApiClient.Models.CreateCallWebhookV1201ResponseDataResourceIdsAnyOf2Item&gt;, List&lt;string&gt;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreateCallWebhookV1201ResponseDataResourceIds : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type List&lt;global::Soenneker.Quo.OpenApiClient.Models.AsteriskItem&gt;</summary>
+        /// <summary>Composed type representation for type List&lt;global::Soenneker.Quo.OpenApiClient.Models.CreateCallWebhookV1201ResponseDataResourceIdsAnyOf2Item&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Quo.OpenApiClient.Models.AsteriskItem>? AsteriskItem { get; set; }
+        public List<global::Soenneker.Quo.OpenApiClient.Models.CreateCallWebhookV1201ResponseDataResourceIdsAnyOf2Item>? CreateCallWebhookV1201ResponseDataResourceIdsAnyOf2Item { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Quo.OpenApiClient.Models.AsteriskItem> AsteriskItem { get; set; }
+        public List<global::Soenneker.Quo.OpenApiClient.Models.CreateCallWebhookV1201ResponseDataResourceIdsAnyOf2Item> CreateCallWebhookV1201ResponseDataResourceIdsAnyOf2Item { get; set; }
 #endif
         /// <summary>Composed type representation for type List&lt;string&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -38,9 +38,9 @@ namespace Soenneker.Quo.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Quo.OpenApiClient.Models.CreateCallWebhookV1201ResponseDataResourceIds();
-            if(parseNode.GetCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.AsteriskItem>(global::Soenneker.Quo.OpenApiClient.Models.AsteriskItem.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Quo.OpenApiClient.Models.AsteriskItem> asteriskItemValue)
+            if(parseNode.GetCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.CreateCallWebhookV1201ResponseDataResourceIdsAnyOf2Item>(global::Soenneker.Quo.OpenApiClient.Models.CreateCallWebhookV1201ResponseDataResourceIdsAnyOf2Item.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Quo.OpenApiClient.Models.CreateCallWebhookV1201ResponseDataResourceIdsAnyOf2Item> createCallWebhookV1201ResponseDataResourceIdsAnyOf2ItemValue)
             {
-                result.AsteriskItem = asteriskItemValue;
+                result.CreateCallWebhookV1201ResponseDataResourceIdsAnyOf2Item = createCallWebhookV1201ResponseDataResourceIdsAnyOf2ItemValue;
             }
             else if(parseNode.GetCollectionOfPrimitiveValues<string>()?.AsList() is List<string> stringValue)
             {
@@ -63,9 +63,9 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            if(AsteriskItem != null)
+            if(CreateCallWebhookV1201ResponseDataResourceIdsAnyOf2Item != null)
             {
-                writer.WriteCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.AsteriskItem>(null, AsteriskItem);
+                writer.WriteCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.CreateCallWebhookV1201ResponseDataResourceIdsAnyOf2Item>(null, CreateCallWebhookV1201ResponseDataResourceIdsAnyOf2Item);
             }
             else if(String != null)
             {

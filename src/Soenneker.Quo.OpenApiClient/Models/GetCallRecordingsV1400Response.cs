@@ -38,7 +38,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public string MessageEscaped { get; set; }
 #endif
         /// <summary>The status property</summary>
-        public global::Soenneker.Quo.OpenApiClient.Models.Value400Status? Status { get; set; }
+        public double? Status { get; set; }
         /// <summary>The title property</summary>
         public global::Soenneker.Quo.OpenApiClient.Models.BadRequestTitle? Title { get; set; }
         /// <summary>The trace property</summary>
@@ -78,7 +78,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
                 { "docs", n => { Docs = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.HttpsColonSlashSlashQuoComDocsDocs>(); } },
                 { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.GetCallRecordingsV1400ResponseErrorsItem>(global::Soenneker.Quo.OpenApiClient.Models.GetCallRecordingsV1400ResponseErrorsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "message", n => { MessageEscaped = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.Value400Status>(); } },
+                { "status", n => { Status = n.GetDoubleValue(); } },
                 { "title", n => { Title = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.BadRequestTitle>(); } },
                 { "trace", n => { Trace = n.GetStringValue(); } },
             };
@@ -94,7 +94,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.HttpsColonSlashSlashQuoComDocsDocs>("docs", Docs);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.GetCallRecordingsV1400ResponseErrorsItem>("errors", Errors);
             writer.WriteStringValue("message", MessageEscaped);
-            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.Value400Status>("status", Status);
+            writer.WriteDoubleValue("status", Status);
             writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.BadRequestTitle>("title", Title);
             writer.WriteStringValue("trace", Trace);
             writer.WriteAdditionalData(AdditionalData);

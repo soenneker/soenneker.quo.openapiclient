@@ -14,13 +14,13 @@ namespace Soenneker.Quo.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The unique identifier of the user or system user the conversation is assigned to.</summary>
+        /// <summary>The assignedTo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsDoneV1200ResponseAssignedTo? AssignedTo { get; set; }
+        public UntypedNode? AssignedTo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsDoneV1200ResponseAssignedTo AssignedTo { get; set; }
+        public UntypedNode AssignedTo { get; set; }
 #endif
         /// <summary>The createdAt property</summary>
         public DateTimeOffset? CreatedAt { get; set; }
@@ -99,7 +99,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "assignedTo", n => { AssignedTo = n.GetObjectValue<global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsDoneV1200ResponseAssignedTo>(global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsDoneV1200ResponseAssignedTo.CreateFromDiscriminatorValue); } },
+                { "assignedTo", n => { AssignedTo = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "deletedAt", n => { DeletedAt = n.GetDateTimeOffsetValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
@@ -120,7 +120,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsDoneV1200ResponseAssignedTo>("assignedTo", AssignedTo);
+            writer.WriteObjectValue<UntypedNode>("assignedTo", AssignedTo);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteDateTimeOffsetValue("deletedAt", DeletedAt);
             writer.WriteStringValue("id", Id);
