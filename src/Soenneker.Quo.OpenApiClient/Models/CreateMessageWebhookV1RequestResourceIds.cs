@@ -38,11 +38,11 @@ namespace Soenneker.Quo.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Quo.OpenApiClient.Models.CreateMessageWebhookV1RequestResourceIds();
-            if(parseNode.GetCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.AsteriskItem>(global::Soenneker.Quo.OpenApiClient.Models.AsteriskItem.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Quo.OpenApiClient.Models.AsteriskItem> asteriskItemValue)
+            if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray && parseNode.GetCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.AsteriskItem>(global::Soenneker.Quo.OpenApiClient.Models.AsteriskItem.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Quo.OpenApiClient.Models.AsteriskItem> asteriskItemValue)
             {
                 result.AsteriskItem = asteriskItemValue;
             }
-            else if(parseNode.GetCollectionOfPrimitiveValues<string>()?.AsList() is List<string> stringValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray && parseNode.GetCollectionOfPrimitiveValues<string>()?.AsList() is List<string> stringValue)
             {
                 result.String = stringValue;
             }
