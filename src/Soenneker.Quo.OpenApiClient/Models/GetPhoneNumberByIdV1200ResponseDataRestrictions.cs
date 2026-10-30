@@ -17,8 +17,10 @@ namespace Soenneker.Quo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("calling") is { } nullNodeCalling && nullNodeCalling.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Calling = null;
-            if (parseNode.GetChildNode("messaging") is { } nullNodeMessaging && nullNodeMessaging.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Messaging = null;
+            if (parseNode.GetChildNode("calling") is null) { _explicitNullValueCalling = default!; _explicitNullProperties?.Remove("calling"); }
+            else if (parseNode.GetChildNode("calling") is { } nullNodeCalling && nullNodeCalling.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Calling = null;
+            if (parseNode.GetChildNode("messaging") is null) { _explicitNullValueMessaging = default!; _explicitNullProperties?.Remove("messaging"); }
+            else if (parseNode.GetChildNode("messaging") is { } nullNodeMessaging && nullNodeMessaging.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Messaging = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Quo.OpenApiClient.Models
         /// <summary>The calling property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200ResponseDataRestrictionsCalling? Calling { get => _explicitNullValueCalling; set { _explicitNullValueCalling = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calling"); else _explicitNullProperties?.Remove("calling"); } }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200ResponseDataRestrictionsCalling? Calling { get => _explicitNullValueCalling; set { _explicitNullValueCalling = value; AdditionalData?.Remove("calling"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calling"); else _explicitNullProperties?.Remove("calling"); } }
         private global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200ResponseDataRestrictionsCalling? _explicitNullValueCalling = default!;
 #nullable restore
 #else
-        public global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200ResponseDataRestrictionsCalling Calling { get => _explicitNullValueCalling; set { _explicitNullValueCalling = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calling"); else _explicitNullProperties?.Remove("calling"); } }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200ResponseDataRestrictionsCalling Calling { get => _explicitNullValueCalling; set { _explicitNullValueCalling = value; AdditionalData?.Remove("calling"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calling"); else _explicitNullProperties?.Remove("calling"); } }
         private global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200ResponseDataRestrictionsCalling _explicitNullValueCalling = default!;
 #endif
         /// <summary>The messaging property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200ResponseDataRestrictionsMessaging? Messaging { get => _explicitNullValueMessaging; set { _explicitNullValueMessaging = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messaging"); else _explicitNullProperties?.Remove("messaging"); } }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200ResponseDataRestrictionsMessaging? Messaging { get => _explicitNullValueMessaging; set { _explicitNullValueMessaging = value; AdditionalData?.Remove("messaging"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messaging"); else _explicitNullProperties?.Remove("messaging"); } }
         private global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200ResponseDataRestrictionsMessaging? _explicitNullValueMessaging = default!;
 #nullable restore
 #else
-        public global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200ResponseDataRestrictionsMessaging Messaging { get => _explicitNullValueMessaging; set { _explicitNullValueMessaging = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messaging"); else _explicitNullProperties?.Remove("messaging"); } }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200ResponseDataRestrictionsMessaging Messaging { get => _explicitNullValueMessaging; set { _explicitNullValueMessaging = value; AdditionalData?.Remove("messaging"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messaging"); else _explicitNullProperties?.Remove("messaging"); } }
         private global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200ResponseDataRestrictionsMessaging _explicitNullValueMessaging = default!;
 #endif
         /// <summary>

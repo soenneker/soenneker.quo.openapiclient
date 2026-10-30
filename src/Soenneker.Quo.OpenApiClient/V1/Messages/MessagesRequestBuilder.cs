@@ -91,7 +91,9 @@ namespace Soenneker.Quo.OpenApiClient.V1.Messages
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1400Response">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1401ResponseError">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1402Response">When receiving a 402 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1403ResponseError">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1404Response">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1429ResponseError">When receiving a 429 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1500Response">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -109,7 +111,9 @@ namespace Soenneker.Quo.OpenApiClient.V1.Messages
                 { "400", global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1400Response.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1401ResponseError.CreateFromDiscriminatorValue },
                 { "402", global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1402Response.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1403ResponseError.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1404Response.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1429ResponseError.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1500Response.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
@@ -130,7 +134,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Messages
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesRequestBuilder.MessagesRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/v1/messages?maxResults={maxResults}&phoneNumberId={phoneNumberId}{&createdAfter*,createdBefore*,pageToken*,since*,userId*,participants*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve("{+baseurl}/v1/messages?maxResults={maxResults}&phoneNumberId={phoneNumberId}{&createdAfter*,createdBefore*,pageToken*,since*,userId*,participants*}", RequestAdapter.BaseUrl, "https://api.quo.com", "/v1/messages", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -151,7 +155,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Messages
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.quo.com", "/v1/messages", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
