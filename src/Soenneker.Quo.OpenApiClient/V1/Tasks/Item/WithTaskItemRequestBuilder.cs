@@ -87,6 +87,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Tasks.Item
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.DeleteTaskV1400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.DeleteTaskV1401ResponseError">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.DeleteTaskV1402Response">When receiving a 402 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.DeleteTaskV1403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.DeleteTaskV1404Response">When receiving a 404 status code</exception>
@@ -104,10 +105,13 @@ namespace Soenneker.Quo.OpenApiClient.V1.Tasks.Item
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Quo.OpenApiClient.Models.DeleteTaskV1400Response.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Quo.OpenApiClient.Models.DeleteTaskV1401ResponseError.CreateFromDiscriminatorValue },
                 { "402", global::Soenneker.Quo.OpenApiClient.Models.DeleteTaskV1402Response.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Quo.OpenApiClient.Models.DeleteTaskV1403Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Quo.OpenApiClient.Models.DeleteTaskV1404Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Quo.OpenApiClient.Models.DeleteTaskV1500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -118,6 +122,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Tasks.Item
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1401ResponseError">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1402Response">When receiving a 402 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1404Response">When receiving a 404 status code</exception>
@@ -135,10 +140,13 @@ namespace Soenneker.Quo.OpenApiClient.V1.Tasks.Item
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1400Response.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1401ResponseError.CreateFromDiscriminatorValue },
                 { "402", global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1402Response.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1403Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1404Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1200Response>(requestInfo, global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -150,6 +158,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Tasks.Item
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1401ResponseError">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1402Response">When receiving a 402 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1404Response">When receiving a 404 status code</exception>
@@ -168,10 +177,13 @@ namespace Soenneker.Quo.OpenApiClient.V1.Tasks.Item
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1400Response.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1401ResponseError.CreateFromDiscriminatorValue },
                 { "402", global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1402Response.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1403Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1404Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1200Response>(requestInfo, global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

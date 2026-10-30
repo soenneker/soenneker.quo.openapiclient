@@ -53,6 +53,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Users
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListUsersV1400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListUsersV1401ResponseError">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListUsersV1403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListUsersV1404Response">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListUsersV1500Response">When receiving a 500 status code</exception>
@@ -69,9 +70,12 @@ namespace Soenneker.Quo.OpenApiClient.V1.Users
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Quo.OpenApiClient.Models.ListUsersV1400Response.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Quo.OpenApiClient.Models.ListUsersV1401ResponseError.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Quo.OpenApiClient.Models.ListUsersV1403Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Quo.OpenApiClient.Models.ListUsersV1404Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Quo.OpenApiClient.Models.ListUsersV1500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.Models.ListUsersV1200Response>(requestInfo, global::Soenneker.Quo.OpenApiClient.Models.ListUsersV1200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

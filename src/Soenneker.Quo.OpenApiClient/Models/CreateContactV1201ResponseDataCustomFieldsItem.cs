@@ -12,7 +12,12 @@ namespace Soenneker.Quo.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreateContactV1201ResponseDataCustomFieldsItem : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1201ResponseDataCustomFieldsItemMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -62,12 +67,15 @@ namespace Soenneker.Quo.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1201ResponseDataCustomFieldsItem();
-            result.CreateContactV1201ResponseDataCustomFieldsItemMember1 = new global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1201ResponseDataCustomFieldsItemMember1();
-            result.CreateContactV1201ResponseDataCustomFieldsItemMember2 = new global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1201ResponseDataCustomFieldsItemMember2();
-            result.CreateContactV1201ResponseDataCustomFieldsItemMember3 = new global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1201ResponseDataCustomFieldsItemMember3();
-            result.CreateContactV1201ResponseDataCustomFieldsItemMember4 = new global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1201ResponseDataCustomFieldsItemMember4();
-            result.CreateContactV1201ResponseDataCustomFieldsItemMember5 = new global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1201ResponseDataCustomFieldsItemMember5();
-            return result;
+            
+            
+            
+            
+            
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            if (result.CreateContactV1201ResponseDataCustomFieldsItemMember1 == null && result.CreateContactV1201ResponseDataCustomFieldsItemMember2 == null && result.CreateContactV1201ResponseDataCustomFieldsItemMember3 == null && result.CreateContactV1201ResponseDataCustomFieldsItemMember4 == null && result.CreateContactV1201ResponseDataCustomFieldsItemMember5 == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -87,6 +95,14 @@ namespace Soenneker.Quo.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (CreateContactV1201ResponseDataCustomFieldsItemMember1 == null && CreateContactV1201ResponseDataCustomFieldsItemMember2 == null && CreateContactV1201ResponseDataCustomFieldsItemMember3 == null && CreateContactV1201ResponseDataCustomFieldsItemMember4 == null && CreateContactV1201ResponseDataCustomFieldsItemMember5 == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (CreateContactV1201ResponseDataCustomFieldsItemMember1 != null && CreateContactV1201ResponseDataCustomFieldsItemMember2 == null && CreateContactV1201ResponseDataCustomFieldsItemMember3 == null && CreateContactV1201ResponseDataCustomFieldsItemMember4 == null && CreateContactV1201ResponseDataCustomFieldsItemMember5 == null) { if (CreateContactV1201ResponseDataCustomFieldsItemMember1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, CreateContactV1201ResponseDataCustomFieldsItemMember1); return; }
+            if (CreateContactV1201ResponseDataCustomFieldsItemMember2 != null && CreateContactV1201ResponseDataCustomFieldsItemMember1 == null && CreateContactV1201ResponseDataCustomFieldsItemMember3 == null && CreateContactV1201ResponseDataCustomFieldsItemMember4 == null && CreateContactV1201ResponseDataCustomFieldsItemMember5 == null) { if (CreateContactV1201ResponseDataCustomFieldsItemMember2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, CreateContactV1201ResponseDataCustomFieldsItemMember2); return; }
+            if (CreateContactV1201ResponseDataCustomFieldsItemMember3 != null && CreateContactV1201ResponseDataCustomFieldsItemMember1 == null && CreateContactV1201ResponseDataCustomFieldsItemMember2 == null && CreateContactV1201ResponseDataCustomFieldsItemMember4 == null && CreateContactV1201ResponseDataCustomFieldsItemMember5 == null) { if (CreateContactV1201ResponseDataCustomFieldsItemMember3 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, CreateContactV1201ResponseDataCustomFieldsItemMember3); return; }
+            if (CreateContactV1201ResponseDataCustomFieldsItemMember4 != null && CreateContactV1201ResponseDataCustomFieldsItemMember1 == null && CreateContactV1201ResponseDataCustomFieldsItemMember2 == null && CreateContactV1201ResponseDataCustomFieldsItemMember3 == null && CreateContactV1201ResponseDataCustomFieldsItemMember5 == null) { if (CreateContactV1201ResponseDataCustomFieldsItemMember4 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, CreateContactV1201ResponseDataCustomFieldsItemMember4); return; }
+            if (CreateContactV1201ResponseDataCustomFieldsItemMember5 != null && CreateContactV1201ResponseDataCustomFieldsItemMember1 == null && CreateContactV1201ResponseDataCustomFieldsItemMember2 == null && CreateContactV1201ResponseDataCustomFieldsItemMember3 == null && CreateContactV1201ResponseDataCustomFieldsItemMember4 == null) { if (CreateContactV1201ResponseDataCustomFieldsItemMember5 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, CreateContactV1201ResponseDataCustomFieldsItemMember5); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1201ResponseDataCustomFieldsItemMember1>(null, CreateContactV1201ResponseDataCustomFieldsItemMember1, CreateContactV1201ResponseDataCustomFieldsItemMember2, CreateContactV1201ResponseDataCustomFieldsItemMember3, CreateContactV1201ResponseDataCustomFieldsItemMember4, CreateContactV1201ResponseDataCustomFieldsItemMember5);
         }

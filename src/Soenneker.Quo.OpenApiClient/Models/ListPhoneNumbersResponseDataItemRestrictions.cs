@@ -11,24 +11,37 @@ namespace Soenneker.Quo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ListPhoneNumbersResponseDataItemRestrictions : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("calling") is { } nullNodeCalling && nullNodeCalling.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Calling = null;
+            if (parseNode.GetChildNode("messaging") is { } nullNodeMessaging && nullNodeMessaging.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Messaging = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The calling property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponseDataItemRestrictionsCalling? Calling { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponseDataItemRestrictionsCalling? Calling { get => _explicitNullValueCalling; set { _explicitNullValueCalling = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calling"); else _explicitNullProperties?.Remove("calling"); } }
+        private global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponseDataItemRestrictionsCalling? _explicitNullValueCalling = default!;
 #nullable restore
 #else
-        public global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponseDataItemRestrictionsCalling Calling { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponseDataItemRestrictionsCalling Calling { get => _explicitNullValueCalling; set { _explicitNullValueCalling = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calling"); else _explicitNullProperties?.Remove("calling"); } }
+        private global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponseDataItemRestrictionsCalling _explicitNullValueCalling = default!;
 #endif
         /// <summary>The messaging property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponseDataItemRestrictionsMessaging? Messaging { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponseDataItemRestrictionsMessaging? Messaging { get => _explicitNullValueMessaging; set { _explicitNullValueMessaging = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messaging"); else _explicitNullProperties?.Remove("messaging"); } }
+        private global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponseDataItemRestrictionsMessaging? _explicitNullValueMessaging = default!;
 #nullable restore
 #else
-        public global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponseDataItemRestrictionsMessaging Messaging { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponseDataItemRestrictionsMessaging Messaging { get => _explicitNullValueMessaging; set { _explicitNullValueMessaging = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messaging"); else _explicitNullProperties?.Remove("messaging"); } }
+        private global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponseDataItemRestrictionsMessaging _explicitNullValueMessaging = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponseDataItemRestrictions"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public static global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponseDataItemRestrictions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponseDataItemRestrictions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponseDataItemRestrictions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponseDataItemRestrictionsCalling>("calling", Calling);
             writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.ListPhoneNumbersResponseDataItemRestrictionsMessaging>("messaging", Messaging);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

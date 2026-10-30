@@ -11,15 +11,28 @@ namespace Soenneker.Quo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetPhoneNumberByIdV1200ResponseDataRestrictionsCalling : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("CA") is { } nullNodeCA && nullNodeCA.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CA = null;
+            if (parseNode.GetChildNode("Intl") is { } nullNodeIntl && nullNodeIntl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Intl = null;
+            if (parseNode.GetChildNode("US") is { } nullNodeUS && nullNodeUS.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) US = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The phone-number usage restriction status for a specific region</summary>
-        public global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200ResponseDataRestrictionsCallingCa? CA { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200ResponseDataRestrictionsCallingCa? CA { get => _explicitNullValueCA; set { _explicitNullValueCA = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CA"); else _explicitNullProperties?.Remove("CA"); } }
+        private global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200ResponseDataRestrictionsCallingCa? _explicitNullValueCA = default!;
         /// <summary>The phone-number usage restriction status for a specific region</summary>
-        public global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200ResponseDataRestrictionsCallingIntl? Intl { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200ResponseDataRestrictionsCallingIntl? Intl { get => _explicitNullValueIntl; set { _explicitNullValueIntl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Intl"); else _explicitNullProperties?.Remove("Intl"); } }
+        private global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200ResponseDataRestrictionsCallingIntl? _explicitNullValueIntl = default!;
         /// <summary>The phone-number usage restriction status for a specific region</summary>
-        public global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200ResponseDataRestrictionsCallingUs? US { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200ResponseDataRestrictionsCallingUs? US { get => _explicitNullValueUS; set { _explicitNullValueUS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("US"); else _explicitNullProperties?.Remove("US"); } }
+        private global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200ResponseDataRestrictionsCallingUs? _explicitNullValueUS = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200ResponseDataRestrictionsCalling"/> and sets the default values.
         /// </summary>
@@ -35,7 +48,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public static global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200ResponseDataRestrictionsCalling CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200ResponseDataRestrictionsCalling();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200ResponseDataRestrictionsCalling(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,6 +73,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200ResponseDataRestrictionsCallingCa>("CA", CA);
             writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200ResponseDataRestrictionsCallingIntl>("Intl", Intl);
             writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200ResponseDataRestrictionsCallingUs>("US", US);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

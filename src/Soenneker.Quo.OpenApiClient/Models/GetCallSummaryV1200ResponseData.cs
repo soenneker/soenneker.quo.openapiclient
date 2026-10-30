@@ -11,42 +11,63 @@ namespace Soenneker.Quo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetCallSummaryV1200ResponseData : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("callId") is { } nullNodeCallId && nullNodeCallId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallId = null;
+            if (parseNode.GetChildNode("jobs") is { } nullNodeJobs && nullNodeJobs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Jobs = null;
+            if (parseNode.GetChildNode("nextSteps") is { } nullNodeNextSteps && nullNodeNextSteps.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextSteps = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("summary") is { } nullNodeSummary && nullNodeSummary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Summary = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The unique identifier of the call to which this summary belongs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallId { get; set; }
+        public string? CallId { get => _explicitNullValueCallId; set { _explicitNullValueCallId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callId"); else _explicitNullProperties?.Remove("callId"); } }
+        private string? _explicitNullValueCallId = default!;
 #nullable restore
 #else
-        public string CallId { get; set; }
+        public string CallId { get => _explicitNullValueCallId; set { _explicitNullValueCallId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callId"); else _explicitNullProperties?.Remove("callId"); } }
+        private string _explicitNullValueCallId = default!;
 #endif
         /// <summary>Structured job results from Sona, Quo&apos;s AI voice assistant. Contains Q&amp;A pairs, task completions, and other job-specific data collected during the call. Only present for calls handled by Sona.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataJobsItem>? Jobs { get; set; }
+        public List<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataJobsItem>? Jobs { get => _explicitNullValueJobs; set { _explicitNullValueJobs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jobs"); else _explicitNullProperties?.Remove("jobs"); } }
+        private List<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataJobsItem>? _explicitNullValueJobs = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataJobsItem> Jobs { get; set; }
+        public List<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataJobsItem> Jobs { get => _explicitNullValueJobs; set { _explicitNullValueJobs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jobs"); else _explicitNullProperties?.Remove("jobs"); } }
+        private List<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataJobsItem> _explicitNullValueJobs = default!;
 #endif
         /// <summary>An array of suggested next actions or follow-up items derived from the call content. Null if no next steps were identified or if no call summary is available.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? NextSteps { get; set; }
+        public List<string>? NextSteps { get => _explicitNullValueNextSteps; set { _explicitNullValueNextSteps = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextSteps"); else _explicitNullProperties?.Remove("nextSteps"); } }
+        private List<string>? _explicitNullValueNextSteps = default!;
 #nullable restore
 #else
-        public List<string> NextSteps { get; set; }
+        public List<string> NextSteps { get => _explicitNullValueNextSteps; set { _explicitNullValueNextSteps = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextSteps"); else _explicitNullProperties?.Remove("nextSteps"); } }
+        private List<string> _explicitNullValueNextSteps = default!;
 #endif
         /// <summary>The status of the call summary.</summary>
-        public global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataStatus? Status { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataStatus? _explicitNullValueStatus = default!;
         /// <summary>An array of statements that encapsulate the key points or main topics discussed during the call. For Sona-generated summaries, this includes structured Q&amp;A pairs. Null if the summary is not yet generated or if no call summary is available.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Summary { get; set; }
+        public List<string>? Summary { get => _explicitNullValueSummary; set { _explicitNullValueSummary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summary"); else _explicitNullProperties?.Remove("summary"); } }
+        private List<string>? _explicitNullValueSummary = default!;
 #nullable restore
 #else
-        public List<string> Summary { get; set; }
+        public List<string> Summary { get => _explicitNullValueSummary; set { _explicitNullValueSummary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summary"); else _explicitNullProperties?.Remove("summary"); } }
+        private List<string> _explicitNullValueSummary = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseData"/> and sets the default values.
@@ -63,7 +84,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public static global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseData();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseData(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,6 +113,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("nextSteps", NextSteps);
             writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallSummaryV1200ResponseDataStatus>("status", Status);
             writer.WriteCollectionOfPrimitiveValues<string>("summary", Summary);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

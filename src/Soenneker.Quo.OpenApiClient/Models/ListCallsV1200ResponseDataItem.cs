@@ -11,100 +11,151 @@ namespace Soenneker.Quo.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ListCallsV1200ResponseDataItem : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("aiHandled") is { } nullNodeAiHandled && nullNodeAiHandled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AiHandled = null;
+            if (parseNode.GetChildNode("answeredAt") is { } nullNodeAnsweredAt && nullNodeAnsweredAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnsweredAt = null;
+            if (parseNode.GetChildNode("answeredBy") is { } nullNodeAnsweredBy && nullNodeAnsweredBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnsweredBy = null;
+            if (parseNode.GetChildNode("callRoute") is { } nullNodeCallRoute && nullNodeCallRoute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallRoute = null;
+            if (parseNode.GetChildNode("completedAt") is { } nullNodeCompletedAt && nullNodeCompletedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompletedAt = null;
+            if (parseNode.GetChildNode("createdAt") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("direction") is { } nullNodeDirection && nullNodeDirection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Direction = null;
+            if (parseNode.GetChildNode("duration") is { } nullNodeDuration && nullNodeDuration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Duration = null;
+            if (parseNode.GetChildNode("forwardedFrom") is { } nullNodeForwardedFrom && nullNodeForwardedFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ForwardedFrom = null;
+            if (parseNode.GetChildNode("forwardedTo") is { } nullNodeForwardedTo && nullNodeForwardedTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ForwardedTo = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("initiatedBy") is { } nullNodeInitiatedBy && nullNodeInitiatedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InitiatedBy = null;
+            if (parseNode.GetChildNode("participants") is { } nullNodeParticipants && nullNodeParticipants.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Participants = null;
+            if (parseNode.GetChildNode("phoneNumberId") is { } nullNodePhoneNumberId && nullNodePhoneNumberId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNumberId = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("updatedAt") is { } nullNodeUpdatedAt && nullNodeUpdatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedAt = null;
+            if (parseNode.GetChildNode("userId") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
+        }
+
         /// <summary>Type of AI that answered the call. Set to &apos;ai-agent&apos; for AI responses, or null for human responses.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AiHandled { get; set; }
+        public string? AiHandled { get => _explicitNullValueAiHandled; set { _explicitNullValueAiHandled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aiHandled"); else _explicitNullProperties?.Remove("aiHandled"); } }
+        private string? _explicitNullValueAiHandled = default!;
 #nullable restore
 #else
-        public string AiHandled { get; set; }
+        public string AiHandled { get => _explicitNullValueAiHandled; set { _explicitNullValueAiHandled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aiHandled"); else _explicitNullProperties?.Remove("aiHandled"); } }
+        private string _explicitNullValueAiHandled = default!;
 #endif
         /// <summary>The timestamp when the call was answered in ISO 8601 format. Null if the call was not answered.</summary>
-        public DateTimeOffset? AnsweredAt { get; set; }
+        public DateTimeOffset? AnsweredAt { get => _explicitNullValueAnsweredAt; set { _explicitNullValueAnsweredAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answeredAt"); else _explicitNullProperties?.Remove("answeredAt"); } }
+        private DateTimeOffset? _explicitNullValueAnsweredAt = default!;
         /// <summary>The unique identifier of the Quo user who answered the incoming call. Null for outgoing calls or unanswered incoming calls.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AnsweredBy { get; set; }
+        public string? AnsweredBy { get => _explicitNullValueAnsweredBy; set { _explicitNullValueAnsweredBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answeredBy"); else _explicitNullProperties?.Remove("answeredBy"); } }
+        private string? _explicitNullValueAnsweredBy = default!;
 #nullable restore
 #else
-        public string AnsweredBy { get; set; }
+        public string AnsweredBy { get => _explicitNullValueAnsweredBy; set { _explicitNullValueAnsweredBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answeredBy"); else _explicitNullProperties?.Remove("answeredBy"); } }
+        private string _explicitNullValueAnsweredBy = default!;
 #endif
         /// <summary>How the call reached the user&apos;s inbox: either by direct dial to their number or routed through a phone menu. Null for outbound calls.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallRoute { get; set; }
+        public string? CallRoute { get => _explicitNullValueCallRoute; set { _explicitNullValueCallRoute = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callRoute"); else _explicitNullProperties?.Remove("callRoute"); } }
+        private string? _explicitNullValueCallRoute = default!;
 #nullable restore
 #else
-        public string CallRoute { get; set; }
+        public string CallRoute { get => _explicitNullValueCallRoute; set { _explicitNullValueCallRoute = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callRoute"); else _explicitNullProperties?.Remove("callRoute"); } }
+        private string _explicitNullValueCallRoute = default!;
 #endif
         /// <summary>The timestamp when the call ended, in ISO 8601 format. Null if the call is ongoing or was not completed.</summary>
-        public DateTimeOffset? CompletedAt { get; set; }
+        public DateTimeOffset? CompletedAt { get => _explicitNullValueCompletedAt; set { _explicitNullValueCompletedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("completedAt"); else _explicitNullProperties?.Remove("completedAt"); } }
+        private DateTimeOffset? _explicitNullValueCompletedAt = default!;
         /// <summary>The timestamp when the call record was created, in ISO 8601 format.</summary>
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdAt"); else _explicitNullProperties?.Remove("createdAt"); } }
+        private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>The direction of the call relative to the Quo number.</summary>
-        public global::Soenneker.Quo.OpenApiClient.Models.ListCallsV1200ResponseDataItemDirection? Direction { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.ListCallsV1200ResponseDataItemDirection? Direction { get => _explicitNullValueDirection; set { _explicitNullValueDirection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("direction"); else _explicitNullProperties?.Remove("direction"); } }
+        private global::Soenneker.Quo.OpenApiClient.Models.ListCallsV1200ResponseDataItemDirection? _explicitNullValueDirection = default!;
         /// <summary>The total duration of the call in seconds.</summary>
-        public int? Duration { get; set; }
+        public int? Duration { get => _explicitNullValueDuration; set { _explicitNullValueDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration"); else _explicitNullProperties?.Remove("duration"); } }
+        private int? _explicitNullValueDuration = default!;
         /// <summary>The forwardedFrom property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ForwardedFrom { get; set; }
+        public UntypedNode? ForwardedFrom { get => _explicitNullValueForwardedFrom; set { _explicitNullValueForwardedFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forwardedFrom"); else _explicitNullProperties?.Remove("forwardedFrom"); } }
+        private UntypedNode? _explicitNullValueForwardedFrom = default!;
 #nullable restore
 #else
-        public UntypedNode ForwardedFrom { get; set; }
+        public UntypedNode ForwardedFrom { get => _explicitNullValueForwardedFrom; set { _explicitNullValueForwardedFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forwardedFrom"); else _explicitNullProperties?.Remove("forwardedFrom"); } }
+        private UntypedNode _explicitNullValueForwardedFrom = default!;
 #endif
         /// <summary>The forwardedTo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ForwardedTo { get; set; }
+        public UntypedNode? ForwardedTo { get => _explicitNullValueForwardedTo; set { _explicitNullValueForwardedTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forwardedTo"); else _explicitNullProperties?.Remove("forwardedTo"); } }
+        private UntypedNode? _explicitNullValueForwardedTo = default!;
 #nullable restore
 #else
-        public UntypedNode ForwardedTo { get; set; }
+        public UntypedNode ForwardedTo { get => _explicitNullValueForwardedTo; set { _explicitNullValueForwardedTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forwardedTo"); else _explicitNullProperties?.Remove("forwardedTo"); } }
+        private UntypedNode _explicitNullValueForwardedTo = default!;
 #endif
         /// <summary>The unique identifier of the call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The unique identifier of the Quo user who initiated the outgoing call. Null for incoming calls.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InitiatedBy { get; set; }
+        public string? InitiatedBy { get => _explicitNullValueInitiatedBy; set { _explicitNullValueInitiatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initiatedBy"); else _explicitNullProperties?.Remove("initiatedBy"); } }
+        private string? _explicitNullValueInitiatedBy = default!;
 #nullable restore
 #else
-        public string InitiatedBy { get; set; }
+        public string InitiatedBy { get => _explicitNullValueInitiatedBy; set { _explicitNullValueInitiatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initiatedBy"); else _explicitNullProperties?.Remove("initiatedBy"); } }
+        private string _explicitNullValueInitiatedBy = default!;
 #endif
         /// <summary>An array of phone numbers involved in the call, including the Quo number. Each number includes the country code and conforms to the E.164 format. Currently limited to one-to-one conversations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Participants { get; set; }
+        public List<string>? Participants { get => _explicitNullValueParticipants; set { _explicitNullValueParticipants = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participants"); else _explicitNullProperties?.Remove("participants"); } }
+        private List<string>? _explicitNullValueParticipants = default!;
 #nullable restore
 #else
-        public List<string> Participants { get; set; }
+        public List<string> Participants { get => _explicitNullValueParticipants; set { _explicitNullValueParticipants = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participants"); else _explicitNullProperties?.Remove("participants"); } }
+        private List<string> _explicitNullValueParticipants = default!;
 #endif
         /// <summary>The unique identifier of the Quo number associated with the call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PhoneNumberId { get; set; }
+        public string? PhoneNumberId { get => _explicitNullValuePhoneNumberId; set { _explicitNullValuePhoneNumberId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phoneNumberId"); else _explicitNullProperties?.Remove("phoneNumberId"); } }
+        private string? _explicitNullValuePhoneNumberId = default!;
 #nullable restore
 #else
-        public string PhoneNumberId { get; set; }
+        public string PhoneNumberId { get => _explicitNullValuePhoneNumberId; set { _explicitNullValuePhoneNumberId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phoneNumberId"); else _explicitNullProperties?.Remove("phoneNumberId"); } }
+        private string _explicitNullValuePhoneNumberId = default!;
 #endif
         /// <summary>The current status of the call.</summary>
-        public global::Soenneker.Quo.OpenApiClient.Models.ListCallsV1200ResponseDataItemStatus? Status { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.ListCallsV1200ResponseDataItemStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Quo.OpenApiClient.Models.ListCallsV1200ResponseDataItemStatus? _explicitNullValueStatus = default!;
         /// <summary>The timestamp when the call record was last updated, in ISO 8601 format. Null if never updated.</summary>
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updatedAt"); else _explicitNullProperties?.Remove("updatedAt"); } }
+        private DateTimeOffset? _explicitNullValueUpdatedAt = default!;
         /// <summary>The unique identifier of the Quo user account associated with the call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserId { get; set; }
+        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userId"); else _explicitNullProperties?.Remove("userId"); } }
+        private string? _explicitNullValueUserId = default!;
 #nullable restore
 #else
-        public string UserId { get; set; }
+        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userId"); else _explicitNullProperties?.Remove("userId"); } }
+        private string _explicitNullValueUserId = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -114,7 +165,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public static global::Soenneker.Quo.OpenApiClient.Models.ListCallsV1200ResponseDataItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Quo.OpenApiClient.Models.ListCallsV1200ResponseDataItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.ListCallsV1200ResponseDataItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -166,7 +217,8 @@ namespace Soenneker.Quo.OpenApiClient.Models
             writer.WriteStringValue("phoneNumberId", PhoneNumberId);
             writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.ListCallsV1200ResponseDataItemStatus>("status", Status);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
-            writer.WriteStringValue("userId", UserId);
+            writer.WriteStringValue("userId", UserId);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

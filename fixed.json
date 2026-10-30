@@ -68,7 +68,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetCallRecordingsV1401Response"
+                  "$ref": "#/components/schemas/GetCallRecordingsV1401ResponseError"
                 }
               }
             }
@@ -251,7 +251,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ListCallsV1401Response"
+                  "$ref": "#/components/schemas/ListCallsV1401ResponseError"
                 }
               }
             }
@@ -344,7 +344,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetCallByIdV1401Response"
+                  "$ref": "#/components/schemas/GetCallByIdV1401ResponseError"
                 }
               }
             }
@@ -437,7 +437,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetCallSummaryV1401Response"
+                  "$ref": "#/components/schemas/GetCallSummaryV1401ResponseError"
                 }
               }
             }
@@ -530,7 +530,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetCallTranscriptV1401Response"
+                  "$ref": "#/components/schemas/GetCallTranscriptV1401ResponseError"
                 }
               }
             }
@@ -623,7 +623,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetCallVoicemailsV1401Response"
+                  "$ref": "#/components/schemas/GetCallVoicemailsV1401ResponseError"
                 }
               }
             }
@@ -700,7 +700,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetContactCustomFieldsV1401Response"
+                  "$ref": "#/components/schemas/GetContactCustomFieldsV1401ResponseError"
                 }
               }
             }
@@ -787,7 +787,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CreateContactV1401Response"
+                  "$ref": "#/components/schemas/CreateContactV1401ResponseError"
                 }
               }
             }
@@ -926,7 +926,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ListContactsV1401Response"
+                  "$ref": "#/components/schemas/ListContactsV1401ResponseError"
                 }
               }
             }
@@ -1029,7 +1029,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetContactByIdV1401Response"
+                  "$ref": "#/components/schemas/GetContactByIdV1401ResponseError"
                 }
               }
             }
@@ -1140,7 +1140,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpdateContactByIdV1401Response"
+                  "$ref": "#/components/schemas/UpdateContactByIdV1401ResponseError"
                 }
               }
             }
@@ -1234,7 +1234,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DeleteContactV1401Response"
+                  "$ref": "#/components/schemas/DeleteContactV1401ResponseError"
                 }
               }
             }
@@ -1482,7 +1482,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ListConversationsV1401Response"
+                  "$ref": "#/components/schemas/ListConversationsV1401ResponseError"
                 }
               }
             }
@@ -1575,7 +1575,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MarkConversationAsReadV1401Response"
+                  "$ref": "#/components/schemas/MarkConversationAsReadV1401ResponseError"
                 }
               }
             }
@@ -1668,7 +1668,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MarkConversationAsDoneV1401Response"
+                  "$ref": "#/components/schemas/MarkConversationAsDoneV1401ResponseError"
                 }
               }
             }
@@ -1761,7 +1761,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MarkConversationAsOpenV1401Response"
+                  "$ref": "#/components/schemas/MarkConversationAsOpenV1401ResponseError"
                 }
               }
             }
@@ -1848,7 +1848,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SendMessageV1401Response"
+                  "$ref": "#/components/schemas/SendMessageV1401ResponseError"
                 }
               }
             }
@@ -2053,7 +2053,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ListMessagesV1401Response"
+                  "$ref": "#/components/schemas/ListMessagesV1401ResponseError"
                 }
               }
             }
@@ -2156,7 +2156,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetMessageByIdV1401Response"
+                  "$ref": "#/components/schemas/GetMessageByIdV1401ResponseError"
                 }
               }
             }
@@ -2258,7 +2258,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ListPhoneNumbersV1401Response"
+                  "$ref": "#/components/schemas/ListPhoneNumbersV1401ResponseError"
                 }
               }
             }
@@ -2351,7 +2351,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetPhoneNumberByIdV1401Response"
+                  "$ref": "#/components/schemas/GetPhoneNumberByIdV1401ResponseError"
                 }
               }
             }
@@ -2449,7 +2449,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ListTasksV1401Response"
+                  "$ref": "#/components/schemas/ListTasksV1401ResponseError"
                 }
               }
             }
@@ -2544,7 +2544,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CreateTaskV1401Response"
+                  "$ref": "#/components/schemas/CreateTaskV1401ResponseError"
                 }
               }
             }
@@ -2642,7 +2642,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetTaskByIdV1401Response"
+                  "$ref": "#/components/schemas/GetTaskByIdV1401ResponseError"
                 }
               }
             }
@@ -2731,7 +2731,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DeleteTaskV1401Response"
+                  "$ref": "#/components/schemas/DeleteTaskV1401ResponseError"
                 }
               }
             }
@@ -2837,7 +2837,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpdateTaskV1401Response"
+                  "$ref": "#/components/schemas/UpdateTaskV1401ResponseError"
                 }
               }
             }
@@ -2935,7 +2935,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CompleteTaskV1401Response"
+                  "$ref": "#/components/schemas/CompleteTaskV1401ResponseError"
                 }
               }
             }
@@ -3043,7 +3043,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/LinkTaskToConversationV1401Response"
+                  "$ref": "#/components/schemas/LinkTaskToConversationV1401ResponseError"
                 }
               }
             }
@@ -3151,7 +3151,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UnlinkTaskFromConversationV1401Response"
+                  "$ref": "#/components/schemas/UnlinkTaskFromConversationV1401ResponseError"
                 }
               }
             }
@@ -3249,7 +3249,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ReopenTaskV1401Response"
+                  "$ref": "#/components/schemas/ReopenTaskV1401ResponseError"
                 }
               }
             }
@@ -3357,7 +3357,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AssignTaskV1401Response"
+                  "$ref": "#/components/schemas/AssignTaskV1401ResponseError"
                 }
               }
             }
@@ -3465,7 +3465,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UnassignTaskV1401Response"
+                  "$ref": "#/components/schemas/UnassignTaskV1401ResponseError"
                 }
               }
             }
@@ -3573,7 +3573,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ChangeTaskDueDateV1401Response"
+                  "$ref": "#/components/schemas/ChangeTaskDueDateV1401ResponseError"
                 }
               }
             }
@@ -3671,7 +3671,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/RemoveTaskDueDateV1401Response"
+                  "$ref": "#/components/schemas/RemoveTaskDueDateV1401ResponseError"
                 }
               }
             }
@@ -3778,7 +3778,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ListUsersV1401Response"
+                  "$ref": "#/components/schemas/ListUsersV1401ResponseError"
                 }
               }
             }
@@ -3871,7 +3871,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetUserByIdV1401Response"
+                  "$ref": "#/components/schemas/GetUserByIdV1401ResponseError"
                 }
               }
             }
@@ -3963,7 +3963,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ListWebhooksV1401Response"
+                  "$ref": "#/components/schemas/ListWebhooksV1401ResponseError"
                 }
               }
             }
@@ -4056,7 +4056,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetWebhookByIdV1401Response"
+                  "$ref": "#/components/schemas/GetWebhookByIdV1401ResponseError"
                 }
               }
             }
@@ -4140,7 +4140,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DeleteWebhookByIdV1401Response"
+                  "$ref": "#/components/schemas/DeleteWebhookByIdV1401ResponseError"
                 }
               }
             }
@@ -4227,7 +4227,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CreateMessageWebhookV1401Response"
+                  "$ref": "#/components/schemas/CreateMessageWebhookV1401ResponseError"
                 }
               }
             }
@@ -4314,7 +4314,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CreateCallWebhookV1401Response"
+                  "$ref": "#/components/schemas/CreateCallWebhookV1401ResponseError"
                 }
               }
             }
@@ -4401,7 +4401,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CreateCallSummaryWebhookV1401Response"
+                  "$ref": "#/components/schemas/CreateCallSummaryWebhookV1401ResponseError"
                 }
               }
             }
@@ -4488,7 +4488,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CreateCallTranscriptWebhookV1401Response"
+                  "$ref": "#/components/schemas/CreateCallTranscriptWebhookV1401ResponseError"
                 }
               }
             }
@@ -46797,6 +46797,1511 @@
               "name": "Unrestricted"
             }
           ]
+        }
+      },
+      "GetCallRecordingsV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/GetCallRecordingsV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/Value0900401Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/Value401Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/GetCallRecordingsV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/UnauthorizedTitle"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetCallRecordingsV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/GetCallRecordingsV1401Response"
+        }
+      },
+      "ListCallsV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/ListCallsV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/Value0100401Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ListCallsV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/ListCallsV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/ListCallsV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ListCallsV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/ListCallsV1401Response"
+        }
+      },
+      "GetCallByIdV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/GetCallByIdV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/GetCallByIdV1401ResponseAnyOf2Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/GetCallByIdV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/GetCallByIdV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/GetCallByIdV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetCallByIdV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/GetCallByIdV1401Response"
+        }
+      },
+      "GetCallSummaryV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/GetCallSummaryV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/Value0500401Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/GetCallSummaryV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/GetCallSummaryV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/GetCallSummaryV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetCallSummaryV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/GetCallSummaryV1401Response"
+        }
+      },
+      "GetCallTranscriptV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/GetCallTranscriptV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/Value0600401Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/GetCallTranscriptV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/GetCallTranscriptV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/GetCallTranscriptV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetCallTranscriptV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/GetCallTranscriptV1401Response"
+        }
+      },
+      "GetCallVoicemailsV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/GetCallVoicemailsV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/Value1200401Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/GetCallVoicemailsV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/GetCallVoicemailsV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/GetCallVoicemailsV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetCallVoicemailsV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/GetCallVoicemailsV1401Response"
+        }
+      },
+      "GetContactCustomFieldsV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/GetContactCustomFieldsV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/Value0700401Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/GetContactCustomFieldsV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/GetContactCustomFieldsV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/GetContactCustomFieldsV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetContactCustomFieldsV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/GetContactCustomFieldsV1401Response"
+        }
+      },
+      "ListContactsV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/ListContactsV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/ListContactsV1401ResponseAnyOf2Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ListContactsV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/ListContactsV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/ListContactsV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ListContactsV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/ListContactsV1401Response"
+        }
+      },
+      "CreateContactV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/CreateContactV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/Value0800401Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/CreateContactV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/CreateContactV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/CreateContactV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CreateContactV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/CreateContactV1401Response"
+        }
+      },
+      "DeleteContactV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/DeleteContactV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/DeleteContactV1401ResponseAnyOf2Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/DeleteContactV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/DeleteContactV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/DeleteContactV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DeleteContactV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/DeleteContactV1401Response"
+        }
+      },
+      "UpdateContactByIdV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/UpdateContactByIdV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/UpdateContactByIdV1401ResponseAnyOf2Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/UpdateContactByIdV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/UpdateContactByIdV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/UpdateContactByIdV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UpdateContactByIdV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/UpdateContactByIdV1401Response"
+        }
+      },
+      "GetContactByIdV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/GetContactByIdV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/GetContactByIdV1401ResponseAnyOf2Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/GetContactByIdV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/GetContactByIdV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/GetContactByIdV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetContactByIdV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/GetContactByIdV1401Response"
+        }
+      },
+      "ListConversationsV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/ListConversationsV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/Value1000401Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ListConversationsV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/ListConversationsV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/ListConversationsV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ListConversationsV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/ListConversationsV1401Response"
+        }
+      },
+      "MarkConversationAsReadV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/MarkConversationAsReadV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/MarkConversationAsReadV1401ResponseAnyOf2Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/MarkConversationAsReadV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/MarkConversationAsReadV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/MarkConversationAsReadV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MarkConversationAsReadV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/MarkConversationAsReadV1401Response"
+        }
+      },
+      "MarkConversationAsDoneV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/MarkConversationAsDoneV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/MarkConversationAsDoneV1401ResponseAnyOf2Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/MarkConversationAsDoneV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/MarkConversationAsDoneV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/MarkConversationAsDoneV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MarkConversationAsDoneV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/MarkConversationAsDoneV1401Response"
+        }
+      },
+      "MarkConversationAsOpenV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/MarkConversationAsOpenV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/MarkConversationAsOpenV1401ResponseAnyOf2Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/MarkConversationAsOpenV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/MarkConversationAsOpenV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/MarkConversationAsOpenV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MarkConversationAsOpenV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/MarkConversationAsOpenV1401Response"
+        }
+      },
+      "ListMessagesV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/ListMessagesV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/ListMessagesV1401ResponseAnyOf2Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ListMessagesV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/ListMessagesV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/ListMessagesV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ListMessagesV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/ListMessagesV1401Response"
+        }
+      },
+      "SendMessageV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/SendMessageV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/Value0200401Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/SendMessageV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/SendMessageV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/SendMessageV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SendMessageV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/SendMessageV1401Response"
+        }
+      },
+      "GetMessageByIdV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/GetMessageByIdV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/GetMessageByIdV1401ResponseAnyOf2Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/GetMessageByIdV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/GetMessageByIdV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/GetMessageByIdV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetMessageByIdV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/GetMessageByIdV1401Response"
+        }
+      },
+      "ListPhoneNumbersV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/ListPhoneNumbersV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/Value0400401Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ListPhoneNumbersV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/ListPhoneNumbersV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/ListPhoneNumbersV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ListPhoneNumbersV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/ListPhoneNumbersV1401Response"
+        }
+      },
+      "GetPhoneNumberByIdV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/GetPhoneNumberByIdV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/GetPhoneNumberByIdV1401ResponseAnyOf2Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/GetPhoneNumberByIdV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/GetPhoneNumberByIdV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/GetPhoneNumberByIdV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetPhoneNumberByIdV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/GetPhoneNumberByIdV1401Response"
+        }
+      },
+      "CreateTaskV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/CreateTaskV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/CreateTaskV1401ResponseAnyOf2Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/CreateTaskV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/CreateTaskV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/CreateTaskV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CreateTaskV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/CreateTaskV1401Response"
+        }
+      },
+      "ListTasksV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/ListTasksV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/ListTasksV1401ResponseAnyOf2Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ListTasksV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/ListTasksV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/ListTasksV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ListTasksV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/ListTasksV1401Response"
+        }
+      },
+      "UpdateTaskV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/UpdateTaskV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/UpdateTaskV1401ResponseAnyOf2Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/UpdateTaskV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/UpdateTaskV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/UpdateTaskV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UpdateTaskV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/UpdateTaskV1401Response"
+        }
+      },
+      "DeleteTaskV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/DeleteTaskV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/DeleteTaskV1401ResponseAnyOf2Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/DeleteTaskV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/DeleteTaskV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/DeleteTaskV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DeleteTaskV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/DeleteTaskV1401Response"
+        }
+      },
+      "GetTaskByIdV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/GetTaskByIdV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/GetTaskByIdV1401ResponseAnyOf2Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/GetTaskByIdV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/GetTaskByIdV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/GetTaskByIdV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetTaskByIdV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/GetTaskByIdV1401Response"
+        }
+      },
+      "CompleteTaskV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/CompleteTaskV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/CompleteTaskV1401ResponseAnyOf2Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/CompleteTaskV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/CompleteTaskV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/CompleteTaskV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CompleteTaskV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/CompleteTaskV1401Response"
+        }
+      },
+      "LinkTaskToConversationV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/LinkTaskToConversationV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/LinkTaskToConversationV1401ResponseAnyOf2Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/LinkTaskToConversationV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/LinkTaskToConversationV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/LinkTaskToConversationV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LinkTaskToConversationV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/LinkTaskToConversationV1401Response"
+        }
+      },
+      "UnlinkTaskFromConversationV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/UnlinkTaskFromConversationV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/UnlinkTaskFromConversationV1401ResponseAnyOf2Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/UnlinkTaskFromConversationV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/UnlinkTaskFromConversationV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/UnlinkTaskFromConversationV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UnlinkTaskFromConversationV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/UnlinkTaskFromConversationV1401Response"
+        }
+      },
+      "ReopenTaskV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/ReopenTaskV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/ReopenTaskV1401ResponseAnyOf2Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ReopenTaskV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/ReopenTaskV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/ReopenTaskV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReopenTaskV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/ReopenTaskV1401Response"
+        }
+      },
+      "AssignTaskV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/AssignTaskV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/AssignTaskV1401ResponseAnyOf2Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/AssignTaskV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/AssignTaskV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/AssignTaskV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AssignTaskV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/AssignTaskV1401Response"
+        }
+      },
+      "UnassignTaskV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/UnassignTaskV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/UnassignTaskV1401ResponseAnyOf2Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/UnassignTaskV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/UnassignTaskV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/UnassignTaskV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UnassignTaskV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/UnassignTaskV1401Response"
+        }
+      },
+      "ChangeTaskDueDateV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/ChangeTaskDueDateV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/ChangeTaskDueDateV1401ResponseAnyOf2Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ChangeTaskDueDateV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/ChangeTaskDueDateV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/ChangeTaskDueDateV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ChangeTaskDueDateV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/ChangeTaskDueDateV1401Response"
+        }
+      },
+      "RemoveTaskDueDateV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/RemoveTaskDueDateV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/RemoveTaskDueDateV1401ResponseAnyOf2Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/RemoveTaskDueDateV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/RemoveTaskDueDateV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/RemoveTaskDueDateV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RemoveTaskDueDateV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/RemoveTaskDueDateV1401Response"
+        }
+      },
+      "ListUsersV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/ListUsersV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/Value1100401Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ListUsersV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/ListUsersV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/ListUsersV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ListUsersV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/ListUsersV1401Response"
+        }
+      },
+      "GetUserByIdV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/GetUserByIdV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/GetUserByIdV1401ResponseAnyOf2Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/GetUserByIdV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/GetUserByIdV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/GetUserByIdV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetUserByIdV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/GetUserByIdV1401Response"
+        }
+      },
+      "ListWebhooksV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/ListWebhooksV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/Value0300401Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ListWebhooksV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/ListWebhooksV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/ListWebhooksV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ListWebhooksV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/ListWebhooksV1401Response"
+        }
+      },
+      "DeleteWebhookByIdV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/DeleteWebhookByIdV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/DeleteWebhookByIdV1401ResponseAnyOf2Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/DeleteWebhookByIdV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/DeleteWebhookByIdV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/DeleteWebhookByIdV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DeleteWebhookByIdV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/DeleteWebhookByIdV1401Response"
+        }
+      },
+      "GetWebhookByIdV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/GetWebhookByIdV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/GetWebhookByIdV1401ResponseAnyOf2Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/GetWebhookByIdV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/GetWebhookByIdV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/GetWebhookByIdV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetWebhookByIdV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/GetWebhookByIdV1401Response"
+        }
+      },
+      "CreateMessageWebhookV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/CreateMessageWebhookV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/CreateMessageWebhookV1401ResponseAnyOf2Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/CreateMessageWebhookV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/CreateMessageWebhookV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/CreateMessageWebhookV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CreateMessageWebhookV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/CreateMessageWebhookV1401Response"
+        }
+      },
+      "CreateCallWebhookV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/CreateCallWebhookV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/CreateCallWebhookV1401ResponseAnyOf2Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/CreateCallWebhookV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/CreateCallWebhookV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/CreateCallWebhookV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CreateCallWebhookV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/CreateCallWebhookV1401Response"
+        }
+      },
+      "CreateCallSummaryWebhookV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/CreateCallSummaryWebhookV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/CreateCallSummaryWebhookV1401ResponseAnyOf2Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/CreateCallSummaryWebhookV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/CreateCallSummaryWebhookV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/CreateCallSummaryWebhookV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CreateCallSummaryWebhookV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/CreateCallSummaryWebhookV1401Response"
+        }
+      },
+      "CreateCallTranscriptWebhookV1401ResponseError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/CreateCallTranscriptWebhookV1401ResponseAnyOf1Error"
+          },
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "$ref": "#/components/schemas/CreateCallTranscriptWebhookV1401ResponseAnyOf2Code"
+          },
+          "status": {
+            "$ref": "#/components/schemas/CreateCallTranscriptWebhookV1401ResponseAnyOf2Status"
+          },
+          "docs": {
+            "$ref": "#/components/schemas/CreateCallTranscriptWebhookV1401ResponseAnyOf2Docs"
+          },
+          "title": {
+            "$ref": "#/components/schemas/CreateCallTranscriptWebhookV1401ResponseAnyOf2Title"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CreateCallTranscriptWebhookV1401ResponseAnyOf2ErrorsItem"
+            }
+          }
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/CreateCallTranscriptWebhookV1401Response"
         }
       }
     },
