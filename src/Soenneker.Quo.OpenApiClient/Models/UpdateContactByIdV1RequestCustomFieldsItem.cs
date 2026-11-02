@@ -74,6 +74,23 @@ namespace Soenneker.Quo.OpenApiClient.Models
             
             
             var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool? matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject ? (bool?)null : (bool?)false;
+            bool? matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject ? (bool?)null : (bool?)false;
+            bool? matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject ? (bool?)null : (bool?)false;
+            bool? matchesUnionBranch3 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject ? (bool?)null : (bool?)false;
+            bool? matchesUnionBranch4 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject ? (bool?)null : (bool?)false;
+            int matchingUnionBranches = 0;
+            if (matchesUnionBranch0 != false) matchingUnionBranches++;
+            if (matchesUnionBranch1 != false) matchingUnionBranches++;
+            if (matchesUnionBranch2 != false) matchingUnionBranches++;
+            if (matchesUnionBranch3 != false) matchingUnionBranches++;
+            if (matchesUnionBranch4 != false) matchingUnionBranches++;
+            bool noSelectedUnionBranch = result.UpdateContactByIdV1RequestCustomFieldsItemMember1 == null && result.UpdateContactByIdV1RequestCustomFieldsItemMember2 == null && result.UpdateContactByIdV1RequestCustomFieldsItemMember3 == null && result.UpdateContactByIdV1RequestCustomFieldsItemMember4 == null && result.UpdateContactByIdV1RequestCustomFieldsItemMember5 == null;
+            if (noSelectedUnionBranch && matchesUnionBranch0 == true && matchingUnionBranches == 1) result.UpdateContactByIdV1RequestCustomFieldsItemMember1 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1RequestCustomFieldsItemMember1(), parseNode);
+            if (noSelectedUnionBranch && matchesUnionBranch1 == true && matchingUnionBranches == 1) result.UpdateContactByIdV1RequestCustomFieldsItemMember2 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1RequestCustomFieldsItemMember2(), parseNode);
+            if (noSelectedUnionBranch && matchesUnionBranch2 == true && matchingUnionBranches == 1) result.UpdateContactByIdV1RequestCustomFieldsItemMember3 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1RequestCustomFieldsItemMember3(), parseNode);
+            if (noSelectedUnionBranch && matchesUnionBranch3 == true && matchingUnionBranches == 1) result.UpdateContactByIdV1RequestCustomFieldsItemMember4 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1RequestCustomFieldsItemMember4(), parseNode);
+            if (noSelectedUnionBranch && matchesUnionBranch4 == true && matchingUnionBranches == 1) result.UpdateContactByIdV1RequestCustomFieldsItemMember5 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1RequestCustomFieldsItemMember5(), parseNode);
             if (result.UpdateContactByIdV1RequestCustomFieldsItemMember1 == null && result.UpdateContactByIdV1RequestCustomFieldsItemMember2 == null && result.UpdateContactByIdV1RequestCustomFieldsItemMember3 == null && result.UpdateContactByIdV1RequestCustomFieldsItemMember4 == null && result.UpdateContactByIdV1RequestCustomFieldsItemMember5 == null) result.UnrecognizedValue = unionPayload;
 return result;
         }
