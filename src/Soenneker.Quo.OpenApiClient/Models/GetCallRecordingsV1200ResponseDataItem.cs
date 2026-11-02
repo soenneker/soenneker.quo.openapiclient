@@ -48,8 +48,15 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public DateTimeOffset? StartTime { get => _explicitNullValueStartTime; set { _explicitNullValueStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startTime"); else _explicitNullProperties?.Remove("startTime"); } }
         private DateTimeOffset? _explicitNullValueStartTime = default!;
         /// <summary>The current status of the call recording.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Quo.OpenApiClient.Models.GetCallRecordingsV1200ResponseDataItemStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.Quo.OpenApiClient.Models.GetCallRecordingsV1200ResponseDataItemStatus? _explicitNullValueStatus = default!;
+#nullable restore
+#else
+        public global::Soenneker.Quo.OpenApiClient.Models.GetCallRecordingsV1200ResponseDataItemStatus Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Quo.OpenApiClient.Models.GetCallRecordingsV1200ResponseDataItemStatus _explicitNullValueStatus = default!;
+#endif
         /// <summary>The file type of the call recording. Null if the type is not specified or is unknown.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -91,7 +98,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
                 { "duration", n => { Duration = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "startTime", n => { StartTime = n.GetDateTimeOffsetValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallRecordingsV1200ResponseDataItemStatus>(); } },
+                { "status", n => { Status = n.GetObjectValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallRecordingsV1200ResponseDataItemStatus>(global::Soenneker.Quo.OpenApiClient.Models.GetCallRecordingsV1200ResponseDataItemStatus.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
@@ -106,7 +113,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
             writer.WriteIntValue("duration", Duration);
             writer.WriteStringValue("id", Id);
             writer.WriteDateTimeOffsetValue("startTime", StartTime);
-            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallRecordingsV1200ResponseDataItemStatus>("status", Status);
+            writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallRecordingsV1200ResponseDataItemStatus>("status", Status);
             writer.WriteStringValue("type", Type);
             writer.WriteStringValue("url", Url);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             
