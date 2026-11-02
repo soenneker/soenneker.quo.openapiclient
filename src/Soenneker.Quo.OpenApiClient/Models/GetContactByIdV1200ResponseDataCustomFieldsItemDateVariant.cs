@@ -9,7 +9,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ListContactsV1200ResponseDataItemCustomFieldsItemListContactsV1200ResponseDataItemCustomFieldsItemDate : global::Soenneker.Quo.OpenApiClient.Models.ListContactsV1200ResponseDataItemCustomFieldsItem, IParsable
+    public partial class GetContactByIdV1200ResponseDataCustomFieldsItemDateVariant : global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItem, IParsable
     #pragma warning restore CS1591
     {
         // Track explicitly assigned nulls separately from absent properties.
@@ -64,12 +64,12 @@ namespace Soenneker.Quo.OpenApiClient.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.ListContactsV1200ResponseDataItemCustomFieldsItemListContactsV1200ResponseDataItemCustomFieldsItemDate"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemDateVariant"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Quo.OpenApiClient.Models.ListContactsV1200ResponseDataItemCustomFieldsItemListContactsV1200ResponseDataItemCustomFieldsItemDate CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static new global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemDateVariant CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.ListContactsV1200ResponseDataItemCustomFieldsItemListContactsV1200ResponseDataItemCustomFieldsItemDate(), parseNode);
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemDateVariant(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model

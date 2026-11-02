@@ -9,7 +9,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class GetContactByIdV1200ResponseDataCustomFieldsItemGetContactByIdV1200ResponseDataCustomFieldsItemDate : global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItem, IParsable
+    public partial class UpdateContactByIdV1200ResponseDataCustomFieldsItemDateVariant : global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1200ResponseDataCustomFieldsItem, IParsable
     #pragma warning restore CS1591
     {
         // Track explicitly assigned nulls separately from absent properties.
@@ -18,8 +18,6 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
             base.CaptureExplicitNulls(parseNode);
-            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
-            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
             if (parseNode.GetChildNode("key") is null) { _explicitNullValueKey = default!; _explicitNullProperties?.Remove("key"); }
             else if (parseNode.GetChildNode("key") is { } nullNodeKey && nullNodeKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Key = null;
             if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
@@ -28,16 +26,6 @@ namespace Soenneker.Quo.OpenApiClient.Models
             else if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
         }
 
-        /// <summary>The unique identifier for the contact custom field.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
-        private string? _explicitNullValueId = default!;
-#nullable restore
-#else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
-        private string _explicitNullValueId = default!;
-#endif
         /// <summary>The identifying key for contact custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -64,12 +52,12 @@ namespace Soenneker.Quo.OpenApiClient.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemGetContactByIdV1200ResponseDataCustomFieldsItemDate"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1200ResponseDataCustomFieldsItemDateVariant"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemGetContactByIdV1200ResponseDataCustomFieldsItemDate CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static new global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1200ResponseDataCustomFieldsItemDateVariant CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemGetContactByIdV1200ResponseDataCustomFieldsItemDate(), parseNode);
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1200ResponseDataCustomFieldsItemDateVariant(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,7 +67,6 @@ namespace Soenneker.Quo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
             {
-                { "id", n => { Id = n.GetStringValue(); } },
                 { "key", n => { Key = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "value", n => { Value = n.GetDateTimeOffsetValue(); } },
@@ -93,7 +80,6 @@ namespace Soenneker.Quo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             base.Serialize(writer);
-            writer.WriteStringValue("id", Id);
             writer.WriteStringValue("key", Key);
             writer.WriteStringValue("name", Name);
             writer.WriteDateTimeOffsetValue("value", Value);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

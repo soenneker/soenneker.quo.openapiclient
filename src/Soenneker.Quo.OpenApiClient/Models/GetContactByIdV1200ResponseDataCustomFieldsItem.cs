@@ -51,13 +51,13 @@ namespace Soenneker.Quo.OpenApiClient.Models
             var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
             return mappingValue switch
             {
-                "address" => new global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemGetContactByIdV1200ResponseDataCustomFieldsItemAddress(),
-                "boolean" => new global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemGetContactByIdV1200ResponseDataCustomFieldsItemBoolean(),
-                "date" => new global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemGetContactByIdV1200ResponseDataCustomFieldsItemDate(),
-                "multi-select" => new global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemGetContactByIdV1200ResponseDataCustomFieldsItemMultiSelect(),
-                "number" => new global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemGetContactByIdV1200ResponseDataCustomFieldsItemNumber(),
-                "string" => new global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemGetContactByIdV1200ResponseDataCustomFieldsItemAddress(),
-                "url" => new global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemGetContactByIdV1200ResponseDataCustomFieldsItemAddress(),
+                "address" => new global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemAddressVariant(),
+                "boolean" => new global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemBooleanVariant(),
+                "date" => new global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemDateVariant(),
+                "multi-select" => new global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemMultiSelectVariant(),
+                "number" => new global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemNumberVariant(),
+                "string" => new global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemAddressVariant(),
+                "url" => new global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItemAddressVariant(),
                 _ => new global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200ResponseDataCustomFieldsItem(),
             };
         }

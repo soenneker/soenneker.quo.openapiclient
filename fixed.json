@@ -13774,13 +13774,13 @@
         "discriminator": {
           "propertyName": "type",
           "mapping": {
-            "multi-select": "#/components/schemas/CreateContactV1201ResponseDataCustomFieldsItemCreateContactV1201ResponseDataCustomFieldsItemMultiSelect",
-            "address": "#/components/schemas/CreateContactV1201ResponseDataCustomFieldsItemCreateContactV1201ResponseDataCustomFieldsItemAddress",
-            "string": "#/components/schemas/CreateContactV1201ResponseDataCustomFieldsItemCreateContactV1201ResponseDataCustomFieldsItemAddress",
-            "url": "#/components/schemas/CreateContactV1201ResponseDataCustomFieldsItemCreateContactV1201ResponseDataCustomFieldsItemAddress",
-            "boolean": "#/components/schemas/CreateContactV1201ResponseDataCustomFieldsItemCreateContactV1201ResponseDataCustomFieldsItemBoolean",
-            "date": "#/components/schemas/CreateContactV1201ResponseDataCustomFieldsItemCreateContactV1201ResponseDataCustomFieldsItemDate",
-            "number": "#/components/schemas/CreateContactV1201ResponseDataCustomFieldsItemCreateContactV1201ResponseDataCustomFieldsItemNumber"
+            "multi-select": "#/components/schemas/CreateContactV1201ResponseDataCustomFieldsItemMultiSelectVariant",
+            "address": "#/components/schemas/CreateContactV1201ResponseDataCustomFieldsItemAddressVariant",
+            "string": "#/components/schemas/CreateContactV1201ResponseDataCustomFieldsItemAddressVariant",
+            "url": "#/components/schemas/CreateContactV1201ResponseDataCustomFieldsItemAddressVariant",
+            "boolean": "#/components/schemas/CreateContactV1201ResponseDataCustomFieldsItemBooleanVariant",
+            "date": "#/components/schemas/CreateContactV1201ResponseDataCustomFieldsItemDateVariant",
+            "number": "#/components/schemas/CreateContactV1201ResponseDataCustomFieldsItemNumberVariant"
           }
         },
         "x-client-original-tagged-union": {
@@ -13828,13 +13828,13 @@
         "discriminator": {
           "propertyName": "type",
           "mapping": {
-            "multi-select": "#/components/schemas/ListContactsV1200ResponseDataItemCustomFieldsItemListContactsV1200ResponseDataItemCustomFieldsItemMultiSelect",
-            "address": "#/components/schemas/ListContactsV1200ResponseDataItemCustomFieldsItemListContactsV1200ResponseDataItemCustomFieldsItemAddress",
-            "string": "#/components/schemas/ListContactsV1200ResponseDataItemCustomFieldsItemListContactsV1200ResponseDataItemCustomFieldsItemAddress",
-            "url": "#/components/schemas/ListContactsV1200ResponseDataItemCustomFieldsItemListContactsV1200ResponseDataItemCustomFieldsItemAddress",
-            "boolean": "#/components/schemas/ListContactsV1200ResponseDataItemCustomFieldsItemListContactsV1200ResponseDataItemCustomFieldsItemBoolean",
-            "date": "#/components/schemas/ListContactsV1200ResponseDataItemCustomFieldsItemListContactsV1200ResponseDataItemCustomFieldsItemDate",
-            "number": "#/components/schemas/ListContactsV1200ResponseDataItemCustomFieldsItemListContactsV1200ResponseDataItemCustomFieldsItemNumber"
+            "multi-select": "#/components/schemas/ListContactsV1200ResponseDataItemCustomFieldsItemMultiSelectVariant",
+            "address": "#/components/schemas/ListContactsV1200ResponseDataItemCustomFieldsItemAddressVariant",
+            "string": "#/components/schemas/ListContactsV1200ResponseDataItemCustomFieldsItemAddressVariant",
+            "url": "#/components/schemas/ListContactsV1200ResponseDataItemCustomFieldsItemAddressVariant",
+            "boolean": "#/components/schemas/ListContactsV1200ResponseDataItemCustomFieldsItemBooleanVariant",
+            "date": "#/components/schemas/ListContactsV1200ResponseDataItemCustomFieldsItemDateVariant",
+            "number": "#/components/schemas/ListContactsV1200ResponseDataItemCustomFieldsItemNumberVariant"
           }
         },
         "x-client-original-tagged-union": {
@@ -13882,13 +13882,13 @@
         "discriminator": {
           "propertyName": "type",
           "mapping": {
-            "multi-select": "#/components/schemas/GetContactByIdV1200ResponseDataCustomFieldsItemGetContactByIdV1200ResponseDataCustomFieldsItemMultiSelect",
-            "address": "#/components/schemas/GetContactByIdV1200ResponseDataCustomFieldsItemGetContactByIdV1200ResponseDataCustomFieldsItemAddress",
-            "string": "#/components/schemas/GetContactByIdV1200ResponseDataCustomFieldsItemGetContactByIdV1200ResponseDataCustomFieldsItemAddress",
-            "url": "#/components/schemas/GetContactByIdV1200ResponseDataCustomFieldsItemGetContactByIdV1200ResponseDataCustomFieldsItemAddress",
-            "boolean": "#/components/schemas/GetContactByIdV1200ResponseDataCustomFieldsItemGetContactByIdV1200ResponseDataCustomFieldsItemBoolean",
-            "date": "#/components/schemas/GetContactByIdV1200ResponseDataCustomFieldsItemGetContactByIdV1200ResponseDataCustomFieldsItemDate",
-            "number": "#/components/schemas/GetContactByIdV1200ResponseDataCustomFieldsItemGetContactByIdV1200ResponseDataCustomFieldsItemNumber"
+            "multi-select": "#/components/schemas/GetContactByIdV1200ResponseDataCustomFieldsItemMultiSelectVariant",
+            "address": "#/components/schemas/GetContactByIdV1200ResponseDataCustomFieldsItemAddressVariant",
+            "string": "#/components/schemas/GetContactByIdV1200ResponseDataCustomFieldsItemAddressVariant",
+            "url": "#/components/schemas/GetContactByIdV1200ResponseDataCustomFieldsItemAddressVariant",
+            "boolean": "#/components/schemas/GetContactByIdV1200ResponseDataCustomFieldsItemBooleanVariant",
+            "date": "#/components/schemas/GetContactByIdV1200ResponseDataCustomFieldsItemDateVariant",
+            "number": "#/components/schemas/GetContactByIdV1200ResponseDataCustomFieldsItemNumberVariant"
           }
         },
         "x-client-original-tagged-union": {
@@ -14125,13 +14125,13 @@
         "discriminator": {
           "propertyName": "type",
           "mapping": {
-            "multi-select": "#/components/schemas/UpdateContactByIdV1200ResponseDataCustomFieldsItemUpdateContactByIdV1200ResponseDataCustomFieldsItemMultiSelect",
-            "address": "#/components/schemas/UpdateContactByIdV1200ResponseDataCustomFieldsItemUpdateContactByIdV1200ResponseDataCustomFieldsItemAddress",
-            "string": "#/components/schemas/UpdateContactByIdV1200ResponseDataCustomFieldsItemUpdateContactByIdV1200ResponseDataCustomFieldsItemAddress",
-            "url": "#/components/schemas/UpdateContactByIdV1200ResponseDataCustomFieldsItemUpdateContactByIdV1200ResponseDataCustomFieldsItemAddress",
-            "boolean": "#/components/schemas/UpdateContactByIdV1200ResponseDataCustomFieldsItemUpdateContactByIdV1200ResponseDataCustomFieldsItemBoolean",
-            "date": "#/components/schemas/UpdateContactByIdV1200ResponseDataCustomFieldsItemUpdateContactByIdV1200ResponseDataCustomFieldsItemDate",
-            "number": "#/components/schemas/UpdateContactByIdV1200ResponseDataCustomFieldsItemUpdateContactByIdV1200ResponseDataCustomFieldsItemNumber"
+            "multi-select": "#/components/schemas/UpdateContactByIdV1200ResponseDataCustomFieldsItemMultiSelectVariant",
+            "address": "#/components/schemas/UpdateContactByIdV1200ResponseDataCustomFieldsItemAddressVariant",
+            "string": "#/components/schemas/UpdateContactByIdV1200ResponseDataCustomFieldsItemAddressVariant",
+            "url": "#/components/schemas/UpdateContactByIdV1200ResponseDataCustomFieldsItemAddressVariant",
+            "boolean": "#/components/schemas/UpdateContactByIdV1200ResponseDataCustomFieldsItemBooleanVariant",
+            "date": "#/components/schemas/UpdateContactByIdV1200ResponseDataCustomFieldsItemDateVariant",
+            "number": "#/components/schemas/UpdateContactByIdV1200ResponseDataCustomFieldsItemNumberVariant"
           }
         },
         "x-client-original-tagged-union": {
@@ -43029,7 +43029,7 @@
           "$ref": "#/components/schemas/CreateCallTranscriptWebhookV1401Response"
         }
       },
-      "CreateContactV1201ResponseDataCustomFieldsItemCreateContactV1201ResponseDataCustomFieldsItemMultiSelect": {
+      "CreateContactV1201ResponseDataCustomFieldsItemMultiSelectVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/CreateContactV1201ResponseDataCustomFieldsItem"
@@ -43093,7 +43093,7 @@
           }
         ]
       },
-      "CreateContactV1201ResponseDataCustomFieldsItemCreateContactV1201ResponseDataCustomFieldsItemAddress": {
+      "CreateContactV1201ResponseDataCustomFieldsItemAddressVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/CreateContactV1201ResponseDataCustomFieldsItem"
@@ -43148,7 +43148,7 @@
           }
         ]
       },
-      "CreateContactV1201ResponseDataCustomFieldsItemCreateContactV1201ResponseDataCustomFieldsItemBoolean": {
+      "CreateContactV1201ResponseDataCustomFieldsItemBooleanVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/CreateContactV1201ResponseDataCustomFieldsItem"
@@ -43203,7 +43203,7 @@
           }
         ]
       },
-      "CreateContactV1201ResponseDataCustomFieldsItemCreateContactV1201ResponseDataCustomFieldsItemDate": {
+      "CreateContactV1201ResponseDataCustomFieldsItemDateVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/CreateContactV1201ResponseDataCustomFieldsItem"
@@ -43259,7 +43259,7 @@
           }
         ]
       },
-      "CreateContactV1201ResponseDataCustomFieldsItemCreateContactV1201ResponseDataCustomFieldsItemNumber": {
+      "CreateContactV1201ResponseDataCustomFieldsItemNumberVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/CreateContactV1201ResponseDataCustomFieldsItem"
@@ -43314,7 +43314,7 @@
           }
         ]
       },
-      "ListContactsV1200ResponseDataItemCustomFieldsItemListContactsV1200ResponseDataItemCustomFieldsItemMultiSelect": {
+      "ListContactsV1200ResponseDataItemCustomFieldsItemMultiSelectVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/ListContactsV1200ResponseDataItemCustomFieldsItem"
@@ -43378,7 +43378,7 @@
           }
         ]
       },
-      "ListContactsV1200ResponseDataItemCustomFieldsItemListContactsV1200ResponseDataItemCustomFieldsItemAddress": {
+      "ListContactsV1200ResponseDataItemCustomFieldsItemAddressVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/ListContactsV1200ResponseDataItemCustomFieldsItem"
@@ -43433,7 +43433,7 @@
           }
         ]
       },
-      "ListContactsV1200ResponseDataItemCustomFieldsItemListContactsV1200ResponseDataItemCustomFieldsItemBoolean": {
+      "ListContactsV1200ResponseDataItemCustomFieldsItemBooleanVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/ListContactsV1200ResponseDataItemCustomFieldsItem"
@@ -43488,7 +43488,7 @@
           }
         ]
       },
-      "ListContactsV1200ResponseDataItemCustomFieldsItemListContactsV1200ResponseDataItemCustomFieldsItemDate": {
+      "ListContactsV1200ResponseDataItemCustomFieldsItemDateVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/ListContactsV1200ResponseDataItemCustomFieldsItem"
@@ -43544,7 +43544,7 @@
           }
         ]
       },
-      "ListContactsV1200ResponseDataItemCustomFieldsItemListContactsV1200ResponseDataItemCustomFieldsItemNumber": {
+      "ListContactsV1200ResponseDataItemCustomFieldsItemNumberVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/ListContactsV1200ResponseDataItemCustomFieldsItem"
@@ -43599,7 +43599,7 @@
           }
         ]
       },
-      "GetContactByIdV1200ResponseDataCustomFieldsItemGetContactByIdV1200ResponseDataCustomFieldsItemMultiSelect": {
+      "GetContactByIdV1200ResponseDataCustomFieldsItemMultiSelectVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/GetContactByIdV1200ResponseDataCustomFieldsItem"
@@ -43663,7 +43663,7 @@
           }
         ]
       },
-      "GetContactByIdV1200ResponseDataCustomFieldsItemGetContactByIdV1200ResponseDataCustomFieldsItemAddress": {
+      "GetContactByIdV1200ResponseDataCustomFieldsItemAddressVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/GetContactByIdV1200ResponseDataCustomFieldsItem"
@@ -43718,7 +43718,7 @@
           }
         ]
       },
-      "GetContactByIdV1200ResponseDataCustomFieldsItemGetContactByIdV1200ResponseDataCustomFieldsItemBoolean": {
+      "GetContactByIdV1200ResponseDataCustomFieldsItemBooleanVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/GetContactByIdV1200ResponseDataCustomFieldsItem"
@@ -43773,7 +43773,7 @@
           }
         ]
       },
-      "GetContactByIdV1200ResponseDataCustomFieldsItemGetContactByIdV1200ResponseDataCustomFieldsItemDate": {
+      "GetContactByIdV1200ResponseDataCustomFieldsItemDateVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/GetContactByIdV1200ResponseDataCustomFieldsItem"
@@ -43829,7 +43829,7 @@
           }
         ]
       },
-      "GetContactByIdV1200ResponseDataCustomFieldsItemGetContactByIdV1200ResponseDataCustomFieldsItemNumber": {
+      "GetContactByIdV1200ResponseDataCustomFieldsItemNumberVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/GetContactByIdV1200ResponseDataCustomFieldsItem"
@@ -43884,7 +43884,7 @@
           }
         ]
       },
-      "UpdateContactByIdV1200ResponseDataCustomFieldsItemUpdateContactByIdV1200ResponseDataCustomFieldsItemMultiSelect": {
+      "UpdateContactByIdV1200ResponseDataCustomFieldsItemMultiSelectVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/UpdateContactByIdV1200ResponseDataCustomFieldsItem"
@@ -43940,7 +43940,7 @@
           }
         ]
       },
-      "UpdateContactByIdV1200ResponseDataCustomFieldsItemUpdateContactByIdV1200ResponseDataCustomFieldsItemAddress": {
+      "UpdateContactByIdV1200ResponseDataCustomFieldsItemAddressVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/UpdateContactByIdV1200ResponseDataCustomFieldsItem"
@@ -43987,7 +43987,7 @@
           }
         ]
       },
-      "UpdateContactByIdV1200ResponseDataCustomFieldsItemUpdateContactByIdV1200ResponseDataCustomFieldsItemBoolean": {
+      "UpdateContactByIdV1200ResponseDataCustomFieldsItemBooleanVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/UpdateContactByIdV1200ResponseDataCustomFieldsItem"
@@ -44034,7 +44034,7 @@
           }
         ]
       },
-      "UpdateContactByIdV1200ResponseDataCustomFieldsItemUpdateContactByIdV1200ResponseDataCustomFieldsItemDate": {
+      "UpdateContactByIdV1200ResponseDataCustomFieldsItemDateVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/UpdateContactByIdV1200ResponseDataCustomFieldsItem"
@@ -44082,7 +44082,7 @@
           }
         ]
       },
-      "UpdateContactByIdV1200ResponseDataCustomFieldsItemUpdateContactByIdV1200ResponseDataCustomFieldsItemNumber": {
+      "UpdateContactByIdV1200ResponseDataCustomFieldsItemNumberVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/UpdateContactByIdV1200ResponseDataCustomFieldsItem"
@@ -44458,9 +44458,9 @@
       "discriminator": {
         "propertyName": "code",
         "mapping": {
-          "0200403": "#/components/schemas/SendMessageV1403ResponseSendMessageV1403ResponseAnyOf1",
-          "0202403": "#/components/schemas/SendMessageV1403ResponseSendMessageV1403ResponseAnyOf2",
-          "0203403": "#/components/schemas/SendMessageV1403ResponseSendMessageV1403ResponseAnyOf3"
+          "0200403": "#/components/schemas/SendMessageV1403ResponseAnyOf1Variant",
+          "0202403": "#/components/schemas/SendMessageV1403ResponseAnyOf2Variant",
+          "0203403": "#/components/schemas/SendMessageV1403ResponseAnyOf3Variant"
         }
       },
       "x-client-original-tagged-union": {
@@ -44498,8 +44498,8 @@
       "discriminator": {
         "propertyName": "title",
         "mapping": {
-          "Daily Conversation Limit Reached": "#/components/schemas/SendMessageV1429ResponseSendMessageV1429ResponseAnyOf1",
-          "Too Many Requests": "#/components/schemas/SendMessageV1429ResponseSendMessageV1429ResponseAnyOf2"
+          "Daily Conversation Limit Reached": "#/components/schemas/SendMessageV1429ResponseAnyOf1Variant",
+          "Too Many Requests": "#/components/schemas/SendMessageV1429ResponseAnyOf2Variant"
         }
       },
       "x-client-original-tagged-union": {
@@ -49577,7 +49577,7 @@
         "name"
       ]
     },
-    "SendMessageV1403ResponseSendMessageV1403ResponseAnyOf1": {
+    "SendMessageV1403ResponseAnyOf1Variant": {
       "allOf": [
         {
           "$ref": "#/components/schemas/SendMessageV1403Response"
@@ -49622,7 +49622,7 @@
         }
       ]
     },
-    "SendMessageV1403ResponseSendMessageV1403ResponseAnyOf2": {
+    "SendMessageV1403ResponseAnyOf2Variant": {
       "allOf": [
         {
           "$ref": "#/components/schemas/SendMessageV1403Response"
@@ -49667,7 +49667,7 @@
         }
       ]
     },
-    "SendMessageV1403ResponseSendMessageV1403ResponseAnyOf3": {
+    "SendMessageV1403ResponseAnyOf3Variant": {
       "allOf": [
         {
           "$ref": "#/components/schemas/SendMessageV1403Response"
@@ -49712,7 +49712,7 @@
         }
       ]
     },
-    "SendMessageV1429ResponseSendMessageV1429ResponseAnyOf1": {
+    "SendMessageV1429ResponseAnyOf1Variant": {
       "allOf": [
         {
           "$ref": "#/components/schemas/SendMessageV1429Response"
@@ -49757,7 +49757,7 @@
         }
       ]
     },
-    "SendMessageV1429ResponseSendMessageV1429ResponseAnyOf2": {
+    "SendMessageV1429ResponseAnyOf2Variant": {
       "allOf": [
         {
           "$ref": "#/components/schemas/SendMessageV1429Response"

@@ -9,7 +9,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class CreateContactV1201ResponseDataCustomFieldsItemCreateContactV1201ResponseDataCustomFieldsItemDate : global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1201ResponseDataCustomFieldsItem, IParsable
+    public partial class UpdateContactByIdV1200ResponseDataCustomFieldsItemMultiSelectVariant : global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1200ResponseDataCustomFieldsItem, IParsable
     #pragma warning restore CS1591
     {
         // Track explicitly assigned nulls separately from absent properties.
@@ -18,8 +18,6 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
             base.CaptureExplicitNulls(parseNode);
-            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
-            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
             if (parseNode.GetChildNode("key") is null) { _explicitNullValueKey = default!; _explicitNullProperties?.Remove("key"); }
             else if (parseNode.GetChildNode("key") is { } nullNodeKey && nullNodeKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Key = null;
             if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
@@ -28,16 +26,6 @@ namespace Soenneker.Quo.OpenApiClient.Models
             else if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
         }
 
-        /// <summary>The unique identifier for the contact custom field.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
-        private string? _explicitNullValueId = default!;
-#nullable restore
-#else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
-        private string _explicitNullValueId = default!;
-#endif
         /// <summary>The identifying key for contact custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -58,18 +46,25 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
-        /// <summary>Value defined for the date type custom fields.</summary>
-        public DateTimeOffset? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
-        private DateTimeOffset? _explicitNullValueValue = default!;
+        /// <summary>Value defined for the multi select type custom field.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        private List<string>? _explicitNullValueValue = default!;
+#nullable restore
+#else
+        public List<string> Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        private List<string> _explicitNullValueValue = default!;
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1201ResponseDataCustomFieldsItemCreateContactV1201ResponseDataCustomFieldsItemDate"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1200ResponseDataCustomFieldsItemMultiSelectVariant"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1201ResponseDataCustomFieldsItemCreateContactV1201ResponseDataCustomFieldsItemDate CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static new global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1200ResponseDataCustomFieldsItemMultiSelectVariant CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1201ResponseDataCustomFieldsItemCreateContactV1201ResponseDataCustomFieldsItemDate(), parseNode);
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1200ResponseDataCustomFieldsItemMultiSelectVariant(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,10 +74,9 @@ namespace Soenneker.Quo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
             {
-                { "id", n => { Id = n.GetStringValue(); } },
                 { "key", n => { Key = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "value", n => { Value = n.GetDateTimeOffsetValue(); } },
+                { "value", n => { Value = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -93,10 +87,9 @@ namespace Soenneker.Quo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             base.Serialize(writer);
-            writer.WriteStringValue("id", Id);
             writer.WriteStringValue("key", Key);
             writer.WriteStringValue("name", Name);
-            writer.WriteDateTimeOffsetValue("value", Value);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            writer.WriteCollectionOfPrimitiveValues<string>("value", Value);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             
         }
     }

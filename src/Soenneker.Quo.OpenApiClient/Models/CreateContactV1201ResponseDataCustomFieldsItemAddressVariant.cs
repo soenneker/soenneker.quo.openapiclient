@@ -9,7 +9,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class CreateContactV1201ResponseDataCustomFieldsItemCreateContactV1201ResponseDataCustomFieldsItemBoolean : global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1201ResponseDataCustomFieldsItem, IParsable
+    public partial class CreateContactV1201ResponseDataCustomFieldsItemAddressVariant : global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1201ResponseDataCustomFieldsItem, IParsable
     #pragma warning restore CS1591
     {
         // Track explicitly assigned nulls separately from absent properties.
@@ -58,18 +58,25 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
-        /// <summary>Value defined for the boolean type custom field.</summary>
-        public bool? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
-        private bool? _explicitNullValueValue = default!;
+        /// <summary>Value defined for the address, string, or url type custom field.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        private string? _explicitNullValueValue = default!;
+#nullable restore
+#else
+        public string Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        private string _explicitNullValueValue = default!;
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1201ResponseDataCustomFieldsItemCreateContactV1201ResponseDataCustomFieldsItemBoolean"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1201ResponseDataCustomFieldsItemAddressVariant"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1201ResponseDataCustomFieldsItemCreateContactV1201ResponseDataCustomFieldsItemBoolean CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static new global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1201ResponseDataCustomFieldsItemAddressVariant CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1201ResponseDataCustomFieldsItemCreateContactV1201ResponseDataCustomFieldsItemBoolean(), parseNode);
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1201ResponseDataCustomFieldsItemAddressVariant(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,7 +89,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "key", n => { Key = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "value", n => { Value = n.GetBoolValue(); } },
+                { "value", n => { Value = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -96,7 +103,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("key", Key);
             writer.WriteStringValue("name", Name);
-            writer.WriteBoolValue("value", Value);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            writer.WriteStringValue("value", Value);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             
         }
     }

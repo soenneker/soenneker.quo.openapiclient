@@ -9,7 +9,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class CreateContactV1201ResponseDataCustomFieldsItemCreateContactV1201ResponseDataCustomFieldsItemMultiSelect : global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1201ResponseDataCustomFieldsItem, IParsable
+    public partial class ListContactsV1200ResponseDataItemCustomFieldsItemDateVariant : global::Soenneker.Quo.OpenApiClient.Models.ListContactsV1200ResponseDataItemCustomFieldsItem, IParsable
     #pragma warning restore CS1591
     {
         // Track explicitly assigned nulls separately from absent properties.
@@ -58,25 +58,18 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
-        /// <summary>Value defined for the multi select type custom field.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<string>? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
-        private List<string>? _explicitNullValueValue = default!;
-#nullable restore
-#else
-        public List<string> Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
-        private List<string> _explicitNullValueValue = default!;
-#endif
+        /// <summary>Value defined for the date type custom fields.</summary>
+        public DateTimeOffset? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        private DateTimeOffset? _explicitNullValueValue = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1201ResponseDataCustomFieldsItemCreateContactV1201ResponseDataCustomFieldsItemMultiSelect"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.ListContactsV1200ResponseDataItemCustomFieldsItemDateVariant"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1201ResponseDataCustomFieldsItemCreateContactV1201ResponseDataCustomFieldsItemMultiSelect CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static new global::Soenneker.Quo.OpenApiClient.Models.ListContactsV1200ResponseDataItemCustomFieldsItemDateVariant CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.CreateContactV1201ResponseDataCustomFieldsItemCreateContactV1201ResponseDataCustomFieldsItemMultiSelect(), parseNode);
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.ListContactsV1200ResponseDataItemCustomFieldsItemDateVariant(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,7 +82,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "key", n => { Key = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "value", n => { Value = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "value", n => { Value = n.GetDateTimeOffsetValue(); } },
             };
         }
         /// <summary>
@@ -103,7 +96,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("key", Key);
             writer.WriteStringValue("name", Name);
-            writer.WriteCollectionOfPrimitiveValues<string>("value", Value);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            writer.WriteDateTimeOffsetValue("value", Value);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             
         }
     }
