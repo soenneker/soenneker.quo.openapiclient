@@ -43,7 +43,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.PhoneNumbers.Item
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1401ResponseError">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1404Response">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1500Response">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1500ResponseError">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1200Response?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -60,7 +60,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.PhoneNumbers.Item
                 { "401", global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1401ResponseError.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1403Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1404Response.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1500Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Quo.OpenApiClient.Models.GetPhoneNumberByIdV1500ResponseError.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };

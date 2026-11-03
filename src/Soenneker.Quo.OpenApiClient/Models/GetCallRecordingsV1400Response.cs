@@ -40,8 +40,8 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public global::Soenneker.Quo.OpenApiClient.Models.Value0900400Code? Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; AdditionalData?.Remove("code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code"); else _explicitNullProperties?.Remove("code"); } }
         private global::Soenneker.Quo.OpenApiClient.Models.Value0900400Code? _explicitNullValueCode = default!;
         /// <summary>The docs property</summary>
-        public global::Soenneker.Quo.OpenApiClient.Models.HttpsColonSlashSlashQuoComDocsDocs? Docs { get => _explicitNullValueDocs; set { _explicitNullValueDocs = value; AdditionalData?.Remove("docs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("docs"); else _explicitNullProperties?.Remove("docs"); } }
-        private global::Soenneker.Quo.OpenApiClient.Models.HttpsColonSlashSlashQuoComDocsDocs? _explicitNullValueDocs = default!;
+        public global::Soenneker.Quo.OpenApiClient.Models.GetCallRecordingsV1400ResponseDocs? Docs { get => _explicitNullValueDocs; set { _explicitNullValueDocs = value; AdditionalData?.Remove("docs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("docs"); else _explicitNullProperties?.Remove("docs"); } }
+        private global::Soenneker.Quo.OpenApiClient.Models.GetCallRecordingsV1400ResponseDocs? _explicitNullValueDocs = default!;
         /// <summary>The errors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -68,8 +68,8 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public double? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private double? _explicitNullValueStatus = default!;
         /// <summary>The title property</summary>
-        public global::Soenneker.Quo.OpenApiClient.Models.BadRequestTitle? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
-        private global::Soenneker.Quo.OpenApiClient.Models.BadRequestTitle? _explicitNullValueTitle = default!;
+        public global::Soenneker.Quo.OpenApiClient.Models.GetCallRecordingsV1400ResponseTitle? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private global::Soenneker.Quo.OpenApiClient.Models.GetCallRecordingsV1400ResponseTitle? _explicitNullValueTitle = default!;
         /// <summary>The trace property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -107,11 +107,11 @@ namespace Soenneker.Quo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "code", n => { var parsed = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.Value0900400Code>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCode = default; _explicitNullProperties?.Remove("code"); AdditionalData["code"] = unknown; } else { Code = parsed; AdditionalData.Remove("code"); } } },
-                { "docs", n => { var parsed = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.HttpsColonSlashSlashQuoComDocsDocs>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDocs = default; _explicitNullProperties?.Remove("docs"); AdditionalData["docs"] = unknown; } else { Docs = parsed; AdditionalData.Remove("docs"); } } },
+                { "docs", n => { var parsed = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallRecordingsV1400ResponseDocs>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDocs = default; _explicitNullProperties?.Remove("docs"); AdditionalData["docs"] = unknown; } else { Docs = parsed; AdditionalData.Remove("docs"); } } },
                 { "errors", n => { Errors = n.GetCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.GetCallRecordingsV1400ResponseErrorsItem>(global::Soenneker.Quo.OpenApiClient.Models.GetCallRecordingsV1400ResponseErrorsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "message", n => { MessageEscaped = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetDoubleValue(); } },
-                { "title", n => { var parsed = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.BadRequestTitle>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTitle = default; _explicitNullProperties?.Remove("title"); AdditionalData["title"] = unknown; } else { Title = parsed; AdditionalData.Remove("title"); } } },
+                { "title", n => { var parsed = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallRecordingsV1400ResponseTitle>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTitle = default; _explicitNullProperties?.Remove("title"); AdditionalData["title"] = unknown; } else { Title = parsed; AdditionalData.Remove("title"); } } },
                 { "trace", n => { Trace = n.GetStringValue(); } },
             };
         }
@@ -123,11 +123,11 @@ namespace Soenneker.Quo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.Value0900400Code>("code", Code);
-            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.HttpsColonSlashSlashQuoComDocsDocs>("docs", Docs);
+            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallRecordingsV1400ResponseDocs>("docs", Docs);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.GetCallRecordingsV1400ResponseErrorsItem>("errors", Errors);
             writer.WriteStringValue("message", MessageEscaped);
             writer.WriteDoubleValue("status", Status);
-            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.BadRequestTitle>("title", Title);
+            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallRecordingsV1400ResponseTitle>("title", Title);
             writer.WriteStringValue("trace", Trace);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

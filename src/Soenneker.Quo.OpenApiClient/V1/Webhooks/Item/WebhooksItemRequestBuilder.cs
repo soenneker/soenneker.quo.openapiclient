@@ -38,11 +38,11 @@ namespace Soenneker.Quo.OpenApiClient.V1.Webhooks.Item
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.DeleteWebhookByIdV1400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.DeleteWebhookByIdV1400ResponseError">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.DeleteWebhookByIdV1401ResponseError">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.DeleteWebhookByIdV1403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.DeleteWebhookByIdV1404Response">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.DeleteWebhookByIdV1500Response">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.DeleteWebhookByIdV1500ResponseError">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -55,11 +55,11 @@ namespace Soenneker.Quo.OpenApiClient.V1.Webhooks.Item
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Quo.OpenApiClient.Models.DeleteWebhookByIdV1400Response.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Quo.OpenApiClient.Models.DeleteWebhookByIdV1400ResponseError.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Quo.OpenApiClient.Models.DeleteWebhookByIdV1401ResponseError.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Quo.OpenApiClient.Models.DeleteWebhookByIdV1403Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Quo.OpenApiClient.Models.DeleteWebhookByIdV1404Response.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Quo.OpenApiClient.Models.DeleteWebhookByIdV1500Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Quo.OpenApiClient.Models.DeleteWebhookByIdV1500ResponseError.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
@@ -71,11 +71,11 @@ namespace Soenneker.Quo.OpenApiClient.V1.Webhooks.Item
         /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1400ResponseError">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1401ResponseError">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1404Response">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1500Response">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1500ResponseError">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1200Response?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -88,11 +88,11 @@ namespace Soenneker.Quo.OpenApiClient.V1.Webhooks.Item
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1400Response.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1400ResponseError.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1401ResponseError.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1403Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1404Response.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1500Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Quo.OpenApiClient.Models.GetWebhookByIdV1500ResponseError.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };

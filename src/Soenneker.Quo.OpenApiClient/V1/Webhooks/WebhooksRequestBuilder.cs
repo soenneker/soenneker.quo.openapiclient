@@ -76,11 +76,11 @@ namespace Soenneker.Quo.OpenApiClient.V1.Webhooks
         /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.ListWebhooksV1200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListWebhooksV1400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListWebhooksV1400ResponseError">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListWebhooksV1401ResponseError">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListWebhooksV1403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListWebhooksV1404Response">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListWebhooksV1500Response">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListWebhooksV1500ResponseError">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Quo.OpenApiClient.Models.ListWebhooksV1200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Webhooks.WebhooksRequestBuilder.WebhooksRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -93,11 +93,11 @@ namespace Soenneker.Quo.OpenApiClient.V1.Webhooks
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Quo.OpenApiClient.Models.ListWebhooksV1400Response.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Quo.OpenApiClient.Models.ListWebhooksV1400ResponseError.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Quo.OpenApiClient.Models.ListWebhooksV1401ResponseError.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Quo.OpenApiClient.Models.ListWebhooksV1403Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Quo.OpenApiClient.Models.ListWebhooksV1404Response.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Quo.OpenApiClient.Models.ListWebhooksV1500Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Quo.OpenApiClient.Models.ListWebhooksV1500ResponseError.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };

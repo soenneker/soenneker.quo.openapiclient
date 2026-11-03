@@ -41,9 +41,9 @@ namespace Soenneker.Quo.OpenApiClient.V1.Conversations.Item.MarkAsRead
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsReadV1400Response">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsReadV1401ResponseError">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsReadV1403Response">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsReadV1403ResponseError">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsReadV1404Response">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsReadV1500Response">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsReadV1500ResponseError">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsReadV1200Response?> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -58,9 +58,9 @@ namespace Soenneker.Quo.OpenApiClient.V1.Conversations.Item.MarkAsRead
             {
                 { "400", global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsReadV1400Response.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsReadV1401ResponseError.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsReadV1403Response.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsReadV1403ResponseError.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsReadV1404Response.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsReadV1500Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Quo.OpenApiClient.Models.MarkConversationAsReadV1500ResponseError.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };

@@ -40,8 +40,8 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1403ResponseError_code? Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; AdditionalData?.Remove("code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code"); else _explicitNullProperties?.Remove("code"); } }
         private global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1403ResponseError_code? _explicitNullValueCode = default!;
         /// <summary>The docs property</summary>
-        public global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1403ResponseAnyOf1Docs? Docs { get => _explicitNullValueDocs; set { _explicitNullValueDocs = value; AdditionalData?.Remove("docs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("docs"); else _explicitNullProperties?.Remove("docs"); } }
-        private global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1403ResponseAnyOf1Docs? _explicitNullValueDocs = default!;
+        public global::Soenneker.Quo.OpenApiClient.Models.ForbiddenError4AnyOf1Docs? Docs { get => _explicitNullValueDocs; set { _explicitNullValueDocs = value; AdditionalData?.Remove("docs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("docs"); else _explicitNullProperties?.Remove("docs"); } }
+        private global::Soenneker.Quo.OpenApiClient.Models.ForbiddenError4AnyOf1Docs? _explicitNullValueDocs = default!;
         /// <summary>The errors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -107,7 +107,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "code", n => { var parsed = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1403ResponseError_code>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCode = default; _explicitNullProperties?.Remove("code"); AdditionalData["code"] = unknown; } else { Code = parsed; AdditionalData.Remove("code"); } } },
-                { "docs", n => { var parsed = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1403ResponseAnyOf1Docs>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDocs = default; _explicitNullProperties?.Remove("docs"); AdditionalData["docs"] = unknown; } else { Docs = parsed; AdditionalData.Remove("docs"); } } },
+                { "docs", n => { var parsed = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.ForbiddenError4AnyOf1Docs>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDocs = default; _explicitNullProperties?.Remove("docs"); AdditionalData["docs"] = unknown; } else { Docs = parsed; AdditionalData.Remove("docs"); } } },
                 { "errors", n => { Errors = n.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue); } },
                 { "message", n => { MessageEscaped = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetDoubleValue(); } },
@@ -123,7 +123,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1403ResponseError_code>("code", Code);
-            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1403ResponseAnyOf1Docs>("docs", Docs);
+            writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.ForbiddenError4AnyOf1Docs>("docs", Docs);
             writer.WriteObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>("errors", Errors);
             writer.WriteStringValue("message", MessageEscaped);
             writer.WriteDoubleValue("status", Status);

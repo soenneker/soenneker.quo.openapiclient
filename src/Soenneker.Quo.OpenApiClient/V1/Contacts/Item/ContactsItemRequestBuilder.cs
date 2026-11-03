@@ -38,12 +38,12 @@ namespace Soenneker.Quo.OpenApiClient.V1.Contacts.Item
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.DeleteContactV1400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.DeleteContactV1400ResponseError">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.DeleteContactV1401ResponseError">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.DeleteContactV1403Response">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.DeleteContactV1403ResponseError">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.DeleteContactV1404Response">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.DeleteContactV1409Response">When receiving a 409 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.DeleteContactV1500Response">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.DeleteContactV1500ResponseError">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -56,12 +56,12 @@ namespace Soenneker.Quo.OpenApiClient.V1.Contacts.Item
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Quo.OpenApiClient.Models.DeleteContactV1400Response.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Quo.OpenApiClient.Models.DeleteContactV1400ResponseError.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Quo.OpenApiClient.Models.DeleteContactV1401ResponseError.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Quo.OpenApiClient.Models.DeleteContactV1403Response.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Quo.OpenApiClient.Models.DeleteContactV1403ResponseError.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Quo.OpenApiClient.Models.DeleteContactV1404Response.CreateFromDiscriminatorValue },
                 { "409", global::Soenneker.Quo.OpenApiClient.Models.DeleteContactV1409Response.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Quo.OpenApiClient.Models.DeleteContactV1500Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Quo.OpenApiClient.Models.DeleteContactV1500ResponseError.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
@@ -73,12 +73,12 @@ namespace Soenneker.Quo.OpenApiClient.V1.Contacts.Item
         /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1400ResponseError">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1401ResponseError">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1403Response">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1403ResponseError">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1404Response">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1409Response">When receiving a 409 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1500Response">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1500ResponseError">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1200Response?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -91,12 +91,12 @@ namespace Soenneker.Quo.OpenApiClient.V1.Contacts.Item
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1400Response.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1400ResponseError.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1401ResponseError.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1403Response.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1403ResponseError.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1404Response.CreateFromDiscriminatorValue },
                 { "409", global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1409Response.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1500Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Quo.OpenApiClient.Models.GetContactByIdV1500ResponseError.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
@@ -109,12 +109,12 @@ namespace Soenneker.Quo.OpenApiClient.V1.Contacts.Item
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1400ResponseError">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1401ResponseError">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1403Response">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1403ResponseError">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1404Response">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1409Response">When receiving a 409 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1500Response">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1500ResponseError">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1200Response?> PatchAsync(global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1Request body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -128,12 +128,12 @@ namespace Soenneker.Quo.OpenApiClient.V1.Contacts.Item
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1400Response.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1400ResponseError.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1401ResponseError.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1403Response.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1403ResponseError.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1404Response.CreateFromDiscriminatorValue },
                 { "409", global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1409Response.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1500Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1500ResponseError.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };

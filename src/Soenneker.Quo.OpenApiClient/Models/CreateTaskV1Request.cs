@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Quo.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf1"/>, <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf2"/>, <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf3"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf1"/>, <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf2"/>, <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf3"/>, <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf4"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreateTaskV1Request : IComposedTypeWrapper, IParsable
@@ -42,6 +42,14 @@ namespace Soenneker.Quo.OpenApiClient.Models
 #else
         public global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf3 CreateTaskV1RequestAnyOf3 { get; set; }
 #endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf4"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf4? CreateTaskV1RequestAnyOf4 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf4 CreateTaskV1RequestAnyOf4 { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -51,6 +59,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1Request();
+            
             
             
             
@@ -66,11 +75,11 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (fields.ContainsKey("title")); if (result == false) return false; }
 { result &= (fields.ContainsKey("description")); if (result == false) return false; }
 { result &= (fields.ContainsKey("phoneNumberId")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("title") ? (bool?)true : MatchSchema3(fields["title"], depth + 1)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("description") ? (bool?)true : MatchSchema4(fields["description"], depth + 1)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("dueDate") ? (bool?)true : MatchSchema5(fields["dueDate"], depth + 1)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("assignedTo") ? (bool?)true : MatchSchema6(fields["assignedTo"], depth + 1)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("phoneNumberId") ? (bool?)true : MatchSchema7(fields["phoneNumberId"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("title") ? (bool?)true : MatchSchema4(fields["title"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("description") ? (bool?)true : MatchSchema5(fields["description"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("dueDate") ? (bool?)true : MatchSchema6(fields["dueDate"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("assignedTo") ? (bool?)true : MatchSchema7(fields["assignedTo"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("phoneNumberId") ? (bool?)true : MatchSchema8(fields["phoneNumberId"], depth + 1)); if (result == false) return false; }
 foreach (var field in fields) {
 if (field.Key == "title" || field.Key == "description" || field.Key == "dueDate" || field.Key == "assignedTo" || field.Key == "phoneNumberId") continue;
 { result &= ((bool?)false); if (result == false) return false; }
@@ -86,11 +95,11 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (fields.ContainsKey("title")); if (result == false) return false; }
 { result &= (fields.ContainsKey("description")); if (result == false) return false; }
 { result &= (fields.ContainsKey("conversationId")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("title") ? (bool?)true : MatchSchema8(fields["title"], depth + 1)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("description") ? (bool?)true : MatchSchema9(fields["description"], depth + 1)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("dueDate") ? (bool?)true : MatchSchema10(fields["dueDate"], depth + 1)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("assignedTo") ? (bool?)true : MatchSchema11(fields["assignedTo"], depth + 1)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("conversationId") ? (bool?)true : MatchSchema12(fields["conversationId"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("title") ? (bool?)true : MatchSchema9(fields["title"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("description") ? (bool?)true : MatchSchema10(fields["description"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("dueDate") ? (bool?)true : MatchSchema11(fields["dueDate"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("assignedTo") ? (bool?)true : MatchSchema12(fields["assignedTo"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("conversationId") ? (bool?)true : MatchSchema13(fields["conversationId"], depth + 1)); if (result == false) return false; }
 foreach (var field in fields) {
 if (field.Key == "title" || field.Key == "description" || field.Key == "dueDate" || field.Key == "assignedTo" || field.Key == "conversationId") continue;
 { result &= ((bool?)false); if (result == false) return false; }
@@ -106,11 +115,11 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (fields.ContainsKey("title")); if (result == false) return false; }
 { result &= (fields.ContainsKey("description")); if (result == false) return false; }
 { result &= (fields.ContainsKey("activityId")); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("title") ? (bool?)true : MatchSchema13(fields["title"], depth + 1)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("description") ? (bool?)true : MatchSchema14(fields["description"], depth + 1)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("dueDate") ? (bool?)true : MatchSchema15(fields["dueDate"], depth + 1)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("assignedTo") ? (bool?)true : MatchSchema16(fields["assignedTo"], depth + 1)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("activityId") ? (bool?)true : MatchSchema17(fields["activityId"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("title") ? (bool?)true : MatchSchema14(fields["title"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("description") ? (bool?)true : MatchSchema15(fields["description"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("dueDate") ? (bool?)true : MatchSchema16(fields["dueDate"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("assignedTo") ? (bool?)true : MatchSchema17(fields["assignedTo"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("activityId") ? (bool?)true : MatchSchema18(fields["activityId"], depth + 1)); if (result == false) return false; }
 foreach (var field in fields) {
 if (field.Key == "title" || field.Key == "description" || field.Key == "dueDate" || field.Key == "assignedTo" || field.Key == "activityId") continue;
 { result &= ((bool?)false); if (result == false) return false; }
@@ -121,7 +130,22 @@ return result;
 bool? MatchSchema3(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject); if (result == false) return false; }
+if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj) { var fields = obj.GetValue();
+{ result &= (fields.ContainsKey("title")); if (result == false) return false; }
+{ result &= (fields.ContainsKey("description")); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("title") ? (bool?)true : MatchSchema19(fields["title"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("description") ? (bool?)true : MatchSchema20(fields["description"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("dueDate") ? (bool?)true : MatchSchema21(fields["dueDate"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("assignedTo") ? (bool?)true : MatchSchema22(fields["assignedTo"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("phoneNumberId") ? (bool?)true : MatchSchema23(fields["phoneNumberId"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("conversationId") ? (bool?)true : MatchSchema24(fields["conversationId"], depth + 1)); if (result == false) return false; }
+{ result &= (!fields.ContainsKey("activityId") ? (bool?)true : MatchSchema25(fields["activityId"], depth + 1)); if (result == false) return false; }
+foreach (var field in fields) {
+if (field.Key == "title" || field.Key == "description" || field.Key == "dueDate" || field.Key == "assignedTo" || field.Key == "phoneNumberId" || field.Key == "conversationId" || field.Key == "activityId") continue;
+{ result &= ((bool?)false); if (result == false) return false; }
+}
+}
 return result;
 }
 bool? MatchSchema4(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
@@ -139,7 +163,6 @@ return result;
 bool? MatchSchema6(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-result = null;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
@@ -153,6 +176,7 @@ return result;
 bool? MatchSchema8(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
+result = null;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
@@ -171,7 +195,6 @@ return result;
 bool? MatchSchema11(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-result = null;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
@@ -185,6 +208,7 @@ return result;
 bool? MatchSchema13(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
+result = null;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
@@ -203,7 +227,6 @@ return result;
 bool? MatchSchema16(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
 if (depth > 64 || --remaining < 0) return null;
 bool? result = true;
-result = null;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
@@ -214,23 +237,92 @@ result = null;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
-var matches = new bool?[3];
+bool? MatchSchema18(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result = null;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema19(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema20(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema21(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema22(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+result = null;
+{ result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema23(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (!(MatchSchema26(node, depth + 1))); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema24(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (!(MatchSchema27(node, depth + 1))); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema25(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+{ result &= (!(MatchSchema28(node, depth + 1))); if (result == false) return false; }
+return result;
+}
+bool? MatchSchema26(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+return result;
+}
+bool? MatchSchema27(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+return result;
+}
+bool? MatchSchema28(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
+if (depth > 64 || --remaining < 0) return null;
+bool? result = true;
+return result;
+}
+var matches = new bool?[4];
 remaining = 10000; matches[0] = MatchSchema0(unionPayload, 0);
 remaining = 10000; matches[1] = MatchSchema1(unionPayload, 0);
 remaining = 10000; matches[2] = MatchSchema2(unionPayload, 0);
+remaining = 10000; matches[3] = MatchSchema3(unionPayload, 0);
 return matches; }))() : null;
             bool? matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject ? unionBranchMatches![0] : (bool?)false;
             bool? matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject ? unionBranchMatches![1] : (bool?)false;
             bool? matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject ? unionBranchMatches![2] : (bool?)false;
+            bool? matchesUnionBranch3 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject ? unionBranchMatches![3] : (bool?)false;
             int matchingUnionBranches = 0;
             if (matchesUnionBranch0 != false) matchingUnionBranches++;
             if (matchesUnionBranch1 != false) matchingUnionBranches++;
             if (matchesUnionBranch2 != false) matchingUnionBranches++;
-            bool noSelectedUnionBranch = result.CreateTaskV1RequestAnyOf1 == null && result.CreateTaskV1RequestAnyOf2 == null && result.CreateTaskV1RequestAnyOf3 == null;
+            if (matchesUnionBranch3 != false) matchingUnionBranches++;
+            bool noSelectedUnionBranch = result.CreateTaskV1RequestAnyOf1 == null && result.CreateTaskV1RequestAnyOf2 == null && result.CreateTaskV1RequestAnyOf3 == null && result.CreateTaskV1RequestAnyOf4 == null;
             if (noSelectedUnionBranch && matchesUnionBranch0 == true && matchingUnionBranches == 1) result.CreateTaskV1RequestAnyOf1 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf1(), parseNode);
             if (noSelectedUnionBranch && matchesUnionBranch1 == true && matchingUnionBranches == 1) result.CreateTaskV1RequestAnyOf2 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf2(), parseNode);
             if (noSelectedUnionBranch && matchesUnionBranch2 == true && matchingUnionBranches == 1) result.CreateTaskV1RequestAnyOf3 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf3(), parseNode);
-            if (result.CreateTaskV1RequestAnyOf1 == null && result.CreateTaskV1RequestAnyOf2 == null && result.CreateTaskV1RequestAnyOf3 == null) result.UnrecognizedValue = unionPayload;
+            if (noSelectedUnionBranch && matchesUnionBranch3 == true && matchingUnionBranches == 1) result.CreateTaskV1RequestAnyOf4 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf4(), parseNode);
+            if (result.CreateTaskV1RequestAnyOf1 == null && result.CreateTaskV1RequestAnyOf2 == null && result.CreateTaskV1RequestAnyOf3 == null && result.CreateTaskV1RequestAnyOf4 == null) result.UnrecognizedValue = unionPayload;
 return result;
         }
         /// <summary>
@@ -241,9 +333,9 @@ return result;
         {
             if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawFields) { var fields = new global::System.Collections.Generic.Dictionary<string, global::System.Action<IParseNode>>(); foreach (var entry in rawFields.GetValue()) fields[entry.Key] = _ => { }; return fields; }
 
-            if(CreateTaskV1RequestAnyOf1 != null || CreateTaskV1RequestAnyOf2 != null || CreateTaskV1RequestAnyOf3 != null)
+            if(CreateTaskV1RequestAnyOf1 != null || CreateTaskV1RequestAnyOf2 != null || CreateTaskV1RequestAnyOf3 != null || CreateTaskV1RequestAnyOf4 != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(CreateTaskV1RequestAnyOf1, CreateTaskV1RequestAnyOf2, CreateTaskV1RequestAnyOf3);
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(CreateTaskV1RequestAnyOf1, CreateTaskV1RequestAnyOf2, CreateTaskV1RequestAnyOf3, CreateTaskV1RequestAnyOf4);
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -254,17 +346,19 @@ return result;
         public virtual void Serialize(ISerializationWriter writer)
         {
             if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
-            if (CreateTaskV1RequestAnyOf1 == null && CreateTaskV1RequestAnyOf2 == null && CreateTaskV1RequestAnyOf3 == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (CreateTaskV1RequestAnyOf1 == null && CreateTaskV1RequestAnyOf2 == null && CreateTaskV1RequestAnyOf3 == null && CreateTaskV1RequestAnyOf4 == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
             int selectedUnionBranches = 0;
             if (CreateTaskV1RequestAnyOf1 != null) selectedUnionBranches++;
             if (CreateTaskV1RequestAnyOf2 != null) selectedUnionBranches++;
             if (CreateTaskV1RequestAnyOf3 != null) selectedUnionBranches++;
+            if (CreateTaskV1RequestAnyOf4 != null) selectedUnionBranches++;
             if (CreateTaskV1RequestAnyOf1 != null && selectedUnionBranches == 1) { if (CreateTaskV1RequestAnyOf1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, CreateTaskV1RequestAnyOf1); return; }
             if (CreateTaskV1RequestAnyOf2 != null && selectedUnionBranches == 1) { if (CreateTaskV1RequestAnyOf2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, CreateTaskV1RequestAnyOf2); return; }
             if (CreateTaskV1RequestAnyOf3 != null && selectedUnionBranches == 1) { if (CreateTaskV1RequestAnyOf3 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, CreateTaskV1RequestAnyOf3); return; }
+            if (CreateTaskV1RequestAnyOf4 != null && selectedUnionBranches == 1) { if (CreateTaskV1RequestAnyOf4 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, CreateTaskV1RequestAnyOf4); return; }
 
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf1>(null, CreateTaskV1RequestAnyOf1, CreateTaskV1RequestAnyOf2, CreateTaskV1RequestAnyOf3);
+            writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf1>(null, CreateTaskV1RequestAnyOf1, CreateTaskV1RequestAnyOf2, CreateTaskV1RequestAnyOf3, CreateTaskV1RequestAnyOf4);
         }
     }
 }

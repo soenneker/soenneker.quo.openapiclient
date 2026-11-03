@@ -57,7 +57,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Tasks
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListTasksV1402Response">When receiving a 402 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListTasksV1403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListTasksV1404Response">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListTasksV1500Response">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListTasksV1500ResponseError">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Quo.OpenApiClient.Models.ListTasksV1200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Tasks.TasksRequestBuilder.TasksRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -75,17 +75,17 @@ namespace Soenneker.Quo.OpenApiClient.V1.Tasks
                 { "402", global::Soenneker.Quo.OpenApiClient.Models.ListTasksV1402Response.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Quo.OpenApiClient.Models.ListTasksV1403Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Quo.OpenApiClient.Models.ListTasksV1404Response.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Quo.OpenApiClient.Models.ListTasksV1500Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Quo.OpenApiClient.Models.ListTasksV1500ResponseError.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Quo.OpenApiClient.Models.ListTasksV1200Response>(requestInfo, global::Soenneker.Quo.OpenApiClient.Models.ListTasksV1200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create a task linked to a phone number, conversation, or conversation activity. Provide exactly one of `phoneNumberId`, `conversationId`, or `activityId`.
+        /// Create a task, optionally linked to a phone number, conversation, or conversation activity. Provide at most one of `phoneNumberId`, `conversationId`, or `activityId`; omit all three to create an org-wide task visible to every member of the organization.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1201Response"/></returns>
-        /// <param name="body">The task to create. Provide exactly one of `phoneNumberId`, `conversationId`, or `activityId` to link the task to that resource.</param>
+        /// <param name="body">The task to create. Provide at most one of `phoneNumberId`, `conversationId`, or `activityId` to link the task to that resource. Omit all three to create an org-wide task.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1400Response">When receiving a 400 status code</exception>
@@ -93,7 +93,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Tasks
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1402Response">When receiving a 402 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1404Response">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1500Response">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1500ResponseError">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1201Response?> PostAsync(global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1Request body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -112,7 +112,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Tasks
                 { "402", global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1402Response.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1403Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1404Response.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1500Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1500ResponseError.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
@@ -138,10 +138,10 @@ namespace Soenneker.Quo.OpenApiClient.V1.Tasks
             return requestInfo;
         }
         /// <summary>
-        /// Create a task linked to a phone number, conversation, or conversation activity. Provide exactly one of `phoneNumberId`, `conversationId`, or `activityId`.
+        /// Create a task, optionally linked to a phone number, conversation, or conversation activity. Provide at most one of `phoneNumberId`, `conversationId`, or `activityId`; omit all three to create an org-wide task visible to every member of the organization.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
-        /// <param name="body">The task to create. Provide exactly one of `phoneNumberId`, `conversationId`, or `activityId` to link the task to that resource.</param>
+        /// <param name="body">The task to create. Provide at most one of `phoneNumberId`, `conversationId`, or `activityId` to link the task to that resource. Omit all three to create an org-wide task.</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

@@ -52,12 +52,12 @@ namespace Soenneker.Quo.OpenApiClient.V1.Messages
         /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.ListMessagesV1200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListMessagesV1400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListMessagesV1400ResponseError">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListMessagesV1401ResponseError">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListMessagesV1402Response">When receiving a 402 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListMessagesV1403Response">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListMessagesV1402ResponseError">When receiving a 402 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListMessagesV1403ResponseError">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListMessagesV1404Response">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListMessagesV1500Response">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ListMessagesV1500ResponseError">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Quo.OpenApiClient.Models.ListMessagesV1200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.Quo.OpenApiClient.V1.Messages.MessagesRequestBuilder.MessagesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -70,12 +70,12 @@ namespace Soenneker.Quo.OpenApiClient.V1.Messages
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Quo.OpenApiClient.Models.ListMessagesV1400Response.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Quo.OpenApiClient.Models.ListMessagesV1400ResponseError.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Quo.OpenApiClient.Models.ListMessagesV1401ResponseError.CreateFromDiscriminatorValue },
-                { "402", global::Soenneker.Quo.OpenApiClient.Models.ListMessagesV1402Response.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Quo.OpenApiClient.Models.ListMessagesV1403Response.CreateFromDiscriminatorValue },
+                { "402", global::Soenneker.Quo.OpenApiClient.Models.ListMessagesV1402ResponseError.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Quo.OpenApiClient.Models.ListMessagesV1403ResponseError.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Quo.OpenApiClient.Models.ListMessagesV1404Response.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Quo.OpenApiClient.Models.ListMessagesV1500Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Quo.OpenApiClient.Models.ListMessagesV1500ResponseError.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
@@ -88,13 +88,13 @@ namespace Soenneker.Quo.OpenApiClient.V1.Messages
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1400ResponseError">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1401ResponseError">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1402Response">When receiving a 402 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1402ResponseError">When receiving a 402 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1403ResponseError">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1404Response">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1429ResponseError">When receiving a 429 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1500Response">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1500ResponseError">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1202Response?> PostAsync(global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1Request body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -108,13 +108,13 @@ namespace Soenneker.Quo.OpenApiClient.V1.Messages
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1400Response.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1400ResponseError.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1401ResponseError.CreateFromDiscriminatorValue },
-                { "402", global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1402Response.CreateFromDiscriminatorValue },
+                { "402", global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1402ResponseError.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1403ResponseError.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1404Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1429ResponseError.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1500Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Quo.OpenApiClient.Models.SendMessageV1500ResponseError.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };

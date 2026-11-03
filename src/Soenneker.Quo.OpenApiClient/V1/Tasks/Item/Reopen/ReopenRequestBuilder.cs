@@ -44,7 +44,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Tasks.Item.Reopen
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ReopenTaskV1402Response">When receiving a 402 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ReopenTaskV1403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ReopenTaskV1404Response">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ReopenTaskV1500Response">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.ReopenTaskV1500ResponseError">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Quo.OpenApiClient.Models.ReopenTaskV1200Response?> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -62,7 +62,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Tasks.Item.Reopen
                 { "402", global::Soenneker.Quo.OpenApiClient.Models.ReopenTaskV1402Response.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Quo.OpenApiClient.Models.ReopenTaskV1403Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Quo.OpenApiClient.Models.ReopenTaskV1404Response.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Quo.OpenApiClient.Models.ReopenTaskV1500Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Quo.OpenApiClient.Models.ReopenTaskV1500ResponseError.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };

@@ -91,7 +91,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Tasks.Item
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.DeleteTaskV1402Response">When receiving a 402 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.DeleteTaskV1403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.DeleteTaskV1404Response">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.DeleteTaskV1500Response">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.DeleteTaskV1500ResponseError">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -109,7 +109,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Tasks.Item
                 { "402", global::Soenneker.Quo.OpenApiClient.Models.DeleteTaskV1402Response.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Quo.OpenApiClient.Models.DeleteTaskV1403Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Quo.OpenApiClient.Models.DeleteTaskV1404Response.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Quo.OpenApiClient.Models.DeleteTaskV1500Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Quo.OpenApiClient.Models.DeleteTaskV1500ResponseError.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
@@ -126,7 +126,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Tasks.Item
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1402Response">When receiving a 402 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1404Response">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1500Response">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1500ResponseError">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1200Response?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -144,7 +144,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Tasks.Item
                 { "402", global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1402Response.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1403Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1404Response.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1500Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Quo.OpenApiClient.Models.GetTaskByIdV1500ResponseError.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
@@ -162,7 +162,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Tasks.Item
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1402Response">When receiving a 402 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1404Response">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1500Response">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1500ResponseError">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1200Response?> PutAsync(global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1Request body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -181,7 +181,7 @@ namespace Soenneker.Quo.OpenApiClient.V1.Tasks.Item
                 { "402", global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1402Response.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1403Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1404Response.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1500Response.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Quo.OpenApiClient.Models.UpdateTaskV1500ResponseError.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
