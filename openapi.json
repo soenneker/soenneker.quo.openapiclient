@@ -161,8 +161,7 @@
                               }
                             ]
                           }
-                        },
-                        "additionalProperties": false
+                        }
                       }
                     }
                   }
@@ -944,8 +943,7 @@
                             "type": "string",
                             "pattern": "^US(.*)$"
                           }
-                        },
-                        "additionalProperties": false
+                        }
                       },
                       "description": "Array of items"
                     },
@@ -1533,8 +1531,7 @@
                           "type": "string",
                           "pattern": "^US(.*)$"
                         }
-                      },
-                      "additionalProperties": false
+                      }
                     }
                   }
                 }
@@ -2917,8 +2914,7 @@
                           ],
                           "example": "completed"
                         }
-                      },
-                      "additionalProperties": false
+                      }
                     }
                   }
                 }
@@ -10642,7 +10638,7 @@
             }
           },
           "402": {
-            "description": "Not Enough Credits | Subscription Expired",
+            "description": "Not Enough Credits | Subscription Expired | Text Allowance Used Up. The workspace is on an agent plan and has no texts left. The message says which allowance is used up and how to get more.",
             "content": {
               "application/json": {
                 "schema": {
@@ -10652,6 +10648,9 @@
                     },
                     {
                       "$ref": "#/components/schemas/SubscriptionExpiredError"
+                    },
+                    {
+                      "$ref": "#/components/schemas/TextAllowanceUsedUpTheWorkspaceIsOnAnAgentPlanAndHasNoTextsLeftTheMessageSaysWhichAllowanceIsUsedUpAndHowToGetMoreError"
                     }
                   ]
                 }
@@ -13175,6 +13174,7 @@
                           "createdAt",
                           "createdBy",
                           "completed",
+                          "completedAt",
                           "isDeleted",
                           "revision"
                         ],
@@ -13308,6 +13308,17 @@
                           },
                           "completed": {
                             "type": "boolean"
+                          },
+                          "completedAt": {
+                            "anyOf": [
+                              {
+                                "type": "string",
+                                "format": "date-time"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
                           },
                           "isDeleted": {
                             "type": "boolean"
@@ -14428,6 +14439,7 @@
                         "createdAt",
                         "createdBy",
                         "completed",
+                        "completedAt",
                         "isDeleted",
                         "revision"
                       ],
@@ -14561,6 +14573,17 @@
                         },
                         "completed": {
                           "type": "boolean"
+                        },
+                        "completedAt": {
+                          "anyOf": [
+                            {
+                              "type": "string",
+                              "format": "date-time"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
                         },
                         "isDeleted": {
                           "type": "boolean"
@@ -28487,6 +28510,72 @@
           }
         },
         "title": "Subscription Expired"
+      },
+      "TextAllowanceUsedUpTheWorkspaceIsOnAnAgentPlanAndHasNoTextsLeftTheMessageSaysWhichAllowanceIsUsedUpAndHowToGetMoreError": {
+        "type": "object",
+        "required": [
+          "message",
+          "code",
+          "status",
+          "docs",
+          "title"
+        ],
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string",
+            "const": "0202402"
+          },
+          "status": {
+            "type": "number",
+            "const": 402
+          },
+          "docs": {
+            "type": "string",
+            "const": "https://quo.com/docs"
+          },
+          "title": {
+            "type": "string",
+            "const": "Text Allowance Used Up"
+          },
+          "trace": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "path",
+                "message",
+                "schema"
+              ],
+              "properties": {
+                "path": {
+                  "type": "string"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "value": {},
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "type"
+                  ],
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "title": "Text Allowance Used Up. The workspace is on an agent plan and has no texts left. The message says which allowance is used up and how to get more."
       },
       "ForbiddenError4": {
         "anyOf": [

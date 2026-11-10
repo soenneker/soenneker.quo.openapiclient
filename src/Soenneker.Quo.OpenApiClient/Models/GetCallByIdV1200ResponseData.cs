@@ -9,7 +9,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class GetCallByIdV1200ResponseData : IParsable
+    public partial class GetCallByIdV1200ResponseData : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
@@ -53,127 +53,136 @@ namespace Soenneker.Quo.OpenApiClient.Models
             else if (parseNode.GetChildNode("userId") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
         }
 
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Type of AI that answered the call. Set to &apos;ai-agent&apos; for AI responses, or null for human responses.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AiHandled { get => _explicitNullValueAiHandled; set { _explicitNullValueAiHandled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aiHandled"); else _explicitNullProperties?.Remove("aiHandled"); } }
+        public string? AiHandled { get => _explicitNullValueAiHandled; set { _explicitNullValueAiHandled = value; AdditionalData?.Remove("aiHandled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aiHandled"); else _explicitNullProperties?.Remove("aiHandled"); } }
         private string? _explicitNullValueAiHandled = default!;
 #nullable restore
 #else
-        public string AiHandled { get => _explicitNullValueAiHandled; set { _explicitNullValueAiHandled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aiHandled"); else _explicitNullProperties?.Remove("aiHandled"); } }
+        public string AiHandled { get => _explicitNullValueAiHandled; set { _explicitNullValueAiHandled = value; AdditionalData?.Remove("aiHandled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aiHandled"); else _explicitNullProperties?.Remove("aiHandled"); } }
         private string _explicitNullValueAiHandled = default!;
 #endif
         /// <summary>The timestamp when the call was answered in ISO 8601 format. Null if the call was not answered.</summary>
-        public DateTimeOffset? AnsweredAt { get => _explicitNullValueAnsweredAt; set { _explicitNullValueAnsweredAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answeredAt"); else _explicitNullProperties?.Remove("answeredAt"); } }
+        public DateTimeOffset? AnsweredAt { get => _explicitNullValueAnsweredAt; set { _explicitNullValueAnsweredAt = value; AdditionalData?.Remove("answeredAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answeredAt"); else _explicitNullProperties?.Remove("answeredAt"); } }
         private DateTimeOffset? _explicitNullValueAnsweredAt = default!;
         /// <summary>The unique identifier of the Quo user who answered the incoming call. Null for outgoing calls or unanswered incoming calls.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AnsweredBy { get => _explicitNullValueAnsweredBy; set { _explicitNullValueAnsweredBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answeredBy"); else _explicitNullProperties?.Remove("answeredBy"); } }
+        public string? AnsweredBy { get => _explicitNullValueAnsweredBy; set { _explicitNullValueAnsweredBy = value; AdditionalData?.Remove("answeredBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answeredBy"); else _explicitNullProperties?.Remove("answeredBy"); } }
         private string? _explicitNullValueAnsweredBy = default!;
 #nullable restore
 #else
-        public string AnsweredBy { get => _explicitNullValueAnsweredBy; set { _explicitNullValueAnsweredBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answeredBy"); else _explicitNullProperties?.Remove("answeredBy"); } }
+        public string AnsweredBy { get => _explicitNullValueAnsweredBy; set { _explicitNullValueAnsweredBy = value; AdditionalData?.Remove("answeredBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("answeredBy"); else _explicitNullProperties?.Remove("answeredBy"); } }
         private string _explicitNullValueAnsweredBy = default!;
 #endif
         /// <summary>How the call reached the user&apos;s inbox: either by direct dial to their number or routed through a phone menu. Null for outbound calls.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallRoute { get => _explicitNullValueCallRoute; set { _explicitNullValueCallRoute = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callRoute"); else _explicitNullProperties?.Remove("callRoute"); } }
+        public string? CallRoute { get => _explicitNullValueCallRoute; set { _explicitNullValueCallRoute = value; AdditionalData?.Remove("callRoute"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callRoute"); else _explicitNullProperties?.Remove("callRoute"); } }
         private string? _explicitNullValueCallRoute = default!;
 #nullable restore
 #else
-        public string CallRoute { get => _explicitNullValueCallRoute; set { _explicitNullValueCallRoute = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callRoute"); else _explicitNullProperties?.Remove("callRoute"); } }
+        public string CallRoute { get => _explicitNullValueCallRoute; set { _explicitNullValueCallRoute = value; AdditionalData?.Remove("callRoute"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callRoute"); else _explicitNullProperties?.Remove("callRoute"); } }
         private string _explicitNullValueCallRoute = default!;
 #endif
         /// <summary>The timestamp when the call ended, in ISO 8601 format. Null if the call is ongoing or was not completed.</summary>
-        public DateTimeOffset? CompletedAt { get => _explicitNullValueCompletedAt; set { _explicitNullValueCompletedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("completedAt"); else _explicitNullProperties?.Remove("completedAt"); } }
+        public DateTimeOffset? CompletedAt { get => _explicitNullValueCompletedAt; set { _explicitNullValueCompletedAt = value; AdditionalData?.Remove("completedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("completedAt"); else _explicitNullProperties?.Remove("completedAt"); } }
         private DateTimeOffset? _explicitNullValueCompletedAt = default!;
         /// <summary>The timestamp when the call record was created, in ISO 8601 format.</summary>
-        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdAt"); else _explicitNullProperties?.Remove("createdAt"); } }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("createdAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdAt"); else _explicitNullProperties?.Remove("createdAt"); } }
         private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>The direction of the call relative to the Quo number.</summary>
-        public global::Soenneker.Quo.OpenApiClient.Models.GetCallByIdV1200ResponseDataDirection? Direction { get => _explicitNullValueDirection; set { _explicitNullValueDirection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("direction"); else _explicitNullProperties?.Remove("direction"); } }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetCallByIdV1200ResponseDataDirection? Direction { get => _explicitNullValueDirection; set { _explicitNullValueDirection = value; AdditionalData?.Remove("direction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("direction"); else _explicitNullProperties?.Remove("direction"); } }
         private global::Soenneker.Quo.OpenApiClient.Models.GetCallByIdV1200ResponseDataDirection? _explicitNullValueDirection = default!;
         /// <summary>The total duration of the call in seconds.</summary>
-        public int? Duration { get => _explicitNullValueDuration; set { _explicitNullValueDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration"); else _explicitNullProperties?.Remove("duration"); } }
+        public int? Duration { get => _explicitNullValueDuration; set { _explicitNullValueDuration = value; AdditionalData?.Remove("duration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration"); else _explicitNullProperties?.Remove("duration"); } }
         private int? _explicitNullValueDuration = default!;
         /// <summary>The forwardedFrom property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ForwardedFrom { get => _explicitNullValueForwardedFrom; set { _explicitNullValueForwardedFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forwardedFrom"); else _explicitNullProperties?.Remove("forwardedFrom"); } }
+        public UntypedNode? ForwardedFrom { get => _explicitNullValueForwardedFrom; set { _explicitNullValueForwardedFrom = value; AdditionalData?.Remove("forwardedFrom"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forwardedFrom"); else _explicitNullProperties?.Remove("forwardedFrom"); } }
         private UntypedNode? _explicitNullValueForwardedFrom = default!;
 #nullable restore
 #else
-        public UntypedNode ForwardedFrom { get => _explicitNullValueForwardedFrom; set { _explicitNullValueForwardedFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forwardedFrom"); else _explicitNullProperties?.Remove("forwardedFrom"); } }
+        public UntypedNode ForwardedFrom { get => _explicitNullValueForwardedFrom; set { _explicitNullValueForwardedFrom = value; AdditionalData?.Remove("forwardedFrom"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forwardedFrom"); else _explicitNullProperties?.Remove("forwardedFrom"); } }
         private UntypedNode _explicitNullValueForwardedFrom = default!;
 #endif
         /// <summary>The forwardedTo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ForwardedTo { get => _explicitNullValueForwardedTo; set { _explicitNullValueForwardedTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forwardedTo"); else _explicitNullProperties?.Remove("forwardedTo"); } }
+        public UntypedNode? ForwardedTo { get => _explicitNullValueForwardedTo; set { _explicitNullValueForwardedTo = value; AdditionalData?.Remove("forwardedTo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forwardedTo"); else _explicitNullProperties?.Remove("forwardedTo"); } }
         private UntypedNode? _explicitNullValueForwardedTo = default!;
 #nullable restore
 #else
-        public UntypedNode ForwardedTo { get => _explicitNullValueForwardedTo; set { _explicitNullValueForwardedTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forwardedTo"); else _explicitNullProperties?.Remove("forwardedTo"); } }
+        public UntypedNode ForwardedTo { get => _explicitNullValueForwardedTo; set { _explicitNullValueForwardedTo = value; AdditionalData?.Remove("forwardedTo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forwardedTo"); else _explicitNullProperties?.Remove("forwardedTo"); } }
         private UntypedNode _explicitNullValueForwardedTo = default!;
 #endif
         /// <summary>The unique identifier of the call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The unique identifier of the Quo user who initiated the outgoing call. Null for incoming calls.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InitiatedBy { get => _explicitNullValueInitiatedBy; set { _explicitNullValueInitiatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initiatedBy"); else _explicitNullProperties?.Remove("initiatedBy"); } }
+        public string? InitiatedBy { get => _explicitNullValueInitiatedBy; set { _explicitNullValueInitiatedBy = value; AdditionalData?.Remove("initiatedBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initiatedBy"); else _explicitNullProperties?.Remove("initiatedBy"); } }
         private string? _explicitNullValueInitiatedBy = default!;
 #nullable restore
 #else
-        public string InitiatedBy { get => _explicitNullValueInitiatedBy; set { _explicitNullValueInitiatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initiatedBy"); else _explicitNullProperties?.Remove("initiatedBy"); } }
+        public string InitiatedBy { get => _explicitNullValueInitiatedBy; set { _explicitNullValueInitiatedBy = value; AdditionalData?.Remove("initiatedBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initiatedBy"); else _explicitNullProperties?.Remove("initiatedBy"); } }
         private string _explicitNullValueInitiatedBy = default!;
 #endif
         /// <summary>An array of phone numbers involved in the call, including the Quo number. Each number includes the country code and conforms to the E.164 format. Currently limited to one-to-one conversations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Participants { get => _explicitNullValueParticipants; set { _explicitNullValueParticipants = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participants"); else _explicitNullProperties?.Remove("participants"); } }
+        public List<string>? Participants { get => _explicitNullValueParticipants; set { _explicitNullValueParticipants = value; AdditionalData?.Remove("participants"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participants"); else _explicitNullProperties?.Remove("participants"); } }
         private List<string>? _explicitNullValueParticipants = default!;
 #nullable restore
 #else
-        public List<string> Participants { get => _explicitNullValueParticipants; set { _explicitNullValueParticipants = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participants"); else _explicitNullProperties?.Remove("participants"); } }
+        public List<string> Participants { get => _explicitNullValueParticipants; set { _explicitNullValueParticipants = value; AdditionalData?.Remove("participants"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participants"); else _explicitNullProperties?.Remove("participants"); } }
         private List<string> _explicitNullValueParticipants = default!;
 #endif
         /// <summary>The unique identifier of the Quo number associated with the call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PhoneNumberId { get => _explicitNullValuePhoneNumberId; set { _explicitNullValuePhoneNumberId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phoneNumberId"); else _explicitNullProperties?.Remove("phoneNumberId"); } }
+        public string? PhoneNumberId { get => _explicitNullValuePhoneNumberId; set { _explicitNullValuePhoneNumberId = value; AdditionalData?.Remove("phoneNumberId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phoneNumberId"); else _explicitNullProperties?.Remove("phoneNumberId"); } }
         private string? _explicitNullValuePhoneNumberId = default!;
 #nullable restore
 #else
-        public string PhoneNumberId { get => _explicitNullValuePhoneNumberId; set { _explicitNullValuePhoneNumberId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phoneNumberId"); else _explicitNullProperties?.Remove("phoneNumberId"); } }
+        public string PhoneNumberId { get => _explicitNullValuePhoneNumberId; set { _explicitNullValuePhoneNumberId = value; AdditionalData?.Remove("phoneNumberId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phoneNumberId"); else _explicitNullProperties?.Remove("phoneNumberId"); } }
         private string _explicitNullValuePhoneNumberId = default!;
 #endif
         /// <summary>The current status of the call.</summary>
-        public global::Soenneker.Quo.OpenApiClient.Models.GetCallByIdV1200ResponseDataStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetCallByIdV1200ResponseDataStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.Quo.OpenApiClient.Models.GetCallByIdV1200ResponseDataStatus? _explicitNullValueStatus = default!;
         /// <summary>The timestamp when the call record was last updated, in ISO 8601 format. Null if never updated.</summary>
-        public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updatedAt"); else _explicitNullProperties?.Remove("updatedAt"); } }
+        public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; AdditionalData?.Remove("updatedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updatedAt"); else _explicitNullProperties?.Remove("updatedAt"); } }
         private DateTimeOffset? _explicitNullValueUpdatedAt = default!;
         /// <summary>The unique identifier of the Quo user account associated with the call.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userId"); else _explicitNullProperties?.Remove("userId"); } }
+        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; AdditionalData?.Remove("userId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userId"); else _explicitNullProperties?.Remove("userId"); } }
         private string? _explicitNullValueUserId = default!;
 #nullable restore
 #else
-        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userId"); else _explicitNullProperties?.Remove("userId"); } }
+        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; AdditionalData?.Remove("userId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userId"); else _explicitNullProperties?.Remove("userId"); } }
         private string _explicitNullValueUserId = default!;
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetCallByIdV1200ResponseData"/> and sets the default values.
+        /// </summary>
+        public GetCallByIdV1200ResponseData()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -198,7 +207,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
                 { "callRoute", n => { CallRoute = n.GetStringValue(); } },
                 { "completedAt", n => { CompletedAt = n.GetDateTimeOffsetValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "direction", n => { Direction = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallByIdV1200ResponseDataDirection>(); } },
+                { "direction", n => { var parsed = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallByIdV1200ResponseDataDirection>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDirection = default; _explicitNullProperties?.Remove("direction"); AdditionalData["direction"] = unknown; } else { Direction = parsed; AdditionalData.Remove("direction"); } } },
                 { "duration", n => { Duration = n.GetIntValue(); } },
                 { "forwardedFrom", n => { ForwardedFrom = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "forwardedTo", n => { ForwardedTo = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
@@ -206,7 +215,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
                 { "initiatedBy", n => { InitiatedBy = n.GetStringValue(); } },
                 { "participants", n => { Participants = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "phoneNumberId", n => { PhoneNumberId = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallByIdV1200ResponseDataStatus>(); } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallByIdV1200ResponseDataStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "userId", n => { UserId = n.GetStringValue(); } },
             };
@@ -234,8 +243,9 @@ namespace Soenneker.Quo.OpenApiClient.Models
             writer.WriteStringValue("phoneNumberId", PhoneNumberId);
             writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallByIdV1200ResponseDataStatus>("status", Status);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
-            writer.WriteStringValue("userId", UserId);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
-            
+            writer.WriteStringValue("userId", UserId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

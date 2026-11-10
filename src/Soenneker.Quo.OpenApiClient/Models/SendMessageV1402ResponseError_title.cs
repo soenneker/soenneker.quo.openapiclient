@@ -16,5 +16,9 @@ namespace Soenneker.Quo.OpenApiClient.Models
         #pragma warning disable CS1591
         SubscriptionExpired,
         #pragma warning restore CS1591
+        [EnumMember(Value = "Text Allowance Used Up")]
+        #pragma warning disable CS1591
+        TextAllowanceUsedUp,
+        #pragma warning restore CS1591
     }
 }

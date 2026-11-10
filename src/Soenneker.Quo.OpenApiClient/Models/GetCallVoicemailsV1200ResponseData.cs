@@ -9,7 +9,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class GetCallVoicemailsV1200ResponseData : IParsable
+    public partial class GetCallVoicemailsV1200ResponseData : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
@@ -29,42 +29,51 @@ namespace Soenneker.Quo.OpenApiClient.Models
             else if (parseNode.GetChildNode("transcript") is { } nullNodeTranscript && nullNodeTranscript.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transcript = null;
         }
 
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The length of the call voicemail in seconds. Null if the voicemail is not completed or the duration is unknown.</summary>
-        public int? Duration { get => _explicitNullValueDuration; set { _explicitNullValueDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration"); else _explicitNullProperties?.Remove("duration"); } }
+        public int? Duration { get => _explicitNullValueDuration; set { _explicitNullValueDuration = value; AdditionalData?.Remove("duration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration"); else _explicitNullProperties?.Remove("duration"); } }
         private int? _explicitNullValueDuration = default!;
         /// <summary>The unique identifier of the call voicemail.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The URL where the call voicemail can be accessed or downloaded. Null if the voicemail is not completed or the URL is not available.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RecordingUrl { get => _explicitNullValueRecordingUrl; set { _explicitNullValueRecordingUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recordingUrl"); else _explicitNullProperties?.Remove("recordingUrl"); } }
+        public string? RecordingUrl { get => _explicitNullValueRecordingUrl; set { _explicitNullValueRecordingUrl = value; AdditionalData?.Remove("recordingUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recordingUrl"); else _explicitNullProperties?.Remove("recordingUrl"); } }
         private string? _explicitNullValueRecordingUrl = default!;
 #nullable restore
 #else
-        public string RecordingUrl { get => _explicitNullValueRecordingUrl; set { _explicitNullValueRecordingUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recordingUrl"); else _explicitNullProperties?.Remove("recordingUrl"); } }
+        public string RecordingUrl { get => _explicitNullValueRecordingUrl; set { _explicitNullValueRecordingUrl = value; AdditionalData?.Remove("recordingUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recordingUrl"); else _explicitNullProperties?.Remove("recordingUrl"); } }
         private string _explicitNullValueRecordingUrl = default!;
 #endif
         /// <summary>The current status of the call voicemail.</summary>
-        public global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1200ResponseDataStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1200ResponseDataStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1200ResponseDataStatus? _explicitNullValueStatus = default!;
         /// <summary>The transcript of the call voicemail. Null if the voicemail is not completed or the transcript is not available.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Transcript { get => _explicitNullValueTranscript; set { _explicitNullValueTranscript = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcript"); else _explicitNullProperties?.Remove("transcript"); } }
+        public string? Transcript { get => _explicitNullValueTranscript; set { _explicitNullValueTranscript = value; AdditionalData?.Remove("transcript"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcript"); else _explicitNullProperties?.Remove("transcript"); } }
         private string? _explicitNullValueTranscript = default!;
 #nullable restore
 #else
-        public string Transcript { get => _explicitNullValueTranscript; set { _explicitNullValueTranscript = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcript"); else _explicitNullProperties?.Remove("transcript"); } }
+        public string Transcript { get => _explicitNullValueTranscript; set { _explicitNullValueTranscript = value; AdditionalData?.Remove("transcript"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcript"); else _explicitNullProperties?.Remove("transcript"); } }
         private string _explicitNullValueTranscript = default!;
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1200ResponseData"/> and sets the default values.
+        /// </summary>
+        public GetCallVoicemailsV1200ResponseData()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -86,7 +95,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
                 { "duration", n => { Duration = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "recordingUrl", n => { RecordingUrl = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1200ResponseDataStatus>(); } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1200ResponseDataStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "transcript", n => { Transcript = n.GetStringValue(); } },
             };
         }
@@ -101,8 +110,9 @@ namespace Soenneker.Quo.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("recordingUrl", RecordingUrl);
             writer.WriteEnumValue<global::Soenneker.Quo.OpenApiClient.Models.GetCallVoicemailsV1200ResponseDataStatus>("status", Status);
-            writer.WriteStringValue("transcript", Transcript);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
-            
+            writer.WriteStringValue("transcript", Transcript);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

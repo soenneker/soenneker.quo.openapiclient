@@ -16,5 +16,9 @@ namespace Soenneker.Quo.OpenApiClient.Models
         #pragma warning disable CS1591
         Value0201402,
         #pragma warning restore CS1591
+        [EnumMember(Value = "0202402")]
+        #pragma warning disable CS1591
+        Value0202402,
+        #pragma warning restore CS1591
     }
 }

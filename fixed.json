@@ -1865,7 +1865,7 @@
             }
           },
           "402": {
-            "description": "Not Enough Credits | Subscription Expired",
+            "description": "Not Enough Credits | Subscription Expired | Text Allowance Used Up. The workspace is on an agent plan and has no texts left. The message says which allowance is used up and how to get more.",
             "content": {
               "application/json": {
                 "schema": {
@@ -13400,8 +13400,7 @@
             "example": "https://examplestorage.com/a643d4d3e1484fcc8b721627284eda5e.mp3",
             "x-client-original-format": "uri-reference"
           }
-        },
-        "additionalProperties": false
+        }
       },
       "GetCallRecordingsV1400ResponseErrorsItem": {
         "required": [
@@ -13622,8 +13621,7 @@
             "description": "The unique identifier of the Quo user account associated with the call.",
             "example": "US123abc"
           }
-        },
-        "additionalProperties": false
+        }
       },
       "ListCallsV1404ResponseErrorsItem": {
         "required": [
@@ -13804,8 +13802,7 @@
             "description": "The unique identifier of the Quo user account associated with the call.",
             "example": "US123abc"
           }
-        },
-        "additionalProperties": false
+        }
       },
       "GetCallByIdV1404ResponseErrorsItem": {
         "required": [
@@ -14104,8 +14101,7 @@
           "status": {
             "$ref": "#/components/schemas/GetCallVoicemailsV1200ResponseDataStatus"
           }
-        },
-        "additionalProperties": false
+        }
       },
       "GetCallVoicemailsV1400ResponseErrorsItem": {
         "required": [
@@ -15880,6 +15876,7 @@
           "createdAt",
           "createdBy",
           "completed",
+          "completedAt",
           "isDeleted",
           "revision"
         ],
@@ -15954,6 +15951,13 @@
           },
           "completed": {
             "type": "boolean"
+          },
+          "completedAt": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time"
           },
           "isDeleted": {
             "type": "boolean"
@@ -16167,6 +16171,7 @@
           "createdAt",
           "createdBy",
           "completed",
+          "completedAt",
           "isDeleted",
           "revision"
         ],
@@ -16241,6 +16246,13 @@
           },
           "completed": {
             "type": "boolean"
+          },
+          "completedAt": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time"
           },
           "isDeleted": {
             "type": "boolean"
@@ -36718,7 +36730,8 @@
             "type": "string",
             "enum": [
               "0200402",
-              "0201402"
+              "0201402",
+              "0202402"
             ],
             "x-ms-enum": {
               "name": "Code",
@@ -36731,6 +36744,10 @@
                 {
                   "value": "0201402",
                   "name": "Value0201402"
+                },
+                {
+                  "value": "0202402",
+                  "name": "Value0202402"
                 }
               ]
             }
@@ -36747,7 +36764,8 @@
             "type": "string",
             "enum": [
               "Not Enough Credits",
-              "Subscription Expired"
+              "Subscription Expired",
+              "Text Allowance Used Up"
             ],
             "x-ms-enum": {
               "name": "Title",
@@ -36760,6 +36778,10 @@
                 {
                   "value": "Subscription Expired",
                   "name": "SubscriptionExpired"
+                },
+                {
+                  "value": "Text Allowance Used Up",
+                  "name": "TextAllowanceUsedUp"
                 }
               ]
             }
@@ -36771,15 +36793,26 @@
             "x-client-untyped-value": true,
             "x-client-original-field-schemas": [
               {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/NotEnoughCreditsErrorErrorsItem"
-                }
+                "x-client-untyped-value": true,
+                "x-client-original-field-schemas": [
+                  {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/NotEnoughCreditsErrorErrorsItem"
+                    }
+                  },
+                  {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/SubscriptionExpiredErrorErrorsItem"
+                    }
+                  }
+                ]
               },
               {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/SubscriptionExpiredErrorErrorsItem"
+                  "$ref": "#/components/schemas/TextAllowanceUsedUpTheWorkspaceIsOnAnAgentPlanAndHasNoTextsLeftTheMessageSaysWhichAllowanceIsUsedUpAndHowToGetMoreErrorErrorsItem"
                 }
               }
             ]
@@ -44170,6 +44203,45 @@
         }
       }
     },
+    "TextAllowanceUsedUpTheWorkspaceIsOnAnAgentPlanAndHasNoTextsLeftTheMessageSaysWhichAllowanceIsUsedUpAndHowToGetMoreError": {
+      "title": "Text Allowance Used Up. The workspace is on an agent plan and has no texts left. The message says which allowance is used up and how to get more.",
+      "required": [
+        "message",
+        "code",
+        "status",
+        "docs",
+        "title"
+      ],
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string"
+        },
+        "code": {
+          "$ref": "#/components/schemas/Value0202402Code"
+        },
+        "status": {
+          "type": "number",
+          "default": 402,
+          "x-client-original-const": 402
+        },
+        "docs": {
+          "$ref": "#/components/schemas/TextAllowanceUsedUpTheWorkspaceIsOnAnAgentPlanAndHasNoTextsLeftTheMessageSaysWhichAllowanceIsUsedUpAndHowToGetMoreErrorDocs"
+        },
+        "title": {
+          "$ref": "#/components/schemas/TextAllowanceUsedUpTitle"
+        },
+        "trace": {
+          "type": "string"
+        },
+        "errors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/TextAllowanceUsedUpTheWorkspaceIsOnAnAgentPlanAndHasNoTextsLeftTheMessageSaysWhichAllowanceIsUsedUpAndHowToGetMoreErrorErrorsItem"
+          }
+        }
+      }
+    },
     "ForbiddenError4": {
       "title": "Forbidden",
       "discriminator": {
@@ -45985,6 +46057,26 @@
         }
       }
     },
+    "TextAllowanceUsedUpTheWorkspaceIsOnAnAgentPlanAndHasNoTextsLeftTheMessageSaysWhichAllowanceIsUsedUpAndHowToGetMoreErrorErrorsItem": {
+      "required": [
+        "path",
+        "message",
+        "schema"
+      ],
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "value": {},
+        "schema": {
+          "$ref": "#/components/schemas/TextAllowanceUsedUpTheWorkspaceIsOnAnAgentPlanAndHasNoTextsLeftTheMessageSaysWhichAllowanceIsUsedUpAndHowToGetMoreErrorErrorsItemSchema"
+        }
+      }
+    },
     "UnexpectedError9ErrorsItem": {
       "required": [
         "path",
@@ -46829,6 +46921,17 @@
       }
     },
     "SubscriptionExpiredErrorErrorsItemSchema": {
+      "required": [
+        "type"
+      ],
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        }
+      }
+    },
+    "TextAllowanceUsedUpTheWorkspaceIsOnAnAgentPlanAndHasNoTextsLeftTheMessageSaysWhichAllowanceIsUsedUpAndHowToGetMoreErrorErrorsItemSchema": {
       "required": [
         "type"
       ],
@@ -48145,7 +48248,8 @@
         "propertyName": "code",
         "mapping": {
           "0200402": "#/components/schemas/SendMessageV1402ResponseNotEnoughCreditsError",
-          "0201402": "#/components/schemas/SendMessageV1402ResponseSubscriptionExpiredError"
+          "0201402": "#/components/schemas/SendMessageV1402ResponseSubscriptionExpiredError",
+          "0202402": "#/components/schemas/Tagged0202402VariantA786A7027E83F033"
         }
       },
       "x-client-original-tagged-union": {
@@ -48155,13 +48259,17 @@
           },
           {
             "$ref": "#/components/schemas/SubscriptionExpiredError"
+          },
+          {
+            "$ref": "#/components/schemas/TextAllowanceUsedUpTheWorkspaceIsOnAnAgentPlanAndHasNoTextsLeftTheMessageSaysWhichAllowanceIsUsedUpAndHowToGetMoreError"
           }
         ],
         "discriminator": {
           "propertyName": "code",
           "mapping": {
             "0200402": "#/components/schemas/NotEnoughCreditsError",
-            "0201402": "#/components/schemas/SubscriptionExpiredError"
+            "0201402": "#/components/schemas/SubscriptionExpiredError",
+            "0202402": "#/components/schemas/TextAllowanceUsedUpTheWorkspaceIsOnAnAgentPlanAndHasNoTextsLeftTheMessageSaysWhichAllowanceIsUsedUpAndHowToGetMoreError"
           }
         }
       },
@@ -53850,6 +53958,57 @@
         ]
       }
     },
+    "Value0202402Code": {
+      "enum": [
+        "0202402"
+      ],
+      "type": "string",
+      "x-client-original-const": "0202402",
+      "x-ms-enum": {
+        "name": "Value0202402Code",
+        "modelAsString": false,
+        "values": [
+          {
+            "value": "0202402",
+            "name": "Value0202402"
+          }
+        ]
+      }
+    },
+    "TextAllowanceUsedUpTheWorkspaceIsOnAnAgentPlanAndHasNoTextsLeftTheMessageSaysWhichAllowanceIsUsedUpAndHowToGetMoreErrorDocs": {
+      "enum": [
+        "https://quo.com/docs"
+      ],
+      "type": "string",
+      "x-client-original-const": "https://quo.com/docs",
+      "x-ms-enum": {
+        "name": "TextAllowanceUsedUpTheWorkspaceIsOnAnAgentPlanAndHasNoTextsLeftTheMessageSaysWhichAllowanceIsUsedUpAndHowToGetMoreErrorDocs",
+        "modelAsString": false,
+        "values": [
+          {
+            "value": "https://quo.com/docs",
+            "name": "HttpsColonSlashSlashQuoComDocs"
+          }
+        ]
+      }
+    },
+    "TextAllowanceUsedUpTitle": {
+      "enum": [
+        "Text Allowance Used Up"
+      ],
+      "type": "string",
+      "x-client-original-const": "Text Allowance Used Up",
+      "x-ms-enum": {
+        "name": "TextAllowanceUsedUpTitle",
+        "modelAsString": false,
+        "values": [
+          {
+            "value": "Text Allowance Used Up",
+            "name": "TextAllowanceUsedUp"
+          }
+        ]
+      }
+    },
     "Value0200500Code": {
       "enum": [
         "0200500"
@@ -58225,6 +58384,52 @@
             },
             "description": {
               "$ref": "#/components/schemas/YourSubscriptionHasExpiredDescription"
+            }
+          }
+        }
+      ]
+    },
+    "Tagged0202402VariantA786A7027E83F033": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SendMessageV1402Response"
+        },
+        {
+          "title": "Text Allowance Used Up. The workspace is on an agent plan and has no texts left. The message says which allowance is used up and how to get more.",
+          "required": [
+            "message",
+            "code",
+            "status",
+            "docs",
+            "title"
+          ],
+          "type": "object",
+          "properties": {
+            "message": {
+              "type": "string"
+            },
+            "code": {
+              "$ref": "#/components/schemas/Value0202402Code"
+            },
+            "status": {
+              "type": "number",
+              "default": 402,
+              "x-client-original-const": 402
+            },
+            "docs": {
+              "$ref": "#/components/schemas/TextAllowanceUsedUpTheWorkspaceIsOnAnAgentPlanAndHasNoTextsLeftTheMessageSaysWhichAllowanceIsUsedUpAndHowToGetMoreErrorDocs"
+            },
+            "title": {
+              "$ref": "#/components/schemas/TextAllowanceUsedUpTitle"
+            },
+            "trace": {
+              "type": "string"
+            },
+            "errors": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/TextAllowanceUsedUpTheWorkspaceIsOnAnAgentPlanAndHasNoTextsLeftTheMessageSaysWhichAllowanceIsUsedUpAndHowToGetMoreErrorErrorsItem"
+              }
             }
           }
         }
