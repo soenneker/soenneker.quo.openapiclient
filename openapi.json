@@ -13797,7 +13797,8 @@
                         "pattern": "^PN(.*)$"
                       }
                     },
-                    "additionalProperties": false
+                    "additionalProperties": false,
+                    "title": "Linked to a phone number"
                   },
                   {
                     "type": "object",
@@ -13836,7 +13837,8 @@
                         "pattern": "^CN(.*)$"
                       }
                     },
-                    "additionalProperties": false
+                    "additionalProperties": false,
+                    "title": "Linked to a conversation"
                   },
                   {
                     "type": "object",
@@ -13875,7 +13877,8 @@
                         "pattern": "^AC(.*)$"
                       }
                     },
-                    "additionalProperties": false
+                    "additionalProperties": false,
+                    "title": "Linked to an activity"
                   },
                   {
                     "type": "object",
@@ -13907,18 +13910,10 @@
                       "assignedTo": {
                         "type": "string",
                         "pattern": "^US(.*)$"
-                      },
-                      "phoneNumberId": {
-                        "not": {}
-                      },
-                      "conversationId": {
-                        "not": {}
-                      },
-                      "activityId": {
-                        "not": {}
                       }
                     },
-                    "additionalProperties": false
+                    "additionalProperties": false,
+                    "title": "Org-wide task"
                   }
                 ],
                 "description": "The task to create. Provide at most one of `phoneNumberId`, `conversationId`, or `activityId` to link the task to that resource. Omit all three to create an org-wide task."

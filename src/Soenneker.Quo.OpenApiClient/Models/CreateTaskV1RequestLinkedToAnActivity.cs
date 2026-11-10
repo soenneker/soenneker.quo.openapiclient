@@ -9,7 +9,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class CreateTaskV1RequestAnyOf4 : IParsable
+    public partial class CreateTaskV1RequestLinkedToAnActivity : IParsable
     #pragma warning restore CS1591
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
@@ -21,14 +21,10 @@ namespace Soenneker.Quo.OpenApiClient.Models
             else if (parseNode.GetChildNode("activityId") is { } nullNodeActivityId && nullNodeActivityId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityId = null;
             if (parseNode.GetChildNode("assignedTo") is null) { _explicitNullValueAssignedTo = default!; _explicitNullProperties?.Remove("assignedTo"); }
             else if (parseNode.GetChildNode("assignedTo") is { } nullNodeAssignedTo && nullNodeAssignedTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssignedTo = null;
-            if (parseNode.GetChildNode("conversationId") is null) { _explicitNullValueConversationId = default!; _explicitNullProperties?.Remove("conversationId"); }
-            else if (parseNode.GetChildNode("conversationId") is { } nullNodeConversationId && nullNodeConversationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConversationId = null;
             if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
             else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
             if (parseNode.GetChildNode("dueDate") is null) { _explicitNullValueDueDate = default!; _explicitNullProperties?.Remove("dueDate"); }
             else if (parseNode.GetChildNode("dueDate") is { } nullNodeDueDate && nullNodeDueDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DueDate = null;
-            if (parseNode.GetChildNode("phoneNumberId") is null) { _explicitNullValuePhoneNumberId = default!; _explicitNullProperties?.Remove("phoneNumberId"); }
-            else if (parseNode.GetChildNode("phoneNumberId") is { } nullNodePhoneNumberId && nullNodePhoneNumberId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNumberId = null;
             if (parseNode.GetChildNode("title") is null) { _explicitNullValueTitle = default!; _explicitNullProperties?.Remove("title"); }
             else if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
         }
@@ -36,12 +32,12 @@ namespace Soenneker.Quo.OpenApiClient.Models
         /// <summary>The activityId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ActivityId { get => _explicitNullValueActivityId; set { _explicitNullValueActivityId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityId"); else _explicitNullProperties?.Remove("activityId"); } }
-        private UntypedNode? _explicitNullValueActivityId = default!;
+        public string? ActivityId { get => _explicitNullValueActivityId; set { _explicitNullValueActivityId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityId"); else _explicitNullProperties?.Remove("activityId"); } }
+        private string? _explicitNullValueActivityId = default!;
 #nullable restore
 #else
-        public UntypedNode ActivityId { get => _explicitNullValueActivityId; set { _explicitNullValueActivityId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityId"); else _explicitNullProperties?.Remove("activityId"); } }
-        private UntypedNode _explicitNullValueActivityId = default!;
+        public string ActivityId { get => _explicitNullValueActivityId; set { _explicitNullValueActivityId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityId"); else _explicitNullProperties?.Remove("activityId"); } }
+        private string _explicitNullValueActivityId = default!;
 #endif
         /// <summary>The assignedTo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -52,16 +48,6 @@ namespace Soenneker.Quo.OpenApiClient.Models
 #else
         public string AssignedTo { get => _explicitNullValueAssignedTo; set { _explicitNullValueAssignedTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignedTo"); else _explicitNullProperties?.Remove("assignedTo"); } }
         private string _explicitNullValueAssignedTo = default!;
-#endif
-        /// <summary>The conversationId property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public UntypedNode? ConversationId { get => _explicitNullValueConversationId; set { _explicitNullValueConversationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversationId"); else _explicitNullProperties?.Remove("conversationId"); } }
-        private UntypedNode? _explicitNullValueConversationId = default!;
-#nullable restore
-#else
-        public UntypedNode ConversationId { get => _explicitNullValueConversationId; set { _explicitNullValueConversationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversationId"); else _explicitNullProperties?.Remove("conversationId"); } }
-        private UntypedNode _explicitNullValueConversationId = default!;
 #endif
         /// <summary>The description of the task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -76,16 +62,6 @@ namespace Soenneker.Quo.OpenApiClient.Models
         /// <summary>The dueDate property</summary>
         public DateTimeOffset? DueDate { get => _explicitNullValueDueDate; set { _explicitNullValueDueDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dueDate"); else _explicitNullProperties?.Remove("dueDate"); } }
         private DateTimeOffset? _explicitNullValueDueDate = default!;
-        /// <summary>The phoneNumberId property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public UntypedNode? PhoneNumberId { get => _explicitNullValuePhoneNumberId; set { _explicitNullValuePhoneNumberId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phoneNumberId"); else _explicitNullProperties?.Remove("phoneNumberId"); } }
-        private UntypedNode? _explicitNullValuePhoneNumberId = default!;
-#nullable restore
-#else
-        public UntypedNode PhoneNumberId { get => _explicitNullValuePhoneNumberId; set { _explicitNullValuePhoneNumberId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phoneNumberId"); else _explicitNullProperties?.Remove("phoneNumberId"); } }
-        private UntypedNode _explicitNullValuePhoneNumberId = default!;
-#endif
         /// <summary>The title of the task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -99,12 +75,12 @@ namespace Soenneker.Quo.OpenApiClient.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf4"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestLinkedToAnActivity"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf4 CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestLinkedToAnActivity CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf4(), parseNode);
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestLinkedToAnActivity(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -114,12 +90,10 @@ namespace Soenneker.Quo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "activityId", n => { ActivityId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "activityId", n => { ActivityId = n.GetStringValue(); } },
                 { "assignedTo", n => { AssignedTo = n.GetStringValue(); } },
-                { "conversationId", n => { ConversationId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "dueDate", n => { DueDate = n.GetDateTimeOffsetValue(); } },
-                { "phoneNumberId", n => { PhoneNumberId = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetStringValue(); } },
             };
         }
@@ -130,12 +104,10 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<UntypedNode>("activityId", ActivityId);
+            writer.WriteStringValue("activityId", ActivityId);
             writer.WriteStringValue("assignedTo", AssignedTo);
-            writer.WriteObjectValue<UntypedNode>("conversationId", ConversationId);
             writer.WriteStringValue("description", Description);
             writer.WriteDateTimeOffsetValue("dueDate", DueDate);
-            writer.WriteObjectValue<UntypedNode>("phoneNumberId", PhoneNumberId);
             writer.WriteStringValue("title", Title);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             
         }

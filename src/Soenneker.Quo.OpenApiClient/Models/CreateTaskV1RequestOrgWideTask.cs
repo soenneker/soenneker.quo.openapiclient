@@ -9,7 +9,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class CreateTaskV1RequestAnyOf3 : IParsable
+    public partial class CreateTaskV1RequestOrgWideTask : IParsable
     #pragma warning restore CS1591
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
@@ -17,8 +17,6 @@ namespace Soenneker.Quo.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("activityId") is null) { _explicitNullValueActivityId = default!; _explicitNullProperties?.Remove("activityId"); }
-            else if (parseNode.GetChildNode("activityId") is { } nullNodeActivityId && nullNodeActivityId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityId = null;
             if (parseNode.GetChildNode("assignedTo") is null) { _explicitNullValueAssignedTo = default!; _explicitNullProperties?.Remove("assignedTo"); }
             else if (parseNode.GetChildNode("assignedTo") is { } nullNodeAssignedTo && nullNodeAssignedTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssignedTo = null;
             if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
@@ -29,16 +27,6 @@ namespace Soenneker.Quo.OpenApiClient.Models
             else if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
         }
 
-        /// <summary>The activityId property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ActivityId { get => _explicitNullValueActivityId; set { _explicitNullValueActivityId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityId"); else _explicitNullProperties?.Remove("activityId"); } }
-        private string? _explicitNullValueActivityId = default!;
-#nullable restore
-#else
-        public string ActivityId { get => _explicitNullValueActivityId; set { _explicitNullValueActivityId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityId"); else _explicitNullProperties?.Remove("activityId"); } }
-        private string _explicitNullValueActivityId = default!;
-#endif
         /// <summary>The assignedTo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -75,12 +63,12 @@ namespace Soenneker.Quo.OpenApiClient.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf3"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestOrgWideTask"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf3 CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestOrgWideTask CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf3(), parseNode);
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestOrgWideTask(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -90,7 +78,6 @@ namespace Soenneker.Quo.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "activityId", n => { ActivityId = n.GetStringValue(); } },
                 { "assignedTo", n => { AssignedTo = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "dueDate", n => { DueDate = n.GetDateTimeOffsetValue(); } },
@@ -104,7 +91,6 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("activityId", ActivityId);
             writer.WriteStringValue("assignedTo", AssignedTo);
             writer.WriteStringValue("description", Description);
             writer.WriteDateTimeOffsetValue("dueDate", DueDate);

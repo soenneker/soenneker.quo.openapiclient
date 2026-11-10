@@ -7458,16 +7458,16 @@
       "CreateTaskV1Request": {
         "anyOf": [
           {
-            "$ref": "#/components/schemas/CreateTaskV1RequestAnyOf1"
+            "$ref": "#/components/schemas/CreateTaskV1RequestLinkedToAPhoneNumber"
           },
           {
-            "$ref": "#/components/schemas/CreateTaskV1RequestAnyOf2"
+            "$ref": "#/components/schemas/CreateTaskV1RequestLinkedToAConversation"
           },
           {
-            "$ref": "#/components/schemas/CreateTaskV1RequestAnyOf3"
+            "$ref": "#/components/schemas/CreateTaskV1RequestLinkedToAnActivity"
           },
           {
-            "$ref": "#/components/schemas/CreateTaskV1RequestAnyOf4"
+            "$ref": "#/components/schemas/CreateTaskV1RequestOrgWideTask"
           }
         ],
         "description": "The task to create. Provide at most one of \u0060phoneNumberId\u0060, \u0060conversationId\u0060, or \u0060activityId\u0060 to link the task to that resource. Omit all three to create an org-wide task."
@@ -11294,7 +11294,8 @@
           }
         ]
       },
-      "CreateTaskV1RequestAnyOf1": {
+      "CreateTaskV1RequestLinkedToAPhoneNumber": {
+        "title": "Linked to a phone number",
         "required": [
           "title",
           "description",
@@ -11333,7 +11334,8 @@
         },
         "additionalProperties": false
       },
-      "CreateTaskV1RequestAnyOf2": {
+      "CreateTaskV1RequestLinkedToAConversation": {
+        "title": "Linked to a conversation",
         "required": [
           "title",
           "description",
@@ -11372,7 +11374,8 @@
         },
         "additionalProperties": false
       },
-      "CreateTaskV1RequestAnyOf3": {
+      "CreateTaskV1RequestLinkedToAnActivity": {
+        "title": "Linked to an activity",
         "required": [
           "title",
           "description",
@@ -11411,7 +11414,8 @@
         },
         "additionalProperties": false
       },
-      "CreateTaskV1RequestAnyOf4": {
+      "CreateTaskV1RequestOrgWideTask": {
+        "title": "Org-wide task",
         "required": [
           "title",
           "description"
@@ -11441,15 +11445,6 @@
           "assignedTo": {
             "pattern": "^US(.*)$",
             "type": "string"
-          },
-          "phoneNumberId": {
-            "not": {}
-          },
-          "conversationId": {
-            "not": {}
-          },
-          "activityId": {
-            "not": {}
           }
         },
         "additionalProperties": false

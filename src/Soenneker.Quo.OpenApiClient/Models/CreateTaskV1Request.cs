@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Quo.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf1"/>, <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf2"/>, <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf3"/>, <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf4"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestLinkedToAConversation"/>, <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestLinkedToAnActivity"/>, <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestLinkedToAPhoneNumber"/>, <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestOrgWideTask"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreateTaskV1Request : IComposedTypeWrapper, IParsable
@@ -18,37 +18,37 @@ namespace Soenneker.Quo.OpenApiClient.Models
         public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf1"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestLinkedToAConversation"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf1? CreateTaskV1RequestAnyOf1 { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestLinkedToAConversation? CreateTaskV1RequestLinkedToAConversation { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf1 CreateTaskV1RequestAnyOf1 { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestLinkedToAConversation CreateTaskV1RequestLinkedToAConversation { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf2"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestLinkedToAnActivity"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf2? CreateTaskV1RequestAnyOf2 { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestLinkedToAnActivity? CreateTaskV1RequestLinkedToAnActivity { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf2 CreateTaskV1RequestAnyOf2 { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestLinkedToAnActivity CreateTaskV1RequestLinkedToAnActivity { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf3"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestLinkedToAPhoneNumber"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf3? CreateTaskV1RequestAnyOf3 { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestLinkedToAPhoneNumber? CreateTaskV1RequestLinkedToAPhoneNumber { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf3 CreateTaskV1RequestAnyOf3 { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestLinkedToAPhoneNumber CreateTaskV1RequestLinkedToAPhoneNumber { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf4"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestOrgWideTask"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf4? CreateTaskV1RequestAnyOf4 { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestOrgWideTask? CreateTaskV1RequestOrgWideTask { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf4 CreateTaskV1RequestAnyOf4 { get; set; }
+        public global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestOrgWideTask CreateTaskV1RequestOrgWideTask { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -138,11 +138,8 @@ if (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject obj
 { result &= (!fields.ContainsKey("description") ? (bool?)true : MatchSchema20(fields["description"], depth + 1)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("dueDate") ? (bool?)true : MatchSchema21(fields["dueDate"], depth + 1)); if (result == false) return false; }
 { result &= (!fields.ContainsKey("assignedTo") ? (bool?)true : MatchSchema22(fields["assignedTo"], depth + 1)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("phoneNumberId") ? (bool?)true : MatchSchema23(fields["phoneNumberId"], depth + 1)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("conversationId") ? (bool?)true : MatchSchema24(fields["conversationId"], depth + 1)); if (result == false) return false; }
-{ result &= (!fields.ContainsKey("activityId") ? (bool?)true : MatchSchema25(fields["activityId"], depth + 1)); if (result == false) return false; }
 foreach (var field in fields) {
-if (field.Key == "title" || field.Key == "description" || field.Key == "dueDate" || field.Key == "assignedTo" || field.Key == "phoneNumberId" || field.Key == "conversationId" || field.Key == "activityId") continue;
+if (field.Key == "title" || field.Key == "description" || field.Key == "dueDate" || field.Key == "assignedTo") continue;
 { result &= ((bool?)false); if (result == false) return false; }
 }
 }
@@ -269,39 +266,6 @@ result = null;
 { result &= (node is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString); if (result == false) return false; }
 return result;
 }
-bool? MatchSchema23(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
-if (depth > 64 || --remaining < 0) return null;
-bool? result = true;
-{ result &= (!(MatchSchema26(node, depth + 1))); if (result == false) return false; }
-return result;
-}
-bool? MatchSchema24(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
-if (depth > 64 || --remaining < 0) return null;
-bool? result = true;
-{ result &= (!(MatchSchema27(node, depth + 1))); if (result == false) return false; }
-return result;
-}
-bool? MatchSchema25(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
-if (depth > 64 || --remaining < 0) return null;
-bool? result = true;
-{ result &= (!(MatchSchema28(node, depth + 1))); if (result == false) return false; }
-return result;
-}
-bool? MatchSchema26(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
-if (depth > 64 || --remaining < 0) return null;
-bool? result = true;
-return result;
-}
-bool? MatchSchema27(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
-if (depth > 64 || --remaining < 0) return null;
-bool? result = true;
-return result;
-}
-bool? MatchSchema28(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? node, int depth) {
-if (depth > 64 || --remaining < 0) return null;
-bool? result = true;
-return result;
-}
 var matches = new bool?[4];
 remaining = 10000; matches[0] = MatchSchema0(unionPayload, 0);
 remaining = 10000; matches[1] = MatchSchema1(unionPayload, 0);
@@ -317,12 +281,12 @@ return matches; }))() : null;
             if (matchesUnionBranch1 != false) matchingUnionBranches++;
             if (matchesUnionBranch2 != false) matchingUnionBranches++;
             if (matchesUnionBranch3 != false) matchingUnionBranches++;
-            bool noSelectedUnionBranch = result.CreateTaskV1RequestAnyOf1 == null && result.CreateTaskV1RequestAnyOf2 == null && result.CreateTaskV1RequestAnyOf3 == null && result.CreateTaskV1RequestAnyOf4 == null;
-            if (noSelectedUnionBranch && matchesUnionBranch0 == true && matchingUnionBranches == 1) result.CreateTaskV1RequestAnyOf1 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf1(), parseNode);
-            if (noSelectedUnionBranch && matchesUnionBranch1 == true && matchingUnionBranches == 1) result.CreateTaskV1RequestAnyOf2 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf2(), parseNode);
-            if (noSelectedUnionBranch && matchesUnionBranch2 == true && matchingUnionBranches == 1) result.CreateTaskV1RequestAnyOf3 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf3(), parseNode);
-            if (noSelectedUnionBranch && matchesUnionBranch3 == true && matchingUnionBranches == 1) result.CreateTaskV1RequestAnyOf4 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf4(), parseNode);
-            if (result.CreateTaskV1RequestAnyOf1 == null && result.CreateTaskV1RequestAnyOf2 == null && result.CreateTaskV1RequestAnyOf3 == null && result.CreateTaskV1RequestAnyOf4 == null) result.UnrecognizedValue = unionPayload;
+            bool noSelectedUnionBranch = result.CreateTaskV1RequestLinkedToAConversation == null && result.CreateTaskV1RequestLinkedToAnActivity == null && result.CreateTaskV1RequestLinkedToAPhoneNumber == null && result.CreateTaskV1RequestOrgWideTask == null;
+            if (noSelectedUnionBranch && matchesUnionBranch0 == true && matchingUnionBranches == 1) result.CreateTaskV1RequestLinkedToAPhoneNumber = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestLinkedToAPhoneNumber(), parseNode);
+            if (noSelectedUnionBranch && matchesUnionBranch1 == true && matchingUnionBranches == 1) result.CreateTaskV1RequestLinkedToAConversation = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestLinkedToAConversation(), parseNode);
+            if (noSelectedUnionBranch && matchesUnionBranch2 == true && matchingUnionBranches == 1) result.CreateTaskV1RequestLinkedToAnActivity = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestLinkedToAnActivity(), parseNode);
+            if (noSelectedUnionBranch && matchesUnionBranch3 == true && matchingUnionBranches == 1) result.CreateTaskV1RequestOrgWideTask = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestOrgWideTask(), parseNode);
+            if (result.CreateTaskV1RequestLinkedToAConversation == null && result.CreateTaskV1RequestLinkedToAnActivity == null && result.CreateTaskV1RequestLinkedToAPhoneNumber == null && result.CreateTaskV1RequestOrgWideTask == null) result.UnrecognizedValue = unionPayload;
 return result;
         }
         /// <summary>
@@ -333,9 +297,9 @@ return result;
         {
             if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawFields) { var fields = new global::System.Collections.Generic.Dictionary<string, global::System.Action<IParseNode>>(); foreach (var entry in rawFields.GetValue()) fields[entry.Key] = _ => { }; return fields; }
 
-            if(CreateTaskV1RequestAnyOf1 != null || CreateTaskV1RequestAnyOf2 != null || CreateTaskV1RequestAnyOf3 != null || CreateTaskV1RequestAnyOf4 != null)
+            if(CreateTaskV1RequestLinkedToAConversation != null || CreateTaskV1RequestLinkedToAnActivity != null || CreateTaskV1RequestLinkedToAPhoneNumber != null || CreateTaskV1RequestOrgWideTask != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(CreateTaskV1RequestAnyOf1, CreateTaskV1RequestAnyOf2, CreateTaskV1RequestAnyOf3, CreateTaskV1RequestAnyOf4);
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(CreateTaskV1RequestLinkedToAConversation, CreateTaskV1RequestLinkedToAnActivity, CreateTaskV1RequestLinkedToAPhoneNumber, CreateTaskV1RequestOrgWideTask);
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -346,19 +310,19 @@ return result;
         public virtual void Serialize(ISerializationWriter writer)
         {
             if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
-            if (CreateTaskV1RequestAnyOf1 == null && CreateTaskV1RequestAnyOf2 == null && CreateTaskV1RequestAnyOf3 == null && CreateTaskV1RequestAnyOf4 == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (CreateTaskV1RequestLinkedToAConversation == null && CreateTaskV1RequestLinkedToAnActivity == null && CreateTaskV1RequestLinkedToAPhoneNumber == null && CreateTaskV1RequestOrgWideTask == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
             int selectedUnionBranches = 0;
-            if (CreateTaskV1RequestAnyOf1 != null) selectedUnionBranches++;
-            if (CreateTaskV1RequestAnyOf2 != null) selectedUnionBranches++;
-            if (CreateTaskV1RequestAnyOf3 != null) selectedUnionBranches++;
-            if (CreateTaskV1RequestAnyOf4 != null) selectedUnionBranches++;
-            if (CreateTaskV1RequestAnyOf1 != null && selectedUnionBranches == 1) { if (CreateTaskV1RequestAnyOf1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, CreateTaskV1RequestAnyOf1); return; }
-            if (CreateTaskV1RequestAnyOf2 != null && selectedUnionBranches == 1) { if (CreateTaskV1RequestAnyOf2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, CreateTaskV1RequestAnyOf2); return; }
-            if (CreateTaskV1RequestAnyOf3 != null && selectedUnionBranches == 1) { if (CreateTaskV1RequestAnyOf3 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, CreateTaskV1RequestAnyOf3); return; }
-            if (CreateTaskV1RequestAnyOf4 != null && selectedUnionBranches == 1) { if (CreateTaskV1RequestAnyOf4 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, CreateTaskV1RequestAnyOf4); return; }
+            if (CreateTaskV1RequestLinkedToAConversation != null) selectedUnionBranches++;
+            if (CreateTaskV1RequestLinkedToAnActivity != null) selectedUnionBranches++;
+            if (CreateTaskV1RequestLinkedToAPhoneNumber != null) selectedUnionBranches++;
+            if (CreateTaskV1RequestOrgWideTask != null) selectedUnionBranches++;
+            if (CreateTaskV1RequestLinkedToAConversation != null && selectedUnionBranches == 1) { if (CreateTaskV1RequestLinkedToAConversation is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, CreateTaskV1RequestLinkedToAConversation); return; }
+            if (CreateTaskV1RequestLinkedToAnActivity != null && selectedUnionBranches == 1) { if (CreateTaskV1RequestLinkedToAnActivity is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, CreateTaskV1RequestLinkedToAnActivity); return; }
+            if (CreateTaskV1RequestLinkedToAPhoneNumber != null && selectedUnionBranches == 1) { if (CreateTaskV1RequestLinkedToAPhoneNumber is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, CreateTaskV1RequestLinkedToAPhoneNumber); return; }
+            if (CreateTaskV1RequestOrgWideTask != null && selectedUnionBranches == 1) { if (CreateTaskV1RequestOrgWideTask is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, CreateTaskV1RequestOrgWideTask); return; }
 
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestAnyOf1>(null, CreateTaskV1RequestAnyOf1, CreateTaskV1RequestAnyOf2, CreateTaskV1RequestAnyOf3, CreateTaskV1RequestAnyOf4);
+            writer.WriteObjectValue<global::Soenneker.Quo.OpenApiClient.Models.CreateTaskV1RequestLinkedToAConversation>(null, CreateTaskV1RequestLinkedToAConversation, CreateTaskV1RequestLinkedToAnActivity, CreateTaskV1RequestLinkedToAPhoneNumber, CreateTaskV1RequestOrgWideTask);
         }
     }
 }
