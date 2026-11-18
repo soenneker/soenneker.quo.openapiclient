@@ -109,7 +109,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "code", n => { var parsed = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.ListContactsV1403ResponseError_code>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCode = default; _explicitNullProperties?.Remove("code"); AdditionalData["code"] = unknown; } else { Code = parsed; AdditionalData.Remove("code"); } } },
                 { "description", n => { var parsed = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.NotPhoneNumberUserDescription>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDescription = default; _explicitNullProperties?.Remove("description"); AdditionalData["description"] = unknown; } else { Description = parsed; AdditionalData.Remove("description"); } } },

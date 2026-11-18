@@ -104,7 +104,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "customFields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1RequestCustomFieldsItem>(global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1RequestCustomFieldsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "defaultFields", n => { DefaultFields = n.GetObjectValue<global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1RequestDefaultFields>(global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1RequestDefaultFields.CreateFromDiscriminatorValue); } },

@@ -116,7 +116,7 @@ namespace Soenneker.Quo.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "code", n => { var parsed = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1401ResponseAnyOf2Code>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCode = default; _explicitNullProperties?.Remove("code"); AdditionalData["code"] = unknown; } else { Code = parsed; AdditionalData.Remove("code"); } } },
                 { "docs", n => { var parsed = n.GetEnumValue<global::Soenneker.Quo.OpenApiClient.Models.UpdateContactByIdV1401ResponseAnyOf2Docs>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDocs = default; _explicitNullProperties?.Remove("docs"); AdditionalData["docs"] = unknown; } else { Docs = parsed; AdditionalData.Remove("docs"); } } },
