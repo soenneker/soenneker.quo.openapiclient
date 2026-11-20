@@ -2,7 +2,7 @@
   "descriptionHash": "3C3835439B6C54B73B40598CDCE6C2EB98DEB97732912E2803592FEE152B46984342B6EDAA3EC7B2F15B17A4494F23AC0DAEBE82CF12E477E57C455BE6D2E908",
   "descriptionLocation": "../../fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.38.0",
+  "kiotaVersion": "1.39.0",
   "clientClassName": "QuoOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Quo.OpenApiClient",
